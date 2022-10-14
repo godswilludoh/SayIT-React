@@ -1,14 +1,13 @@
 import React from 'react';
 import './Navbar.css';
 
-
 const Navbar = () => {
 	return (
 		<nav>
 			<section className='logoLogoHeading'>
 				<div className='sayITLogo'>
 					<img
-						src='./Images/SAYIT.jpeg'
+						src='/assets/SAYIT.jpeg'
 						height='80px'
 						width='100px'
 						alt='logo of the SayIT platform'
