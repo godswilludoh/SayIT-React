@@ -1,15 +1,14 @@
-# SayIT-FE
+# SayIT-FE-React
 
-## SayIT Whisteblowing Frontend Application. 
+## SayIT Whisteblowing Frontend Application.
 
 To get started
+
 - All Team members clone the repo
 - Pull from origin main to get latest changes on the repo
 - All team members create branch(unclebigbay-env, unclebigbay-develop) (unclebigbay-fixing-landing-page-navbar)
 - Implement your task
 - Push to your branch and make a pull request to the main branch
-
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
