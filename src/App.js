@@ -1,7 +1,12 @@
 import './App.css';
+import Navbar from './components/nav/Navbar';
 
 function App() {
-	return <div className='App'>SayIT Application</div>;
+	return (
+		<>
+			<Navbar />
+		</>
+	);
 }
 
 export default App;

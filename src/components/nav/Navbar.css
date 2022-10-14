@@ -1,0 +1,69 @@
+/* Nav Bar Css starts here */
+nav {
+	/* margin-top: 20px; */
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	background: #ffffff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	position: fixed;
+	width: 100%;
+}
+
+.logoLogoHeading {
+	display: flex;
+	margin-left: 75px;
+	color: #6e6660;
+}
+
+.IT {
+	color: #ed4d02;
+}
+
+.logoHeading {
+	padding-top: 20px;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+.navLinkWrapper {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-right: 75px;
+	margin-bottom: 5px;
+}
+
+.navLinkWrapper li {
+	text-decoration: none;
+	padding: 10px;
+	list-style: none;
+}
+
+nav .navLinkWrapper li a {
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 10px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #ed4d02;
+}
+
+nav ul li a:hover,
+nav ul li a#active {
+	background-color: #ed4d02;
+	color: #ffff;
+}
+
+/*For the removing the Id click from the background */
+#click {
+	display: none;
+}
+
+/* for the collapse menu button */
+nav .menu_button i {
+	color: #ed4d02;
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
+}
