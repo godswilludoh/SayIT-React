@@ -67,3 +67,54 @@ nav .menu_button i {
 	cursor: pointer;
 	display: none;
 }
+
+/* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
+/* Working on the mobile responsiveness screen 940 and below */
+@media (max-width: 940px) {
+	.logoLogoHeading {
+		display: flex;
+		margin-left: 15px;
+	}
+
+	nav .menu_button {
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	nav .menu_button i {
+		display: block;
+	}
+
+	nav .navLinkWrapper {
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		background: #111;
+		height: 100vh;
+		width: 100%;
+		display: block;
+		text-align: center;
+		transition: all 0.3s ease;
+	}
+
+	/* For the Id integration with the hamburger, remeber we change left from 0 to -100% in the nav ul*/
+	#click:checked ~ .navLinkWrapper {
+		left: 0%;
+	}
+
+	nav .navLinkWrapper li {
+		margin: 40px 0;
+	}
+
+	nav .navLinkWrapper li a {
+		font-size: 20px;
+		display: block;
+	}
+
+	nav .navLinkWrapper li a.active,
+	nav .navLinkWrapper li a:hover {
+		background: none;
+		color: #ed4d02;
+	}
+}
+/* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE */
