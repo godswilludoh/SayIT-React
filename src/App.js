@@ -8,10 +8,12 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Navbar />
+			<LandingPage />
 			<Routes>
-				<Route path='/' element={<LandingPage />} />
+				<Route path='/landingPage' element={<LandingPage />} />
 				{/* <Route path='/report' element={<Report />} /> */}
 			</Routes>
+
 		</BrowserRouter>
 	);
 }
