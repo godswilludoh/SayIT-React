@@ -1,5 +1,5 @@
 import React from 'react';
-import './Landing.css';
+import './landing.css';
 import Footer from '../../components/footerLandingPage/FooterLandingPage';
 
 const LandingPage = () => {
@@ -35,7 +35,7 @@ const LandingPage = () => {
 					<a href='/pages/sign-up-page.html' className='btn'>
 						Create Account
 					</a>
-					<a href='/pages/anonymousReport.html' className='btn'>
+					<a href='/report' className='btn'>
 						REPORT ANONYMOUSLY
 					</a>
 				</div>
