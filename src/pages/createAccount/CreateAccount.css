@@ -1,0 +1,200 @@
+.signup-container {
+	padding-top: 120px;
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.signup-heading {
+	color: #ed4d02;
+	font-weight: 900;
+	font-size: 18px;
+	margin-bottom: 3rem;
+}
+
+.text-area {
+	padding: 12px;
+	width: 95%;
+	height: 60px;
+	outline: none;
+	margin-bottom: 0;
+	border: 1px solid #ed4d02;
+	border-radius: 2rem;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'] {
+	padding-left: 2rem;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+input::placeholder {
+	color: #000000;
+}
+
+::placeholder {
+	height: 19px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+	padding-left: 10px;
+}
+
+/* Validation styling */
+
+.form-control {
+	margin-bottom: 1.5rem;
+}
+
+.form-control i {
+	visibility: hidden;
+}
+
+.form-control small {
+	visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control.error small {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+#createAccount {
+	padding: 12px 30px;
+	width: 95%;
+	height: 60px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #ffffff;
+	border: 1px solid #ed4d02;
+	background-color: #ed4d02;
+	border-radius: 2rem;
+	border: none;
+	cursor: pointer;
+}
+
+.login {
+	text-align: center;
+	margin: 2rem auto;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.login a {
+	text-decoration: none;
+	color: #ed4d02;
+}
+
+.signup-container a {
+	text-decoration: none;
+	color: black;
+	margin-top: 10px;
+}
+.signup-container a:hover {
+	color: blue;
+}
+
+.side {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+.side img {
+	width: 375px;
+	height: 375px;
+	filter: grayscale();
+	margin-right: 200px;
+}
+
+small {
+	margin-top: 40rem;
+}
+
+#sign-up-footer {
+	text-align: center;
+	margin: 40px 0 0 0;
+}
+.footer-text {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 40px;
+}
+
+/* Responsiveness for mobile devices */
+/* Normal screen sizes */
+@media (min-width: 769px) and (max-width: 1200px) {
+	.text-area {
+		padding: 12px;
+		width: 80%;
+	}
+
+	#createAccount {
+		padding: 12px;
+		width: 80%;
+	}
+
+	.signup-heading {
+		text-align: center;
+	}
+}
+
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px) {
+	.text-area {
+		padding: 12px;
+		width: 100%;
+		margin: 0 40px;
+	}
+
+	#createAccount {
+		padding: 12px;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.signup-heading {
+		text-align: center;
+	}
+}
+
+/* Smartphones */
+@media (min-width: 0px) and (max-width: 500px) {
+	.text-area {
+		padding: 12px;
+		width: 85%;
+		margin: 0 10px;
+	}
+
+	#createAccount {
+		padding: 12px;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.signup-heading {
+		text-align: center;
+	}
+}
