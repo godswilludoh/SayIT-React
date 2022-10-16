@@ -21,12 +21,12 @@ const Navbar = () => {
 			<label htmlFor='click' className='menu_button'>
 				<i className='fas fa-bars' />
 			</label>
-			<input type='checkbox' id='click' />
-			<ul className='navLinkWrapper'>
-				<Link to='/'>Home</Link>
-				<Link to='/'>WHY US</Link>
-				<Link to='/'>Report</Link>
-				<Link to='/'>BLOG</Link>
+			{/* <input type='checkbox' id='click' /> */}
+			<div className='navLinkWrapper'>
+				<Link to='/'>HOME</Link>
+				<Link to='/whyUs'>WHY US</Link>
+				<Link to='/report'>REPORT</Link>
+				<Link to='/blog'>BLOG</Link>
 				{/* <li>
 					<a href='./index.html'>HOME</a>
 				</li>
@@ -44,7 +44,7 @@ const Navbar = () => {
 						SIGN IN
 					</a>
 				</li> */}
-			</ul>
+			</div>
 		</nav>
 	);
 };
