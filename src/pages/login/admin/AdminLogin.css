@@ -1,0 +1,110 @@
+form {
+	margin: 50px auto;
+}
+
+.overallContainer {
+	padding-top: 50px;
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
+}
+/* THE LOGIN SIDE */
+.theLoginSide {
+	flex: 2;
+	width: 50%;
+	background: #dc6b36;
+	height: 100vh;
+}
+
+.innerContainer {
+	margin-top: 100px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logInButton {
+	padding: 15px;
+	border-radius: 25px;
+	border: none;
+	width: 100%;
+	background: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ed4d02;
+	cursor: pointer;
+}
+
+.innerContainer .adminTitle {
+	text-align: center;
+	margin: 5rem auto 0;
+	font-weight: 800;
+}
+
+.formGroup {
+	border: 1px solid #fff;
+	height: 60px;
+	border-radius: 25px;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	padding: 5px 5px 5px 5px;
+	display: flex;
+}
+input {
+	background-color: #dc6b36;
+	border: 1px solid rgba(221, 215, 215, 0);
+	height: 40px;
+	border-radius: 15px;
+	margin-left: 10px;
+	width: 80%;
+	padding: 0.8rem;
+	font-size: 15px;
+	outline: none;
+}
+
+.formGroup input::placeholder {
+	color: #fff;
+}
+
+footer {
+	text-align: center;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+
+/* THE IMAGE/LOGO SIDE */
+.ImageSideDiv {
+	width: 50%;
+	height: 100%;
+}
+.theImageSide {
+	flex: 1;
+	width: 50%;
+}
+
+.theImageSide img {
+	margin: 12rem;
+	background: #d9d9d9;
+}
+
+.icon {
+	margin-left: 15px;
+	top: 0px;
+	font-size: 20px;
+	height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fa-eye {
+	cursor: pointer;
+	margin-left: -40px;
+	margin-top: 15px;
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+	.ImageSideDiv {
+		display: none;
+	}
+}

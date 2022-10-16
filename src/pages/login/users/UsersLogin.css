@@ -1,0 +1,79 @@
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	padding: 7rem 0 2rem 0;
+}
+
+.login-heading {
+	font-weight: 900;
+	font-size: 20px;
+	text-align: center;
+	color: #ed4d02;
+	margin-bottom: 40px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding-bottom: 40px;
+}
+
+.input {
+	border-radius: 2rem;
+	padding: 0.8rem;
+	width: 25rem;
+	height: 60px;
+	border: 1px solid #ed4d02;
+	outline: none;
+	display: inline;
+	margin: 0;
+}
+
+input {
+	border: 0;
+	width: 20rem;
+	outline: none;
+}
+
+input[type='text'],
+input[type='password'] {
+	padding-left: 1rem;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+input::placeholder {
+	color: #000000;
+}
+
+/* styling for the additional links */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#admin-login {
+	color: darkgray;
+}
+
+.other_links {
+	text-align: center;
+	padding: 10px 0;
+	line-height: 2rem;
+	font-weight: bold;
+}
+
+.other_links #sign-up a {
+	color: #ed4d02;
+}
+
+.admin-login {
+	display: flex;
+	gap: 4rem;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0 20px 0;
+}

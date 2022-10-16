@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -22,7 +23,8 @@ const Navbar = () => {
 			</label>
 			<input type='checkbox' id='click' />
 			<ul className='navLinkWrapper'>
-				<li>
+				<Link to='/'>Home</Link>
+				{/* <li>
 					<a href='./index.html'>HOME</a>
 				</li>
 				<li>
@@ -38,7 +40,7 @@ const Navbar = () => {
 					<a href='/pages/loginpage.html' id='active'>
 						SIGN IN
 					</a>
-				</li>
+				</li> */}
 			</ul>
 		</nav>
 	);
