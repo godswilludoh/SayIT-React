@@ -27,23 +27,15 @@ const Navbar = () => {
 				<Link to='/whyUs'>WHY US</Link>
 				<Link to='/report'>REPORT</Link>
 				<Link to='/blog'>BLOG</Link>
+				<Link id='active' to='login'>
+					SIGN IN
+				</Link>
+
 				{/* <li>
-					<a href='./index.html'>HOME</a>
-				</li>
-				<li>
-					<a href='#whyUs'>WHY US</a>
-				</li>
-				<li>
-					<a href='./pages/anonymousReport.html'>REPORT</a>
-				</li>
-				<li>
-					<a href='./pages/blog-page.html'>BLOG</a>
-				</li>
-				<li>
 					<a href='/pages/loginpage.html' id='active'>
 						SIGN IN
 					</a>
-				</li> */}
+				</li>  */}
 			</div>
 		</nav>
 	);

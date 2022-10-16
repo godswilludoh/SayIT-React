@@ -44,7 +44,8 @@ nav .navLinkWrapper a {
 	color: #ed4d02;
 }
 
-nav .navLinkWrapper a:hover {
+nav .navLinkWrapper a:hover,
+nav .navLinkWrapper a#active {
 	background-color: #ed4d02;
 	color: #ffff;
 }

@@ -14,13 +14,13 @@ function App() {
 		<BrowserRouter>
 			<Navbar />
 			<Routes>
-				{/* <Route path='/' element={<LandingPage />} />
-				<Route path='createAccount' element={<CreateAccount />} />
+				<Route path='/' element={<LandingPage />} />
+				<Route path='/signup' element={<CreateAccount />} />
 				<Route path='/report' element={<Report />} />
-				<Route path='/blog' element={<Blog />} /> */}
-				{/* <Route path='/' element={<UsersLogin />} /> */}
-				<Route path='/' element={<AdminLogin />} />
-				{/* <Route path='/' element={<AgentsLogin />} /> */}
+				<Route path='/blog' element={<Blog />} />
+				<Route path='/login' element={<UsersLogin />} />
+				<Route path='/admin' element={<AdminLogin />} />
+				<Route path='/agents' element={<AgentsLogin />} />
 			</Routes>
 		</BrowserRouter>
 	);
