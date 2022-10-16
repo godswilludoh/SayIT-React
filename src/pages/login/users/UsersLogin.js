@@ -1,7 +1,15 @@
 import React from 'react';
+import Footer from '../../../components/footer/Footer';
+import Header from '../Header';
+import './UsersLogin.css';
 
 const UsersLogin = () => {
-	return <div>UsersLogin</div>;
+	return (
+		<>
+			<Header />
+			<Footer />
+		</>
+	);
 };
 
 export default UsersLogin;
