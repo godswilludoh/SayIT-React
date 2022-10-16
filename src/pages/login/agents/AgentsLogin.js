@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../components/footer/Footer';
 import './AgentsLogin.css';
 
 const AgentsLogin = () => {
@@ -53,16 +54,11 @@ const AgentsLogin = () => {
 							LOGIN
 						</button>
 					</form>
-					<footer>
-						<p className='privacyPolicy'>Privacy Policy | Terms of use</p>
-						<p className='copRight'>
-							©2022 All Rights Reserved | Designed By Tech Stars
-						</p>
-					</footer>
+					<Footer />
 				</div>
 			</section>
 			<section className='theImageSide'>
-				<img src='../Images/SAYIT.jpeg' alt='sayITimage' width='550px' />
+				<img src='/assets/images/SAYIT.jpeg' alt='sayITimage' width='550px' />
 			</section>
 		</section>
 	);

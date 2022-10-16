@@ -34,13 +34,13 @@ nav {
 	margin-bottom: 5px;
 }
 
-.navLinkWrapper li {
+.navLinkWrapper Link {
 	text-decoration: none;
 	padding: 10px;
 	list-style: none;
 }
 
-nav .navLinkWrapper li a {
+nav .navLinkWrapper Link {
 	border-radius: 5px;
 	font-size: 16px;
 	padding: 10px;
@@ -49,8 +49,8 @@ nav .navLinkWrapper li a {
 	color: #ed4d02;
 }
 
-nav ul li a:hover,
-nav ul li a#active {
+nav ul Link a:hover,
+nav ul Link a#active {
 	background-color: #ed4d02;
 	color: #ffff;
 }

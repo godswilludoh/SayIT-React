@@ -8,7 +8,7 @@ const Navbar = () => {
 			<section className='logoLogoHeading'>
 				<div className='sayITLogo'>
 					<img
-						src='/assets/SAYIT.jpeg'
+						src='/assets/images/SAYIT.jpeg'
 						height='80px'
 						width='100px'
 						alt='logo of the SayIT platform'
@@ -24,6 +24,9 @@ const Navbar = () => {
 			<input type='checkbox' id='click' />
 			<ul className='navLinkWrapper'>
 				<Link to='/'>Home</Link>
+				<Link to='/'>WHY US</Link>
+				<Link to='/'>Report</Link>
+				<Link to='/'>BLOG</Link>
 				{/* <li>
 					<a href='./index.html'>HOME</a>
 				</li>
