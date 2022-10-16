@@ -2,7 +2,7 @@
 .hero-image {
 	padding-top: 5rem;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		url(./LandinPageImage/dashboardImage.png);
+		url('/public/assets/dashboardImage.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -248,7 +248,7 @@
 		transition: all 0.3s ease;
 	}
 
-	/* For the Id integration with the hamburger, remeber we change left from 0 to -100% in the nav ul*/
+	/* For the Id integration with the hamburger, remember we change left from 0 to -100% in the nav ul*/
 	#click:checked ~ .navLinkWrapper {
 		left: 0%;
 	}
@@ -297,7 +297,7 @@
 
 .image {
 	flex: 1;
-	background-image: url(./LandinPageImage/Amplifyyourvoice.png);
+	background-image: url(/public/assets/Amplifyyourvoice.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -363,7 +363,7 @@
 
 .imageForMan {
 	flex: 2;
-	background-image: url(./LandinPageImage/manImage.png);
+	background-image: url(/public/assets/manImage.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;

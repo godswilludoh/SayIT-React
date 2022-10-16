@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FooterLandingPage.css';
 
 const Footer = () => {
@@ -11,23 +12,13 @@ const Footer = () => {
 					</p>
 				</div>
 				<div>
-					<ul className='footerLinkDocs'>
-						<li>
-							<a>Contact Us</a>
-						</li>
-						<li>
-							<a>Admin</a>
-						</li>
-						<li>
-							<a href='#'>Privacy Policy</a>
-						</li>
-						<li>
-							<a>Terms and Conditions</a>
-						</li>
-						<li>
-							<a>Follow us</a>
-						</li>
-					</ul>
+					<div className='footerLinkDocs'>
+						<Link to='/contact'>Contact Us</Link>
+						<Link to='/admin'>Admin</Link>
+						<Link to='/privacy'>Privacy Policy</Link>
+						<Link to='/terms'>Terms and Conditions</Link>
+						<Link to='/follow'>Follow us</Link>
+					</div>
 				</div>
 			</div>
 			<p className='copyright'>

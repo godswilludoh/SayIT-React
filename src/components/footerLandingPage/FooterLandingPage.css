@@ -5,6 +5,7 @@
 .footer_section {
 	padding: 50px;
 	display: flex;
+	align-items: center;
 	justify-content: space-evenly;
 	width: 100%;
 }
@@ -12,11 +13,6 @@
 .logoHeading {
 	color: #6e6660;
 	font-size: 36px;
-}
-
-ul {
-	font-size: 16px;
-	font-weight: 700;
 }
 
 .footerLinkDocs {
@@ -27,17 +23,14 @@ ul {
 	margin-bottom: 5px;
 }
 
-.footerLinkDocs li {
+.footerLinkDocs a {
+	font-size: 16px;
+	font-weight: 700;
 	padding: 40px;
-	list-style: none;
-}
-
-.footerLinkDocs li a {
-	text-decoration: none;
 	color: #ffffff;
 }
 
-.footerLinkDocs li a:hover {
+.footerLinkDocs a:hover {
 	color: #6e6660;
 }
 

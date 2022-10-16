@@ -8,7 +8,7 @@ const Navbar = () => {
 			<section className='logoLogoHeading'>
 				<div className='sayITLogo'>
 					<img
-						src='/assets/images/SAYIT.jpeg'
+						src='/assets/SAYIT.jpeg'
 						height='80px'
 						width='100px'
 						alt='logo of the SayIT platform'

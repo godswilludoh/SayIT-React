@@ -3,7 +3,7 @@ header {
 	flex-direction: row-reverse;
 	justify-content: space-around;
 	align-items: center;
-	padding: 7rem 0 2rem 0;
+	padding: 10rem 0 1rem 0;
 }
 
 .login-heading {
@@ -11,14 +11,13 @@ header {
 	font-size: 20px;
 	text-align: center;
 	color: #ed4d02;
-	margin-bottom: 40px;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 }
 
 .input {
@@ -43,6 +42,8 @@ input[type='password'] {
 	padding-left: 1rem;
 	font-size: 17px;
 	font-weight: 700;
+	fill: none;
+	background: transparent;
 }
 
 input::placeholder {
