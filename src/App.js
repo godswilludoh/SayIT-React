@@ -12,12 +12,11 @@ function App() {
 			<Navbar />
 			<LandingPage />
 			<Routes>
-				{/* <Route path='/' element={<LandingPage />} /> */}
+				<Route path='/' element={<LandingPage />} />
 				{/* <Route path='/report' element={<Report />} /> */}
 				{/* <Route path='/' element={<UsersLogin />} /> */}
-				<Route path='/' element={<AdminLogin />} />
+				{/* <Route path='/' element={<AdminLogin />} /> */}
 			</Routes>
-
 		</BrowserRouter>
 	);
 }
