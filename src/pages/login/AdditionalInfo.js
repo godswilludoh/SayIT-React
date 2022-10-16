@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AdditionalInfo = () => {
 	return (
 		<div className='other_links'>
 			<p id='sign-up'>
 				Don't have an Account?
-				<a>SIGN UP</a>
+				<Link to='/signup'>SIGN UP</Link>
 			</p>
 			<div className='admin-login'>
-				<div id='admin-login'>
-					<a>Admin Login</a>
-				</div>
-				<div id='admin-login'>
-					<a>Agents Login</a>
-				</div>
+				<Link to='/admin' id='admin-login'>
+					Admin Login
+				</Link>
+				<Link to='/agents' id='admin-login'>
+					Agents Login
+				</Link>
 			</div>
 		</div>
 	);
