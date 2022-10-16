@@ -58,7 +58,7 @@ const AgentsLogin = () => {
 				</div>
 			</section>
 			<section className='theImageSide'>
-				<img src='/assets/images/SAYIT.jpeg' alt='sayITimage' width='550px' />
+				<img src='/assets/SAYIT.jpeg' alt='sayITimage' width='550px' />
 			</section>
 		</section>
 	);
