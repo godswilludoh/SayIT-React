@@ -1,9 +1,9 @@
 import React from 'react';
-import './Footer.css';
+import './FooterLandingPage.css';
 
 const Footer = () => {
 	return (
-		<footer>
+		<footer className='footer'>
 			<div className='footer_section'>
 				<div className='footer_header'>
 					<p className='logoHeading'>

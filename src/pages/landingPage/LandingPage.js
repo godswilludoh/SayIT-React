@@ -3,7 +3,7 @@ import './Landing.css';
 import image1 from './LandinPageImage/goal.png';
 import image2 from './LandinPageImage/dubbing.png';
 import image3 from './LandinPageImage/unknown.png';
-import Footer from './footer/Footer';
+import Footer from './footer/FooterLandingPage';
 
 const LandingPage = () => {
 	return (
