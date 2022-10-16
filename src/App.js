@@ -8,7 +8,6 @@ import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
 import AgentsLogin from './pages/login/agents/AgentsLogin';
-// import Report from './pages/report/report';
 
 function App() {
 	return (
