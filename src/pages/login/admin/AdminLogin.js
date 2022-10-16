@@ -1,7 +1,7 @@
 import React from 'react';
 import AdminContainer from './AdminContainer';
 import AdminImage from './AdminImage';
-import './AdminLogin.css';
+// import './AdminLogin.css';
 
 const AdminLogin = () => {
 	return (

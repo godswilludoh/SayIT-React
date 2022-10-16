@@ -1,13 +1,10 @@
 import React from 'react';
 import './Landing.css';
-import image1 from './LandinPageImage/goal.png';
-import image2 from './LandinPageImage/dubbing.png';
-import image3 from './LandinPageImage/unknown.png';
-import Footer from './footer/FooterLandingPage';
+import Footer from '../../components/footerLandingPage/FooterLandingPage';
 
 const LandingPage = () => {
 	return (
-		<React.Fragment>
+		<>
 			<div className='hero-image'>
 				<div className='hero-text'>
 					<h1>Let’s build a society that is crime free!</h1>
@@ -116,7 +113,11 @@ const LandingPage = () => {
 					<div className='gridContainer'>
 						<section className='goalSection'>
 							<div className='loGo'>
-								<img src={image1} alt='logo here' className='how_img' />
+								<img
+									src='/assets/goal.png'
+									alt='logo here'
+									className='how_img'
+								/>
 							</div>
 							<div className='conTent'>
 								<h3 className='contentTitle'>OUR GOALS</h3>
@@ -132,7 +133,11 @@ const LandingPage = () => {
 						</section>
 						<section className='goalSection'>
 							<div className='loGo'>
-								<img src={image2} alt='logo here' className='how_img' />
+								<img
+									src='/assets/dubbing.png'
+									alt='logo here'
+									className='how_img'
+								/>
 							</div>
 							<div className='conTent'>
 								<h3 className='contentTitle'>WE ARE YOUR VOICE</h3>
@@ -148,7 +153,11 @@ const LandingPage = () => {
 						</section>
 						<section className='goalSection'>
 							<div className='loGo'>
-								<img src={image3} alt='logo here' className='how_img' />
+								<img
+									src='/assets/unknown.png'
+									alt='logo here'
+									className='how_img'
+								/>
 							</div>
 							<div className='conTent'>
 								<h3 className='contentTitle'>SECURITY</h3>
@@ -163,7 +172,7 @@ const LandingPage = () => {
 				</div>
 			</section>
 			<Footer />
-		</React.Fragment>
+		</>
 	);
 };
 
