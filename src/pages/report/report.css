@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nav Bar Css starts here */
+nav {
+  /* margin-top: 20px; */
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
+}
+
+.logoLogoHeading {
+  display: flex;
+  margin-left: 75px;
+  color: #6E6660
+}
+
+.IT {
+  color: #ed4d02;
+}
+
+.logoHeading {
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.navLinkWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 75px;
+  margin-bottom: 5px;
+}
+
+.navLinkWrapper li {
+  text-decoration: none;
+  padding: 10px;
+  list-style: none;
+}
+
+nav .navLinkWrapper li a {
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ed4d02;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #ed4d02;
+  color: #ffff;
+}
+
+/*For removing the Id click from the background */
+#click {
+  display: none;
+}
+
+/* for the collapse menu button */
+nav .menu_button i {
+  color: #ed4d02;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Nav bar css ends here */
+
+/* Anonymous Report Form Section */
+
+main {
+  padding: 5rem 0;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #F9F9F9;
+  line-height: 1.8;
+  border: 3px solid #999DAD38;
+  border-radius: 10px;
+}
+
+.container {
+  margin: 4rem auto;
+  padding: 2rem 5rem;
+  border: 3px solid #999DAD38;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-top: -4em;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-details {
+  margin-top: 1rem;
+}
+
+.form-box {
+  padding-bottom: 20px;
+}
+
+.form-box p {
+  margin-top: -1em;
+  /* visibility: hidden; */
+}
+
+select,
+.form-input {
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
+  padding-left: 20px;
+}
+
+.agency{
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 15rem;
+  outline: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
+}
+
+#upload {
+  padding-left: 2rem;
+}
+
+input[type="text"] {
+  padding-left: 1rem;
+}
+
+#Affirm {
+  padding-left: 12em;
+  width: 2rem;
+  /* display: none; */
+}
+
+button {
+  width: 100%;
+  height: 2.5rem;
+  display: block;
+}
+
+/* .btn{ */
+#myBtn {
+  background-color: #ED4D02;
+  color: #F5F5F5;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* .btn:hover{ */
+#myBtn:hover {
+  background-color: #da4804;
+  font-size: 19px;
+}
+
+/* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
+/* Working on the mobile responsiveness screen 940 and below */
+@media (max-width: 940px) {
+  .logoLogoHeading {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  nav .menu_button {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  nav .menu_button i {
+    display: block;
+  }
+
+  nav .navLinkWrapper {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  /* For the Id integration with the hamburger, remember we change left from 0 to -100% in the nav ul*/
+  #click:checked~.navLinkWrapper {
+    left: 0%;
+  }
+
+  nav .navLinkWrapper li {
+    margin: 40px 0;
+  }
+
+  nav .navLinkWrapper li a {
+    font-size: 20px;
+    display: block;
+  }
+}
+
+/* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE
+/****Media Queries ****/
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px) {
+  .container {
+    padding: 10rem 5rem 1rem;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  label {
+    display: block;
+    font-size: 18px;
+  }
+
+  select,
+  input {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Smartphones */
+@media(min-width: 0px) and (max-width:500px) {
+  .container {
+    padding: 10rem 3rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  select,
+  input {
+    font-size: 13px;
+  }
+}
+
+/* THE PROMPT MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #060606be;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
+
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto;
+  padding: 20px;
+  border: 10px solid #0000;
+  width: 40%;
+  color: rgb(238, 244, 244);
+  box-shadow: 0px 4px 4px 0px #413b36;
+  border-radius: 20px 20px;
+  background-color: #ffffff;
+
+}
+
+
+/* The Close Button */
+.close {
+  color: #df0707d1;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The notes in the popup */
+.ThanksSAYit {
+  color: #444862a6;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 30%;
+  margin-top: 30px;
+}
+
+.your_Report {
+  color: #ED4D02;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 15%;
+}
+
+.agentID {
+  margin-left: 20%;
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.takeNote {
+  color: #60616E;
+  font-size: 13px;
+  font-weight: 800;
+  margin-left: 30%;
+}
+
+
+.returnHome {
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  color: #FFFFFF;
+  background: #ED4D02;
+  padding: 10px 40px;
+  margin: 40px auto;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.returnHome:hover {
+  color: #44444473; 
+}
+
+/* MEDIA QUERY FOR SMART PHONES */
+@media (min-width: 370px) and (max-width: 700px) {
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    margin-top: 50%;
+    padding: 10px;
+    width: 300px
+  }
+
+  .ThanksSAYit {
+    font-size: small;
+    margin-left: 20%;
+  }
+
+  .your_Report {
+    font-size: large;
+  }
+
+  .agentID {
+    font-size: small;
+  }
+
+  .takeNote {
+    margin-left: 15%;
+    font-size: smaller;
+  }
+
+  .returnHome {
+    width: 75px;
+    margin-left: 30%;
+    padding: 1px;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS */
+@media (min-width: 820px)and (max-width: 900px) {
+  .modal-content {
+    width: 600px;
+    margin-top: 30%;
+  }
+}
