@@ -1,5 +1,6 @@
 import React from 'react';
-import './landing.css';
+import './Landing.css';
+import { Link } from 'react-router-dom';
 import Footer from '../../components/footerLandingPage/FooterLandingPage';
 
 const LandingPage = () => {
@@ -32,12 +33,10 @@ const LandingPage = () => {
 					The reports made are passed to agents that partner with the platform.
 				</p>
 				<div className='whatWedoButton'>
-					<a href='/pages/sign-up-page.html' className='btn'>
-						Create Account
-					</a>
-					<a href='/report' className='btn'>
+					<Link className='btn'>Create Account</Link>
+					<Link href='/report' className='btn'>
 						REPORT ANONYMOUSLY
-					</a>
+					</Link>
 				</div>
 			</section>
 

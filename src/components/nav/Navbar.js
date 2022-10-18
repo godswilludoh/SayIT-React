@@ -22,7 +22,7 @@ const Navbar = () => {
 				<i className='fas fa-bars' />
 			</label>
 			{/* <input type='checkbox' id='click' /> */}
-			<div className='navLinkWrapper'>
+			<ul className='navLinkWrapper'>
 				<Link to='/'>HOME</Link>
 				<Link to='/whyUs'>WHY US</Link>
 				<Link to='/report'>REPORT</Link>
@@ -30,13 +30,7 @@ const Navbar = () => {
 				<Link id='active' to='login'>
 					SIGN IN
 				</Link>
-
-				{/* <li>
-					<a href='/pages/loginpage.html' id='active'>
-						SIGN IN
-					</a>
-				</li>  */}
-			</div>
+			</ul>
 		</nav>
 	);
 };
