@@ -1,19 +1,19 @@
 form {
-	margin: 8rem auto;
+	margin: 3rem auto;
 }
 
 .overallContainer {
-	padding-top: 50px;
+	padding-top: 30px;
 	display: flex;
 	max-height: 100vh;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .theLoginSide {
 	flex: 2;
 	max-width: 50%;
 	background: #dc6b36;
-	min-height: 100vh;
+	max-height: 100vh;
 }
 
 .innerContainer {
@@ -32,7 +32,6 @@ footer {
 .theImageSide {
 	flex: 1;
 	max-width: 50%;
-	/* background: #d9d9d9; */
 }
 
 .theImageSide img {

@@ -1,24 +1,24 @@
-form {
-	margin: 50px auto;
+/* form {
+	margin: 8rem auto;
 }
 
 .overallContainer {
 	padding-top: 50px;
 	display: flex;
-	height: 100vh;
+	max-height: 100vh;
 	overflow: hidden;
 }
 /* THE LOGIN SIDE */
-.theLoginSide {
+/* .theLoginSide {
 	flex: 2;
-	width: 50%;
+	max-width: 50%;
 	background: #dc6b36;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .innerContainer {
 	margin-top: 100px;
-	width: 60%;
+	max-width: 60%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -33,9 +33,9 @@ form {
 	font-weight: bold;
 	color: #ed4d02;
 	cursor: pointer;
-}
+} */
 
-.innerContainer .adminTitle {
+/* .innerContainer .adminTitle {
 	text-align: center;
 	margin: 5rem auto 0;
 	font-weight: 800;
@@ -50,22 +50,43 @@ form {
 	padding: 5px 5px 5px 5px;
 	display: flex;
 }
+input {
+	background-color: #dc6b36;
+	border: 1px solid rgba(221, 215, 215, 0);
+	height: 40px;
+	border-radius: 15px;
+	margin-left: 10px;
+	width: 80%;
+	padding: 0.8rem;
+	font-size: 15px;
+	outline: none;
+}
+
+.formGroup input::placeholder {
+	color: #fff;
+}
+
+footer {
+	text-align: center;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
 
 /* THE IMAGE/LOGO SIDE */
-.ImageSideDiv {
+/* .ImageSideDiv {
 	width: 50%;
 	height: 100%;
 }
 .theImageSide {
 	flex: 1;
 	width: 50%;
-}
+} */
 
 /* .theImageSide img {
 	margin: 12rem;
 	background: #d9d9d9;
-} */
-/* 
+}
+
 .icon {
 	margin-left: 15px;
 	top: 0px;
@@ -76,14 +97,14 @@ form {
 	justify-content: center;
 } */
 
-.fa-eye {
+/* .fa-eye {
 	cursor: pointer;
 	margin-left: -40px;
 	margin-top: 15px;
-}
+} */
 
-@media (min-width: 300px) and (max-width: 900px) {
+/* @media (min-width: 300px) and (max-width: 900px) {
 	.ImageSideDiv {
 		display: none;
 	}
-}
+} */
