@@ -11,7 +11,10 @@ const CreateAccount = () => {
 				<Form />
 			</div>
 			<p className='login'>
-				Already have an account? <Link to='/login'>LOG IN</Link>
+				Already have an account?{' '}
+				<Link to='/login' className='login-link'>
+					LOG IN
+				</Link>
 			</p>
 
 			<Footer />

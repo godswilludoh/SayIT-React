@@ -1,24 +1,24 @@
-/* form {
-	margin: 8rem auto;
+form {
+	margin: 50px auto;
 }
 
 .overallContainer {
 	padding-top: 50px;
 	display: flex;
-	max-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
 }
 /* THE LOGIN SIDE */
-/* .theLoginSide {
+.theLoginSide {
 	flex: 2;
-	max-width: 50%;
+	width: 50%;
 	background: #dc6b36;
-	min-height: 100vh;
+	height: 100vh;
 }
 
 .innerContainer {
 	margin-top: 100px;
-	max-width: 60%;
+	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -33,9 +33,9 @@
 	font-weight: bold;
 	color: #ed4d02;
 	cursor: pointer;
-} */
+}
 
-/* .innerContainer .adminTitle {
+.innerContainer .adminTitle {
 	text-align: center;
 	margin: 5rem auto 0;
 	font-weight: 800;
@@ -73,16 +73,16 @@ footer {
 }
 
 /* THE IMAGE/LOGO SIDE */
-/* .ImageSideDiv {
+.ImageSideDiv {
 	width: 50%;
 	height: 100%;
 }
 .theImageSide {
 	flex: 1;
 	width: 50%;
-} */
+}
 
-/* .theImageSide img {
+.theImageSide img {
 	margin: 12rem;
 	background: #d9d9d9;
 }
@@ -95,16 +95,16 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-} */
+}
 
-/* .fa-eye {
+.fa-eye {
 	cursor: pointer;
 	margin-left: -40px;
 	margin-top: 15px;
-} */
+}
 
-/* @media (min-width: 300px) and (max-width: 900px) {
+@media (min-width: 300px) and (max-width: 900px) {
 	.ImageSideDiv {
 		display: none;
 	}
-} */
+}

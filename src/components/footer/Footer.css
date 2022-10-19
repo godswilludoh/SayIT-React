@@ -1,8 +1,8 @@
 footer {
 	background: #fff;
 	text-align: center;
-	color: inherit;
-	padding: 2px 0;
-	line-height: 2rem;
-	font-weight: bold;
+	padding: 1px 0;
+	line-height: 1.3rem;
+	font-weight: 700;
+	font-size: 14px;
 }
