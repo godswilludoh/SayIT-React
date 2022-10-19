@@ -1,5 +1,5 @@
 .overallContainer {
-	padding-top: 30px;
+	padding-top: 4rem;
 	display: flex;
 	height: 100vh;
 	overflow: hidden;
@@ -9,6 +9,7 @@
 	flex: 2;
 	max-width: 50%;
 	background: #dc6b36;
+	text-align: center;
 }
 
 .innerContainer {
@@ -18,8 +19,8 @@
 }
 
 .agentTitle {
-	padding-top: 1rem;
-	font-size: 17px;
+	padding-top: 5rem;
+	font-size: 18px;
 }
 
 form {
@@ -88,10 +89,10 @@ footer {
 }
 
 .logInButton {
-	height: 60px;
-	border-radius: 2rem;
+	padding: 15px;
+	border-radius: 25px;
 	border: none;
-	width: 100%;
+	width: 50%;
 	background: #fff;
 	color: #ed4d02;
 	font-size: 18px;

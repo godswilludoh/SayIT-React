@@ -1,13 +1,14 @@
 import React from 'react';
 import Footer from '../../../components/footer/Footer';
 import './AgentsLogin.css';
+import styles from './button.module.css';
 
 const AgentsLogin = () => {
 	return (
-		<section className='overallContainer'>
-			<section className='theLoginSide'>
+		<section className={styles.overallContainer}>
+			<section className={styles.theLoginSide}>
 				<div className='innerContainer'>
-					<h3 className='agentTitle'>AGENT LOGIN</h3>
+					<h3 className={styles.agentTitle}>AGENT LOGIN</h3>
 					<form id='agent-form'>
 						{/*FIELD FOR THE AGENT ID */}
 						<div className='formGroup'>
@@ -49,16 +50,13 @@ const AgentsLogin = () => {
 								required
 							/>
 						</div>
-						{/*FIELD FOR SUBMIT*/}
-						<button type='submit' className='logInButton'>
-							LOGIN
-						</button>
 					</form>
-					<Footer />
+					<button className='logInButton'>LOGIN</button>
+					{/* <Footer /> */}
 				</div>
 			</section>
 			<section className='theImageSide'>
-				<img src='/assets/SAYIT.jpeg' alt='sayITimage' width='550px' />
+				<img src='/assets/SAYIT-removebg.png' alt='sayITimage' width='550px' />
 			</section>
 		</section>
 	);

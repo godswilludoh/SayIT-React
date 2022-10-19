@@ -13,7 +13,7 @@ const LoginForm = () => {
 				placeholder='Password'
 			/>
 
-			<Button />
+			<Button type='submit' id='button' text='LOGIN' />
 		</form>
 	);
 };

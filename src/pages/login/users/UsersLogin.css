@@ -3,14 +3,15 @@ header {
 	flex-direction: row-reverse;
 	justify-content: space-around;
 	align-items: center;
-	padding: 10rem 0 1rem 0;
+	padding: 8rem 0 1rem 0;
 }
 
 .login-heading {
 	font-weight: 900;
-	font-size: 20px;
+	font-size: 17px;
 	text-align: center;
 	color: #ed4d02;
+	margin-bottom: 3rem;
 }
 
 form {
@@ -22,9 +23,8 @@ form {
 
 .input {
 	border-radius: 2rem;
-	padding: 0.8rem;
+	padding: 1.2rem;
 	width: 25rem;
-	height: 60px;
 	border: 1px solid #ed4d02;
 	outline: none;
 	display: inline;
@@ -48,6 +48,7 @@ input[type='password'] {
 
 input::placeholder {
 	color: #000000;
+	padding-top: 1rem;
 }
 
 /* styling for the additional links */
@@ -57,18 +58,24 @@ a {
 }
 
 #admin-login {
-	color: darkgray;
+	color: #a9a9a9;
 }
 
 .other_links {
 	text-align: center;
 	padding: 10px 0;
-	line-height: 2rem;
-	font-weight: bold;
+	line-height: 1rem;
+	font-weight: 700;
 }
 
 .other_links #sign-up a {
 	color: #ed4d02;
+	padding-left: 15px;
+}
+
+.other_links #sign-up a:hover {
+	color: #b13800;
+	text-decoration: underline;
 }
 
 .admin-login {
@@ -77,4 +84,9 @@ a {
 	justify-content: center;
 	align-items: center;
 	padding: 40px 0 20px 0;
+}
+
+#admin-login:hover {
+	text-decoration: underline;
+	color: #8f8f8f;
 }
