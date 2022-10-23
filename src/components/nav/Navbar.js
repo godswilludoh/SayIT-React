@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
 			{/* <input type='checkbox' id='click' /> */}
 			<ul className='navLinkWrapper'>
 				<Link to='/'>HOME</Link>
-				<Link to='/whyUs'>WHY US</Link>
+				<Link to='#whyUs'>WHY US</Link>
 				<Link to='/report'>REPORT</Link>
 				<Link to='/blog'>BLOG</Link>
 				<Link id='active' to='login'>
