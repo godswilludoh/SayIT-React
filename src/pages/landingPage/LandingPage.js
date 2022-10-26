@@ -11,16 +11,16 @@ import Footer from "../../components/footerLandingPage/FooterLandingPage";
 const LandingPage = () => {
   return (
     <>
-	  <HeroSection />
+      <HeroSection />
 
-	  <WhatwedoSection />
+      <WhatwedoSection />
 
-	  <HowitworksSection />
+      <HowitworksSection />
 
-	  <Faq />
+      <Faq />
 
-	  <WhyUS />
-	  
+      <WhyUS />
+
       <Footer />
     </>
   );

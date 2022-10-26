@@ -1,131 +1,129 @@
 /* Nav Bar Css starts here */
 nav {
-	/* margin-top: 20px; */
-	height: 80px;
-	display: flex;
-	justify-content: space-between;
-	background: #ffffff;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	position: fixed;
-	width: 100%;
+  /* margin-top: 20px; */
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
 }
 
 .logoLogoHeading {
-	display: flex;
-	margin-left: 75px;
-	color: #6e6660;
+  display: flex;
+  margin-left: 75px;
+  color: #6e6660;
 }
 
 .IT {
-	color: #ed4d02;
+  color: #ed4d02;
 }
 
 .logoHeading {
-	padding-top: 20px;
-	font-size: 26px;
-	font-weight: 700;
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .navLinkWrapper {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-right: 75px;
-	margin-bottom: 5px;
-	gap: 2rem;
-	font-weight: 700;
-	color: #ed4d02;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 75px;
+  margin-bottom: 5px;
+  gap: 2rem;
+  font-weight: 700;
+  color: #ed4d02;
 }
 
 .navLinkWrapper {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	margin-right: 75px;
-	margin-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 75px;
+  margin-bottom: 5px;
 }
 
 .navLinkWrapper li {
-	text-decoration: none;
-	padding: 10px;
-	list-style: none;
+  text-decoration: none;
+  padding: 10px;
+  list-style: none;
 }
 
 nav .navLinkWrapper a {
-	border-radius: 5px;
-	font-size: 16px;
-	padding: 10px;
-	color: #ed4d02;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  color: #ed4d02;
 }
 
 nav .navLinkWrapper a:hover,
 nav .navLinkWrapper a#active {
-	background-color: #ed4d02;
-	color: #ffff;
+  background-color: #ed4d02;
+  color: #ffff;
 }
-
-
 
 /*For the removing the Id click from the background */
 #click {
-	display: none;
+  display: none;
 }
 
 /* for the collapse menu button */
-nav .menu_button i {
-	color: #ed4d02;
-	font-size: 25px;
-	cursor: pointer;
-	display: none;
+nav .menu_button #menuBar{
+  color: #ed4d02;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
 }
 
 /* RESPONSIVE DESIGN FOR NAV BAR IS HERE */
 /* Working on the mobile responsiveness screen 940 and below */
 @media (max-width: 940px) {
-	.logoLogoHeading {
-		display: flex;
-		margin-left: 15px;
-	}
+  .logoLogoHeading {
+    display: flex;
+    margin-left: 15px;
+  }
 
-	nav .menu_button {
-		margin-top: 20px;
-		margin-right: 20px;
-	}
+  nav .menu_button {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
 
-	nav .menu_button i {
-		display: block;
-	}
+  nav .menu_button #menuBar {
+    display: block;
+  }
 
-	nav .navLinkWrapper {
-		position: fixed;
-		top: 80px;
-		left: -100%;
-		background: #111;
-		height: 100vh;
-		width: 100%;
-		display: block;
-		text-align: center;
-		transition: all 0.3s ease;
-	}
+  nav .navLinkWrapper {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
 
-	/* For the Id integration with the hamburger, remeber we change left from 0 to -100% in the nav ul*/
-	#click:checked ~ .navLinkWrapper {
-		left: 0%;
-	}
+  /* For the Id integration with the hamburger, remeber we change left from 0 to -100% in the nav ul*/
+  #click:checked ~ .navLinkWrapper {
+    left: 0%;
+  }
 
-	nav .navLinkWrapper li {
-		margin: 40px 0;
-	}
+  nav .navLinkWrapper li {
+    margin: 40px 0;
+  }
 
-	nav .navLinkWrapper li a {
-		font-size: 20px;
-		display: block;
-	}
+  nav .navLinkWrapper li a {
+    font-size: 20px;
+    display: block;
+  }
 
-	nav .navLinkWrapper li a.active,
-	nav .navLinkWrapper li a:hover {
-		background: none;
-		color: #ed4d02;
-	}
+  nav .navLinkWrapper li a.active,
+  nav .navLinkWrapper li a:hover {
+    background: none;
+    color: #ed4d02;
+  }
 }
 /* RESPONSIVE DESIGN FOR NAV BAR ENDS HERE */
