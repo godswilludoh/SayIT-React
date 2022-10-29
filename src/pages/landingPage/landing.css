@@ -408,6 +408,10 @@
 	.imageForMan {
 		display: none;
 	}
+
+	.stepbyStepApproachContainer {
+		width: 100%
+	}
 }
 
 /* MEDia QUERY FOR HOW IT WORKS SECTION */
@@ -419,5 +423,10 @@
 	.image {
 		display: none;
 	}
+
+	.stepbyStepApproachContainer {
+		width: 100%
+	}
+	
 }
 /* MEDIA QUERY FOR HOW IT WORKS SECTION ENDS HERE */

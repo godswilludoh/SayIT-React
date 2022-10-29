@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = () => {
 	return (
@@ -20,7 +23,8 @@ const Navbar = () => {
 				</h1>
 			</section>
 			<label htmlFor='click' className='menu_button'>
-				<i className='fas fa-bars' />
+				{/* <i className='fas fa-bars' /> */}
+				<FontAwesomeIcon id='menuBar' icon = {faBars}/>
 			</label>
 			{/* <input type='checkbox' id='click' /> */}
 			<ul className='navLinkWrapper'>
@@ -37,3 +41,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
