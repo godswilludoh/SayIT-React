@@ -8,6 +8,8 @@ import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
 import AgentsLogin from './pages/login/agents/AgentsLogin';
+import AgentDashBoard  from './pages/agentDashboard/AgentDashBoard';
+
 
 function App() {
 	return (
@@ -21,6 +23,7 @@ function App() {
 				<Route path='login' element={<UsersLogin />} />
 				<Route path='admin' element={<AdminLogin />} />
 				<Route path='agents' element={<AgentsLogin />} />
+				<Route path='agentDashboard' element={<AgentDashBoard/>} />	
 			</Routes>
 		</>
 	);

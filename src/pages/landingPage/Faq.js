@@ -1,5 +1,7 @@
 import React from "react";
 
+// import "../landingPage/Landing.css"
+
 const Faq = () => {
   return (
     <section className="frequentlyAskedQuestion">
