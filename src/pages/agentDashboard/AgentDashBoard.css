@@ -1,0 +1,650 @@
+
+/*Main container*/
+.main-container {
+  display: flex;
+}
+
+/* Sidebar CSS*/
+/* .sidebar-container {
+  width: 230px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-right: 0.5px solid #b4b1af;
+  position: fixed;
+}
+
+.sidebar-container .logo {
+  display: flex;
+  align-items: center;
+  padding: 30px 0 0 30px;
+  margin-right: 15px;
+}
+
+.sidebar-container img {
+  width: 50px;
+}
+
+.heading {
+  color: #6e6660;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.it {
+  color: #ed4d02;
+}
+
+.sidebar-lists {
+  margin: 4rem 1rem;
+}
+
+.sidebar-lists li {
+  list-style: none;
+  padding: 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-lists li:hover {
+  cursor: pointer;
+  background: rgba(153, 157, 173, 0.22);
+}
+
+.sidebar-items {
+  border: 1px solid #b4b1af;
+  background: rgba(217, 217, 217, 0.12);
+  border-radius: 8px;
+}
+
+.sidebar-icons {
+  margin: 0.2rem 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  align-self: center;
+  gap: 2.5rem;
+}
+
+.sidebar-lists li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sidebar-lists li .dropdown-menu {
+  display: none;
+}
+ */
+
+/* button {
+  display: block;
+  padding: 8px 20px;
+  position: absolute;
+  bottom: 0;
+} */
+
+/* .btn {
+  border: 1px solid #b4b1af;
+  background: rgba(217, 217, 217, 0.12);
+  border-radius: 8px;
+  margin: 4rem 1rem;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(153, 157, 173, 0.22);
+} */
+
+/* Dashboard Interface */
+
+.dashboard-interface {
+  width: 100%;
+  padding: 30px;
+  /* margin: 0 5rem; */
+  background: #d9d9d9;
+  margin-left: 14rem;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-display {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.time {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-left: 430px;
+}
+
+.time-one {
+  background: rgba(237, 77, 2, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 10px;
+  width: 92px;
+  height: 42px;
+}
+
+.time-two {
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 10px;
+  width: 150px;
+  height: 42px;
+}
+
+.dashboard-container {
+  margin: 2rem auto;
+}
+
+.registeredAgencyName {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.forTheAgentID {
+  font-weight: 700;
+}
+
+#containerHousingTheTableData {
+  margin-top: 80px;
+  border-radius: 10px;
+  padding: 5px 30px 50px 30px;
+  background-color: rgba(110, 102, 96, 0.3);
+}
+
+.user-table {
+  margin: 4rem auto;
+}
+
+.report-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profileImageInputField {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: 2px solid #606163;
+  border-radius: 5px;
+}
+
+.tableSearchOption[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #f5f5f5;
+}
+
+::placeholder {
+  color: #000000;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 4rem 0 6rem 0;
+}
+
+td,
+th {
+  border: 1px solid #d9d9d9;
+  text-align: left;
+  padding: 20px;
+}
+
+th {
+  background-color: #60616e;
+  color: #ffffff;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(110, 102, 96, 0.3);
+}
+
+.toViewMoreLinke {
+  padding: 5px;
+  background: #ed4d02;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.toViewMoreLinke:hover {
+  background-color: #ce5707;
+  opacity: 1;
+}
+
+.forTheDeleteButton {
+  padding: 5px;
+  background: #ed4d02;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tableSelect {
+  width: 90%;
+  height: 2rem;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  border-color: #000000;
+  border: 1px solid #d9d9d9;
+  padding-left: 20px;
+}
+
+.report-button {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ed4d02;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.report-button:hover {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ce5707;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.forTheUpdateAndDownloadButton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* CSS FOR THE CARDS METRICS START HERE */
+
+.metricCardContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.coverForEachCard {
+  border: 1px solid #f5f5f5;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+  width: 250px;
+  height: 124px;
+  padding: 10px 5px 10px 5px;
+}
+
+.forCardWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b4b1af;
+  padding: 15px 0;
+}
+
+.cardWording {
+  font-weight: 700;
+  font-size: 13px;
+  color: #60616e;
+}
+
+.otherCardWording {
+  /* margin-bottom: 12px; */
+  text-decoration: none;
+  font-size: 13px;
+  color: #ed4d02;
+  font-weight: 700;
+}
+
+.theMetricItself {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.forNotificationButton {
+  background-color: rgba(0, 0, 0, 0.25);
+  /* background-color: rgba(142, 157, 198, 0.1); */
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  width: 201px;
+  margin-bottom: 25px;
+}
+
+#messageLink {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+}
+
+#printReport {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.forPrintButton {
+  background-color: #ed4d02;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  width: 201px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+}
+/* CSS FOR THE CARDS METRICS ENDS HERE */
+
+/* CSS FOR THE PROFILE IMAGE */
+#imageUpload {
+  display: none;
+}
+
+#profile-container #profileImage {
+  cursor: pointer;
+}
+
+#profile-container {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#profile-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.forTheprofileImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* CSS FOR THE PROFILE IMAGE ENDS HERE*/
+
+.user-table {
+  margin: 0.1rem;
+  padding: 0.1rem;
+}
+
+/* ################################### */
+/* CSS FOR THE POP MODAL STRATS HERE */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #B4B1AF;
+  padding: 1rem 1.5rem;
+  /* width: 24rem; */
+  width: 70%;
+  height: 90%;
+  border-radius: 0.5rem;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+/* ################################### */
+/* CSS FOR THE POP MODAL CONTENT STRATS HERE */
+
+.reportHeadingContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 1.5rem; */
+  margin-bottom: 2.3rem;
+}
+
+.reportHeading, .reportID{
+  font-weight: 700;
+}
+
+.sourceAndDateReported{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group{
+  margin-bottom: 0.5rem;
+}
+
+
+.form-group .InputField{
+  margin-top: 10px;
+  padding: 10px 10px 10px 5px;
+  border:  red;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+
+.form-group label{
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.form-group textarea {
+  border: 1px solid #19100f;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  resize: none;
+  height: 220px;
+  margin-bottom: 0px;
+}
+
+.viewFileButtonContainer{
+  margin-top: 5px;
+}
+
+.formButton{
+  text-decoration: none;
+  padding: 5px;
+  background-color: #ed4d02;
+  color: #fff;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+/* Popup card modal */
+/* #popup-container {
+  z-index: 2;
+  background-color: rgba(110, 102, 96, 0.3);
+}
+
+.popup {
+  background-color: #6e6660;
+  width: 600px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 50px 100px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup {
+  visibility: visible;
+  top: 100%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#paraOne {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.623);
+  margin-bottom: 5px;
+}
+
+#paraTwo {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  color: rgba(237, 76, 2, 0.534);
+  margin-bottom: 5px;
+}
+
+#paraThree {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+#paraFour {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.623);
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.dashBoardBtn a {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  background: rgba(237, 77, 2, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 80px;
+}
+
+#dashBoardBtn a:hover {
+  background-color: rgba(237, 77, 2, 0.7);
+  font-size: 19px;
+}
+
+@media (max-width: 940px) {
+  .popup {
+    width: 400px;
+    padding: 30px 40px;
+   
+    
+  }
+  #paraOne {
+    font-size: 14px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+
+  #paraTwo {
+    font-size: 20px;
+    line-height: 25px;
+  
+   
+ }
+ #paraThree {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 8px;
+}
+
+#paraFour {
+  font-size: 14px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.623);
+  margin-top: 5px;
+  margin-bottom: 15px;
+ 
+
+  }
+    .dashBoardBtn a {
+    padding: 15px 50px;
+    font-size: 15px;
+  }
+} 
+.btn{
+  background-color: #fff;
+  border: 1px solid #B4B1AF;
+  border-radius: 5px;
+  margin: 4rem 3rem 1.5rem 3rem;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+} */
