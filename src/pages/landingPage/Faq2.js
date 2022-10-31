@@ -40,10 +40,10 @@ export default function Example() {
 
         <section className="containerHousingAccordion">
           <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-            <AccordionHeader onClick={() => handleOpen(1)}>
+            <AccordionHeader className="accordionHeader" onClick={() => handleOpen(1)}>
               WHY SHOULD I USE SayIT?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="accordionBody">
               This website uses state of the art security software to anonymize
               your internet connection as you submit files or correspond with
               reporters. This way your identity is protected both from the
@@ -52,10 +52,10 @@ export default function Example() {
             </AccordionBody>
           </Accordion>
           <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-            <AccordionHeader onClick={() => handleOpen(2)}>
+            <AccordionHeader className="accordionHeader" onClick={() => handleOpen(2)}>
               DOES SUBMISSION INVOLVES DANGER?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="accordionBody">
               Sharing confidential information is never without risk. SayIT will
               try, as much as possible, to protect your communication and to
               provide information about the risks. The system makes finding the
@@ -65,10 +65,10 @@ export default function Example() {
             </AccordionBody>
           </Accordion>
           <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-            <AccordionHeader onClick={() => handleOpen(3)}>
+            <AccordionHeader className="accordionHeader" onClick={() => handleOpen(3)}>
               HOW ARE AGENTS SELECTED?
             </AccordionHeader>
-            <AccordionBody>
+            <AccordionBody className="accordionBody">
               Sharing confidential information is never without risk. SayIT will
               try, as much as possible, to protect your communication and to
               provide information about the risks. The system makes finding the

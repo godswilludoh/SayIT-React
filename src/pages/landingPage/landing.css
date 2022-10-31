@@ -461,3 +461,22 @@ Style
 		display: block;
 	} */
 }
+
+.accordionHeader {
+	padding: 15px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #544c44;
+	background-color: #ecedf8;
+	border: none;
+}
+
+.accordionHeader:hover {
+	background-color: #cccccc;
+}
+
+.accordionBody {
+	padding: 15px;
+	padding-bottom: 25px;
+	text-align: justify;
+}
