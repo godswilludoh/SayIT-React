@@ -174,8 +174,20 @@
 	margin-right: auto;
 }
 
-Style the buttons that are used to open and close the accordion panel
-.accordion {
+Style
+	the
+	buttons
+	that
+	are
+	used
+	to
+	open
+	and
+	close
+	the
+	accordion
+	panel
+	.accordion {
 	background-color: #1017ac14;
 	color: #444;
 	cursor: pointer;
@@ -411,7 +423,7 @@ Style the buttons that are used to open and close the accordion panel
 	}
 
 	.stepbyStepApproachContainer {
-		width: 100%
+		width: 100%;
 	}
 }
 
@@ -426,14 +438,12 @@ Style the buttons that are used to open and close the accordion panel
 	}
 
 	.stepbyStepApproachContainer {
-		width: 100%
+		width: 100%;
 	}
-	
 }
 /* MEDIA QUERY FOR HOW IT WORKS SECTION ENDS HERE */
 
-
-@media (max-width: 896){
+@media (max-width: 896) {
 	.hero-btn {
 		padding: 0.8rem 1.2rem;
 		font-weight: 700;
@@ -451,4 +461,3 @@ Style the buttons that are used to open and close the accordion panel
 		display: block;
 	} */
 }
-
