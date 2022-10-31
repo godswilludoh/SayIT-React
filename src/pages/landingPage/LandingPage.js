@@ -1,36 +1,35 @@
-import React from "react";
-import "./Landing.css";
-import { Link } from "react-router-dom";
-import HeroSection from "./HeroSection";
-import WhatwedoSection from "./WhatwedoSection";
-import HowitworksSection from "./HowitworksSection";
-import Faq from "./Faq";
-import WhyUS from "./WhyUS";
-import Footer from "../../components/footerLandingPage/FooterLandingPage";
-import Navbar from "../../components/nav/Navbar";
-import Example from "./Faq2";
-
+import React from 'react';
+import './Landing.css';
+import { Link } from 'react-router-dom';
+import HeroSection from './HeroSection';
+import WhatwedoSection from './WhatwedoSection';
+import HowitworksSection from './HowitworksSection';
+import Faq from './Faq';
+import WhyUS from './WhyUS';
+import Footer from '../../components/footerLandingPage/FooterLandingPage';
+import Navbar from '../../components/nav/Navbar';
+import Example from './Faq2';
 
 const LandingPage = () => {
-  return (
-    <>
-      <Navbar />
+	return (
+		<>
+			<Navbar />
 
-      <HeroSection />
+			<HeroSection />
 
-      <WhatwedoSection />
+			<WhatwedoSection />
 
-      <HowitworksSection />
+			<HowitworksSection />
 
-      {/* <Faq /> */}
+			{/* <Faq /> */}
 
-      <Example/>
+			<Example />
 
-      <WhyUS />
+			<WhyUS />
 
-      <Footer />
-    </>
-  );
+			<Footer />
+		</>
+	);
 };
 
 export default LandingPage;

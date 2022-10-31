@@ -1,63 +1,55 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-// import { HashLink } from 'react-router-hash-link';
-import { headerLinks } from '../../data/headerLinks';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-	const [show, setShow] = useState(false);
+	const [toggle, setToggle] = useState(false);
 
-	function mobileNavbar() {
-		setShow(!show);
-	}
+	const handleToggle = () => {
+		setToggle(!toggle);
+	};
 	return (
-		<nav>
-			<section className='logoLogoHeading'>
-				<Link to='/'>
-					<div className='sayITLogo'>
-						<img
-							src='/assets/SAYIT.jpeg'
-							height='80px'
-							width='100px'
-							alt='logo of the SayIT platform'
-						/>
-					</div>
-				</Link>
-
-				<h1 className='logoHeading'>
+		<nav className={toggle ? 'navbar expanded' : 'navbar'}>
+			<section className='headingLogo'>
+				<div className='sayITLogo'>
+					<img
+						src='/assets/SAYIT.jpeg'
+						height='80px'
+						width='100px'
+						alt='logo of the SayIT platform'
+					/>
+				</div>
+				<h1 className='headingText'>
 					Say<span className='IT'>IT</span>
 				</h1>
 			</section>
+			<div className='menu_button' onClick={handleToggle}>
+				{toggle ? (
+					<FontAwesomeIcon id='menuBar' icon={faClose} />
+				) : (
+					<FontAwesomeIcon id='menuBar' icon={faBars} />
+				)}
+			</div>
 
-			<ul className='navLinkWrapper'>
-				{headerLinks.map(({ id, link, text }) => {
-					return (
-						<li key={id}>
-							<NavLink
-								className={(navData) => (navData.isActive ? 'active' : '')}
-								to={link}
-							>
-								{text}
-							</NavLink>
-						</li>
-					);
-				})}
+			<ul className='links'>
+				<Link to='/'>
+					<li>HOME</li>
+				</Link>
+				<Link to='/whyUs'>
+					<li>WHY US</li>
+				</Link>
+				<Link to='/report'>
+					<li>REPORT</li>
+				</Link>
+				<Link to='/blog'>
+					<li>BLOG</li>
+				</Link>
+				<Link id='active' to='login'>
+					SIGN IN
+				</Link>
 			</ul>
-			<div className='navLinkWrapper'>
-				<button>
-					<Link id='active' to='/login'>
-						SIGN IN
-					</Link>
-				</button>
-			</div>
-			<div className='menu_button' onClick={mobileNavbar}>
-				<div className={show ? 'hide' : 'start'} />
-				<div className={show ? 'hide' : 'mid'} />
-				<div className={show ? 'hide' : 'end'} />
-				
-			</div>
 		</nav>
 	);
 };
