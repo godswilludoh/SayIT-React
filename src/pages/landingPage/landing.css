@@ -174,8 +174,20 @@
 	margin-right: auto;
 }
 
-Style the buttons that are used to open and close the accordion panel
-.accordion {
+Style
+	the
+	buttons
+	that
+	are
+	used
+	to
+	open
+	and
+	close
+	the
+	accordion
+	panel
+	.accordion {
 	background-color: #1017ac14;
 	color: #444;
 	cursor: pointer;
@@ -411,7 +423,7 @@ Style the buttons that are used to open and close the accordion panel
 	}
 
 	.stepbyStepApproachContainer {
-		width: 100%
+		width: 100%;
 	}
 }
 
@@ -426,14 +438,12 @@ Style the buttons that are used to open and close the accordion panel
 	}
 
 	.stepbyStepApproachContainer {
-		width: 100%
+		width: 100%;
 	}
-	
 }
 /* MEDIA QUERY FOR HOW IT WORKS SECTION ENDS HERE */
 
-
-@media (max-width: 896){
+@media (max-width: 896) {
 	.hero-btn {
 		padding: 0.8rem 1.2rem;
 		font-weight: 700;
@@ -452,22 +462,21 @@ Style the buttons that are used to open and close the accordion panel
 	} */
 }
 
-.accordionHeader{
+.accordionHeader {
 	padding: 15px;
 	font-weight: 700;
 	font-size: 14px;
-	color: #544C44;
+	color: #544c44;
 	background-color: #ecedf8;
 	border: none;
 }
 
-.accordionHeader:hover{
+.accordionHeader:hover {
 	background-color: #cccccc;
 }
 
-.accordionBody{
+.accordionBody {
 	padding: 15px;
 	padding-bottom: 25px;
 	text-align: justify;
-	
 }

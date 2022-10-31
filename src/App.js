@@ -1,16 +1,15 @@
 import './App.css';
 import Navbar from './components/nav/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage/landingPage';
+import LandingPage from './pages/landingPage/LandingPage';
 import Report from './pages/report/Report';
 import CreateAccount from './pages/createAccount/CreateAccount';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
 import AgentsLogin from './pages/login/agents/AgentsLogin';
-import AgentDashBoard  from './pages/agentDashboard/AgentDashBoard';
+import AgentDashBoard from './pages/agentDashboard/AgentDashBoard';
 import Admindash from './pages/AdminDashboard/AdminDash';
-
 
 function App() {
 	return (
@@ -24,8 +23,8 @@ function App() {
 				<Route path='login' element={<UsersLogin />} />
 				<Route path='admin' element={<AdminLogin />} />
 				<Route path='agents' element={<AgentsLogin />} />
-				<Route path='agentDashboard' element={<AgentDashBoard/>} />	
-				<Route path='adminDashboard' element={<Admindash/>} />	
+				<Route path='agentDashboard' element={<AgentDashBoard />} />
+				<Route path='adminDashboard' element={<Admindash />} />
 			</Routes>
 		</>
 	);

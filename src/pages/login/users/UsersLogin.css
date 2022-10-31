@@ -90,3 +90,78 @@ a {
 	text-decoration: underline;
 	color: #8f8f8f;
 }
+
+/* RESPONSIVE DESIGN */
+/* Working on the mobile responsiveness screen 940 and below */
+@media (max-width: 940px) {
+	.logoLogoHeading {
+		display: flex;
+		margin-left: 15px;
+	}
+
+	nav .menu_button {
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	nav .menu_button i {
+		display: block;
+	}
+
+	nav .navLinkWrapper {
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		background: #111;
+		height: 100vh;
+		width: 100%;
+		display: block;
+		text-align: center;
+		transition: all 0.3s ease;
+	}
+
+	/* For the Id integration with the hamburger, remeber we change left from 0 to -100% in the nav ul*/
+	#click:checked ~ .navLinkWrapper {
+		left: 0%;
+	}
+
+	nav .navLinkWrapper li {
+		margin: 40px 0;
+	}
+
+	nav .navLinkWrapper li a {
+		font-size: 20px;
+		display: block;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		padding: 8rem;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		padding: 1rem;
+	}
+
+	.input {
+		border-radius: 1rem;
+		padding: 0.8rem;
+		width: 20rem;
+		border: 1px solid #ed4d02;
+	}
+
+	input {
+		width: 15rem;
+	}
+}
+
+/* Eye icon styling */
+.fa-eye {
+	cursor: pointer;
+}
