@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
+	const [toggle, setToggle] = useState(false);
+
+	const handleToggle = () => {
+		setToggle(!toggle);
+	};
 	return (
-		<nav>
-			<section className='logoLogoHeading'>
+		<nav className={toggle ? 'navbar expanded' : 'navbar'}>
+			<section className='headingLogo'>
 				<div className='sayITLogo'>
 					<img
 						src='/assets/SAYIT.jpeg'
@@ -14,19 +21,31 @@ const Navbar = () => {
 						alt='logo of the SayIT platform'
 					/>
 				</div>
-				<h1 className='logoHeading'>
+				<h1 className='headingText'>
 					Say<span className='IT'>IT</span>
 				</h1>
 			</section>
-			<label htmlFor='click' className='menu_button'>
-				<i className='fas fa-bars' />
-			</label>
-			{/* <input type='checkbox' id='click' /> */}
-			<ul className='navLinkWrapper'>
-				<Link to='/'>HOME</Link>
-				<Link to='/whyUs'>WHY US</Link>
-				<Link to='/report'>REPORT</Link>
-				<Link to='/blog'>BLOG</Link>
+			<div className='menu_button' onClick={handleToggle}>
+				{toggle ? (
+					<FontAwesomeIcon id='menuBar' icon={faClose} />
+				) : (
+					<FontAwesomeIcon id='menuBar' icon={faBars} />
+				)}
+			</div>
+
+			<ul className='links'>
+				<Link to='/'>
+					<li>HOME</li>
+				</Link>
+				<Link to='/whyUs'>
+					<li>WHY US</li>
+				</Link>
+				<Link to='/report'>
+					<li>REPORT</li>
+				</Link>
+				<Link to='/blog'>
+					<li>BLOG</li>
+				</Link>
 				<Link id='active' to='login'>
 					SIGN IN
 				</Link>

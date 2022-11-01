@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../../components/footer/Footer';
 import './AgentsLogin.css';
 import styles from './button.module.css';
 

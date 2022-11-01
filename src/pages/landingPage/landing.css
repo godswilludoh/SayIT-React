@@ -6,7 +6,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 744px;
+	height: 944px;
 	transition: 0.3s ease;
 	display: flex;
 	justify-content: center;
@@ -68,6 +68,7 @@
 
 .whatWedo .whatWeDoParagraph {
 	text-align: center;
+	/* text-align: justify; */
 	font-weight: 700;
 	font-size: 17px;
 	line-height: 1.8rem;
@@ -78,7 +79,7 @@
 	margin-top: 20px;
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 15px;
 }
 
 .whatWedoButton .btn {
@@ -173,8 +174,20 @@
 	margin-right: auto;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
+Style
+	the
+	buttons
+	that
+	are
+	used
+	to
+	open
+	and
+	close
+	the
+	accordion
+	panel
+	.accordion {
 	background-color: #1017ac14;
 	color: #444;
 	cursor: pointer;
@@ -274,7 +287,7 @@
 
 /* WHY US SECTION */
 #whyUs {
-	margin-top: 50px;
+	margin-top: 30px;
 	background: #f0f0ef;
 	min-height: 80vh;
 	padding: 5px 0 20px 0;
@@ -285,8 +298,8 @@
 	font-weight: 800;
 	color: #ed4d02;
 	text-align: center;
-	margin-top: 100px;
-	margin-bottom: 80px;
+	margin-top: 80px;
+	margin-bottom: 50px;
 }
 
 #flexContainerWorks {
@@ -408,6 +421,10 @@
 	.imageForMan {
 		display: none;
 	}
+
+	.stepbyStepApproachContainer {
+		width: 100%;
+	}
 }
 
 /* MEDia QUERY FOR HOW IT WORKS SECTION */
@@ -419,5 +436,47 @@
 	.image {
 		display: none;
 	}
+
+	.stepbyStepApproachContainer {
+		width: 100%;
+	}
 }
 /* MEDIA QUERY FOR HOW IT WORKS SECTION ENDS HERE */
+
+@media (max-width: 896) {
+	.hero-btn {
+		padding: 0.8rem 1.2rem;
+		font-weight: 700;
+		text-align: center;
+		text-decoration: none;
+		color: #ed4d02;
+		background: #ffffff;
+		border: 2px solid #ed4d02;
+		width: 50%;
+		height: 100px;
+		border-radius: 7.5px;
+	}
+
+	/* .footer_section{
+		display: block;
+	} */
+}
+
+.accordionHeader {
+	padding: 15px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #544c44;
+	background-color: #ecedf8;
+	border: none;
+}
+
+.accordionHeader:hover {
+	background-color: #cccccc;
+}
+
+.accordionBody {
+	padding: 15px;
+	padding-bottom: 25px;
+	text-align: justify;
+}
