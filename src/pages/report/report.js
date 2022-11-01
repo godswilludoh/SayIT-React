@@ -1,7 +1,7 @@
 import React from 'react';
-import './Report.css';
+import './report.css';
 
-const report = () => {
+export const Report = () => {
 	return (
 		<>
 			<main>
@@ -139,5 +139,3 @@ const report = () => {
 		</>
 	);
 };
-
-export default report;
