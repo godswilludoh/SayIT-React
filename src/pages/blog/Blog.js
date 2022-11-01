@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './Blog.css'
 // import './Navbar.css'
@@ -53,9 +53,9 @@ const Blog = () => {
 		<Blogsearch/>
 		
 
-		<Footer />
-	</React.Fragment>
-	)
+			<Footer />
+		</>
+	);
 };
 
 export default Blog;

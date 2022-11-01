@@ -6,12 +6,17 @@ export const headerLinks = [
 	},
 	{
 		id: 1,
+		link: '#why-us',
+		text: 'WHY US',
+	},
+	{
+		id: 2,
 		link: '/report',
-		text: 'Report',
+		text: 'REPORT',
 	},
 
 	{
-		id: 2,
+		id: 3,
 		link: '/blog',
 		text: 'BLOG',
 	},
