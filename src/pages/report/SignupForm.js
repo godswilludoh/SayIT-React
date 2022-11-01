@@ -75,11 +75,12 @@ export const SignupForm = () => {
         //   .required('Required'),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          // setTimeout(() => {
-          //   alert(JSON.stringify(values, null, 2));
-          //   setSubmitting(false);
-          // }, 400);
-          console.log(Formik);
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+          // console.log("values");
+          // alert("values");
         }}
       >
         
@@ -181,7 +182,7 @@ export const SignupForm = () => {
             <button 
             type="submit" 
             id="myBtn" 
-            disabled={!Formik.isSubmitting}>Submit</button>
+            disabled={Formik.isSubmitting}>Submit</button>
 
         </Form>
       </div>
