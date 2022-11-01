@@ -4,55 +4,57 @@
 /*Main container*/
 .main-container {
   display: flex;
+  /* overflow: none; */
 }
 
+
 /* Sidebar CSS*/
-.sidebar-container {
+/* .sidebar-container {
   width: 230px;
   min-height: 100vh;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-right: .5px solid #B4B1AF;
   position: fixed;
-}
+} */
 
-.sidebar-container .logo {
+/* .sidebar-container .logo {
   display: flex;
   align-items: center;
   padding: 30px 0 0 30px;
   margin-right: 15px;
-}
+} */
 
-.sidebar-container img {
+/* .sidebar-container img {
   width: 50px;
-}
+} */
 
-.heading {
+/* .heading {
   color: #6E6660;
   font-size: 25px;
   font-weight: 700;
-}
+} */
 
-.it {
+/* .it {
   color: #ED4D02
-}
+} */
 
-.sidebar-lists {
+/* .sidebar-lists {
   margin: 4rem 1rem;
-}
+} */
 
-.sidebar-lists li {
+/* .sidebar-lists li {
   list-style: none;
   padding: 8px 0;
   margin-bottom: 1.5rem;
-}
+} */
 
-.sidebar-lists li:hover {
+/* .sidebar-lists li:hover {
   cursor: pointer;
   background: rgba(153, 157, 173, 0.22);
-}
+} */
 
-.sidebar-items {
+/* .sidebar-items {
   border: 1px solid #B4B1AF;
   background: rgba(217, 217, 217, 0.12);
   border-radius: 8px;
@@ -72,16 +74,16 @@
   color: #000000;
   font-size: 13px;
   font-weight: 500;
-}
+} */
 
-.sidebar-lists li .dropdown-menu {
+/* .sidebar-lists li .dropdown-menu {
   display: none;
 }
 
 .sidebar-lists li:hover .dropdown-menu {
   display: block;
   margin: 1rem .5rem;
-}
+} */
 /* DON'T FORGET TO STYLE THIS IN RELATIVE TO THE DASHBOARD ONLY(THEO) */
 /* button {
   display: block;
@@ -111,34 +113,70 @@
 ul{ 
     list-style-type: none; 
 }
+
+.topAdmin{
+  background-color: #B4B1AF;
+  margin: 0rem 0rem 0rem 14rem;
+  padding-top: 10px;
+  width: 85%;
+  height: 100vh;
+  /* height: 820px; */
+  justify-content: space-evenly; 
+  
+}
 .admin_Dash_Nav{
   height: 60px;
   display: flex;
-  justify-content: space-between;
-  background: #f2f2ed;
+  justify-content: space-around;
+  background: #fefaf7;
   border-radius: 5px;
-  width: 70rem;
-  margin-top: 30px;
-  margin-left: 60px
-}
+  width: 90%;
+  
+  /* margin-top: 10px; */
+  margin: 15px 0px 0px 60px
+  
+ }
 
 #adminBar{
-    margin-top: 5px;
-    margin-right: 10px;
-    color: #ED4D02;
+     margin-top: 5px;
 }
 #dashBar{
-    margin-top: 5px;
-    margin-left: 5px;
+    margin: 25px 0px 0px 0px;
+   /* margin-left: 5px; */
 }
+.time{
+  display: flex;
+  gap: 2rem;
+  align-content: flex-end;
+  margin-top: 10px;
+  margin-right: 35px;
+} 
+
+.time-one{
+  background: rgba(237, 77, 2, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* text-align: center; */
+  padding-top: 10px; 
+  width: 92px;
+  height: 35px;
+}
+
+.time-two{
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* text-align: center; */
+  padding-top: 10px; 
+  width: 150px;
+  height: 35px;
+} 
 
 
 
 /* THE NOTIFICATION SECTION */
 .NotifyBar{
-    background-color: #efeaea;
-    margin: 40px 40px 60px 60px; 
-    height: 20rem; 
+    background-color: #fffffe;
+    margin: 60px 40px 60px 60px; 
+    height: 10rem; 
     width: 90%;
     border: 1px solid #000000;
     box-shadow:0px 5px 4px rgba(0, 0, 0, 0.25);
@@ -147,9 +185,6 @@ ul{
 }
 .Notify{
     margin: 20px 0px 10px 40px;
-    /* position: fixed; */
-    /* padding: 100px;
-    border: #B4B1AF; */
     
 }
 .Notifications{
@@ -184,23 +219,23 @@ ul{
     background: rgba(153, 157, 173, 0.22);
     border-radius: 5px;
 }
+
 /* THE REPORTS INTERFACE */
 .Report_Cards{
     display: flex;
-    margin-top: 40px;
-    justify-content: center 
+    margin-top: 50px;
+    justify-content: space-around; 
+    padding: 10px;
+    
     
 }
 #report_cards{
-    padding: 5px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    width: 50%;
-    height: 10%;
-    margin: 10px 30px 10px 60px;
-    
-    background-color:#ffffff;;
-    /* font-size: medium; */
+    /* width: 90%; */
+    height: 5%;
+    background-color:#ffffff;
     
 
 }
@@ -218,43 +253,6 @@ hr{
 margin-left: 150px;
 }
 
-.topAdmin{
-    background-color: #B4B1AF;
-    margin-left: 14rem;
-    width: 85%;
-    height: 820px;
-    justify-content: space-between;
-    align-items: center;
- 
-}
-
-.time{
-  display: flex;
-  gap: 2rem;
-  justify-content: right;
-  /* align-items: flex-end; */
-  align-content: flex-end;
-  margin-top: 10px;
-  margin-right: 35px;
-} 
-
-.time-one{
-  background: rgba(237, 77, 2, 0.7);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  padding-top: 10px; 
-  width: 92px;
-  height: 35px;
-}
-
-.time-two{
-  background: #D9D9D9;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  padding-top: 10px; 
-  width: 150px;
-  height: 35px;
-} 
 
 /* PROFILE IMAGE  */
 #imageUpload {
@@ -263,11 +261,13 @@ margin-left: 150px;
 
 #profile-container #profileImage {
   cursor: pointer;
+  
 }
 
 #profile-container {
   width: 50px;
   height: 50px;
+  /* margin-top: 10px; */
   overflow: hidden;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -282,15 +282,13 @@ margin-left: 150px;
 }
 
 .forTheprofileImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* gap: 15px; */
 }
 
-.forTheAgentID{
-  margin-right: 10px;
-}
+
 #profilename{
   margin-right: 10px;
 }
