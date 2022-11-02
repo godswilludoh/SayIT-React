@@ -11,6 +11,9 @@ const SignupForm = () => {
 	};
 
 	const validate = Yup.object({
+		firstName: Yup.string()
+			.max(15, 'Must be 15 characters or less')
+			.required('Required'),
 		email: Yup.string().email('Email is invalid').required('Email is Required'),
 		username: Yup.string()
 			.max(15, 'Must be 15 characters or less')
@@ -54,11 +57,10 @@ const SignupForm = () => {
 				}}
 			>
 				{(formik) => (
-					<form className='signup-form' id='form'>
-						<h1 className='my-4 font-weight-bold-display-4'>
-							CREATE YOUR ACCOUNT
-						</h1>
-						<Form>
+					<form className='' id=''>
+						<h4 className='mt-2 text-center display-6'>CREATE YOUR ACCOUNT</h4>
+						<Form className='signup-form'>
+							<TextField label='First Name' name='firstName' type='text' />
 							<TextField label='Email' name='email' type='email' />
 							<TextField label='Username' name='username' type='username' />
 							<TextField label='Phone Number' name='tel' type='tel' />
