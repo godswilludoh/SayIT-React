@@ -6,7 +6,7 @@ const MoreInfo = () => {
 		<div className='other_links'>
 			<p id='sign-up'>
 				Already have an Account?
-				<Link to='/signup' className='sign-up'>
+				<Link to='/login' className='sign-up'>
 					Log In
 				</Link>
 			</p>

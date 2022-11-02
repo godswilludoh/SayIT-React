@@ -8,7 +8,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 const AgentDashBoard = () => {
 	return (
 		<div className='main-container'>
-			<Sidebar />
+			{/* <Sidebar /> */}
 
 			<AgentDashBoardInterface />
 

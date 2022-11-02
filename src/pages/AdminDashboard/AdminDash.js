@@ -9,9 +9,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 const admindash = () => {
 	return (
 		<React.Fragment>
-			<div className='main-container'>
-				<Sidebar />
-			</div>
+			<div className='main-container'>{/* <Sidebar /> */}</div>
 
 			<div className='topAdmin'>
 				<ul className='admin_Dash_Nav'>
