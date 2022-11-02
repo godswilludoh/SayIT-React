@@ -12,7 +12,7 @@ import {MyTextArea} from "../../components/reportFormFields/MyTextArea";
 
 
 // And now we can use these
-export const SignupForm = () => {
+export const ReportForm = () => {
   return (
     <>
       <h1>SAYIT Report Form</h1>
