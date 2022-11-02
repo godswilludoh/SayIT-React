@@ -71,6 +71,7 @@ a {
 .other_links #sign-up a {
 	color: #ed4d02;
 	padding-left: 15px;
+	text-decoration: none;
 }
 
 .other_links #sign-up a:hover {
@@ -84,6 +85,10 @@ a {
 	justify-content: center;
 	align-items: center;
 	padding: 40px 0 20px 0;
+}
+
+#admin-login {
+	text-decoration: none;
 }
 
 #admin-login:hover {
