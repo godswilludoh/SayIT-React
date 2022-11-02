@@ -49,7 +49,7 @@ const Navbar = () => {
 				<Link to='/blog'>
 					<li>BLOG</li>
 				</Link>
-				<Link id='active' to='login'>
+				<Link id='active' to='/login'>
 					SIGN IN
 				</Link>
 			</ul>

@@ -6,6 +6,7 @@ import './Blog.css';
 // import './Navbar.css'
 import Footer from '../../components/footerLandingPage/FooterLandingPage';
 import Blogsearch from './Blogsearch';
+import Navbar from '../../components/nav/Navbar';
 
 // NAVBAR FOR JUST DE BLOG PAGE
 // export const BlogNavBar = () => {
@@ -46,6 +47,7 @@ const Blog = () => {
 	return (
 		<>
 			{/* <BlogNavBar /> */}
+			<Navbar />
 			<Blogsearch />
 
 			<Footer />
