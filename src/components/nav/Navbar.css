@@ -41,6 +41,8 @@
 	border-radius: 5px;
 	font-size: 16px;
 	padding: 10px;
+	text-decoration: none;
+	color: #ed4d02;
 }
 
 .navbar .links a:hover,

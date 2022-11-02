@@ -17,7 +17,7 @@ const Navbar = () => {
 					<div className='sayITLogo'>
 						<img
 							src='/assets/SAYIT.jpeg'
-							height='80px'
+							height='72px'
 							width='100px'
 							alt='logo of the SayIT platform'
 						/>
