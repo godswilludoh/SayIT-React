@@ -1,9 +1,11 @@
 import React from 'react';
+import Navbar from '../../components/nav/Navbar';
 import './Report.css';
 
 const report = () => {
 	return (
 		<>
+			<Navbar />
 			<main>
 				<div className='container'>
 					<form id='reportForm'>

@@ -1,7 +1,6 @@
 import './App.css';
-import Navbar from './components/nav/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage/LandingPage';
+import LandingPage from './pages/landingPage/LandingPage';
 import Report from './pages/report/Report';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
@@ -17,9 +16,9 @@ function App() {
 			<Routes>
 				<Route index element={<LandingPage />} />
 				<Route path='signup' element={<SignupAcc />} />
-				<Route path='report' element={<Report />} />
+				<Route path='/report' element={<Report />} />
 				<Route path='blog' element={<Blog />} />
-				<Route path='login' element={<UsersLogin />} />
+				<Route path='/login' element={<UsersLogin />} />
 				<Route path='admin' element={<AdminLogin />} />
 				<Route path='agents' element={<AgentsLogin />} />
 				<Route path='agentDashboard' element={<AgentDashBoard />} />
