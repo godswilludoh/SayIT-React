@@ -8,7 +8,7 @@ const TextField = ({ label, ...props }) => {
 		<div>
 			<label htmlFor={field.name}>{label}</label>
 			<input
-				className={`form-control shadow-none  ${
+				className={`form-control shadow-none border border-info ${
 					meta.touched && meta.error && 'is-invalid'
 				}`}
 				{...field}

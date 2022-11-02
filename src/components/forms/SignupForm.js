@@ -58,8 +58,10 @@ const SignupForm = () => {
 			>
 				{(formik) => (
 					<form className='' id=''>
-						<h4 className='mt-2 text-center display-6'>CREATE YOUR ACCOUNT</h4>
-						<Form className='signup-form'>
+						<h4 className='mt-2 text-center text-info'>
+							<strong>CREATE YOUR ACCOUNT</strong>
+						</h4>
+						<Form className='w-50'>
 							<TextField label='First Name' name='firstName' type='text' />
 							<TextField label='Email' name='email' type='email' />
 							<TextField label='Username' name='username' type='username' />
@@ -74,7 +76,7 @@ const SignupForm = () => {
 							<button
 								type='submit'
 								id='createAccount'
-								className='btn btn-dark mt-3'
+								className='btn mt-3 text-white bg-info btn-outline-info ml-0'
 								onClick={displaySignUpNotification}
 							>
 								Create Account
