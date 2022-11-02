@@ -1,21 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import "./AgentDashBoard.css";
-import AgentDashBoardModal from "./AgentDashBoardModal";
-import AgentDashBoardInterface from "./AgentDashBoardInterface";
+import './AgentDashBoard.css';
+import AgentDashBoardModal from './AgentDashBoardModal';
+import AgentDashBoardInterface from './AgentDashBoardInterface';
+import Sidebar from '../../components/sidebar/Sidebar';
 
 const AgentDashBoard = () => {
-  return (
+	return (
+		<div className='main-container'>
+			{/* <Sidebar /> */}
 
-    <div className="main-container">
-      {/* <SideNavSection/> */}
+			<AgentDashBoardInterface />
 
-      <AgentDashBoardInterface />
-
-      <AgentDashBoardModal />
-    </div>
-    
-  );
+			<AgentDashBoardModal />
+		</div>
+	);
 };
 
 export default AgentDashBoard;
