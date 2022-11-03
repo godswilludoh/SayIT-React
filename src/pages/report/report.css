@@ -13,8 +13,8 @@ main {
 	border-radius: 10px;
 }
 
-.container {
-	margin: 4rem auto;
+.report-container {
+	margin: 1rem auto;
 	padding: 1rem 5rem;
 	border: 3px solid #999dad38;
 	border-radius: 10px;
