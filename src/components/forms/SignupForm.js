@@ -75,7 +75,6 @@ const SignupForm = () => {
 							/>
 
 							<button
-								// type='submit'
 								id='createAccount'
 								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto'
 								onClick={displaySignUpNotification}

@@ -15,7 +15,11 @@ const SignupAcc = () => {
 						<SignupForm />
 					</div>
 					<div className='col-md-5 mt-5'>
-						<img className='img-fluid w-70 img-responsive d-block mx-auto' src={SignupImg} alt='signup img' />
+						<img
+							className='img-fluid w-70 img-responsive d-block mx-auto'
+							src={SignupImg}
+							alt='signup img'
+						/>
 					</div>
 				</div>
 			</div>
