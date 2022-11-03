@@ -282,12 +282,12 @@ hr {
 	height: 50px;
 }
 
-.forTheprofileImage {
+/* .forTheprofileImage { */
 	/* display: flex; */
 	/* justify-content: center; */
 	/* align-items: center; */
 	/* gap: 15px; */
-}
+/* } */
 
 #profilename {
 	margin-right: 10px;

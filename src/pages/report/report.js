@@ -7,7 +7,7 @@ const report = () => {
 		<>
 			<Navbar />
 			<main>
-				<div className='container'>
+				<div className='report-container'>
 					<form id='reportForm'>
 						<h2 className='welcome'>Report Form</h2>
 

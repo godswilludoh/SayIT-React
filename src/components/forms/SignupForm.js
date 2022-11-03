@@ -58,7 +58,7 @@ const SignupForm = () => {
 				}}
 			>
 				{(formik) => (
-					<form className='' id=''>
+					<form className='h-25'>
 						<h4 className='mt-2 text-center text-info'>
 							<strong>CREATE YOUR ACCOUNT</strong>
 						</h4>

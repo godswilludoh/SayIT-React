@@ -11,7 +11,7 @@ const SignupAcc = () => {
 			<Navbar />
 			<div className='mt-5'>
 				<div className='row'>
-					<div className='col-md-7'>
+					<div className='col-md-6'>
 						<SignupForm />
 					</div>
 					<div className='col-md-5 mt-5'>
