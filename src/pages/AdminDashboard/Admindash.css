@@ -111,9 +111,9 @@ ul {
 
 .topAdmin {
 	background-color: #b4b1af;
-	margin: 0rem 0rem 0rem 14rem;
+	margin: 0rem 0rem 0rem;
 	padding-top: 10px;
-	width: 85%;
+	width: 100%;
 	min-height: 100vh;
 	/* height: 820px; */
 	justify-content: space-evenly;
