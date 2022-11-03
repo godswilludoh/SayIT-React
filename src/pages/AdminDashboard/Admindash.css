@@ -177,14 +177,28 @@ ul {
 	border-radius: 10px;
 }
 .Notify {
-	margin: 20px 0px 10px 40px;
+	margin: 20px 0px 0px 0px;
 	font-weight: 700;
 	font-size: 20px;
+  display: flex;
+  background-color:#707078;;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: #ffffff;
+  border: 1px solid rgb(232, 229, 229);;
 }
+/* .report-id{
+  display: flex; */
+  
+/* } */
 .Notifications {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 10px;
+  background-color:#707078;
+  padding: 1rem;
+  color: #ffffff;
+  border: 1px solid rgb(232, 229, 229);
 }
 
 #notificatonlist li {
@@ -200,8 +214,9 @@ ul {
 	padding: 8px 20px 8px 20px;
 	border-radius: 5px;
 	width: 25px;
-	background-color: #ed4d02;
+	background-color: #ef6728;
 	font-size: x-small;
+  border: 1px solid rgb(85, 80, 75);
 }
 
 #notificatonlist li:hover {
@@ -216,12 +231,14 @@ ul {
 	margin-top: 50px;
 	justify-content: space-around;
 	padding: 10px;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 #report_cards {
-	padding: 15px;
+	padding: 5px;
 	border-radius: 8px;
 	box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-	/* width: 90%; */
+	/* width: 10%; */
 	height: 5%;
 	background-color: #ffffff;
 }
