@@ -6,7 +6,17 @@ export const AdminDashTable = () => {
 	return (
 		<div className='NotifyBar'>
 			<div>
-				<h3 className='Notify'>Notifications 📩</h3>
+				<h3 className='Notify'>Notifications 
+          <span className="report-id">
+                <input
+                  className="tableSearchOption"
+                  id="search-input"
+                  data-table="user-table"
+                  type="text"
+                  placeholder="Search"
+                />
+              </span>
+              </h3>
 				<ul className='Notifications'>
 					<li>
 						{' '}
