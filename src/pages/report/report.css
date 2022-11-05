@@ -20,14 +20,14 @@ main {
 	border-radius: 10px;
 }
 
-h2 {
+.welcome {
 	margin-top: 0.5rem;
 	font-size: 25px;
 	font-weight: 700;
 	text-align: center;
 }
 
-label {
+.report-label {
 	display: inline-block;
 	margin-bottom: 1rem;
 	font-size: 20px;
@@ -166,12 +166,12 @@ button {
 		padding: 10rem 5rem 1rem;
 	}
 
-	h2 {
+	.welcome {
 		font-size: 25px;
 		font-weight: 700;
 	}
 
-	label {
+	.report-label {
 		display: block;
 		font-size: 18px;
 	}
@@ -197,12 +197,12 @@ button {
 		padding: 10rem 3rem;
 	}
 
-	h2 {
+	.welcome {
 		font-size: 20px;
 		font-weight: 700;
 	}
 
-	label {
+	.report-label {
 		font-size: 15px;
 		font-weight: 500;
 	}
