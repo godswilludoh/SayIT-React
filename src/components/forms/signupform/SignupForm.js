@@ -1,14 +1,15 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import TextField from './TextField';
+import TextField from '../TextField';
 import * as Yup from 'yup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MoreInfo from './MoreInfo';
+import './signupform.css';
 
 const SignupForm = () => {
 	const displaySignUpNotification = () => {
-		toast.success('SignUp Successful!', { theme: 'light' });
+		toast.success('SignUp Successfully Done!', { theme: 'light' });
 	};
 
 	const validate = Yup.object({
@@ -62,7 +63,7 @@ const SignupForm = () => {
 						<h4 className='mt-2 text-center text-info'>
 							<strong>CREATE YOUR ACCOUNT</strong>
 						</h4>
-						<Form className='w-50'>
+						<Form className='w-50 '>
 							<TextField label='First Name' name='firstName' type='text' />
 							<TextField label='Email' name='email' type='email' />
 							<TextField label='Username' name='username' type='username' />
@@ -76,10 +77,10 @@ const SignupForm = () => {
 
 							<button
 								id='createAccount'
-								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto'
+								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
 								onClick={displaySignUpNotification}
 							>
-								Create Account
+								CREATE ACCOUNT
 							</button>
 						</Form>
 					</form>
