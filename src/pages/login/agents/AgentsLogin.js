@@ -8,7 +8,7 @@ const AgentsLogin = () => {
 			<section className={styles.theLoginSide}>
 				<div className='innerContainer'>
 					<h3 className={styles.agentTitle}>AGENT LOGIN</h3>
-					<form id='agent-form'>
+					<form className={styles.}>
 						{/*FIELD FOR THE AGENT ID */}
 						<div className='formGroup'>
 							<span className='icon'>

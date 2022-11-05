@@ -3,7 +3,8 @@ header {
 	flex-direction: row-reverse;
 	justify-content: space-around;
 	align-items: center;
-	padding: 8rem 0 1rem 0;
+	margin-top: 4rem;
+	/* padding: 8rem 0 1rem 0; */
 }
 
 .login-heading {
@@ -144,10 +145,10 @@ a {
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-		padding: 8rem;
+		/* padding: 8rem; */
 	}
 
-	form {
+	#form {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;

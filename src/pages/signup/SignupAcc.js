@@ -1,7 +1,7 @@
 import React from 'react';
 import SignupImg from '../../assets/createAccount.png';
 import Footer from '../../components/footer/Footer';
-import SignupForm from '../../components/forms/SignupForm';
+import SignupForm from '../../components/forms/signupform/SignupForm';
 import Navbar from '../../components/nav/Navbar';
 // import './signUp.css';
 
