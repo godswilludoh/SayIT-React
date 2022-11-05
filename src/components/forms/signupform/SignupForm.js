@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import TextField from './TextField';
+import TextField from '../TextField';
 import * as Yup from 'yup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -77,10 +77,10 @@ const SignupForm = () => {
 
 							<button
 								id='createAccount'
-								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto'
+								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
 								onClick={displaySignUpNotification}
 							>
-								Create Account
+								CREATE ACCOUNT
 							</button>
 						</Form>
 					</form>
