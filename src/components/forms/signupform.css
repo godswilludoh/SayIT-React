@@ -1,0 +1,12 @@
+.toast-notify {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+}
+
+/* button {
+	padding: 12px 32px;
+	font-size: large;
+	cursor: pointer;
+} */

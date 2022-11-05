@@ -90,7 +90,7 @@
   bottom: 0;
 } */
 
-.btn {
+/* .btn {
 	border: 1px solid #b4b1af;
 	background: rgba(217, 217, 217, 0.12);
 	border-radius: 8px;
@@ -98,11 +98,11 @@
 	font-size: 13px;
 	font-weight: 500;
 	cursor: pointer;
-}
+} */
 
-.btn:hover {
+/* .btn:hover {
 	background: rgba(153, 157, 173, 0.22);
-}
+} */
 
 /* DASHBOARD INTERFACE */
 ul {
@@ -180,25 +180,25 @@ ul {
 	margin: 20px 0px 0px 0px;
 	font-weight: 700;
 	font-size: 20px;
-  display: flex;
-  background-color:#707078;;
-  justify-content: space-between;
-  padding: 0.5rem;
-  color: #ffffff;
-  border: 1px solid rgb(232, 229, 229);;
+	display: flex;
+	background-color: #707078;
+	justify-content: space-between;
+	padding: 0.5rem;
+	color: #ffffff;
+	border: 1px solid rgb(232, 229, 229);
 }
 /* .report-id{
   display: flex; */
-  
+
 /* } */
 .Notifications {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 10px;
-  background-color:#707078;
-  padding: 1rem;
-  color: #ffffff;
-  border: 1px solid rgb(232, 229, 229);
+	background-color: #707078;
+	padding: 1rem;
+	color: #ffffff;
+	border: 1px solid rgb(232, 229, 229);
 }
 
 #notificatonlist li {
@@ -216,7 +216,7 @@ ul {
 	width: 25px;
 	background-color: #ef6728;
 	font-size: x-small;
-  border: 1px solid rgb(85, 80, 75);
+	border: 1px solid rgb(85, 80, 75);
 }
 
 #notificatonlist li:hover {
@@ -231,8 +231,8 @@ ul {
 	margin-top: 50px;
 	justify-content: space-around;
 	padding: 10px;
-  margin-right: 2rem;
-  margin-left: 2rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
 }
 #report_cards {
 	padding: 5px;
@@ -283,10 +283,10 @@ hr {
 }
 
 /* .forTheprofileImage { */
-	/* display: flex; */
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* gap: 15px; */
+/* display: flex; */
+/* justify-content: center; */
+/* align-items: center; */
+/* gap: 15px; */
 /* } */
 
 #profilename {
