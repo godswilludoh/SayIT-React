@@ -1,8 +1,9 @@
 import React from 'react';
+import './report.css';
 import Navbar from '../../components/nav/Navbar';
-import './Report.css';
+import './report.css';
 
-const report = () => {
+const Report = () => {
 	return (
 		<>
 			<Navbar />
@@ -145,5 +146,3 @@ const report = () => {
 		</>
 	);
 };
-
-export default report;
