@@ -8,13 +8,13 @@ const Report = () => {
 		<>
 			<Navbar />
 			<main>
-				<div className='container'>
+				<div className='report-container'>
 					<form id='reportForm'>
 						<h2 className='welcome'>Report Form</h2>
 
 						<div className='user-details'>
 							<div className='form-box'>
-								<label htmlFor='sector'>
+								<label htmlFor='sector' className='report-label'>
 									Which sector of the economy do you wish to report?
 								</label>
 								<br />
@@ -38,7 +38,7 @@ const Report = () => {
 							</div>
 
 							<div className='form-group agency'>
-								<label htmlFor='agency'>
+								<label htmlFor='agency' className='report-label'>
 									Kindly select the agency you wish to report to
 								</label>
 								<br />
@@ -69,7 +69,7 @@ const Report = () => {
 							</div>
 
 							<div className='form-box'>
-								<label htmlFor='report-org'>
+								<label htmlFor='report-org' className='report-label'>
 									Which company, organization or individual is this about?
 								</label>
 								<input
@@ -81,7 +81,7 @@ const Report = () => {
 							</div>
 
 							<div className='form-box'>
-								<label htmlFor='affiliation'>
+								<label htmlFor='affiliation' className='report-label'>
 									Are you affiliated to the above selected?
 								</label>
 								<select name='affiliation' id='yesOrNo' required>
@@ -93,7 +93,9 @@ const Report = () => {
 							</div>
 
 							<div className='form-box'>
-								<label htmlFor='report-info'>What do you want to report?</label>
+								<label htmlFor='report-info' className='report-label'>
+									What do you want to report?
+								</label>
 								<textarea
 									id='reportInfo'
 									name='reportinfo'
@@ -103,7 +105,9 @@ const Report = () => {
 							</div>
 
 							<div className='form-box'>
-								<label htmlFor='upload'>Upload document</label>
+								<label htmlFor='upload' className='report-label'>
+									Upload document
+								</label>
 								<input type='file' id='upload' name='upload' required />
 								<p>Docx, Image, Audio and Videos</p>
 							</div>

@@ -34,10 +34,7 @@ const Sidebar = ({ children }) => {
 		<div className='sidebar-container'>
 			<div style={{ width: isOpen ? '250px' : '60px' }} className='sidebar'>
 				<section className='top_section'>
-					<div
-						// style={{ marginLeft: 'isOpen' ? '300px' : '0px' }}
-						className='sidebar-bars'
-					>
+					<div className='sidebar-bars'>
 						<FaBars onClick={toggle} />
 					</div>
 					<Link to='/dashboard'>
@@ -73,7 +70,6 @@ const Sidebar = ({ children }) => {
 					</NavLink>
 				))}
 			</div>
-			{/* <main>{children}</main> */}
 		</div>
 	);
 };

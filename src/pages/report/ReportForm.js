@@ -87,7 +87,7 @@ export const ReportForm = () => {
         
       <div className="main">
         <Form className="container">
-            <h2>Report Form</h2>
+            <h2 className="welcome">Report Form</h2>
 
             <MySelect label="Sector" name="sector">
               <option value="">Select a sector</option>
@@ -105,6 +105,7 @@ export const ReportForm = () => {
               <option value="entertainment">Entertainment</option>
               <option value="others">Others</option>
             </MySelect>
+            <br/>
 
             <MySelect label="Kindly select the agency you wish to report to" name="agency">
               <option value="">Select Agency</option>
@@ -120,6 +121,7 @@ export const ReportForm = () => {
               <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
               <option value="others">Others</option>
             </MySelect>
+            <br/>
 
           {/* the margin  on all <MyTextInput> component is too much */}
             <div> 
@@ -130,12 +132,14 @@ export const ReportForm = () => {
               placeholder="Start typing..."
               />
             </div>
+            <br/>
 
             <MySelect label="Are you affiliated to the above specified" name="affiliation">
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </MySelect>
+            <br/>
 
             <div>
               <MyTextInput
@@ -145,6 +149,7 @@ export const ReportForm = () => {
                 placeholder="Enter subject here.."
               />
             </div>
+            <br/>
 
             {/* <div>
             <MyTextInput 
@@ -164,22 +169,26 @@ export const ReportForm = () => {
               name= "message"
               />
             </div>
+            <br/>
 
             <div>
               <MyTextInput
               label="Upload Document"
               name="upload"
               type="file"
+              className="file-select"
               style = {{border: "none", background: "none"}}
               />
             </div>
+            <br/>
 
-              <MyCheckbox 
-              className="checkbox-input" name="acceptedTerms" 
-              style={ {width: "40px"}}>
-                I affirm that the information provided is valid
-              </MyCheckbox>
+            <MyCheckbox 
+            className="checkbox-input" name="acceptedTerms" 
+            style={ {width: "40px"}}>
+              I affirm that the information provided is valid
+            </MyCheckbox>
 
+            <br/>
             <button 
             type="submit" 
             id="myBtn" 

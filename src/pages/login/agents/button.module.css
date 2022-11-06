@@ -1,5 +1,5 @@
 .overallContainer {
-	padding-top: 4rem;
+	/* padding-top: 4rem; */
 	display: flex;
 	height: 100vh;
 	overflow: hidden;
@@ -23,8 +23,8 @@
 	font-size: 18px;
 }
 
-form {
-	margin: 2rem auto;
+.agentForm {
+	margin: 5rem auto;
 }
 
 footer {

@@ -1,13 +1,13 @@
 /* fOR THE IMAGE ON THE LANDING PAGE */
 .hero-image {
-	padding-top: 5rem;
+	padding-top: 0.5rem;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
 		url('/public/assets/dashboardImage.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 944px;
-	transition: 0.3s ease;
+	height: 544px;
+	transition: 0.3s ease-in-out;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -29,7 +29,7 @@
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 2rem;
-	padding-bottom: 4rem;
+	padding-bottom: 1rem;
 }
 
 .hero-btn {

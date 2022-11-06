@@ -1,9 +1,12 @@
 import React from 'react';
 import './../agents/AgentsLogin.css';
 import styles from './../agents//button.module.css';
+import Navbar from '../../../components/nav/Navbar';
 
 const AdminLogin = () => {
 	return (
+		<>
+		<Navbar/>
 		<section className={styles.overallContainer}>
 			<section className={styles.theLoginSide}>
 				<div className='innerContainer'>
@@ -58,6 +61,7 @@ const AdminLogin = () => {
 				<img src='/assets/SAYIT-removebg.png' alt='sayITimage' width='550px' />
 			</section>
 		</section>
+		</>
 	);
 };
 
