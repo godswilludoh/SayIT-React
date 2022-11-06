@@ -1,9 +1,12 @@
 import React from 'react';
 import './report.css';
+import Navbar from '../../components/nav/Navbar';
+import './report.css';
 
-export const Report = () => {
+const Report = () => {
 	return (
 		<>
+			<Navbar />
 			<main>
 				<div className='container'>
 					<form id='reportForm'>

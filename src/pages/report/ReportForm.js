@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, useField , FormikProvider, ErrorMessage, validateYupSchema} from 'formik';
 import * as Yup from 'yup';
+import Navbar from "../../components/nav/Navbar";
 import './report.css'
 import { json } from "react-router";
 import { upload } from "@testing-library/user-event/dist/upload";
@@ -15,7 +16,7 @@ import {MyTextArea} from "../../components/reportFormFields/MyTextArea";
 export const ReportForm = () => {
   return (
     <>
-      <h1>SAYIT Report Form</h1>
+      <Navbar/>
       <Formik
         initialValues={{
           sector: '',

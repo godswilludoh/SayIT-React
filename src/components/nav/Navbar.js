@@ -13,14 +13,17 @@ const Navbar = () => {
 	return (
 		<nav className={toggle ? 'navbar expanded' : 'navbar'}>
 			<section className='headingLogo'>
-				<div className='sayITLogo'>
-					<img
-						src='/assets/SAYIT.jpeg'
-						height='80px'
-						width='100px'
-						alt='logo of the SayIT platform'
-					/>
-				</div>
+				<Link to='/'>
+					<div className='sayITLogo'>
+						<img
+							src='/assets/SAYIT.jpeg'
+							height='72px'
+							width='100px'
+							alt='logo of the SayIT platform'
+						/>
+					</div>
+				</Link>
+
 				<h1 className='headingText'>
 					Say<span className='IT'>IT</span>
 				</h1>
@@ -46,7 +49,7 @@ const Navbar = () => {
 				<Link to='/blog'>
 					<li>BLOG</li>
 				</Link>
-				<Link id='active' to='login'>
+				<Link id='active' to='/login'>
 					SIGN IN
 				</Link>
 			</ul>
