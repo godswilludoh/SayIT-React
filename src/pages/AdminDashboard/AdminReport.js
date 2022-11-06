@@ -1,22 +1,17 @@
-import React from 'react';
-import './Admindash.css';
-import AdminReportCrd from './AdminReportCrd';
-import {AdminDashTable} from './AdminDashTable';
-
-import AdminSidebar from '../../components/Admin_comps/AdminSidebar';
-// import { Link } from 'react-router-dom';
-// import { AdminReport } from './AdminReport';
-
-const admindash = () => {
-	return (
-		<React.Fragment>
-			<div className='main-container'>
+import React from 'react'
+import AdminSidebar from '../../components/Admin_comps/AdminSidebar'
+import './Admindash.css'
+import { AdminReportTable } from './AdminDashTable'
+export const AdminReport = () => {
+  return (
+    <React.Fragment>
+    <div className='main-container'>
 				<AdminSidebar />
 
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
-							<h3 id='dashBar'>DASHBOARD</h3>
+							<h3 id='dashBar'>REPORTS</h3>
 						</li>
 						{/* THE TIME AND DATE SECTION */}
 						<li>
@@ -45,15 +40,12 @@ const admindash = () => {
 						</li>
 					</ul>
 
-					<AdminReportCrd />
-					<AdminDashTable />
+					<AdminReportTable />
 				</div>
 			</div>
 			
-				{/* <Link to ='/adminReports' element ={<AdminReport />} /> */}
-			
-		</React.Fragment>
-	);
-};
-
-export default admindash;
+    
+    </React.Fragment>
+    
+  )
+}

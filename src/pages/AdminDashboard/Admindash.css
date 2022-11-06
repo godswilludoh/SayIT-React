@@ -6,104 +6,6 @@
 	/* overflow: none; */
 }
 
-/* Sidebar CSS*/
-/* .sidebar-container {
-  width: 230px;
-  min-height: 100vh;
-  background-color: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-right: .5px solid #B4B1AF;
-  position: fixed;
-} */
-
-/* .sidebar-container .logo {
-  display: flex;
-  align-items: center;
-  padding: 30px 0 0 30px;
-  margin-right: 15px;
-} */
-
-/* .sidebar-container img {
-  width: 50px;
-} */
-
-/* .heading {
-  color: #6E6660;
-  font-size: 25px;
-  font-weight: 700;
-} */
-
-/* .it {
-  color: #ED4D02
-} */
-
-/* .sidebar-lists {
-  margin: 4rem 1rem;
-} */
-
-/* .sidebar-lists li {
-  list-style: none;
-  padding: 8px 0;
-  margin-bottom: 1.5rem;
-} */
-
-/* .sidebar-lists li:hover {
-  cursor: pointer;
-  background: rgba(153, 157, 173, 0.22);
-} */
-
-/* .sidebar-items {
-  border: 1px solid #B4B1AF;
-  background: rgba(217, 217, 217, 0.12);
-  border-radius: 8px;
-}
-
-.sidebar-icons {
-  margin: .2rem 1rem ;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  align-self: center;
-  gap: 2.5rem;
-}
-
-.sidebar-lists li a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 13px;
-  font-weight: 500;
-} */
-
-/* .sidebar-lists li .dropdown-menu {
-  display: none;
-}
-
-.sidebar-lists li:hover .dropdown-menu {
-  display: block;
-  margin: 1rem .5rem;
-} */
-/* DON'T FORGET TO STYLE THIS IN RELATIVE TO THE DASHBOARD ONLY(THEO) */
-/* button {
-  display: block;
-  padding: 8px 20px;
-  position: absolute;
-  bottom: 0;
-} */
-
-/* .btn {
-	border: 1px solid #b4b1af;
-	background: rgba(217, 217, 217, 0.12);
-	border-radius: 8px;
-	margin: 4rem 1rem;
-	font-size: 13px;
-	font-weight: 500;
-	cursor: pointer;
-} */
-
-/* .btn:hover {
-	background: rgba(153, 157, 173, 0.22);
-} */
-
 /* DASHBOARD INTERFACE */
 ul {
 	list-style-type: none;
@@ -282,12 +184,6 @@ hr {
 	height: 50px;
 }
 
-/* .forTheprofileImage { */
-/* display: flex; */
-/* justify-content: center; */
-/* align-items: center; */
-/* gap: 15px; */
-/* } */
 
 #profilename {
 	margin-right: 10px;
@@ -306,10 +202,44 @@ hr {
 	}
 
 	#report_cards {
-		/* width: 50% */
-		display: grid;
+		width: 100%;
+		height: 90%;
+		/* display: grid; */
 	}
 	.Report_Cards {
 		display: grid;
 	}
 }
+/* ADMIN REPORT TABLE  */
+#taable_sec{
+    margin: 50px 0px 0px 60px;
+    background: #999DAD38;
+	width: 90%;
+    align-content: center;
+	padding: 5px 2px 0px 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.tableTitle .tableSearch{
+	margin: 1.5em 0em 0em auto;
+	display: flex;
+	align-items: right;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #f5f5f5;
+	width: 25em;
+	/* margin-left: auto; */
+}
+@media(min-width: 300px) and (max-width: 900px) {
+.time{
+	padding: 2px;
+	width: 25%;
+}
+.tableTitle .tableSearch{
+	margin: 2% 10% 2% 10%;
+}
+
+
+}
+  
