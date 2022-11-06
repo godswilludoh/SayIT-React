@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/landingPage/LandingPage';
+import LandingPage from './pages/LandingPage/LandingPage';
 import Report from './pages/report/Report';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
@@ -10,6 +10,7 @@ import AgentDashBoard from './pages/agentDashboard/AgentDashBoard';
 import Admindash from './pages/AdminDashboard/AdminDash';
 import SignupAcc from './pages/signup/SignupAcc';
 import UserDashboard from './pages/users/UserDashboard';
+import { AdminReport } from './pages/AdminDashboard/AdminReport';
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 				<Route path='users' element={<UserDashboard />} />
 				<Route path='agentDashboard' element={<AgentDashBoard />} />
 				<Route path='adminDashboard' element={<Admindash />} />
+				<Route path='adminReport' element={<AdminReport />} />
 			</Routes>
 		</>
 	);
