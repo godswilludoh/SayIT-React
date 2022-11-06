@@ -70,7 +70,6 @@ const Sidebar = ({ children }) => {
 					</NavLink>
 				))}
 			</div>
-			{/* <main>{children}</main> */}
 		</div>
 	);
 };

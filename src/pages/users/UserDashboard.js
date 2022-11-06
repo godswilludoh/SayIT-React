@@ -6,78 +6,78 @@ import './UserDashboard.css';
 
 const UserDashboard = () => {
 	return (
-		<div classname='userdashboard-container'>
-			<sidebar/>
-				<section className='dashboard-interface'>
-					<div className='top'>
-						<div className='info-display'>
-							<p>Dashboard</p>
+		<div className='userdashboard-container'>
+			<Sidebar />
+			<div className='userdashboard-interface'>
+				<div className='user-top'>
+					<div className='user-info-display'>
+						<p>Dashboard</p>
+					</div>
+					<div className='user-time'>
+						<p className='user-time-one'>1 : 15</p>
+						<p className='user-time-two'>01 : 09 : 2022</p>
+					</div>
+					<div className='userProfileImg'>
+						<div id='user-profile-container'>
+							<img id='user-profileImage' src='/Images/newUser.png' />
 						</div>
-						<div className='time'>
-							<p className='time-one' />
-							<p className='time-two' />
+						<input
+							id='imageUpload'
+							type='file'
+							name='profile_photo'
+							placeholder='Photo'
+							required
+							capture
+						/>
+						<span className='user-id' id='user-profilename'>
+							Samuel
+						</span>
+					</div>
+				</div>
+				<div className='user-dashboard-container'>
+					<h2>
+						👋 Welcome <span id='user-username'>Samuel</span>
+					</h2>
+					<p className='user-secure'>Your data is safe with us 🔐</p>
+					<div className='user-cards'>
+						<div className='user-card-item'>
+							<p className='user-p-top'>Total</p>
+							<br />
+							<p className='user-p-bottom'>0</p>
 						</div>
-						<div className='forTheprofileImage'>
-							<div id='profile-container'>
-								<img id='profileImage' src='/Images/newUser.png' />
-							</div>
-							<input
-								id='imageUpload'
-								type='file'
-								name='profile_photo'
-								placeholder='Photo'
-								required
-								capture
-							/>
-							<span className='forTheAgentID' id='profilename'>
-								Samuel
-							</span>
+						<div className='user-card-item'>
+							<p className='user-p-top'>Open Complaints</p>
+							<br />
+							<p className='user-p-bottom user-bottom2'>0</p>
+						</div>
+						<div className='user-card-item'>
+							<p className='user-p-top'>Resolved complaints</p>
+							<br />
+							<p className='user-p-bottom'>0</p>
+						</div>
+						<div className='user-button-container'>
+							<a className='user-report-button' href='/pages/makeReport.html'>
+								Make New Report
+							</a>
 						</div>
 					</div>
-					<div className='dashboard-container'>
-						<h2>
-							👋 Welcome <span id='username'>Samuel</span>
-						</h2>
-						<p className='secure'>Your data is secure with us 🔐</p>
-						<div className='cards'>
-							<div className='card-item'>
-								<p className='p-top'>Total</p>
-								<br />
-								<p className='p-bottom'>0</p>
-							</div>
-							<div className='card-item'>
-								<p className='p-top'>Open Complaints</p>
-								<br />
-								<p className='p-bottom bottom2'>0</p>
-							</div>
-							<div className='card-item'>
-								<p className='p-top'>Resolved complaints</p>
-								<br />
-								<p className='p-bottom'>0</p>
-							</div>
-							<div className='button-container'>
-								<a className='report-button' href='/pages/makeReport.html'>
-									Make New Report
-								</a>
-							</div>
-						</div>
-						<div className='table-section'>
-							<div className='user-table'>
-								<div className='report-table'>
-									<div className='report-text'>
-										<p>Reports</p>
-									</div>
-									<div className='report-id'>
-										<input
-											id='search-input'
-											data-table='user-table'
-											type='text'
-											placeholder='Enter Report ID'
-										/>
-									</div>
+					<div className='user-table-section'>
+						<div className='user-table'>
+							<div className='user-report-table'>
+								<div className='user-report-text'>
+									<p>Reports</p>
+								</div>
+								<div className='user-report-id'>
+									<input
+										id='user-search-input'
+										data-table='user-table'
+										type='text'
+										placeholder='Enter Report ID'
+									/>
 								</div>
 							</div>
-							{/* <table id="user-table">
+						</div>
+						{/* <table id="user-table">
       <tr>
         <th>S/N</th>
         <th>Date reported</th>
@@ -170,33 +170,33 @@ const UserDashboard = () => {
         </td>
       </tr>
     </table> */}
-							<table id='user-table' className='user-table'></table>
-							<div className='pagination'>
-								<a id='prev-button' className='pagination-bracket' href='#'>
-									‹
-								</a>
-								<a className='pagination-item' href='#'>
-									1
-								</a>
-								<a className='pagination-item' href='#'>
-									2
-								</a>
-								<a className='pagination-item' href='#'>
-									3
-								</a>
-								<a className='pagination-item' href='#'>
-									4
-								</a>
-								<a className='pagination-item' href='#'>
-									5
-								</a>
-								<a id='next-button' className='pagination-bracket' href='#'>
-									›
-								</a>
-							</div>
+						<table id='user-table' className='user-table'></table>
+						<div className='user-pagination'>
+							<a id='prev-button' className='user-pagination-bracket' href='#'>
+								‹
+							</a>
+							<a className='user-pagination-item' href='#'>
+								1
+							</a>
+							<a className='user-pagination-item' href='#'>
+								2
+							</a>
+							<a className='user-pagination-item' href='#'>
+								3
+							</a>
+							<a className='user-pagination-item' href='#'>
+								4
+							</a>
+							<a className='user-pagination-item' href='#'>
+								5
+							</a>
+							<a id='next-button' className='user-pagination-bracket' href='#'>
+								›
+							</a>
 						</div>
 					</div>
-				</section>
+				</div>
+			</div>
 		</div>
 	);
 };
