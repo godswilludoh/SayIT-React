@@ -69,9 +69,9 @@ export const AdminReportTable = () => {
     <React.Fragment>
       <div id="taable_sec">
   <div>
-    <h4 className="tableTitle">
+    <h4 className="tableTitle"> 
     <span>
-    <input type="text" className= "tableSearchOption" placeholder="Enter Report ID" />
+    <input type="text" className= "tableSearch" placeholder="Enter Report ID" />
     </span>
     </h4>
   </div>
