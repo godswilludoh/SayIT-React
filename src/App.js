@@ -8,7 +8,7 @@ import AdminLogin from './pages/login/admin/AdminLogin';
 import AgentsLogin from './pages/login/agents/AgentsLogin';
 import AgentDashBoard from './pages/agentDashboard/AgentDashBoard';
 import Admindash from './pages/AdminDashboard/AdminDash';
-import {ReportForm} from './pages/report/ReportForm'
+import { ReportForm } from './pages/report/ReportForm';
 import SignupAcc from './pages/signup/SignupAcc';
 import UserDashboard from './pages/users/UserDashboard';
 import AgentNotificationPage from './pages/agentNotificationPage/AgentNotificationPage';
@@ -31,8 +31,10 @@ function App() {
 				<Route path='users' element={<UserDashboard />} />
 				<Route path='agentDashboard' element={<AgentDashBoard />} />
 				<Route path='adminDashboard' element={<Admindash />} />
-				<Route path='agentNotificationPage' element={<AgentNotificationPage />} />
-				
+				<Route
+					path='agentNotificationPage'
+					element={<AgentNotificationPage />}
+				/>
 			</Routes>
 		</>
 	);
