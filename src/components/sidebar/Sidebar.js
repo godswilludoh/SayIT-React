@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { MdDashboard } from 'react-icons/md';
-import { BiMessageSquareDots, BiLogOut } from 'react-icons/bi';
+import {
+	BiMessageSquareDots,
+	BiLogOut,
+	BiMessageSquareEdit,
+} from 'react-icons/bi';
 import { FaBars, FaUser } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import './Sidebar.css';
@@ -22,7 +26,7 @@ const Sidebar = ({ children }) => {
 		{
 			path: '/makereport',
 			name: 'Make Report',
-			icon: <BiMessageSquareDots />,
+			icon: <BiMessageSquareEdit />,
 		},
 		{
 			path: '/profile',
