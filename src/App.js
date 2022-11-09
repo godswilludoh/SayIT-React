@@ -11,7 +11,7 @@ import Admindash from './pages/AdminDashboard/AdminDash';
 import {ReportForm} from './pages/report/ReportForm'
 import SignupAcc from './pages/signup/SignupAcc';
 import UserDashboard from './pages/users/UserDashboard';
-import { AdminReport } from './pages/AdminDashboard/AdminReport';
+import AgentNotificationPage from './pages/agentNotificationPage/AgentNotificationPage';
 
 function App() {
 	return (
@@ -31,7 +31,8 @@ function App() {
 				<Route path='users' element={<UserDashboard />} />
 				<Route path='agentDashboard' element={<AgentDashBoard />} />
 				<Route path='adminDashboard' element={<Admindash />} />
-				<Route path='adminReport' element={<AdminReport />} />
+				<Route path='agentNotificationPage' element={<AgentNotificationPage />} />
+				
 			</Routes>
 		</>
 	);

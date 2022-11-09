@@ -153,6 +153,7 @@
 .registeredAgencyName {
 	text-align: left;
 	padding-left: 20px;
+	font-weight: 700;
 }
 
 .forTheAgentID {
@@ -316,7 +317,7 @@ tr:nth-child(odd) {
 }
 
 .otherCardWording {
-	/* margin-bottom: 12px; */
+	margin-top: -22px;
 	text-decoration: none;
 	font-size: 13px;
 	color: #ed4d02;
