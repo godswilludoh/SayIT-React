@@ -1,7 +1,6 @@
 import React from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
-// import Dashboard from './userdashboardPages/Dashboard';
-// import Profile from './userdashboardPages/Profile';
+import { DateTime } from '../../helper/date-time/DateTime';
 import './UserDashboard.css';
 
 const UserDashboard = () => {
@@ -14,8 +13,7 @@ const UserDashboard = () => {
 						<p>Dashboard</p>
 					</div>
 					<div className='user-time'>
-						<p className='user-time-one'>1 : 15</p>
-						<p className='user-time-two'>01 : 09 : 2022</p>
+						<DateTime></DateTime>
 					</div>
 					<div className='userProfileImg'>
 						<div id='user-profile-container'>
