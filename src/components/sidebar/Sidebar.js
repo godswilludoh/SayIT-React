@@ -20,6 +20,11 @@ const Sidebar = ({ children }) => {
 			icon: <BiMessageSquareDots />,
 		},
 		{
+			path: '/makereport',
+			name: 'Make Report',
+			icon: <BiMessageSquareDots />,
+		},
+		{
 			path: '/profile',
 			name: 'Profile',
 			icon: <FaUser />,

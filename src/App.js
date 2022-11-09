@@ -1,7 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/landingPage/LandingPage';
-// import CreateAccount from './pages/createAccount/CreateAccount';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
@@ -12,6 +11,7 @@ import { ReportForm } from './pages/report/ReportForm';
 import SignupAcc from './pages/signup/SignupAcc';
 import UserDashboard from './pages/users/UserDashboard';
 import AgentNotificationPage from './pages/agentNotificationPage/AgentNotificationPage';
+import { MakeReportForm } from './pages/users/userdashboardPages/makereport/MakeReport';
 
 function App() {
 	return (
@@ -35,6 +35,7 @@ function App() {
 					path='agentNotificationPage'
 					element={<AgentNotificationPage />}
 				/>
+				<Route path='makereport' element={<MakeReportForm />} />
 			</Routes>
 		</>
 	);
