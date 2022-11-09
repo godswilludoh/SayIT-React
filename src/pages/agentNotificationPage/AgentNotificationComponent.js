@@ -1,4 +1,5 @@
 import React from "react";
+import { DateTime } from "../../helper/date-time/DateTime";
 
 const AgentNotificationComponent = () => {
   return (
@@ -8,8 +9,7 @@ const AgentNotificationComponent = () => {
           <p className="notificationText">Notification</p>
         </div>
         <div className="time">
-          <p className="time-one">12:00</p>
-          <p className="time-two">12/11/2022</p>
+          <DateTime></DateTime>
         </div>
         <div className="forTheprofileImage">
           <div id="profile-container">
