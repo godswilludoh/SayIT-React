@@ -27,7 +27,7 @@ const AgentNotificationComponent = () => {
         </div>
       </div>
       <section className="notificationContainer">
-        <div className="container">
+        <div className="navContainer">
           <ul className="linksContainer">
             <li>
               <a href="#">All</a>

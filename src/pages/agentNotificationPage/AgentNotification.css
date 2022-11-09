@@ -23,7 +23,7 @@
     height: 100vh;
   }
   
-  .container {
+  .navContainer {
     display: flex;
     align-items: center;
     padding: 90px 15px 15px 15px;
