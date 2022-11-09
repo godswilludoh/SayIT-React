@@ -228,9 +228,10 @@ Style
 	margin-left: 5px;
 }
 
-.active:after {
-	content: '\2796'; /* Unicode character for "minus" sign (-) */
-}
+/* .active:after {
+	content: '\2796'; 
+} */
+/* Unicode character for "minus" sign (-) */
 
 /* FREQUENTLY ASKED QUESTION CSS ENDS HERE */
 
