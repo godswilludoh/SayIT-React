@@ -12,6 +12,7 @@ import SignupAcc from './pages/signup/SignupAcc';
 import UserDashboard from './pages/users/UserDashboard';
 import AgentNotificationPage from './pages/agentNotificationPage/AgentNotificationPage';
 import { MakeReportForm } from './pages/users/userdashboardPages/makereport/MakeReport';
+import { EditProfile } from './pages/users/userdashboardPages/editProfile/EditProfile';
 
 function App() {
 	return (
@@ -36,6 +37,7 @@ function App() {
 					element={<AgentNotificationPage />}
 				/>
 				<Route path='makereport' element={<MakeReportForm />} />
+				<Route path='editprofile' element={<EditProfile />} />
 			</Routes>
 		</>
 	);
