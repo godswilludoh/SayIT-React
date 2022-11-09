@@ -10,7 +10,7 @@ const Sidebar = ({ children }) => {
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
 		{
-			path: '/dashboard',
+			path: '/agentDashBoard',
 			name: 'Dashboard',
 			icon: <MdDashboard />,
 		},
