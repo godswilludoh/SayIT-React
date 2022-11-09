@@ -1,4 +1,5 @@
 import React from "react";
+import { DateTime } from "../../helper/date-time/DateTime";
 
 const AgentDashBoardInterface = () => {
   return (
@@ -8,8 +9,7 @@ const AgentDashBoardInterface = () => {
           <p className="text-display" />
         </div>
         <div className="time">
-          <p className="time-one">1 : 15</p>
-          <p className="time-two"> 01 : 09 : 2022</p>
+          <DateTime></DateTime>
         </div>
         <div className="forTheprofileImage">
           <div id="profile-container">
