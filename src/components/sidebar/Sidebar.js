@@ -29,8 +29,8 @@ const Sidebar = ({ children }) => {
 			icon: <BiMessageSquareEdit />,
 		},
 		{
-			path: '/profile',
-			name: 'Profile',
+			path: '/editprofile',
+			name: 'Edit Profile',
 			icon: <FaUser />,
 		},
 		{
