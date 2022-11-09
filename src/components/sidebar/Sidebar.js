@@ -15,7 +15,7 @@ const Sidebar = ({ children }) => {
 			icon: <MdDashboard />,
 		},
 		{
-			path: '/notification',
+			path: '/agentNotificationPage',
 			name: 'Notification',
 			icon: <BiMessageSquareDots />,
 		},
