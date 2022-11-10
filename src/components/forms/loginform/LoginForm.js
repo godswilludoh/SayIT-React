@@ -49,8 +49,18 @@ const SignupForm = () => {
 				{(formik) => (
 					<form>
 						<Form className='w-75'>
-							<TextField label='Username' name='username' type='username' />
-							<TextField label='Password' name='password' type='password' />
+							<TextField
+								label='Username'
+								name='username'
+								type='username'
+								placeholder='Enter Username or Email'
+							/>
+							<TextField
+								label='Password'
+								name='password'
+								type='password'
+								placeholder='Enter Password'
+							/>
 
 							<button
 								id='createAccount'
