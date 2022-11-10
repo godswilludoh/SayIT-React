@@ -220,13 +220,14 @@ Style
 	padding: 15px;
 }
 
-.accordion:after {
-	content: '\02795'; /* Unicode character for "plus" sign (+) */
+/* .accordion:after {
 	font-size: 13px;
 	color: #777;
 	float: right;
 	margin-left: 5px;
-}
+	content: '\02795'; 
+} */
+/* Unicode character for "plus" sign (+) */
 
 /* .active:after {
 	content: '\2796'; 

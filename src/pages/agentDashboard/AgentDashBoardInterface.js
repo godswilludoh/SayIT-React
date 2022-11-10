@@ -99,7 +99,7 @@ const AgentDashBoardInterface = () => {
                 <th>Status</th>
                 <th>Action</th>
               </tr>
-              {/* <tr className="row">
+              {/*<tr className="row">
                 <td>1</td>
                 <td>31/08/2022</td>
                 <td>Report/0000001</td>
