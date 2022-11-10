@@ -6,6 +6,8 @@ import Navbar from '../../components/nav/Navbar';
 // import './signUp.css';
 
 const SignupAcc = () => {
+	
+
 	return (
 		<>
 			<Navbar />
