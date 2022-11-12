@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Formik, Form } from 'formik';
 import TextField from '../TextField';
@@ -15,14 +15,14 @@ const SignupForm = () => {
 	const localToken = JSON.parse(localStorage.getItem('token'));
 	let tokenExists = localToken?.length > 0;
 	useEffect(() => {
-		console.log('Token exists');
+		// console.log('Token exists');
 		if (tokenExists) {
 			setToken(true);
 		}
 	}, [tokenExists]);
 
 	const validate = Yup.object({
-		username: Yup.string()
+		userName: Yup.string()
 			.max(15, 'Must be 15 characters or less')
 			.required('Required'),
 		email: Yup.string().email('Email is invalid').required('Email is Required'),
@@ -55,29 +55,29 @@ const SignupForm = () => {
 
 			<Formik
 				initialValues={{
-					username: '',
 					email: '',
+					userName: '',
 					phoneNumber: '',
 					password: '',
 					confirmPassword: '',
 				}}
 				validationSchema={validate}
 				onSubmit={async (values, { setSubmitting }) => {
-					const { email, username, phoneNumber, password, confirmPassword } =
-						values;
+					const { email, userName, phoneNumber, password } = values;
 					setSubmitting(true);
+					console.log(values);
 					try {
 						let response = await axios.post(
 							'https://say--it.herokuapp.com/v1/auth/register',
 							{
-								username,
 								email,
+								userName,
 								phoneNumber,
 								password,
 							}
 						);
 						console.log(response);
-						const { access, refresh } = response.data.token;
+						const { access, refresh } = response.data.tokens;
 						const tokens = [];
 						tokens.push({ access: access.token });
 						tokens.push({ refresh: refresh.token });
@@ -87,6 +87,7 @@ const SignupForm = () => {
 							toast.success('SignUp Successfully Done!', { theme: 'light' });
 						}
 					} catch (error) {
+						console.log(error);
 						toast.error('Signup Failed! Please try again', {
 							position: 'top-center',
 						});
@@ -118,7 +119,7 @@ const SignupForm = () => {
 								/>
 								<TextField
 									label='Username'
-									name='username'
+									name='userName'
 									type='text'
 									placeholder='Enter your username'
 									onChange={handleChange}
