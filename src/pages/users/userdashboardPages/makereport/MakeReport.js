@@ -23,6 +23,11 @@ export const MakeReportForm = () => {
 		<div className='makereport-container'>
 			<Sidebar />
 			<div className='makereportform-container'>
+				<div className='makereport-top'>
+					<p>Make Report</p>
+					<p>👋🏼 Welcome undefined!</p>
+				</div>
+
 				<Formik
 					initialValues={{
 						sector: '',
