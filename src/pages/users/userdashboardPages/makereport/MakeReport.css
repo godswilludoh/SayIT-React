@@ -1,0 +1,10 @@
+.makereport-container {
+	display: flex;
+}
+
+.makereportform-container {
+	width: 100%;
+	padding: 30px;
+	background: #b4b1af;
+	overflow: hidden;
+}

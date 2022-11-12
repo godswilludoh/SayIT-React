@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import HeroSection from './HeroSection';
 import WhatwedoSection from './WhatwedoSection';
 import HowitworksSection from './HowitworksSection';
-import Faq from './Faq';
 import WhyUS from './WhyUS';
 import Footer from '../../components/footerLandingPage/FooterLandingPage';
 import Navbar from '../../components/nav/Navbar';
-import Example from './Faq2';
+import Faq from './Faq';
 
 const LandingPage = () => {
 	return (
@@ -21,9 +20,7 @@ const LandingPage = () => {
 
 			<HowitworksSection />
 
-			{/* <Faq /> */}
-
-			<Example />
+			<Faq />
 
 			<WhyUS />
 

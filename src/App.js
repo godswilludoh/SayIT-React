@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage/landingPage';
 // import CreateAccount from './pages/createAccount/CreateAccount';
+// import LandingPage from './pages/landingPage/LandingPage';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
@@ -15,6 +16,9 @@ import AgentNotificationPage from './pages/agentNotificationPage/AgentNotificati
 import { AdminUsers } from './pages/AdminDashboard/AdminUsers';
 import { AdminReport } from './pages/AdminDashboard/AdminReport';
 import { AdminAgents } from './pages/AdminDashboard/AdminAgents';
+import { MakeReportForm } from './pages/users/userdashboardPages/makereport/MakeReport';
+import { EditProfile } from './pages/users/userdashboardPages/editProfile/EditProfile';
+
 function App() {
 	return (
 		<>
@@ -40,6 +44,8 @@ function App() {
 				<Route path='adminUsers' element={<AdminUsers />} />
 				<Route path='adminReport' element={<AdminReport />} />
 				<Route path='adminAgents' element={<AdminAgents />} />
+				<Route path='makereport' element={<MakeReportForm />} />
+				<Route path='editprofile' element={<EditProfile />} />
 			</Routes>
 		</>
 	);

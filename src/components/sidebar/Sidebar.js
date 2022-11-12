@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { MdDashboard } from 'react-icons/md';
-import { BiMessageSquareDots, BiLogOut } from 'react-icons/bi';
+import {
+	BiMessageSquareDots,
+	BiLogOut,
+	BiMessageSquareEdit,
+} from 'react-icons/bi';
 import { FaBars, FaUser } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import './Sidebar.css';
@@ -10,18 +14,23 @@ const Sidebar = ({ children }) => {
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
 		{
-			path: '/dashboard',
+			path: '/agentDashBoard',
 			name: 'Dashboard',
 			icon: <MdDashboard />,
 		},
 		{
-			path: '/notification',
+			path: '/agentNotificationPage',
 			name: 'Notification',
 			icon: <BiMessageSquareDots />,
 		},
 		{
-			path: '/profile',
-			name: 'Profile',
+			path: '/makereport',
+			name: 'Make Report',
+			icon: <BiMessageSquareEdit />,
+		},
+		{
+			path: '/editprofile',
+			name: 'Edit Profile',
 			icon: <FaUser />,
 		},
 		{
