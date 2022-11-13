@@ -12,9 +12,9 @@
 }
 
 .innerContainer {
-	margin-top: 6rem;
+	/* margin-top: 6rem; */
 	max-width: 60%;
-	margin: auto;
+	margin: 6rem auto;
 }
 
 .agentTitle {
@@ -61,7 +61,6 @@ footer {
 	width: 100%;
 	padding: 5px 10px 5px 50px;
 	font-size: 15px;
-	display: block;
 	outline: 0;
 	background: #dc6b36;
 }
@@ -97,4 +96,18 @@ footer {
 	font-size: 18px;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+
+
+@media (min-width: 300px) and (max-width: 950px) {
+	.theImageSide {
+		display: none;
+	}
+	.theImageSide img {
+		display: none;
+	}
+	.theLoginSide {
+		max-width: 100%;
+	}
 }

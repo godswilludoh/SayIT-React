@@ -12,15 +12,15 @@ const AdminSidebar = ({ children }) => {
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
 		{
-			path: '/dashboard',
+			path: '/admindashboard',
 			name: 'Dashboard',
 			icon: <MdDashboard />,
 		},
-		{
-			path: '/notification',
-			name: 'Notification',
-			icon: <BiMessageSquareDots />,
-		},
+		// {
+		// 	path: '/notification',
+		// 	name: 'Notification',
+		// 	icon: <BiMessageSquareDots />,
+		// },
         {
             path: '/adminReport',
             name: 'Reports',
@@ -42,7 +42,7 @@ const AdminSidebar = ({ children }) => {
 			icon: <FaUser />,
 		},
 		{
-			path: '/login',
+			path: '/admin',
 			name: 'Logout',
 			icon: <BiLogOut />,
 		},
@@ -80,7 +80,7 @@ const AdminSidebar = ({ children }) => {
 						to={item.path}
 						key={index}
 						className='sidebar-links'
-						activeClassName='active'
+						activeclassname='active'
 					>
 						<div className='sidebar-icon'>{item.icon}</div>
 						<div className='sidebar-text'>{item.name}</div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import AdminSidebar from '../../components/Admin_comps/AdminSidebar'
 import { DateTime } from '../../helper/date-time/DateTime'
-import './Admindash.css'
 import { AdminReportTable } from './AdminDashTable'
-export const AdminReport = () => {
+
+export const AdminAgents = () => {
   return (
     <React.Fragment>
     <div className='main-container'>
@@ -12,7 +12,7 @@ export const AdminReport = () => {
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
-							<h3 id='dashBar'>REPORTS</h3>
+							<h3 id='dashBar'>AGENTS</h3>
 						</li>
 						{/* THE TIME AND DATE SECTION */}
 						<li>
@@ -46,6 +46,5 @@ export const AdminReport = () => {
 			
     
     </React.Fragment>
-    
   )
 }

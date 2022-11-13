@@ -23,18 +23,6 @@ form {
 	margin-right: auto;
 }
 
-.logInButton {
-	padding: 15px;
-	border-radius: 25px;
-	border: none;
-	width: 100%;
-	background: #fff;
-	font-size: 18px;
-	font-weight: bold;
-	color: #ed4d02;
-	cursor: pointer;
-}
-
 .innerContainer .adminTitle {
 	text-align: center;
 	margin: 5rem auto 0;
@@ -104,7 +92,7 @@ footer {
 }
 
 @media (min-width: 300px) and (max-width: 900px) {
-	.ImageSideDiv {
+	.theImageSide {
 		display: none;
 	}
 }
