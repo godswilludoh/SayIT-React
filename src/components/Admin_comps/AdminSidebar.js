@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { MdDashboard } from 'react-icons/md';
 import { BiMessageSquareDots, BiLogOut } from 'react-icons/bi';
-import { FaBars, FaUser, FaUsers, FaEdit, FaCheckDouble,  } from 'react-icons/fa';
+import { FaBars, FaUser, FaUsers, FaEdit, FaCheckDouble } from 'react-icons/fa';
 
 import { NavLink, Link } from 'react-router-dom';
-import './AdminSidebar.css';
+// import './AdminSidebar.css';
 // import { AdminReport } from './AdminReport';
 
 const AdminSidebar = ({ children }) => {
@@ -21,21 +21,21 @@ const AdminSidebar = ({ children }) => {
 		// 	name: 'Notification',
 		// 	icon: <BiMessageSquareDots />,
 		// },
-        {
-            path: '/adminReport',
-            name: 'Reports',
-            icon: <FaEdit/>,
-        },
-        {
-            path: '/adminUsers',
-            name: 'Reg Users',
-            icon: <FaUsers/>,
-        },
-        {
-            path: '/adminAgents',
-            name: 'Agents',
-            icon: <FaCheckDouble/>,
-        },
+		{
+			path: '/adminReport',
+			name: 'Reports',
+			icon: <FaEdit />,
+		},
+		{
+			path: '/adminUsers',
+			name: 'Reg Users',
+			icon: <FaUsers />,
+		},
+		{
+			path: '/adminAgents',
+			name: 'Agents',
+			icon: <FaCheckDouble />,
+		},
 		{
 			path: '/profile',
 			name: 'Profile',

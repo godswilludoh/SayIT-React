@@ -36,7 +36,7 @@ const SidebarUser = ({ children }) => {
 	];
 	return (
 		<div className='sidebar-container'>
-			<div style={{ width: isOpen ? '250px' : '60px' }} className='sidebar'>
+			<div style={{ width: isOpen ? '230px' : '60px' }} className='sidebar'>
 				<section className='top_section'>
 					<div className='sidebar-bars'>
 						<FaBars onClick={toggle} />
