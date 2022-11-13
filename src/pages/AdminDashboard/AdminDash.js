@@ -4,6 +4,7 @@ import AdminReportCrd from './AdminReportCrd';
 import {AdminDashTable} from './AdminDashTable';
 
 import AdminSidebar from '../../components/Admin_comps/AdminSidebar';
+import { DateTime } from '../../helper/date-time/DateTime';
 // import { Link } from 'react-router-dom';
 // import { AdminReport } from './AdminReport';
 
@@ -21,8 +22,10 @@ const admindash = () => {
 						{/* THE TIME AND DATE SECTION */}
 						<li>
 							<div className='time'>
-								<p className='time-one'>10:15</p>
-								<p className='time-two'>02:11:2022</p>
+								{/* <p className='time-one'>  */}
+								<DateTime/>
+								{/* </p> */}
+								{/* <p className='time-two'></p> */}
 							</div>
 						</li>
 						<li>

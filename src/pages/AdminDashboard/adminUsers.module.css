@@ -101,7 +101,6 @@ body {
 button {
   display: block;
   padding: 8px 20px;
-  position: absolute;
   bottom: 0;
 }
 

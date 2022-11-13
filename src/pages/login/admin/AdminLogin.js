@@ -2,15 +2,15 @@ import React from 'react';
 import './../agents/AgentsLogin.css';
 import styles from './../agents//button.module.css';
 import Navbar from '../../../components/nav/Navbar';
-
+// import buttonCSS from "./pages./login./button.module.css"
 const AdminLogin = () => {
 	return (
 		<>
 		<Navbar/>
 		<section className={styles.overallContainer}>
-			<section className={styles.theLoginSide}>
+			<section className="theLoginSide">
 				<div className='innerContainer'>
-					<h3 className={styles.agentTitle}>ADMIN LOGIN</h3>
+					<h3 className="agentTitle">ADMIN LOGIN</h3>
 					<form id='agent-form'>
 						{/*FIELD FOR THE AGENT ID */}
 						<div className='formGroup'>
@@ -21,7 +21,7 @@ const AdminLogin = () => {
 									height={24}
 									style={{ fill: 'rgb(137, 134, 133)' }}
 								>
-									<path d='M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z'></path>
+									<path d= 'M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z'></path>
 								</svg>
 							</span>
 							<input
@@ -51,9 +51,14 @@ const AdminLogin = () => {
 								placeholder='Password'
 								required
 							/>
+							
 						</div>
+						<div>
+							<button className="logInButton">LOGIN</button>
+						</div>
+						
 					</form>
-					<button className='logInButton'>LOGIN</button>
+						
 					{/* <Footer /> */}
 				</div>
 			</section>

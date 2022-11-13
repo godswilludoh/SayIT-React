@@ -1,5 +1,6 @@
 import React from 'react'
 import AdminSidebar from '../../components/Admin_comps/AdminSidebar'
+import { DateTime } from '../../helper/date-time/DateTime'
 import { AdminReportTable } from './AdminDashTable'
 
 export const AdminAgents = () => {
@@ -16,8 +17,7 @@ export const AdminAgents = () => {
 						{/* THE TIME AND DATE SECTION */}
 						<li>
 							<div className='time'>
-								<p className='time-one'>10:15</p>
-								<p className='time-two'>02:11:2022</p>
+								<DateTime/>
 							</div>
 						</li>
 						<li>

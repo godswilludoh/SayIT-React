@@ -3,6 +3,7 @@ import AdminSidebar from "../../components/Admin_comps/AdminSidebar";
 import adminUsersCSS from "./adminUsers.module.css"
 import { faTrash, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+import { DateTime } from "../../helper/date-time/DateTime";
 
 
 export const AdminUsers = () => {
@@ -19,8 +20,7 @@ export const AdminUsers = () => {
             {/* THE TIME AND DATE SECTION */}
             <li>
               <div className="time">
-                <p className="time-one">10:15</p>
-                <p className="time-two">02:11:2022</p>
+                <DateTime/>
               </div>
             </li>
             <li>
