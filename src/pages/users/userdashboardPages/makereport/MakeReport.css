@@ -4,7 +4,32 @@
 
 .makereportform-container {
 	width: 100%;
-	padding: 30px;
+	padding: 30px 4rem;
 	background: #b4b1af;
 	overflow: hidden;
+}
+
+.main-makereport {
+	background: #b4b1af;
+	margin: 2rem auto;
+	padding: 2rem 7rem;
+	border: 3px solid #999dad38;
+	border-radius: 10px;
+	overflow: scroll;
+	height: 100vh;
+	width: 80%;
+}
+
+.makereportform {
+	background: #b4b1af;
+}
+
+.makereport-title {
+	font-size: 26px;
+}
+
+.main-makereport-welcome {
+	margin-top: 2rem;
+	font-size: 20px;
+	font-weight: 700;
 }
