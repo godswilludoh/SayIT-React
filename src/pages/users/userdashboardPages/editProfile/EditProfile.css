@@ -5,13 +5,35 @@
 .editform-container {
 	width: 100%;
 	padding: 30px 4rem;
-	background: #b4b1af;
-	overflow: hidden;
+	background: #d9d9d9;
 }
 
 .editform-title {
+	margin-top: 1rem;
 	font-size: 26px;
 }
 
-.editProfile-main {
+.editprofile-btn {
+	display: flex;
+	justify-content: flex-end;
+	gap: 2rem;
+	margin: 2rem;
+}
+
+.edit-btn {
+	font-size: 14px;
+	color: #fff;
+	width: 179px;
+	height: 47px;
+	border-radius: 8px;
+}
+
+.edit-back {
+	border: 2px solid #ed4d02;
+	color: #ed4d02;
+}
+
+.edit-save {
+	background: #ed4d02;
+	border: 2px solid #ed4d02;
 }

@@ -71,17 +71,9 @@ export const EditFormik = () => {
 							type='password'
 							placeHolder='confirm-password'
 						/>
-						<div className='btn'>
-							<button
-								type='submit'
-								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
-							>
-								Back to Dashboard
-							</button>
-							<button
-								type='submit'
-								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
-							>
+						<div className='editprofile-btn'>
+							<button className='edit-btn edit-back'>Back to Dashboard</button>
+							<button type='submit' className='edit-btn edit-save'>
 								Save Changes
 							</button>
 						</div>
