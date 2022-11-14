@@ -39,7 +39,7 @@ export const EditFormik = () => {
 		>
 			<div className='editProfile-main'>
 				<form action=''>
-					<Form className=''>
+					<Form className='editprofile-form'>
 						<MyTextInput
 							label='Username'
 							name='userName'

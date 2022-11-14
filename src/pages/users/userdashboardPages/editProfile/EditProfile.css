@@ -13,6 +13,13 @@
 	font-size: 26px;
 }
 
+.editprofile-form {
+	width: 90%;
+}
+
+/* .editProfile-input {
+	margin-bottom: 2rem;
+} */
 .editprofile-btn {
 	display: flex;
 	justify-content: flex-end;
