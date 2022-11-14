@@ -1,10 +1,9 @@
 import React from 'react';
 import './Admindash.css';
 import AdminReportCrd from './AdminReportCrd';
-import {AdminDashTable} from './AdminDashTable';
-
-import AdminSidebar from '../../components/Admin_comps/AdminSidebar';
+import { AdminDashTable } from './AdminDashTable';git 
 import { DateTime } from '../../helper/date-time/DateTime';
+import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
 // import { Link } from 'react-router-dom';
 // import { AdminReport } from './AdminReport';
 
@@ -12,7 +11,7 @@ const admindash = () => {
 	return (
 		<React.Fragment>
 			<div className='main-container'>
-				<AdminSidebar />
+				<SidebarAdmin />
 
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
@@ -23,7 +22,7 @@ const admindash = () => {
 						<li>
 							<div className='time'>
 								{/* <p className='time-one'>  */}
-								<DateTime/>
+								<DateTime />
 								{/* </p> */}
 								{/* <p className='time-two'></p> */}
 							</div>
@@ -52,9 +51,8 @@ const admindash = () => {
 					<AdminDashTable />
 				</div>
 			</div>
-			
-				{/* <Link to ='/adminReports' element ={<AdminReport />} /> */}
-			
+
+			{/* <Link to ='/adminReports' element ={<AdminReport />} /> */}
 		</React.Fragment>
 	);
 };

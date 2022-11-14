@@ -1,14 +1,13 @@
-import React from 'react'
-import AdminSidebar from '../../components/Admin_comps/AdminSidebar'
-import { DateTime } from '../../helper/date-time/DateTime'
-import { AdminReportTable } from './AdminDashTable'
+import React from 'react';
+import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
+import { DateTime } from '../../helper/date-time/DateTime';
+import { AdminReportTable } from './AdminDashTable';
 
 export const AdminAgents = () => {
-  return (
-    <React.Fragment>
-    <div className='main-container'>
-				<AdminSidebar />
-
+	return (
+		<React.Fragment>
+			<div className='main-container'>
+				<SidebarAdmin />
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
@@ -17,7 +16,7 @@ export const AdminAgents = () => {
 						{/* THE TIME AND DATE SECTION */}
 						<li>
 							<div className='time'>
-								<DateTime/>
+								<DateTime />
 							</div>
 						</li>
 						<li>
@@ -43,8 +42,6 @@ export const AdminAgents = () => {
 					<AdminReportTable />
 				</div>
 			</div>
-			
-    
-    </React.Fragment>
-  )
-}
+		</React.Fragment>
+	);
+};
