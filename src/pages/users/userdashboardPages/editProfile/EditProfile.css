@@ -1,3 +1,17 @@
 .editProfile-container {
 	display: flex;
 }
+
+.editform-container {
+	width: 100%;
+	padding: 30px 4rem;
+	background: #b4b1af;
+	overflow: hidden;
+}
+
+.editform-title {
+	font-size: 26px;
+}
+
+.editProfile-main {
+}

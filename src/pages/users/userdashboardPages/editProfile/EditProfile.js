@@ -1,14 +1,19 @@
 import React from 'react';
 import SidebarUser from '../../../../components/sidebar/SidebarUser';
 import { EditFormik } from './EditFormik';
+import EditFormTop from './EditFormTop';
 import './EditProfile.css';
 
-// And now we can use these
 export const EditProfile = () => {
 	return (
 		<div className='editProfile-container'>
 			<SidebarUser />
-			<EditFormik />
+			<div className='editform-container'>
+				<div className='editform-top'>
+					<EditFormTop classname='editform-title' title='Edit Profile' />
+				</div>
+				<EditFormik />
+			</div>
 		</div>
 	);
 };
