@@ -13,9 +13,9 @@
 	font-size: 26px;
 }
 
-.editprofile-form {
+/* .editprofile-form {
 	width: 90%;
-}
+} */
 
 /* .editProfile-input {
 	margin-bottom: 2rem;
@@ -38,8 +38,14 @@
 .edit-back {
 	border: 2px solid #ed4d02;
 	color: #ed4d02;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 10px;
 }
 
+.edit-back:hover {
+	color: #fff;
+}
 .edit-save {
 	background: #ed4d02;
 	border: 2px solid #ed4d02;
