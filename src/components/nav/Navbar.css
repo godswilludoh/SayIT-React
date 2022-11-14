@@ -50,7 +50,7 @@
 	background-color: #ed4d02;
 	color: #ffff;
 }
-
+ 
 /* for the collapse menu button */
 .navbar .menu_button #menuBar {
 	color: #ed4d02;
@@ -59,7 +59,7 @@
 	display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
 	.navbar {
 		transition: 0.5s height ease-in-out;
 	}

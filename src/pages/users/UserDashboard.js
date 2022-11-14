@@ -1,12 +1,12 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/Sidebar';
+import SidebarUser from '../../components/sidebar/SidebarUser';
 import { DateTime } from '../../helper/date-time/DateTime';
 import './UserDashboard.css';
 
 const UserDashboard = () => {
 	return (
 		<div className='userdashboard-container'>
-			<Sidebar />
+			<SidebarUser />
 			<div className='userdashboard-interface'>
 				<div className='user-top'>
 					<div className='user-info-display'>

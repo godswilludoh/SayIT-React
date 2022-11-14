@@ -1,48 +1,40 @@
 import React, { useState } from 'react';
 import { MdDashboard } from 'react-icons/md';
-import { BiMessageSquareDots, BiLogOut } from 'react-icons/bi';
-import { FaBars, FaUser, FaUsers, FaEdit, FaCheckDouble } from 'react-icons/fa';
-
+import {
+	BiMessageSquareDots,
+	BiLogOut,
+	BiMessageSquareEdit,
+} from 'react-icons/bi';
+import { FaBars, FaUser } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
-// import './AdminSidebar.css';
-// import { AdminReport } from './AdminReport';
+import './Sidebar.css';
 
-const AdminSidebar = ({ children }) => {
+const SidebarUser = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
 		{
-			path: '/admindashboard',
+			path: '/agentDashBoard',
 			name: 'Dashboard',
 			icon: <MdDashboard />,
 		},
-		// {
-		// 	path: '/notification',
-		// 	name: 'Notification',
-		// 	icon: <BiMessageSquareDots />,
-		// },
 		{
-			path: '/adminReport',
-			name: 'Reports',
-			icon: <FaEdit />,
+			path: '/agentNotificationPage',
+			name: 'Notification',
+			icon: <BiMessageSquareDots />,
 		},
 		{
-			path: '/adminUsers',
-			name: 'Reg Users',
-			icon: <FaUsers />,
+			path: '/makereport',
+			name: 'Make Report',
+			icon: <BiMessageSquareEdit />,
 		},
 		{
-			path: '/adminAgents',
-			name: 'Agents',
-			icon: <FaCheckDouble />,
-		},
-		{
-			path: '/profile',
-			name: 'Profile',
+			path: '/editprofile',
+			name: 'Edit Profile',
 			icon: <FaUser />,
 		},
 		{
-			path: '/admin',
+			path: '/login',
 			name: 'Logout',
 			icon: <BiLogOut />,
 		},
@@ -80,16 +72,15 @@ const AdminSidebar = ({ children }) => {
 						to={item.path}
 						key={index}
 						className='sidebar-links'
-						activeclassname='active'
+						activeClassName='active'
 					>
 						<div className='sidebar-icon'>{item.icon}</div>
 						<div className='sidebar-text'>{item.name}</div>
 					</NavLink>
 				))}
 			</div>
-			{/* <main>{children}</main> */}
 		</div>
 	);
 };
 
-export default AdminSidebar;
+export default SidebarUser;

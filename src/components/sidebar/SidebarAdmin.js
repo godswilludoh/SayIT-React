@@ -9,7 +9,7 @@ import { FaBars, FaUser } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import './Sidebar.css';
 
-const Sidebar = ({ children }) => {
+const SidebarUser = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
@@ -83,4 +83,4 @@ const Sidebar = ({ children }) => {
 	);
 };
 
-export default Sidebar;
+export default SidebarUser;

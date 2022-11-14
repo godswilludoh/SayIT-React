@@ -1,16 +1,17 @@
-import React from 'react'
-import Sidebar from '../../components/sidebar/Sidebar'
-import AgentNotificationComponent from './AgentNotificationComponent'
-import '../agentNotificationPage/AgentNotification.css'
+import React from 'react';
+
+import AgentNotificationComponent from './AgentNotificationComponent';
+import '../agentNotificationPage/AgentNotification.css';
+import SidebarUser from '../../components/sidebar/SidebarUser';
 
 const AgentNotificationPage = () => {
-  return (
-    <div className='containerWrapper'>
-        <Sidebar/>
+	return (
+		<div className='containerWrapper'>
+			<SidebarUser />
 
-        <AgentNotificationComponent />
-    </div>
-  )
-}
+			<AgentNotificationComponent />
+		</div>
+	);
+};
 
-export default AgentNotificationPage
+export default AgentNotificationPage;
