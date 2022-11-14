@@ -123,7 +123,7 @@ const SignupForm = () => {
 									type='text'
 									placeholder='Enter your username'
 									onChange={handleChange}
-									value={values.username}
+									value={values.userName}
 								/>
 								<TextField
 									label='Phone Number'

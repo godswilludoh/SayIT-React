@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import TextField from '../TextField';
 import * as Yup from 'yup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdditionalInfo from './AdditionalInfo';
+import { useNavigate } from 'react-router';
+import axios from 'axios';
 
 const SignupForm = () => {
+	const navigate = useNavigate();
+	const [token, setToken] = useState(false);
+	const localToken = JSON.parse(localStorage.getItem('token'));
+	let tokenExists = localToken?.length > 0;
+	useEffect(() => {
+		console.log('Token exists');
+		if (tokenExists) {
+			setToken(true);
+		}
+	}, [tokenExists]);
+
 	const displaySignUpNotification = () => {
 		toast.success('Login Successful!', { theme: 'light' });
 	};
@@ -38,36 +51,76 @@ const SignupForm = () => {
 
 			<Formik
 				initialValues={{
-					username: '',
+					userName: '',
 					password: '',
 				}}
 				validationSchema={validate}
-				onSubmit={(values) => {
-					console.log(values);
+				onSubmit={async (values, { setSubmitting, resetForm }) => {
+					const { userName, password } = values;
+					setSubmitting(true);
+					setTimeout(() => {
+						setSubmitting(false);
+						console.log('form submitted');
+						try {
+							let response = axios.post(
+								'https://say--it.herokuapp.com/v1/auth/login',
+								{
+									userName,
+									password,
+								}
+							);
+
+							const { access, refresh } = response.data.tokens;
+							const tokens = [];
+							tokens.push({ access: access.token });
+							tokens.push({ refresh: refresh.token });
+							localStorage.setItem('token', JSON.stringify(tokens));
+
+							if (token) {
+								navigate('/users');
+							}
+						} catch (error) {}
+						resetForm();
+					}, 4000);
 				}}
 			>
-				{(formik) => (
+				{(
+					values,
+					errors,
+					touched,
+					handleChange,
+					handleSubmit,
+					handleReset,
+					isSubmitting,
+					formik
+				) => (
 					<form>
 						<Form className='w-75'>
 							<TextField
 								label='Username'
-								name='username'
+								name='userName'
 								type='username'
 								placeholder='Enter Username or Email'
+								onChange={handleChange}
+								value={values.userName}
 							/>
 							<TextField
 								label='Password'
 								name='password'
 								type='password'
 								placeholder='Enter Password'
+								onChange={handleChange}
+								value={values.password}
 							/>
 
 							<button
 								id='createAccount'
 								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
-								onClick={displaySignUpNotification}
+								disabled={isSubmitting}
+								type='submit'
+								onClick={handleSubmit}
 							>
-								LOGIN
+								{isSubmitting ? 'Logging In' : 'Login'}
 							</button>
 						</Form>
 					</form>
