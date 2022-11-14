@@ -2,12 +2,12 @@ import React from 'react';
 
 import AgentNotificationComponent from './AgentNotificationComponent';
 import '../agentNotificationPage/AgentNotification.css';
-import SidebarUser from '../../components/sidebar/SidebarUser';
+import { SidebarAgents } from '../../components/sidebar/SidebarAgents';
 
 const AgentNotificationPage = () => {
 	return (
 		<div className='containerWrapper'>
-			<SidebarUser />
+			<SidebarAgents />
 
 			<AgentNotificationComponent />
 		</div>

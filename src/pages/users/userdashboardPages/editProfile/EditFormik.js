@@ -8,6 +8,7 @@ import {
 	validationSchema,
 } from 'formik';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 import { MyTextInput } from '../../../../components/reportFormFields/MyTextInput';
 
 export const EditFormik = () => {
@@ -72,7 +73,9 @@ export const EditFormik = () => {
 							placeHolder='confirm-password'
 						/>
 						<div className='editprofile-btn'>
-							<button className='edit-btn edit-back'>Back to Dashboard</button>
+							<Link to='/users' className='edit-btn edit-back'>
+								Back to Dashboard
+							</Link>
 							<button type='submit' className='edit-btn edit-save'>
 								Save Changes
 							</button>
