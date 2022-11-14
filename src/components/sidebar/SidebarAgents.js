@@ -9,7 +9,7 @@ import { FaBars, FaUser } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import './Sidebar.css';
 
-const SidebarUser = ({ children }) => {
+export const SidebarAgents = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
@@ -23,18 +23,14 @@ const SidebarUser = ({ children }) => {
 			name: 'Notification',
 			icon: <BiMessageSquareDots />,
 		},
+
 		{
-			path: '/makereport',
-			name: 'Make Report',
-			icon: <BiMessageSquareEdit />,
-		},
-		{
-			path: '/editprofile',
-			name: 'Edit Profile',
+			path: '/agentprofile',
+			name: 'Profile',
 			icon: <FaUser />,
 		},
 		{
-			path: '/login',
+			path: '/agents',
 			name: 'Logout',
 			icon: <BiLogOut />,
 		},
@@ -82,5 +78,3 @@ const SidebarUser = ({ children }) => {
 		</div>
 	);
 };
-
-export default SidebarUser;
