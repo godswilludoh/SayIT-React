@@ -162,3 +162,9 @@
 .usersTimeOfReport{
     font-size: 13px;
 }
+@media(min-width: 300px) and (max-width: 900px) {
+  .time{
+    padding: 2px;
+    width: 25%;
+  }
+}
