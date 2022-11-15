@@ -1,7 +1,8 @@
 import React from 'react';
 import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
 import { DateTime } from '../../helper/date-time/DateTime';
-import { AdminReportTable } from './AdminDashTable';
+// import { AdminReportTable } from './AdminDashTable';
+import "./Admindash.css";
 
 export const AdminAgents = () => {
 	return (
@@ -39,7 +40,39 @@ export const AdminAgents = () => {
 						</li>
 					</ul>
 
-					<AdminReportTable />
+					{/* <AdminReportTable /> */}
+					<div id="taable_sec">
+  			<div>
+    			<h4 className="tableTitle"> 
+   				 <span>
+   				 <input type="text" className= "tableSearch" placeholder="Enter Report ID" />
+    				</span>
+   			 	</h4>
+  			</div>
+  				<div id="user-table">
+    			<div className="table-del">
+      			<div>
+      		</div></div><table id="user-table">
+     		 <tbody><tr>
+         	 	<th>S/N</th>
+          		<th>Agency</th>
+         		<th>Agency Info</th>
+          		<th>Report Info</th>
+          		<th>Status</th>
+          		<th>Action</th>
+       		 </tr>
+				{/* <tr>
+                    <td>1</td>
+					<td>EFCC</td>
+					<td>AG/001EFC</td>
+					<td>View</td>
+					<td>On Boarded</td>
+					<td className='suspend-btn'>Suspend</td>
+                 </tr> */}
+
+      </tbody></table>
+  </div>
+</div>
 				</div>
 			</div>
 		</React.Fragment>

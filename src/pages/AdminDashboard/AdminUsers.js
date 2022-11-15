@@ -75,32 +75,10 @@ export const AdminUsers = () => {
 										<td> Anonymous</td>
 										<td>03-03-2022</td>
 										<td>1</td>
-										<td>
+										<td className='suspend-btn'>
 											<FontAwesomeIcon id='cardicons' icon={faTrash} /> Delete
 										</td>
 									</tr>
-									{/* <tr>
-                    <td>
-                      <i className="fa fa-user" /> Goddess@rocketmail.com
-                    </td>
-                    <td>Whacky Theo</td>
-                    <td>03-03-2022</td>
-                    <td>1</td>
-                    <td>
-                      <i className="fa fa-trash" /> Delete
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i className="fa fa-user" /> Anonymous@mail.com
-                    </td>
-                    <td> Anonymous</td>
-                    <td>03-03-2022</td>
-                    <td>1</td>
-                    <td>
-                      <i className="fa fa-trash" /> Delete
-                    </td>
-                  </tr> */}
 								</tbody>
 							</table>
 						</div>

@@ -64,6 +64,9 @@ footer {
 	outline: 0;
 	background: #dc6b36;
 }
+#agentID{
+	padding: 5px 10px 5px 50px;	
+}
 
 .formGroup Input::placeholder {
 	color: #fff;
