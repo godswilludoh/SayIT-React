@@ -17,6 +17,7 @@ export const AdminDashTable = () => {
             />
           </span>
         </h3>
+        
         <ul className="Notifications">
           <li>
             {" "}
@@ -39,25 +40,23 @@ export const AdminDashTable = () => {
             <strong>Agents</strong> <span className="notifyNums">0</span>
           </li>
         </ul>
-        <hr />
+        <div>
+           <ul id="notificatonlist">
+              {/* <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
+                Agent Phillip <strong> (NPF)</strong> <br></br>
+                10h ago </li>
+              <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
+                  Agent Phillip <strong> (NPF)</strong> <br></br>
+                  10h ago </li>
+               <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
+                    Agent Phillip <strong> (NPF)</strong> <br></br>
+                    10h ago </li> */}
+             </ul>
+        </div>
       </div>
       <div>
         <ul id="notificatonlist">
-          {/* <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
-        Agent Phillip <strong> (NPF)</strong> <br /><br />
-        10h ago </li>
-      <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
-        Agent Phillip <strong> (NPF)</strong> <br /><br />
-        10h ago </li>
-      <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
-        Agent Phillip <strong> (NPF)</strong> <br /><br />
-        10h ago </li>
-      <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
-        Agent Phillip <strong> (NPF)</strong> <br /><br />
-        10h ago </li>
-      <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
-        Agent Phillip <strong> (NPF)</strong> <br /><br />
-        10h ago </li>*/}
+          
         </ul>
       </div>
     </div>
@@ -89,6 +88,17 @@ export const AdminReportTable = () => {
           <th>Admin Charged</th>
           <th>Action</th>
         </tr>
+        {/* <tr>
+        <td>Whacky Theo</td>
+        <td>03-03-2022</td>
+        <td>03-03-2022</td>
+        <td>03-03-2022</td>
+        <td>03-03-2022</td>
+        <td>03-03-2022</td>
+        <td>03-03-2022</td>
+        <td>03-03-2022</td>
+        </tr>
+         */}
         
       </tbody></table>
   </div>

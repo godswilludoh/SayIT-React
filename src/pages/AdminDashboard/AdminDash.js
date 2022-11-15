@@ -1,7 +1,7 @@
 import React from 'react';
 import './Admindash.css';
 import AdminReportCrd from './AdminReportCrd';
-import { AdminDashTable } from './AdminDashTable';git 
+import { AdminDashTable } from './AdminDashTable'; 
 import { DateTime } from '../../helper/date-time/DateTime';
 import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
 // import { Link } from 'react-router-dom';

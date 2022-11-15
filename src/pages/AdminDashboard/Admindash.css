@@ -12,7 +12,7 @@ ul {
 }
 
 .topAdmin {
-	background-color: #b4b1af;
+	background-color: #d0d0d0;
 	margin: 0rem 0rem 0rem;
 	padding-top: 10px;
 	width: 100%;
@@ -24,7 +24,7 @@ ul {
 	height: 60px;
 	display: flex;
 	justify-content: space-around;
-	background: #fefaf7;
+	background: #d0d0d0;
 	border-radius: 5px;
 	width: 90%;
 
@@ -69,21 +69,21 @@ ul {
 
 /* THE NOTIFICATION SECTION */
 .NotifyBar {
-	background-color: #fffffe;
+	/* background-color: #fffffe; */
 	margin: 60px 40px 60px 60px;
 	padding: 5px 30px 50px 30px;
-	height: 15rem;
+	/* height: 15rem; */
 	width: 90%;
-	border: 1px solid #000000;
-	box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
+	/* border: 1px solid #d0d0d0; */
+	/* box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25); */
+	/* border-radius: 10px; */
 }
 .Notify {
-	margin: 20px 0px 0px 0px;
+	margin: 20px 0px 0px 32px;
 	font-weight: 700;
 	font-size: 20px;
 	display: flex;
-	background-color: #707078;
+	background-color: #60616e;
 	justify-content: space-between;
 	padding: 0.5rem;
 	color: #ffffff;
@@ -94,22 +94,23 @@ ul {
 
 /* } */
 .Notifications {
+	margin: 0px 0px 0px 32px;
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 10px;
-	background-color: #707078;
+	background-color: #60616e;
 	padding: 1rem;
 	color: #ffffff;
 	border: 1px solid rgb(232, 229, 229);
 }
 
 #notificatonlist li {
-	margin: 10px 0px 0px 40px;
+	margin: 10px 0px 0px 0px;
 	padding: 10px 10px 0px 10px;
 	border-radius: 8px;
 	border: 1px solid #b4b1af;
-	width: 90%;
-	background-color: #cbc4c4;
+	width: 100%;
+	background-color: #fffcfcee;
 }
 
 .notifyNums {
@@ -118,7 +119,7 @@ ul {
 	width: 25px;
 	background-color: #ef6728;
 	font-size: x-small;
-	border: 1px solid rgb(85, 80, 75);
+	border: 1px solid rgba(85, 80, 75, 0.86);
 }
 
 #notificatonlist li:hover {
@@ -192,13 +193,18 @@ hr {
 @media (min-width: 300px) and (max-width: 900px) {
 	.admin_Dash_Nav {
 		width: 80%;
+		display: grid;
+		/* padding: 5px; */
+		/* margin: auto; */
+		align-content: space-around;
 	}
+
 	.NotifyBar {
-		width: 70%;
+		width: 100%;
 	}
 	.Notifications {
-		width: 80%;
-		display: grid;
+		width: 100%;
+		/* display: grid; */
 	}
 
 	#report_cards {
@@ -209,6 +215,16 @@ hr {
 	.Report_Cards {
 		display: grid;
 	}
+
+	.time {
+		padding: 0px;
+		margin: 0px;
+	}
+	#dashBar {
+		margin: 0px;
+		padding: 2px;
+	}
+	
 }
 /* ADMIN REPORT TABLE  */
 #taable_sec{
@@ -231,15 +247,20 @@ hr {
 	width: 25em;
 	/* margin-left: auto; */
 }
-@media(min-width: 300px) and (max-width: 900px) {
-.time{
-	padding: 2px;
-	width: 25%;
-}
-.tableTitle .tableSearch{
-	margin: 2% 10% 2% 10%;
-}
 
-
-}
+/* THE AGENT TABLE  */
+.suspend-btn{
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color:rgb(220, 20, 20);
+    padding: 10px 10px 10px 15px;
+  }
+  .suspend-btn:hover {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+  }
   
