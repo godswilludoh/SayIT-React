@@ -16,6 +16,7 @@ import { AdminReport } from './pages/AdminDashboard/AdminReport';
 import { AdminAgents } from './pages/AdminDashboard/AdminAgents';
 import { MakeReportForm } from './pages/users/userdashboardPages/makereport/MakeReport';
 import { EditProfile } from './pages/users/userdashboardPages/editProfile/EditProfile';
+import UserForgotPassword from './pages/login/userforgotpassword/UserForgotPassword';
 
 function App() {
 	return (
@@ -44,6 +45,7 @@ function App() {
 				<Route path='adminAgents' element={<AdminAgents />} />
 				<Route path='makereport' element={<MakeReportForm />} />
 				<Route path='editprofile' element={<EditProfile />} />
+				<Route path='userforgotpassword' element={<UserForgotPassword/>} />
 			</Routes>
 		</>
 	);
