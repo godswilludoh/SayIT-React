@@ -72,9 +72,17 @@ const SignupForm = () => {
 						localStorage.setItem('token', JSON.stringify(tokens));
 
 						if (token) {
+							toast.success('Login Successful!', {
+								position: 'top-center',
+							});
 							navigate('/users');
 						}
-					} catch (error) {}
+					} catch (error) {
+						console.log(error);
+						toast.error('Login Failed! Please try again', {
+							position: 'top-center',
+						});
+					}
 				}}
 			>
 				{({ values, handleChange, handleSubmit, isSubmitting, formik }) => (
