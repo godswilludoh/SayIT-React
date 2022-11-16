@@ -17,7 +17,7 @@ const UserDashboard = () => {
 					</div>
 					<div className='userProfileImg'>
 						<div id='user-profile-container'>
-							<img id='user-profileImage' src='/Images/newUser.png' />
+							<img id='user-profileImage' src='/assets/newUser.png' />
 						</div>
 						<input
 							id='imageUpload'
@@ -27,14 +27,12 @@ const UserDashboard = () => {
 							required
 							capture
 						/>
-						<span className='user-id' id='user-profilename'>
-							Samuel
-						</span>
+						<span className='user-id' id='user-profilename'></span>
 					</div>
 				</div>
 				<div className='user-dashboard-container'>
 					<h2>
-						👋 Welcome <span id='user-username'>Samuel</span>
+						👋 Welcome <span id='user-username'></span>
 					</h2>
 					<p className='user-secure'>Your data is safe with us 🔐</p>
 					<div className='user-cards'>

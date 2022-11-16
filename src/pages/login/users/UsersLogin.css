@@ -38,14 +38,14 @@ input {
 	outline: none;
 }
 
-input[type='text'],
+/* input[type='text'],
 input[type='password'] {
 	padding-left: 1rem;
 	font-size: 17px;
 	font-weight: 700;
 	fill: none;
 	background: transparent;
-}
+} */
 
 input::placeholder {
 	color: #000000;
