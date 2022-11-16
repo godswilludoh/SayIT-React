@@ -150,7 +150,7 @@
 	background: #999dad38;
 }
 
-input[type='text'] {
+#user-search-input[type='text'] {
 	padding: 1rem;
 	font-size: 14px;
 	font-weight: 700;
@@ -223,4 +223,13 @@ tr:nth-child(odd) {
 .user-pagination-item:hover {
 	background: #ed4d02;
 	color: #ffffff;
+}
+
+#user-profile-container img {
+	width: 50px;
+	height: 50px;
+}
+
+#user-profile-container #user-profileImage {
+	cursor: pointer;
 }

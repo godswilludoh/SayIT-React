@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdditionalInfo from './AdditionalInfo';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SignupForm = () => {
@@ -25,9 +25,7 @@ const SignupForm = () => {
 	};
 
 	const validate = Yup.object({
-		username: Yup.string()
-			.max(15, 'Must be 15 characters or less')
-			.required('Required'),
+		detail: Yup.string().required('Required'),
 		password: Yup.string()
 			.min(6, 'Password must be at least 6 characters')
 			.required('Password is required'),
@@ -51,58 +49,44 @@ const SignupForm = () => {
 
 			<Formik
 				initialValues={{
-					userName: '',
+					detail: '',
 					password: '',
 				}}
 				validationSchema={validate}
-				onSubmit={async (values, { setSubmitting, resetForm }) => {
-					const { userName, password } = values;
+				onSubmit={async (values, { setSubmitting }) => {
+					const { detail, password } = values;
 					setSubmitting(true);
-					setTimeout(() => {
-						setSubmitting(false);
-						console.log('form submitted');
-						try {
-							let response = axios.post(
-								'https://say--it.herokuapp.com/v1/auth/login',
-								{
-									userName,
-									password,
-								}
-							);
-
-							const { access, refresh } = response.data.tokens;
-							const tokens = [];
-							tokens.push({ access: access.token });
-							tokens.push({ refresh: refresh.token });
-							localStorage.setItem('token', JSON.stringify(tokens));
-
-							if (token) {
-								navigate('/users');
+					try {
+						let response = await axios.post(
+							'https://say--it.herokuapp.com/v1/auth/login',
+							{
+								detail,
+								password,
 							}
-						} catch (error) {}
-						resetForm();
-					}, 4000);
+						);
+
+						const { access, refresh } = response.data.tokens;
+						const tokens = [];
+						tokens.push({ access: access.token });
+						tokens.push({ refresh: refresh.token });
+						localStorage.setItem('token', JSON.stringify(tokens));
+
+						if (token) {
+							navigate('/users');
+						}
+					} catch (error) {}
 				}}
 			>
-				{(
-					values,
-					errors,
-					touched,
-					handleChange,
-					handleSubmit,
-					handleReset,
-					isSubmitting,
-					formik
-				) => (
+				{({ values, handleChange, handleSubmit, isSubmitting, formik }) => (
 					<form>
 						<Form className='w-75'>
 							<TextField
-								label='Username'
-								name='userName'
-								type='username'
+								label='Username or Email'
+								name='detail'
+								type='text'
 								placeholder='Enter Username or Email'
 								onChange={handleChange}
-								value={values.userName}
+								value={values.detail}
 							/>
 							<TextField
 								label='Password'
