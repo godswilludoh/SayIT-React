@@ -1,3 +1,7 @@
+.userLogInContainer{
+	overflow-x: hidden;
+}
+
 header {
 	display: flex;
 	flex-direction: row-reverse;
@@ -96,6 +100,27 @@ a {
 	text-decoration: underline;
 	color: #8f8f8f;
 }
+
+
+.forForgotPassword{
+	margin-top: 10px;
+	display: flex;
+	justify-content: end;
+	font-size: 14px;
+	color: #ed4d02;
+	text-align: end;
+	font-weight: 700;
+}
+
+a.forForgotPassword{
+	text-decoration: none;
+}
+
+a.forForgotPassword:hover{
+	color: #ed4d02;
+}
+
+
 
 /* RESPONSIVE DESIGN */
 /* Working on the mobile responsiveness screen 940 and below */

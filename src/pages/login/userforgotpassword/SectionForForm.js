@@ -8,7 +8,6 @@ const SectionForForm = () => {
         <i className="fa fa-arrow-left" aria-hidden="true" />
         Back to
         <Link to={"/login"} className="seprateText">
-          {" "}
           LOGIN
         </Link>
       </p>

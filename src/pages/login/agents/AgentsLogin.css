@@ -1,3 +1,7 @@
+.agentAndAdminContainer{
+	overflow-x: hidden;
+}
+
 .overallContainer {
 	padding-top: 30px;
 	display: flex;

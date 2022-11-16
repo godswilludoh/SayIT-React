@@ -8,7 +8,7 @@ import './UsersLogin.css';
 
 const UsersLogin = () => {
 	return (
-		<>
+		<div className='userLogInContainer'>
 			<Navbar />
 			<div className='mt-5'>
 				<div className='row'>
@@ -26,7 +26,7 @@ const UsersLogin = () => {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	);
 };
 

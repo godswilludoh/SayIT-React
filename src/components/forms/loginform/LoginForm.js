@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdditionalInfo from './AdditionalInfo';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
 	const navigate = useNavigate();
@@ -104,6 +105,10 @@ const SignupForm = () => {
 								onChange={handleChange}
 								value={values.password}
 							/>
+
+							<Link to={"/userforgotpassword"} className='forForgotPassword'>
+								FORGOT PASSWORD?
+							</Link>
 
 							<button
 								id='createAccount'

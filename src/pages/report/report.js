@@ -1,7 +1,7 @@
 import React from 'react';
 import './report.css';
 import Navbar from '../../components/nav/Navbar';
-import './report.css';
+// import './report.css';
 
 const Report = () => {
 	return (
