@@ -5,7 +5,7 @@ import Navbar from "../../../components/nav/Navbar";
 
 const AgentsLogin = () => {
   return (
-    <>
+    <div className="agentAndAdminContainer">
       <Navbar />
       <section className={styles.overallContainer}>
         <section className={styles.theLoginSide}>
@@ -65,7 +65,7 @@ const AgentsLogin = () => {
           />
         </section>
       </section>
-    </>
+    </div>
   );
 };
 

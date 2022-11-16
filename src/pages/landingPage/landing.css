@@ -1,3 +1,7 @@
+.landingPageContainer{
+	overflow-x: hidden;
+}
+
 /* fOR THE IMAGE ON THE LANDING PAGE */
 .hero-image {
 	padding-top: 0.5rem;

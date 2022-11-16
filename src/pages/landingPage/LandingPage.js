@@ -11,7 +11,7 @@ import Faq from './Faq';
 
 const LandingPage = () => {
 	return (
-		<>
+		<div className='landingPageContainer'>
 			<Navbar />
 
 			<HeroSection />
@@ -25,7 +25,7 @@ const LandingPage = () => {
 			<WhyUS />
 
 			<Footer />
-		</>
+		</div>
 	);
 };
 

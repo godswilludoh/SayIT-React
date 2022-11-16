@@ -1,3 +1,9 @@
+.userSignupContainer{
+	overflow-x: hidden;
+}
+
+
+
 /* .signup-body-container {
 	display: flex;
 	justify-content: space-between;
