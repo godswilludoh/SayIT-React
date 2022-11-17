@@ -9,8 +9,8 @@ import {
 } from 'formik';
 import axios from 'axios';
 import * as Yup from 'yup';
-import { json } from 'react-router';
-import { upload } from '@testing-library/user-event/dist/upload';
+// import { json } from 'react-router';
+// import { upload } from '@testing-library/user-event/dist/upload';
 import { MySelect } from '../../../../components/reportFormFields/MySelect';
 import { MyCheckbox } from '../../../../components/reportFormFields/MyCheckbox';
 import { MyTextInput } from '../../../../components/reportFormFields/MyTextInput';
@@ -34,10 +34,10 @@ const UserFormik = () => {
 			<Formik
 				initialValues={{
 					sector: '',
-					agency: '',
-					reportee: '',
-					affiliation: '',
 					organization: '',
+					reportee: '',
+					affiliation: false,
+					title: '',
 					description: '',
 					upload: '',
 					acceptedTerms: false, // added for our checkbox
@@ -83,7 +83,7 @@ const UserFormik = () => {
 
 					reportee: Yup.string().required('Required'),
 
-					affiliation: Yup.string().required('Required'),
+					affiliation: Yup.boolean().required('Required'),
 
 					title: Yup.string()
 						.max(30, 'Must be 30 characters or less')
@@ -103,6 +103,12 @@ const UserFormik = () => {
 				})}
 				onSubmit={async (values, { setSubmitting }) => {
 					const { title, organization, affiliation, description } = values;
+					if (affiliation.value === 'yes') {
+						affiliation = true;
+					} else {
+						affiliation = false;
+					}
+					// affiliation === 'yes' ? true : false;
 					setSubmitting(true);
 					try {
 						let response = await axios.post(
@@ -161,7 +167,9 @@ const UserFormik = () => {
 
 									<MySelect
 										label='Kindly select the agency you wish to report to'
-										name='agency'
+										name='organization'
+										onChange={handleChange}
+										value={values.organization}
 									>
 										<option value=''>Select Agency</option>
 										<option value='frsc'>
@@ -203,6 +211,8 @@ const UserFormik = () => {
 									<MySelect
 										label='Are you affiliated to the above specified'
 										name='affiliation'
+										onChange={handleChange}
+										value={values.affiliation}
 									>
 										<option value=''>Select</option>
 										<option value='yes'>Yes</option>
@@ -274,9 +284,10 @@ const UserFormik = () => {
 									<button
 										type='submit'
 										id='myBtn'
-										disabled={Formik.isSubmitting}
+										disabled={isSubmitting}
+										onClick={handleSubmit}
 									>
-										Submit
+										{isSubmitting ? 'Loading' : 'SUBMIT'}
 									</button>
 								</Form>
 							</div>
