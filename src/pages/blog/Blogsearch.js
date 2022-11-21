@@ -17,9 +17,8 @@ export const Blogsearch = () => {
 					<SearchBlog type='text' id='search' placeholder='Search Here' />
 				</header>
 			</div>
-			<section id='blog_grid-container'>
-				<BlogCard />
-			</section>
+
+			<BlogCard />
 		</>
 	);
 };
