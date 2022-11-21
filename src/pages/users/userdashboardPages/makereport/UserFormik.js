@@ -83,7 +83,7 @@ const UserFormik = () => {
 
 					reportee: Yup.string().required('Required'),
 
-					affiliation: Yup.boolean().required('Required'),
+					affiliation: Yup.string().required('Required'),
 
 					title: Yup.string()
 						.max(30, 'Must be 30 characters or less')
@@ -102,9 +102,10 @@ const UserFormik = () => {
 						.required('Required'),
 				})}
 				onSubmit={async (values, { setSubmitting }) => {
-					const { title, organization, affiliation, description } = values;
-					if (affiliation.value === 'yes') {
+					let { title, organization, affiliation, description } = values;
+					if (affiliation.values === 'yes') {
 						affiliation = true;
+						console.log(affiliation);
 					} else {
 						affiliation = false;
 					}
