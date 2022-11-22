@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import TextField from '../TextField';
-import * as Yup from 'yup';
+import validationSchema from './validationLogin';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdditionalInfo from './AdditionalInfo';
@@ -32,12 +32,6 @@ const SignupForm = () => {
 		});
 	};
 
-	const validate = Yup.object({
-		detail: Yup.string().required('Required'),
-		password: Yup.string()
-			.min(6, 'Password must be at least 6 characters')
-			.required('Password is required'),
-	});
 	return (
 		<>
 			<div className='toast-notify'>
@@ -60,7 +54,7 @@ const SignupForm = () => {
 					detail: '',
 					password: '',
 				}}
-				validationSchema={validate}
+				validationSchema={validationSchema}
 				onSubmit={async (values, { setSubmitting }) => {
 					const { detail, password } = values;
 					setSubmitting(true);
