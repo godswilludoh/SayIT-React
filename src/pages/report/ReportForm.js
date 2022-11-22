@@ -9,11 +9,22 @@ import {MySelect} from "../../components/reportFormFields/MySelect";
 import {MyCheckbox} from "../../components/reportFormFields/MyCheckbox";
 import {MyTextInput} from "../../components/reportFormFields/MyTextInput";
 import {MyTextArea} from "../../components/reportFormFields/MyTextArea";
-
+import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
 
 
 // And now we can use these
 export const ReportForm = () => {
+
+  const navigate = useNavigate();
+
+  const showAlert =()=>{
+    {swal("Thank you for speaking up!", "Your report have been submitted successfully", "success")}
+    setTimeout(() => {navigate('/')}, 5000);
+  };
+
+
+
   return (
     <>
       <Navbar/>
@@ -77,7 +88,7 @@ export const ReportForm = () => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
+            // alert(JSON.stringify(values, null, 2));
             setSubmitting(false);
           }, 400);
           // console.log("values");
@@ -190,9 +201,11 @@ export const ReportForm = () => {
 
             <br/>
             <button 
+            onClick={showAlert}
             type="submit" 
             id="myBtn" 
             disabled={Formik.isSubmitting}>Submit</button>
+            
 
         </Form>
       </div>
