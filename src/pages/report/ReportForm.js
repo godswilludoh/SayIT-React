@@ -8,51 +8,51 @@ import {
 	validateYupSchema,
 } from 'formik';
 import * as Yup from 'yup';
-import Navbar from '../../components/nav/Navbar';
-import './report.css';
-import { json } from 'react-router';
-import { upload } from '@testing-library/user-event/dist/upload';
-import { MySelect } from '../../components/reportFormFields/MySelect';
-import { MyCheckbox } from '../../components/reportFormFields/MyCheckbox';
-import { MyTextInput } from '../../components/reportFormFields/MyTextInput';
-import { MyTextArea } from '../../components/reportFormFields/MyTextArea';
+import Navbar from "../../components/nav/Navbar";
+import './report.css'
+import { json } from "react-router";
+import { upload } from "@testing-library/user-event/dist/upload";
+import {MySelect} from "../../components/reportFormFields/MySelect";
+import {MyCheckbox} from "../../components/reportFormFields/MyCheckbox";
+import {MyTextInput} from "../../components/reportFormFields/MyTextInput";
+import {MyTextArea} from "../../components/reportFormFields/MyTextArea";
+import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
+
 
 // And now we can use these
 export const ReportForm = () => {
-	return (
-		<>
-			<Navbar />
-			<Formik
-				initialValues={{
-					sector: '',
-					agency: '',
-					reportee: '',
-					affiliation: '',
-					subject: '',
-					message: '',
-					upload: '',
-					acceptedTerms: false, // added for our checkbox
-				}}
-				validationSchema={Yup.object({
-					sector: Yup.string()
-						.oneOf(
-							[
-								'finance',
-								'technology',
-								'agriculture',
-								'oil and gas',
-								'banking',
-								'education',
-								'sports',
-								'health',
-								'energy',
-								'transportation',
-								'entertainment',
-								'others',
-							],
-							'Invalid sector'
-						)
-						.required('Required!, please select a sector'),
+
+  const navigate = useNavigate();
+
+  const showAlert =()=>{
+    {swal("Thank you for speaking up!", "Your report have been submitted successfully", "success")}
+    setTimeout(() => {navigate('/')}, 5000);
+  };
+
+
+
+  return (
+    <>
+      <Navbar/>
+      <Formik
+        initialValues={{
+          sector: '',
+          agency: '',
+          reportee: '',
+          affiliation: '',
+          subject: '',
+          message: '',
+          upload: '',
+          acceptedTerms: false // added for our checkbox
+        }}
+        validationSchema={Yup.object({
+          sector: Yup
+          .string()
+          .oneOf(
+              ['finance', 'technology', 'agriculture', 'oil and gas', 'banking', 'education', 'sports', 'health', 'energy', 'transportation', 'entertainment', 'others'],
+              'Invalid sector'
+            ).required('Required!, please select a sector'),
 
 					agency: Yup.string()
 						.oneOf(
@@ -92,43 +92,44 @@ export const ReportForm = () => {
 						.oneOf([true], 'You must accept the terms and conditions.')
 						.required('Required'),
 
-					// jobType: Yup.string()
-					//   .oneOf(
-					//     ['designer', 'development', 'product', 'other'],
-					//     'Invalid Job Type'
-					//   )
-					//   .required('Required'),
-				})}
-				onSubmit={(values, { setSubmitting }) => {
-					setTimeout(() => {
-						alert(JSON.stringify(values, null, 2));
-						setSubmitting(false);
-					}, 400);
-					// console.log("values");
-					// alert("values");
-				}}
-			>
-				<div className='main'>
-					<Form className='container'>
-						<h2 className='welcome'>Report Form</h2>
+        // jobType: Yup.string()
+        //   .oneOf(
+        //     ['designer', 'development', 'product', 'other'],
+        //     'Invalid Job Type'
+        //   )
+        //   .required('Required'),
+        })}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            // alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+          // console.log("values");
+          // alert("values");
+        }}
+      >
+        
+      <div className="main">
+        <Form className="container">
+            <h2 className="welcome">Report Form</h2>
 
-						<MySelect label='Sector' name='sector'>
-							<option value=''>Select a sector</option>
-							{/* <option value="select" selected>Select</option> */}
-							<option value='finance'>Finance</option>
-							<option value='education'>Education</option>
-							<option value='sports'>Sports</option>
-							<option value='health'>Health</option>
-							<option value='energy'>Energy</option>
-							<option value='transportation'>Transportation</option>
-							<option value='agriculture'>Agriculture</option>
-							<option value='oil and gas'>Oil and gas</option>
-							<option value='banking'>Banking</option>
-							<option value='technology'>Technology</option>
-							<option value='entertainment'>Entertainment</option>
-							<option value='others'>Others</option>
-						</MySelect>
-						<br />
+            <MySelect label="Sector" name="sector">
+              <option value="">Select a sector</option>
+              {/* <option value="select" selected>Select</option> */}
+              <option value="finance">Finance</option>
+              <option value="education">Education</option>
+              <option value="sports">Sports</option>
+              <option value="health">Health</option>
+              <option value="energy">Energy</option>
+              <option value="transportation">Transportation</option>
+              <option value="agriculture">Agriculture</option>
+              <option value="oil and gas">Oil and gas</option>
+              <option value="banking">Banking</option>
+              <option value="technology">Technology</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="others">Others</option>
+            </MySelect>
+            <br/>
 
 						<MySelect
 							label='Kindly select the agency you wish to report to'
@@ -227,13 +228,18 @@ export const ReportForm = () => {
 							I affirm that the information provided is valid
 						</MyCheckbox>
 
-						<br />
-						<button type='submit' id='myBtn' disabled={Formik.isSubmitting}>
-							Submit
-						</button>
-					</Form>
-				</div>
-			</Formik>
-		</>
-	);
+            <br/>
+            <button 
+            onClick={showAlert}
+            type="submit" 
+            id="myBtn" 
+            disabled={Formik.isSubmitting}>Submit</button>
+            
+
+        </Form>
+      </div>
+        
+      </Formik>
+    </>
+  );
 };

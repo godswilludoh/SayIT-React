@@ -11,15 +11,13 @@ const Footer = () => {
             Say<span className="IT">IT</span>
           </p>
         </div>
-        <div>
-          <div className="footerLinkDocs">
+        <ul className="footerLinkDocs">
             <Link to="/contact">Contact Us</Link>
             <Link to="/admin">Admin</Link>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms and Conditions</Link>
             <Link to="/follow">Follow us</Link>
-          </div>
-        </div>
+        </ul>
       </div>
       <p className="copyright">
         ©2022. All rights Reserved | Designed by Tech Stars

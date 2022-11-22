@@ -44,3 +44,45 @@
 	text-align: center;
 	padding: 40px;
 }
+
+
+@media (max-width: 900px) {
+	.footerLinkDocs {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.footerLinkDocs a {
+		font-size: 16px;
+		font-weight: 700;
+		padding: 10px;
+		color: #ffffff;
+		text-decoration: none;
+		text-align: center;
+	}
+	
+	.footerLinkDocs a:hover {
+		text-decoration: none;
+		color: #ed4d02;
+
+	}
+
+	.copyright {
+		border-top: 2px solid #444444;
+		color: #444444;
+		font-size: 16px;
+		font-weight: 700;
+		text-align: justify;
+		align-items: center;
+	
+	}
+
+	.logoHeading {
+		color: #6e6660;
+		font-size: 25px;
+	}
+
+}
