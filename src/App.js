@@ -41,13 +41,13 @@ function App() {
 					path='agentNotificationPage'
 					element={<AgentNotificationPage />}
 				/>
-				<Route path='agentProfilePage' element={<AgentProfilePage/>} />
+				<Route path='agentProfilePage' element={<AgentProfilePage />} />
 				<Route path='adminUsers' element={<AdminUsers />} />
 				<Route path='adminReport' element={<AdminReport />} />
 				<Route path='adminAgents' element={<AdminAgents />} />
 				<Route path='makereport' element={<MakeReportForm />} />
 				<Route path='editprofile' element={<EditProfile />} />
-				<Route path='userforgotpassword' element={<UserForgotPassword/>} />
+				<Route path='userforgotpassword' element={<UserForgotPassword />} />
 			</Routes>
 		</>
 	);
