@@ -1,9 +1,11 @@
 import React from 'react';
 import SidebarUser from '../../components/sidebar/SidebarUser';
 import { DateTime } from '../../helper/date-time/DateTime';
+import { useAuth } from '../../components/hooks/useAuth';
 import './UserDashboard.css';
 
 const UserDashboard = () => {
+	const { user } = useAuth();
 	return (
 		<div className='userdashboard-container'>
 			<SidebarUser />
@@ -27,12 +29,14 @@ const UserDashboard = () => {
 							required
 							capture
 						/>
-						<span className='user-id' id='user-profilename'></span>
+						<span className='user-id' id='user-profilename'>
+							{user.userName}
+						</span>
 					</div>
 				</div>
 				<div className='user-dashboard-container'>
 					<h2>
-						👋 Welcome <span id='user-username'></span>
+						👋 Welcome <span id='user-username'>{user.userName}</span>
 					</h2>
 					<p className='user-secure'>Your data is safe with us 🔐</p>
 					<div className='user-cards'>
@@ -73,99 +77,7 @@ const UserDashboard = () => {
 								</div>
 							</div>
 						</div>
-						{/* <table id="user-table">
-      <tr>
-        <th>S/N</th>
-        <th>Date reported</th>
-        <th>Report ID</th>
-        <th>Sector</th>
-        <th>Action</th>
-      </tr>
-      <tr class="row">
-        <td>1.</td>
-        <td>DD/MM/YYYY MM:HH</td>
-        <td>Report/000001</td>
-        <td class="sector">Finance</td>
-        <td>
-          <div class="table-icons">
-            <div>
-              <a class="report-button view" href="#">View</a>
-            </div>
-            <div>
-              <box-icon name='printer' type='solid'></box-icon>
-            </div>
-          </div>
-        </td>
-      </tr>
 
-      <tr class="row">
-        <td>2.</td>
-        <td>DD/MM/YYYY MM:HH</td>
-        <td>Report/000002</td>
-        <td class="sector">Security</td>
-        <td>
-          <div class="table-icons">
-            <div>
-              <a class="report-button view" href="#">View</a>
-            </div>
-            <div>
-              <box-icon name='printer' type='solid'></box-icon>
-            </div>
-          </div>
-        </td>
-      </tr>
-
-      <tr class="row">
-        <td>3.</td>
-        <td>DD/MM/YYYY MM:HH</td>
-        <td>Report/000003</td>
-        <td class="sector">Finance</td>
-        <td>
-          <div class="table-icons">
-            <div>
-              <a class="report-button view" href="#">View</a>
-            </div>
-            <div>
-              <box-icon name='printer' type='solid'></box-icon>
-            </div>
-          </div>
-        </td>
-      </tr>
-
-      <tr class="row">
-        <td>4.</td>
-        <td>DD/MM/YYYY MM:HH</td>
-        <td>Report/000004</td>
-        <td class="sector">Finance</td>
-        <td>
-          <div class="table-icons">
-            <div>
-              <a class="report-button view" href="#">View</a>
-            </div>
-            <div>
-              <box-icon name='printer' type='solid'></box-icon>
-            </div>
-          </div>
-        </td>
-      </tr>
-
-      <tr class="row">
-        <td>5.</td>
-        <td>DD/MM/YYYY MM:HH</td>
-        <td>Report/000005</td>
-        <td id="reportSector"></td>
-        <td>
-          <div class="table-icons">
-            <div>
-              <a class="report-button view" href="#">View</a>
-            </div>
-            <div>
-              <box-icon name='printer' type='solid'></box-icon>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </table> */}
 						<table id='user-table' className='user-table'></table>
 						<div className='user-pagination'>
 							<a id='prev-button' className='user-pagination-bracket' href='#'>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import TextField from '../TextField';
 import * as Yup from 'yup';
@@ -7,22 +7,29 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdditionalInfo from './AdditionalInfo';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../../components/hooks/useAuth';
+import { FaEye } from 'react-icons/fa';
+import { FaEyeSlash } from 'react-icons/fa';
 
 const SignupForm = () => {
 	const navigate = useNavigate();
-	const [token, setToken] = useState(false);
-	const localToken = JSON.parse(localStorage.getItem('token'));
-	let tokenExists = localToken?.length > 0;
-	useEffect(() => {
-		console.log('Token exists');
-		if (tokenExists) {
-			setToken(true);
-		}
-	}, [tokenExists]);
+	const { auth, setAuth, setUser } = useAuth();
 
-	const displaySignUpNotification = () => {
-		toast.success('Login Successful!', { theme: 'light' });
+	const [showPassword, setShowPassword] = useState(false);
+
+	const togglePassword = () => {
+		setShowPassword(!showPassword);
+	};
+
+	const loginSuccess = () => {
+		toast.success('Login Successful!', { position: toast.POSITION.TOP_CENTER });
+	};
+
+	const loginFailed = (error) => {
+		toast.error(error, {
+			position: toast.POSITION.TOP_CENTER,
+		});
 	};
 
 	const validate = Yup.object({
@@ -66,23 +73,27 @@ const SignupForm = () => {
 							}
 						);
 
-						const { access, refresh } = response.data.tokens;
-						const tokens = [];
-						tokens.push({ access: access.token });
-						tokens.push({ refresh: refresh.token });
-						localStorage.setItem('token', JSON.stringify(tokens));
+						const accessToken = response.data.tokens.access.token;
+						const refreshToken = response.data.tokens.refresh.token;
+						const userObj = response.data.user;
 
-						if (token) {
-							toast.success('Login Successful!', {
-								position: 'top-center',
-							});
+						setAuth({ accessToken, refreshToken });
+						setUser(userObj);
+						loginSuccess();
+
+						if (auth) {
 							navigate('/users');
 						}
-					} catch (error) {
-						console.log(error);
-						toast.error('Login Failed! Please try again', {
-							position: 'top-center',
-						});
+					} catch (err) {
+						if (!err.response) {
+							loginFailed('no server response');
+						} else if (err.response.status === 400) {
+							loginFailed(err.response.message);
+						} else if (err.response.status === 401) {
+							loginFailed(err.response.message);
+						} else {
+							loginFailed('Login Failed');
+						}
 					}
 				}}
 			>
@@ -100,13 +111,17 @@ const SignupForm = () => {
 							<TextField
 								label='Password'
 								name='password'
-								type='password'
+								type={showPassword ? 'password' : 'text'}
 								placeholder='Enter Password'
 								onChange={handleChange}
 								value={values.password}
 							/>
 
-							<Link to={"/userforgotpassword"} className='forForgotPassword'>
+							<span className='toggle-password' onClick={togglePassword}>
+								{showPassword ? <FaEyeSlash /> : <FaEye />}
+							</span>
+
+							<Link to={'/userforgotpassword'} className='forForgotPassword'>
 								FORGOT PASSWORD?
 							</Link>
 
