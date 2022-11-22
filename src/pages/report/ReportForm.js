@@ -154,7 +154,7 @@ export const ReportForm = () => {
                 "https://say--it.herokuapp.com/v1/reports",
                 report
               );
-          	console.log(response.data)
+          	// console.log(response.data)
             } catch (error) {
               console.log(error);
             }
