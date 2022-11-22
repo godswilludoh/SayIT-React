@@ -1,5 +1,12 @@
-import React from "react";
-import { Formik, Form, useField , FormikProvider, ErrorMessage, validateYupSchema} from 'formik';
+import React from 'react';
+import {
+	Formik,
+	Form,
+	useField,
+	FormikProvider,
+	ErrorMessage,
+	validateYupSchema,
+} from 'formik';
 import * as Yup from 'yup';
 import Navbar from "../../components/nav/Navbar";
 import './report.css'
@@ -47,37 +54,43 @@ export const ReportForm = () => {
               'Invalid sector'
             ).required('Required!, please select a sector'),
 
-          agency: Yup
-          .string()
-          .oneOf(
-            ['frsc', 'nps', 'nscdc', 'ndlea', 'nis', 'nc', 'efcc', 'icfc', 'npf','others'],
-            'Invalid agency'
-          ).required('Required'),
+					agency: Yup.string()
+						.oneOf(
+							[
+								'frsc',
+								'nps',
+								'nscdc',
+								'ndlea',
+								'nis',
+								'nc',
+								'efcc',
+								'icfc',
+								'npf',
+								'others',
+							],
+							'Invalid agency'
+						)
+						.required('Required'),
 
-          reportee: Yup
-          .string()
-          .required('Required'),
+					reportee: Yup.string().required('Required'),
 
-          affiliation: Yup
-          .string()
-          .required('Required'),
+					affiliation: Yup.string().required('Required'),
 
-          subject: Yup
-          .string()
-          .max(30, 'Must be 30 characters or less')
-          .required('Required'),
+					subject: Yup.string()
+						.max(30, 'Must be 30 characters or less')
+						.required('Required'),
 
-          message: Yup
-          .string()
-          .min(30, 'Please be more detailed!')
-          .max(1000, 'Must be 1000 characters of less')
-          .required('Please enter a message'),
+					message: Yup.string()
+						.min(30, 'Please be more detailed!')
+						.max(1000, 'Must be 1000 characters of less')
+						.required('Please enter a message'),
 
-          upload: Yup
-          .string(),
-          // .required('attach a file'),
+					upload: Yup.string(),
+					// .required('attach a file'),
 
-          acceptedTerms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions.').required('Required')
+					acceptedTerms: Yup.boolean()
+						.oneOf([true], 'You must accept the terms and conditions.')
+						.required('Required'),
 
         // jobType: Yup.string()
         //   .oneOf(
@@ -118,51 +131,65 @@ export const ReportForm = () => {
             </MySelect>
             <br/>
 
-            <MySelect label="Kindly select the agency you wish to report to" name="agency">
-              <option value="">Select Agency</option>
-              {/* <option value="select" selected>Select Agency</option> */}
-              <option value="frsc">Federal Road Safety Corps (FRSC)</option>
-              <option value="nps">Nigeria Prisons Service (NPS)</option>
-              <option value="nscdc">Nigeria Security and Civil Defense Corps (NSCDC)</option>
-              <option value="ndlea">Nigeria Drug Law Enforcement Agency (NDLEA)</option>
-              <option value="nis">Nigeria Immigrations Service (NIS)</option>
-              <option value="nc">Nigeria Customs</option>
-              <option value="npf">Nigeria Police Force</option>
-              <option value="efcc">Economic and Finance Crime Commissions (EFCC)</option>
-              <option value="icfc">Independent Corrupt Practices Commission (ICPC)</option>
-              <option value="others">Others</option>
-            </MySelect>
-            <br/>
+						<MySelect
+							label='Kindly select the agency you wish to report to'
+							name='agency'
+						>
+							<option value=''>Select Agency</option>
+							{/* <option value="select" selected>Select Agency</option> */}
+							<option value='frsc'>Federal Road Safety Corps (FRSC)</option>
+							<option value='nps'>Nigeria Prisons Service (NPS)</option>
+							<option value='nscdc'>
+								Nigeria Security and Civil Defense Corps (NSCDC)
+							</option>
+							<option value='ndlea'>
+								Nigeria Drug Law Enforcement Agency (NDLEA)
+							</option>
+							<option value='nis'>Nigeria Immigrations Service (NIS)</option>
+							<option value='nc'>Nigeria Customs</option>
+							<option value='npf'>Nigeria Police Force</option>
+							<option value='efcc'>
+								Economic and Finance Crime Commissions (EFCC)
+							</option>
+							<option value='icfc'>
+								Independent Corrupt Practices Commission (ICPC)
+							</option>
+							<option value='others'>Others</option>
+						</MySelect>
+						<br />
 
-          {/* the margin  on all <MyTextInput> component is too much */}
-            <div> 
-              <MyTextInput
-              label="Which company, organization or individual is this about?"
-              name="reportee"
-              type="text"
-              placeholder="Start typing..."
-              />
-            </div>
-            <br/>
+						{/* the margin  on all <MyTextInput> component is too much */}
+						<div>
+							<MyTextInput
+								label='Which company, organization or individual is this about?'
+								name='reportee'
+								type='text'
+								placeholder='Start typing...'
+							/>
+						</div>
+						<br />
 
-            <MySelect label="Are you affiliated to the above specified" name="affiliation">
-              <option value="">Select</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </MySelect>
-            <br/>
+						<MySelect
+							label='Are you affiliated to the above specified'
+							name='affiliation'
+						>
+							<option value=''>Select</option>
+							<option value='yes'>Yes</option>
+							<option value='no'>No</option>
+						</MySelect>
+						<br />
 
-            <div>
-              <MyTextInput
-                label="Subject"
-                name="subject"
-                type="text"
-                placeholder="Enter subject here.."
-              />
-            </div>
-            <br/>
+						<div>
+							<MyTextInput
+								label='Subject'
+								name='subject'
+								type='text'
+								placeholder='Enter subject here..'
+							/>
+						</div>
+						<br />
 
-            {/* <div>
+						{/* <div>
             <MyTextInput 
             className="textarea" 
             rows="4" 
@@ -171,33 +198,35 @@ export const ReportForm = () => {
             placeholder="Enter Report Here"/>
             </div> */}
 
-            <div>
-              <MyTextArea 
-              className= "textarea"
-              label= "What do you want to report?"
-              placeholder = "Enter Report Here"
-              rows= "6"
-              name= "message"
-              />
-            </div>
-            <br/>
+						<div>
+							<MyTextArea
+								className='textarea'
+								label='What do you want to report?'
+								placeholder='Enter Report Here'
+								rows='6'
+								name='message'
+							/>
+						</div>
+						<br />
 
-            <div>
-              <MyTextInput
-              label="Upload Document"
-              name="upload"
-              type="file"
-              className="file-select"
-              style = {{border: "none", background: "none"}}
-              />
-            </div>
-            <br/>
+						<div>
+							<MyTextInput
+								label='Upload Document'
+								name='upload'
+								type='file'
+								className='file-select'
+								style={{ border: 'none', background: 'none' }}
+							/>
+						</div>
+						<br />
 
-            <MyCheckbox 
-            className="checkbox-input" name="acceptedTerms" 
-            style={ {width: "40px"}}>
-              I affirm that the information provided is valid
-            </MyCheckbox>
+						<MyCheckbox
+							className='checkbox-input'
+							name='acceptedTerms'
+							style={{ width: '40px' }}
+						>
+							I affirm that the information provided is valid
+						</MyCheckbox>
 
             <br/>
             <button 

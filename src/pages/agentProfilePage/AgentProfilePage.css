@@ -118,12 +118,10 @@
 
 
 .values{
-  padding: 12px;
+  padding: 12px 50px 12px 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #000000;
   background-color: #ffff;
-  min-width: 500px;
-  height: 52px;
   border-radius: 10px;
 }
 
