@@ -118,6 +118,14 @@ export const ReportForm = () => {
           //   .required('Required'),
         })}
         onSubmit={async (values, { setSubmitting }) => {
+          {
+            values.affiliation = values.affiliation == "yes" ? true : false;
+          }
+          //   if (values.affiliation === "yes") {
+          //     values.affiliation = true;
+          //   } else {
+          //     values.affiliation;
+          //   }
           setSubmitting(false);
           const {
             sector,
@@ -137,24 +145,21 @@ export const ReportForm = () => {
             affiliation,
             message,
             anonymity: true,
-            attachments: {
-              image: upload,
-            },
+            attachments: {},
           };
+          console.log(report);
 
-        //   try {
-        //     let response = await axios.post(
-        //       "https://say--it.herokuapp.com/v1/reports",
-        //       report
-        //     );
-		// 	console.log(response.data)
-        //   } catch (error) {
-        //     console.log(error);
-        //   }
-		
-		  showAlert();
+            try {
+              let response = await axios.post(
+                "https://say--it.herokuapp.com/v1/reports",
+                report
+              );
+          	// console.log(response.data)
+            } catch (error) {
+              console.log(error);
+            }
 
-
+          showAlert();
         }}
       >
         <div className="main">
@@ -277,11 +282,7 @@ export const ReportForm = () => {
             </MyCheckbox>
 
             <br />
-            <button
-              type="submit"
-              id="myBtn"
-              disabled={Formik.isSubmitting}
-            >
+            <button type="submit" id="myBtn" disabled={Formik.isSubmitting}>
               Submit
             </button>
           </Form>
