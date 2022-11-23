@@ -18,6 +18,7 @@ import { MakeReportForm } from './pages/users/userdashboardPages/makereport/Make
 import { EditProfile } from './pages/users/userdashboardPages/editProfile/EditProfile';
 import UserForgotPassword from './pages/login/userforgotpassword/UserForgotPassword';
 import { AdminProfile } from './pages/AdminDashboard/AdminProfile';
+import AgentProfilePage from './pages/agentProfilePage/AgentProfilePage';
 
 function App() {
 	return (
@@ -41,15 +42,15 @@ function App() {
 					path='agentNotificationPage'
 					element={<AgentNotificationPage />}
 				/>
+				<Route path='agentProfilePage' element={<AgentProfilePage />} />
 				<Route path='adminUsers' element={<AdminUsers />} />
 				<Route path='adminReport' element={<AdminReport />} />
 				<Route path='adminAgents' element={<AdminAgents />} />
 				<Route path='makereport' element={<MakeReportForm />} />
 				<Route path='editprofile' element={<EditProfile />} />
 				<Route path='userforgotpassword' element={<UserForgotPassword/>} />
-
-
 				<Route path='adminProfile' element={<AdminProfile/>} />
+				<Route path='userforgotpassword' element={<UserForgotPassword />} />
 			</Routes>
 		</>
 	);

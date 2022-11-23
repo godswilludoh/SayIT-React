@@ -25,7 +25,7 @@ export const SidebarAgents = ({ children }) => {
 		},
 
 		{
-			path: '/agentprofile',
+			path: '/agentProfilePage',
 			name: 'Profile',
 			icon: <FaUser />,
 		},

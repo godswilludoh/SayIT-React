@@ -431,7 +431,35 @@ Style
 	.stepbyStepApproachContainer {
 		width: 100%;
 	}
+
+	.hero-image {
+		padding-top: 0.5rem;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+			url('/public/assets/dashboardImage.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 900px;
+		transition: 0.3s ease-in-out;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-text {
+		margin-top: -50px;
+		color: #fff;
+		text-align: center;
+	}
+
 }
+
+
+
+
+
+
+
 
 /* MEDia QUERY FOR HOW IT WORKS SECTION */
 @media (max-width: 940px) {
