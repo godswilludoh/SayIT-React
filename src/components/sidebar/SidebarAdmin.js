@@ -37,7 +37,7 @@ export const SidebarAdmin = ({ children }) => {
 			icon: <FaCheckDouble />,
 		},
 		{
-			path: '/profile',
+			path: '/adminProfile',
 			name: 'Profile',
 			icon: <FaUser />,
 		},
