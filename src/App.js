@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/landingPage/LandingPage';
+import LandingPage from './pages/LandingPage/LandingPage';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
@@ -17,6 +17,7 @@ import { AdminAgents } from './pages/AdminDashboard/AdminAgents';
 import { MakeReportForm } from './pages/users/userdashboardPages/makereport/MakeReport';
 import { EditProfile } from './pages/users/userdashboardPages/editProfile/EditProfile';
 import UserForgotPassword from './pages/login/userforgotpassword/UserForgotPassword';
+import { AdminProfile } from './pages/AdminDashboard/AdminProfile';
 import AgentProfilePage from './pages/agentProfilePage/AgentProfilePage';
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
 				<Route path='adminAgents' element={<AdminAgents />} />
 				<Route path='makereport' element={<MakeReportForm />} />
 				<Route path='editprofile' element={<EditProfile />} />
+				<Route path='userforgotpassword' element={<UserForgotPassword/>} />
+				<Route path='adminProfile' element={<AdminProfile/>} />
 				<Route path='userforgotpassword' element={<UserForgotPassword />} />
 			</Routes>
 		</>
