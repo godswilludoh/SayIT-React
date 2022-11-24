@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage/LandingPage';
+import LandingPage from './pages/landingPage/LandingPage';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
@@ -48,8 +48,8 @@ function App() {
 				<Route path='adminAgents' element={<AdminAgents />} />
 				<Route path='makereport' element={<MakeReportForm />} />
 				<Route path='editprofile' element={<EditProfile />} />
-				<Route path='userforgotpassword' element={<UserForgotPassword/>} />
-				<Route path='adminProfile' element={<AdminProfile/>} />
+				<Route path='userforgotpassword' element={<UserForgotPassword />} />
+				<Route path='adminProfile' element={<AdminProfile />} />
 				<Route path='userforgotpassword' element={<UserForgotPassword />} />
 			</Routes>
 		</>
