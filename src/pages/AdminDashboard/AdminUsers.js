@@ -67,7 +67,7 @@ export const AdminUsers = () => {
 										<th>Reports</th>
 										<th>Actions</th>
 									</tr>
-									<tr>
+									{/* <tr>
 										<td>
 											<FontAwesomeIcon id='cardicons' icon={faUser} />{' '}
 											Anonymous@mail.com
@@ -78,7 +78,7 @@ export const AdminUsers = () => {
 										<td className='suspend-btn'>
 											<FontAwesomeIcon id='cardicons' icon={faTrash} /> Delete
 										</td>
-									</tr>
+									</tr> */}
 								</tbody>
 							</table>
 						</div>

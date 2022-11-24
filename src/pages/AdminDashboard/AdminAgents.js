@@ -71,6 +71,9 @@ export const AdminAgents = () => {
                  </tr> */}
 
       </tbody></table>
+	  <div>
+		<button className='agent-board-btn'> On board New Agent </button>
+	  </div>
   </div>
 </div>
 				</div>
