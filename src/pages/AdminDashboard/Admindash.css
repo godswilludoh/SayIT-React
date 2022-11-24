@@ -95,6 +95,7 @@ ul {
 /* } */
 .Notifications {
 	margin: 0px 0px 0px 32px;
+	padding-bottom: 5px;
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 10px;
@@ -224,11 +225,18 @@ hr {
 		margin: 0px;
 		padding: 2px;
 	}
+
+	.agent-board-btn{
+		padding: 10px;
+		margin: 10px;
+		width: 60%;
+	}
 	
 }
 /* ADMIN REPORT TABLE  */
 #taable_sec{
     margin: 50px 0px 0px 60px;
+	padding-bottom: 5px;
     background: #999DAD38;
 	width: 90%;
     align-content: center;
@@ -253,14 +261,25 @@ hr {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    color:rgb(220, 20, 20);
+    /* color; */
     padding: 10px 10px 10px 15px;
   }
   .suspend-btn:hover {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    color: #fff;
+    color: rgb(220, 20, 20);
     border-radius: 8px;
+  }
+
+  .agent-board-btn{
+	padding: 10px;
+	margin: 5px 0px 15px 250px;
+	width: 60%;
+
+  }
+
+  .agent-board-btn:hover{
+	background-color: rgba(237, 77, 2, 0.7);
   }
   
