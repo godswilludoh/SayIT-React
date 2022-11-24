@@ -12,7 +12,7 @@ export const AdminAgents = () => {
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
-							<h3 id='dashBar'>AGENTS</h3>
+							<h3 id='dashBar'>Agents</h3>
 						</li>
 						{/* THE TIME AND DATE SECTION */}
 						<li>
@@ -42,12 +42,15 @@ export const AdminAgents = () => {
 
 					{/* <AdminReportTable /> */}
 					<div id="taable_sec">
-  			<div>
+  			<div className='agent-intro'>
     			<h4 className="tableTitle"> 
    				 <span>
    				 <input type="text" className= "tableSearch" placeholder="Enter Report ID" />
     				</span>
    			 	</h4>
+					<span>
+						<button className='agent-board-btn'> On board New Agent </button>
+					</span>
   			</div>
   				<div id="user-table">
     			<div className="table-del">
@@ -61,19 +64,17 @@ export const AdminAgents = () => {
           		<th>Status</th>
           		<th>Action</th>
        		 </tr>
-				{/* <tr>
+				<tr>
                     <td>1</td>
 					<td>EFCC</td>
 					<td>AG/001EFC</td>
 					<td>View</td>
 					<td>On Boarded</td>
 					<td className='suspend-btn'>Suspend</td>
-                 </tr> */}
+                 </tr>
 
       </tbody></table>
-	  <div>
-		<button className='agent-board-btn'> On board New Agent </button>
-	  </div>
+	  
   </div>
 </div>
 				</div>
