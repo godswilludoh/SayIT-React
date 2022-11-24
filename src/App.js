@@ -1,5 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { Toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './pages/LandingPage/landingPage';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
@@ -52,6 +54,7 @@ function App() {
 				<Route path='adminProfile' element={<AdminProfile />} />
 				<Route path='userforgotpassword' element={<UserForgotPassword />} />
 			</Routes>
+			<ToastContainer/>
 		</>
 	);
 }

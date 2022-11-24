@@ -65,7 +65,7 @@
 }
 /* desige error message here */
 .errors {
-    color: red;
+    color: rgb(120, 18, 39);
     font-size: smaller;
 } 
 

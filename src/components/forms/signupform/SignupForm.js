@@ -154,7 +154,7 @@ const SignupForm = () => {
 									disabled={isSubmitting}
 									onClick={handleSubmit}
 								>
-									{isSubmitting ? 'Loading' : 'CREATE ACCOUNT'}
+									{isSubmitting ? 'Signing Up...' : 'CREATE ACCOUNT'}
 								</button>
 							</Form>
 						</form>
