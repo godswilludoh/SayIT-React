@@ -1,5 +1,7 @@
 import React from 'react'
 import './adminprofile.css';
+import { toast, Toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useFormik, yupToFormErrors } from 'formik';
 import * as Yup from "yup";
 
@@ -14,23 +16,25 @@ export const AdminprofileForm = () => {
             Title : "",
         },
         validationSchema: Yup.object({
-            Username: Yup.string().max(15, "should be 15 characters or less").required("Required"),
-            Email: Yup.string().email( "Invalid email").required("Required"),
+            Username: Yup.string().max(15, "*should be 15 characters or less").required("*Required"),
+            Email: Yup.string().email( "*Invalid email").required("*Required"),
             Password: Yup.string()
-                 .required('Please Enter your password')
+                 .required('*Please Enter your password')
                  .matches(
                     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-                    "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
+                    "*Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
             ConfirmPass: Yup.string()
-                .oneOf([Yup.ref('Password'), null], 'Passwords must match'),
-            FullName: Yup.string().required("Required"),    
-            Title: Yup.string().required("Required"),    
+                .oneOf([Yup.ref('Password'), null], '*Passwords must match'),
+            FullName: Yup.string().required("*Required"),    
+            Title: Yup.string().required("*Required"),    
 
         }),
 
         // @THEO LINK THE SUBMITTED INFO TO BACKEND
         onSubmit: (values) =>{
-            console.log(values);
+            // console.log(values);
+            toast.success('Profile updated successfully!')
+            // position: toast.POSITION.TOP_CENTER,
         },
     })
 

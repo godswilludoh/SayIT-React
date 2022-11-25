@@ -1,9 +1,32 @@
 import React from "react";
 import "./../agents/AgentsLogin.css";
 import styles from "./../agents//button.module.css";
+import { toast, Toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+// import { useAuth } from '../../hooks/useAuth';
 import Navbar from "../../../components/nav/Navbar";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 // import buttonCSS from "./pages./login./button.module.css"
 const AdminLogin = () => {
+  const formik = useFormik({
+    initialValues: {
+      adminID: "",
+      Password: "",
+    },
+
+    validationSchema: Yup.object({
+      adminID: Yup.string().max(16, "*Should be less than 16 characters").required("*Cannot be empty"),
+      Password: Yup.string().required("*Please enter your password"),
+    }),
+ // @THEO LINK THE SUBMITTED INFO TO BACKEND
+    onSubmit: (values) =>{
+    console.log(values);
+    toast.success("Welcome Admin")
+    },
+
+
+  })
   return (
     <div className="agentAndAdminContainer">
       <Navbar />
@@ -11,7 +34,7 @@ const AdminLogin = () => {
         <section className="theLoginSide">
           <div className="innerContainer">
             <h3 className="agentTitle">ADMIN LOGIN</h3>
-            <form id="agent-form">
+            <form id="agent-form" onSubmit={formik.handleSubmit}>
               {/*FIELD FOR THE AGENT ID */}
               <div className="formGroup">
                 <span className="icon">
@@ -26,11 +49,14 @@ const AdminLogin = () => {
                 </span>
                 <input
                   type="text"
-                  name="agentlogin"
+                  name="adminID"
                   id="agentID"
                   placeholder="Admin ID"
-                  required
-                />
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value = {formik.values.adminID}
+                  />
+                  {formik.touched.adminID && formik.errors.adminID ? <p className= "errors">{formik.errors.adminID }</p> : null }
               </div>
               {/*FIELD FOR THE AGENT PASSWORD*/}
               <div className="formGroup">
@@ -46,14 +72,18 @@ const AdminLogin = () => {
                 </span>
                 <input
                   type="password"
-                  name="password"
+                  name="Password"
                   id="agentpassword"
                   placeholder="Password"
                   required
-                />
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value = {formik.values.Password}
+                  />
+                  {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null }
               </div>
               <div>
-                <button className="logInButton">LOGIN</button>
+                <button type="submit" className="logInButton">LOGIN</button>
               </div>
             </form>
 
