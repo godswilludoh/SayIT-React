@@ -29,13 +29,6 @@ const Navbar = () => {
 					Say<span className='IT'>IT</span>
 				</h1>
 			</section>
-			<div className='menu_button' onClick={handleToggle}>
-				{toggle ? (
-					<FontAwesomeIcon id='menuBar' icon={faClose} />
-				) : (
-					<FontAwesomeIcon id='menuBar' icon={faBars} />
-				)}
-			</div>
 
 			<ul className='links'>
 				<Link to='/'>
@@ -54,6 +47,13 @@ const Navbar = () => {
 					SIGN IN
 				</Link>
 			</ul>
+			<div className='menu_button' onClick={handleToggle}>
+				{toggle ? (
+					<FontAwesomeIcon id='menuBar' icon={faClose} />
+				) : (
+					<FontAwesomeIcon id='menuBar' icon={faBars} />
+				)}
+			</div>
 		</nav>
 	);
 };
