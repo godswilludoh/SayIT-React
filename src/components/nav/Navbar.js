@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
@@ -40,9 +41,9 @@ const Navbar = () => {
 				<Link to='/'>
 					<li>HOME</li>
 				</Link>
-				<Link to='/whyUs'>
+				<HashLink smooth to='/#whyUs'>
 					<li>WHY US</li>
-				</Link>
+				</HashLink>
 				<Link to='/report'>
 					<li>REPORT</li>
 				</Link>
