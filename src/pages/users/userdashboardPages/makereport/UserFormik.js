@@ -72,21 +72,8 @@ const UserFormik = () => {
 						attachments: {},
 					};
 
-					// if (affiliation.values === 'yes') {
-					// 	affiliation = true;
-					// 	console.log(affiliation);
-					// } else {
-					// 	affiliation = false;
-					// }
-
-					// if (anonymity.values === 'yes') {
-					// 	anonymity = true;
-					// 	console.log(anonymity);
-					// } else {
-					// 	affiliation = false;
-					// }
 					values.affiliation = values.affiliation === 'yes' ? true : false;
-					// values.anonymity = values.anonymity === 'yes' ? true : false;
+					values.anonymity = values.anonymity === 'yes' ? true : false;
 					setSubmitting(true);
 
 					try {
@@ -114,9 +101,9 @@ const UserFormik = () => {
 					<>
 						<div className='main-makereport'>
 							<Form className='makereportform'>
+								{/* <pre>{JSON.stringify(values, 2, null)}</pre> */}
 								<MySelect label='Sector' name='sector'>
 									<option value=''>Select a sector</option>
-									{/* <option value="select" selected>Select</option> */}
 									<option value='finance'>Finance</option>
 									<option value='education'>Education</option>
 									<option value='sports'>Sports</option>
@@ -180,8 +167,8 @@ const UserFormik = () => {
 									value={values.affiliation}
 								>
 									<option value=''>Select</option>
-									<option value='yes'>Yes</option>
-									<option value='no'>No</option>
+									<option value={true}>Yes</option>
+									<option value={false}>No</option>
 								</MySelect>
 								<br />
 
@@ -224,8 +211,8 @@ const UserFormik = () => {
 										value={values.anonymity}
 									>
 										<option value=''>Select</option>
-										<option value='yes'>Yes</option>
-										<option value='no'>No</option>
+										<option value={true}>Yes</option>
+										<option value={false}>No</option>
 									</MySelect>
 
 									<MyTextInput
@@ -254,7 +241,7 @@ const UserFormik = () => {
 									disabled={isSubmitting}
 									onClick={handleSubmit}
 								>
-									{isSubmitting ? 'Loading' : 'SUBMIT'}
+									{isSubmitting ? 'Submitting' : 'SUBMIT'}
 								</button>
 							</Form>
 						</div>

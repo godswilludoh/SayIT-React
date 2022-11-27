@@ -41,9 +41,9 @@ const validationSchema = Yup.object({
 
 	reportee: Yup.string().required('Required'),
 
-	affiliation: Yup.string().required('Required'),
+	affiliation: Yup.boolean().required('Required'),
 
-	anonymity: Yup.string().required('Required'),
+	anonymity: Yup.boolean().required('Required'),
 
 	subject: Yup.string()
 		.max(30, 'Must be 30 characters or less')

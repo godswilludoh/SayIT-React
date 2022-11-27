@@ -6,9 +6,11 @@ const TextField = ({ label, ...props }) => {
 
 	return (
 		<div>
-			<label htmlFor={field.name}>{label}</label>
+			<label className='mb-4' htmlFor={field.name}>
+				{label}
+			</label>
 			<input
-				className={`form-control shadow-none border border-info ${
+				className={`form-control shadow-none border border-info mb-4 ${
 					meta.touched && meta.error && 'is-invalid'
 				}`}
 				{...field}
