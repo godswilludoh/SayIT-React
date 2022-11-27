@@ -109,12 +109,12 @@ const SignupForm = () => {
 								placeholder='Enter Password'
 								onChange={handleChange}
 								value={values.password}
-							/>
 
+								
+							/>
 							<span className='toggle-password' onClick={togglePassword}>
 								{showPassword ? <FaEyeSlash /> : <FaEye />}
 							</span>
-
 							<Link to={'/userforgotpassword'} className='forForgotPassword'>
 								FORGOT PASSWORD?
 							</Link>

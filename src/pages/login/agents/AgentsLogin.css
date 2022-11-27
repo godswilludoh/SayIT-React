@@ -105,6 +105,10 @@ footer {
 	cursor: pointer;
 }
 
+.logInButton :disabled{
+	opacity: 0.35;
+	color: rgb(98, 14, 167);
+}
 
 
 @media (min-width: 300px) and (max-width: 950px) {

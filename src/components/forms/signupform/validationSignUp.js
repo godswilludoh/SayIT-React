@@ -7,7 +7,7 @@ const validationSchema = Yup.object({
 	email: Yup.string().email('Email is invalid').required('Email is Required'),
 	phoneNumber: Yup.string().max(11, 'Must be 11 numbers').required('Required'),
 	password: Yup.string()
-		.min(6, 'Password must be at least 6 characters')
+		.min(8, 'Password must be at least 8 characters')
 		.required('Password is required')
 		.matches(
 			/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,

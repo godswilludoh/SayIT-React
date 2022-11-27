@@ -1,32 +1,89 @@
-import React from "react";
+import React, {useState} from "react";
 import "./../agents/AgentsLogin.css";
 import styles from "./../agents//button.module.css";
 import { toast, Toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-// import { useAuth } from '../../hooks/useAuth';
+import axios from 'axios';
+// import { Link } from 'react-router-dom';
+import { useAuth } from '../../../components/hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 import Navbar from "../../../components/nav/Navbar";
-import { useFormik } from "formik";
+import { Formik, useFormik } from "formik";
 import * as Yup from "yup";
-// import buttonCSS from "./pages./login./button.module.css"
+
 const AdminLogin = () => {
+  const navigate = useNavigate();
+	const { auth, setAuth, setUser } = useAuth();
+  
+  const loginSuccess = () => {
+		toast.success('Successful Login!', { position: toast.POSITION.TOP_CENTER });
+	};
+
+	const loginFailed = (error) => {
+		toast.error(error, {
+			position: toast.POSITION.TOP_CENTER,
+		});
+	};
+
   const formik = useFormik({
     initialValues: {
       adminID: "",
       Password: "",
     },
-
+    
     validationSchema: Yup.object({
       adminID: Yup.string().max(16, "*Should be less than 16 characters").required("*Cannot be empty"),
       Password: Yup.string().required("*Please enter your password"),
+      
     }),
+    
  // @THEO LINK THE SUBMITTED INFO TO BACKEND
-    onSubmit: (values) =>{
-    console.log(values);
-    toast.success("Welcome Admin")
-    },
+    
+ onSubmit: async (values, Action) => { 
+  // console.log(values);
+  const { detail, password} = values;
 
+  try{
+    let response = await axios.post(
+      'https://say--it.herokuapp.com/v1/auth/login',
+      {
+        detail,
+        password,
+      },
+    
+  
+    );
+    const accessToken = response.data.tokens.access.token;
+    const refreshToken = response.data.tokens.refresh.token;
+    const userObj = response.data.user;
 
-  })
+    setAuth({ accessToken, refreshToken });
+    setUser(userObj);
+    loginSuccess();
+
+    if (auth) {
+      navigate('/adminDashboard');
+    }
+  } catch (err) {
+    if (!err.response) {
+      loginFailed('no server response');
+    } else if (err.response.status === 400) {
+      loginFailed(err.response.message);
+    } else if (err.response.status === 401) {
+      loginFailed(err.response.message);
+    } else {
+      loginFailed('Login Failed');
+    }
+  }
+}}
+    // toast.success("Welcome Admin")
+    // await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Action.resetForm(); 
+    // },
+
+  )
+  
+// }
   return (
     <div className="agentAndAdminContainer">
       <Navbar />
@@ -34,7 +91,10 @@ const AdminLogin = () => {
         <section className="theLoginSide">
           <div className="innerContainer">
             <h3 className="agentTitle">ADMIN LOGIN</h3>
-            <form id="agent-form" onSubmit={formik.handleSubmit}>
+            <Formik>
+
+            {({ values, handleChange, handleSubmit, isSubmitting, }) => (          
+            <form id="agent-form" onSubmit={formik.handleSubmit} >
               {/*FIELD FOR THE AGENT ID */}
               <div className="formGroup">
                 <span className="icon">
@@ -55,6 +115,7 @@ const AdminLogin = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value = {formik.values.adminID}
+                  
                   />
                   {formik.touched.adminID && formik.errors.adminID ? <p className= "errors">{formik.errors.adminID }</p> : null }
               </div>
@@ -83,10 +144,11 @@ const AdminLogin = () => {
                   {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null }
               </div>
               <div>
-                <button type="submit" className="logInButton">LOGIN</button>
+                <button type="submit" className="logInButton" disabled ={isSubmitting} >LOGIN</button>
               </div>
             </form>
-
+          )}
+          </Formik>
             {/* <Footer /> */}
           </div>
         </section>
