@@ -4,6 +4,7 @@ import styles from "./../agents//button.module.css";
 import { toast, Toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { Link } from 'react-router-dom';
 import { useAuth } from '../../../components/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +15,13 @@ import * as Yup from "yup";
 const AdminLogin = () => {
   const navigate = useNavigate();
 	const { auth, setAuth, setUser } = useAuth();
+
+    const [passwordShown, setPasswordShown] = useState(false);
+    const togglePassword = () => {
+     
+      setPasswordShown(!passwordShown);
+    };
+  
   
   const loginSuccess = () => {
 		toast.success('Successful Login!', { position: toast.POSITION.TOP_CENTER });
@@ -50,8 +58,8 @@ const AdminLogin = () => {
         detail,
         password,
       },
+       
     
-  
     );
     const accessToken = response.data.tokens.access.token;
     const refreshToken = response.data.tokens.refresh.token;
@@ -60,6 +68,9 @@ const AdminLogin = () => {
     setAuth({ accessToken, refreshToken });
     setUser(userObj);
     loginSuccess();
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    Action.resetForm();
 
     if (auth) {
       navigate('/adminDashboard');
@@ -123,25 +134,31 @@ const AdminLogin = () => {
               <div className="formGroup">
                 <span className="icon">
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
+                    // xmlns="http://www.w3.org/2000/svg"
+                    width={54}
                     height={24}
+                    onClick={togglePassword}
                     style={{ fill: "rgb(137, 134, 133)" }}
                   >
-                    <path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7z"></path>
+                   	{passwordShown ? < FaEye /> : <FaEyeSlash/>}
                   </svg>
                 </span>
                 <input
-                  type="password"
+                  type={passwordShown ? "text" : "password"}
+                 
                   name="Password"
                   id="agentpassword"
-                  placeholder="Password"
+                  placeholder= "Password" 
+                  // style={{width: "500px"}}
                   required
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value = {formik.values.Password}
+                  
                   />
                   {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null }
+
+                  
               </div>
               <div>
                 <button type="submit" className="logInButton" disabled ={isSubmitting} >LOGIN</button>

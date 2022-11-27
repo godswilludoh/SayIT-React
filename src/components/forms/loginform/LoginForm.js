@@ -9,8 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../../components/hooks/useAuth';
-import { FaEye } from 'react-icons/fa';
-import { FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const SignupForm = () => {
 	const navigate = useNavigate();
@@ -102,19 +101,32 @@ const SignupForm = () => {
 								onChange={handleChange}
 								value={values.detail}
 							/>
-							<TextField
+						
+							{/* <span className='toggle-password' onClick={togglePassword}>
+								{showPassword ? <FaEyeSlash /> : <FaEye />}
+							</span> */}
+							
+							 <TextField
 								label='Password'
 								name='password'
 								type={showPassword ? 'password' : 'text'}
 								placeholder='Enter Password'
 								onChange={handleChange}
 								value={values.password}
-
-								
+								// endAdornment={
+								// 	<InputAdornment position="end">
+								// 	  <IconButton
+								// 		aria-label="toggle password visibility"
+								// 		onClick={handleClickShowPassword}
+								// 		onMouseDown={handleMouseDownPassword}
+								// 		edge="end"
+								// 	  >
+								// 		{values.password ? <VisibilityOff /> : <Visibility />}
+								// 	  </IconButton>
+								// 	</InputAdornment>
+								//   }
 							/>
-							<span className='toggle-password' onClick={togglePassword}>
-								{showPassword ? <FaEyeSlash /> : <FaEye />}
-							</span>
+							
 							<Link to={'/userforgotpassword'} className='forForgotPassword'>
 								FORGOT PASSWORD?
 							</Link>
