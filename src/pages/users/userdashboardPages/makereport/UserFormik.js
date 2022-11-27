@@ -241,7 +241,7 @@ const UserFormik = () => {
 									disabled={isSubmitting}
 									onClick={handleSubmit}
 								>
-									{isSubmitting ? 'Submitting' : 'SUBMIT'}
+									{isSubmitting ? 'Submitting...' : 'SUBMIT'}
 								</button>
 							</Form>
 						</div>
