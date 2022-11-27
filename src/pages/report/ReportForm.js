@@ -167,7 +167,7 @@ export const ReportForm = () => {
 			>
 				<div className='main'>
 					<Form className='container'>
-						<h2 className='welcome'>Report Form</h2>
+						<h2 className='welcome'> Anonymous Report Form</h2>
 
 						<MySelect label='Sector' name='sector'>
 							<option value=''>Select a sector</option>
