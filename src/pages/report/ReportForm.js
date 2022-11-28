@@ -40,7 +40,7 @@ export const ReportForm = () => {
   const showFailedAlert = () => {
     {
       swal(
-		"Error",
+        "Error",
         "Unable to submit your report at the moment please try agin later",
         "error"
       );
@@ -140,14 +140,8 @@ export const ReportForm = () => {
           //     values.affiliation;
           //   }
           setSubmitting(false);
-          const {
-            sector,
-            agency,
-            reportee,
-            affiliation,
-            subject,
-            message,
-          } = values;
+          const { sector, agency, reportee, affiliation, subject, message } =
+            values;
 
           const report = {
             subject,
@@ -159,18 +153,18 @@ export const ReportForm = () => {
             anonymity: true,
             attachments: {},
           };
-        //   console.log(report);
+          //   console.log(report);
 
           try {
             let response = await axios.post(
               "https://say--it.herokuapp.com/v1/reports",
               report
             );
-			showAlert();
+            showAlert();
             // console.log(response.data)
           } catch (error) {
             // console.log(error);
-			showFailedAlert();
+            showFailedAlert();
           }
         }}
       >
