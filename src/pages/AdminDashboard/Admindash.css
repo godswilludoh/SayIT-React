@@ -193,19 +193,33 @@ hr {
 
 @media (min-width: 300px) and (max-width: 900px) {
 	.admin_Dash_Nav {
-		width: 80%;
+		width: 100%;
 		display: grid;
-		/* padding: 5px; */
-		/* margin: auto; */
+		padding: 5px;
+		margin: 25px 2px auto auto;
 		align-content: space-around;
 	}
 
 	.NotifyBar {
-		width: 100%;
+		width: 105%;
+		margin: auto;
+		overflow: scroll;
+		
 	}
 	.Notifications {
-		width: 100%;
-		/* display: grid; */
+		/* width: 150%; */
+		margin: auto;
+		/* align-content: space-between; */
+		overflow: scroll;
+		padding: auto;
+		
+	}
+	#notificatonlist{
+		overflow: scroll;
+		height: 500px;
+		background-color: #ffffffa8;
+		margin: 0px;
+		padding: 1px 1px 1px 1px;
 	}
 
 	#report_cards {
@@ -215,22 +229,40 @@ hr {
 	}
 	.Report_Cards {
 		display: grid;
+		width: 70%;
 	}
 
 	.time {
 		padding: 0px;
 		margin: 0px;
+		size: small;
 	}
 	#dashBar {
 		margin: 0px;
 		padding: 2px;
+		width: 100%;
+	}
+	.tableSearchOption{
+		width: 100%;
+	}
+
+	.Notify{
+		margin: auto;
+
+	}
+	#notificatonlist{
+		margin: auto;
+		
 	}
 
 	.agent-board-btn{
-		padding: 10px;
+		/* padding: 10px;
 		margin: 10px;
-		width: 60%;
+		width: 60%; */
+		padding: 5px;
+		margin: auto;
 	}
+	
 	
 }
 /* ADMIN REPORT TABLE  */
@@ -255,6 +287,19 @@ hr {
 	width: 25em;
 	height: 3em;
 	/* margin-left: auto; */
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+	#taable_sec{
+		overflow: scroll;
+		margin: 60px auto auto auto;
+	}
+
+	.agent-intro{
+	display: grid;
+	padding: 2px;
+	margin: 10px;
+	}
 }
 
 /* THE AGENT TABLE  */
@@ -295,4 +340,13 @@ hr {
   .agent-board-btn:hover{
 	background-color: rgba(242, 115, 55, 0.7);
   }
+
+  @media (min-width: 300px) and (max-width: 900px) {
+
+	.agent-intro{
+	display: grid;
+	padding: 2px;
+	margin: 10px;
+	}
+}
   
