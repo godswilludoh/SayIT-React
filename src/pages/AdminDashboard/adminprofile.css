@@ -77,3 +77,22 @@
     /* border-radius: 12px; */
     border: none;
 }
+@media (min-width: 300px) and (max-width: 900px) {
+	.main-details-container{
+    margin-top: 110px ;
+  }
+.acct-info{
+  margin-top: 50px;
+}
+
+#prof-btn{
+  margin: 10px 0px 10px 0px;
+  padding: auto;
+  width: 50%;
+  
+}
+.time{
+  margin-top: 60px;
+  
+}
+}
