@@ -36,12 +36,12 @@ header {
 	margin: 0;
 }
 
-input {
+/* input {
 	border: 0;
 	width: 20rem;
 	outline: none;
-}
-
+} */
+	
 /* input[type='text'],
 input[type='password'] {
 	padding-left: 1rem;
