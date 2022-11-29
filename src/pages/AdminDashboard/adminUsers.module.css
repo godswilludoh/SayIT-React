@@ -275,29 +275,14 @@ ul{
 
   @media(min-width: 300px) and (max-width: 900px) {
     .Display_comtainier{
-        width: 70%;
-        margin-top: 25px;
-        padding: 5px 0px 0px 0px;
-        margin-left: 60px;
+        overflow: scroll;
+        margin: 60px auto auto auto;
     }
 
     .table_interfc {
         
-        width: 90%;
-        margin: 0.8rem 0 6rem 0;
-        padding: 0px;
-        font-size: small;
+      overflow: scroll;
+      margin: 60px auto auto auto;
     }
-   /* .table_rowss{
-          width: 50%;
-    } */
-
-    /* .table_rowss thead{
-      display: none;
-    }
-    tbody, tr, td { */
-      /* display: inline-block; */
-      /* width: 90%;
-    } */
     
   }
