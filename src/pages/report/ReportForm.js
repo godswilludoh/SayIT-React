@@ -35,17 +35,18 @@ export const ReportForm = () => {
 		}, 5000);
 	};
 
-	const showFailedAlert = () => {
-		swal(
-			'Error',
-			'Unable to submit your report at the moment please try agin later',
-			'error'
-		);
-
-		setTimeout(() => {
-			navigate('/');
-		}, 5000);
-	};
+  const showFailedAlert = () => {
+    {
+      swal(
+        "Error",
+        "Unable to submit your report at the moment please try agin later",
+        "error"
+      );
+    }
+    setTimeout(() => {
+      navigate("/");
+    }, 5000);
+  };
 
 	return (
 		<>
@@ -120,54 +121,54 @@ export const ReportForm = () => {
 						.oneOf([true], 'You must accept the terms and conditions.')
 						.required('Required'),
 
-					// jobType: Yup.string()
-					//   .oneOf(
-					//     ['designer', 'development', 'product', 'other'],
-					//     'Invalid Job Type'
-					//   )
-					//   .required('Required'),
-				})}
-				onSubmit={async (values, { setSubmitting }) => {
-					{
-						values.affiliation = values.affiliation == 'yes' ? true : false;
-					}
-					//   if (values.affiliation === "yes") {
-					//     values.affiliation = true;
-					//   } else {
-					//     values.affiliation;
-					//   }
-					setSubmitting(false);
-					const { sector, agency, reportee, affiliation, subject, message } =
-						values;
+          // jobType: Yup.string()
+          //   .oneOf(
+          //     ['designer', 'development', 'product', 'other'],
+          //     'Invalid Job Type'
+          //   )
+          //   .required('Required'),
+        })}
+        onSubmit={async (values, { setSubmitting }) => {
+          {
+            values.affiliation = values.affiliation == "yes" ? true : false;
+          }
+          //   if (values.affiliation === "yes") {
+          //     values.affiliation = true;
+          //   } else {
+          //     values.affiliation;
+          //   }
+          setSubmitting(false);
+          const { sector, agency, reportee, affiliation, subject, message } =
+            values;
 
-					const report = {
-						subject,
-						agency,
-						reportee,
-						sector,
-						affiliation,
-						message,
-						anonymity: true,
-						attachments: {},
-					};
-					//   console.log(report);
+          const report = {
+            subject,
+            agency,
+            reportee,
+            sector,
+            affiliation,
+            message,
+            anonymity: true,
+            attachments: {},
+          };
+          //   console.log(report);
 
-					try {
-						let response = await axios.post(
-							'https://say--it.herokuapp.com/v1/reports',
-							report
-						);
-						showAlert();
-						// console.log(response.data)
-					} catch (error) {
-						// console.log(error);
-						showFailedAlert();
-					}
-				}}
-			>
-				<div className='main'>
-					<Form className='container'>
-						<h2 className='welcome'> Anonymous Report Form</h2>
+          try {
+            let response = await axios.post(
+              "https://say--it.herokuapp.com/v1/reports",
+              report
+            );
+            showAlert();
+            // console.log(response.data)
+          } catch (error) {
+            // console.log(error);
+            showFailedAlert();
+          }
+        }}
+      >
+        <div className="main">
+          <Form className="container">
+            <h2 className="welcome">Report Form</h2>
 
 						<MySelect label='Sector' name='sector'>
 							<option value=''>Select a sector</option>
