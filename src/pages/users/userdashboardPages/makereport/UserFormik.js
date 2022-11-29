@@ -101,7 +101,7 @@ const UserFormik = () => {
 					<>
 						<div className='main-makereport'>
 							<Form className='makereportform'>
-								{/* <pre>{JSON.stringify(values, 2, null)}</pre> */}
+								<pre>{JSON.stringify(values, 2, null)}</pre>
 								<MySelect label='Sector' name='sector'>
 									<option value=''>Select a sector</option>
 									<option value='finance'>Finance</option>

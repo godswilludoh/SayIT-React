@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import LandingPage from './pages/LandingPage/LandingPage';
+import LandingPage from './pages/landingPage/LandingPage';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
