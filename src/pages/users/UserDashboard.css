@@ -161,7 +161,7 @@
 }
 
 .user-pagination {
-	display: flex;
+	display: none;
 	width: 50%;
 	justify-content: center;
 	align-items: center;
@@ -230,6 +230,10 @@
 		display: flex;
 		width: 100%;
 	}
+
+	#user-search-input {
+		width: 100%;
+	}
 }
 
 /* Small screen sizes */
@@ -290,5 +294,9 @@
 
 	.user-pagination {
 		display: none;
+	}
+
+	#user-search-input {
+		width: 100%;
 	}
 }

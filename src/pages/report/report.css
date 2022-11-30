@@ -1,11 +1,22 @@
 /* Anonymous Report Form Section */
-.main {
-	margin: 2rem auto;
-	min-height: 80vh;
+#wrapperForTheAnonymousReportForm{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/../say-it-react-fe/public/assets/whistleblowing1.png);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+}	
+
+
+#main {
+	margin: 0rem auto;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 70%;
+	width: 50%;
 	background: #f9f9f9;
 	line-height: 1.8;
 	border: 3px solid #999dad38;
