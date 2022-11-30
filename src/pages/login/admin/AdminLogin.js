@@ -17,6 +17,12 @@ const AdminLogin = () => {
 	const { auth, setAuth, setUser } = useAuth();
 
     const [passwordShown, setPasswordShown] = useState(false);
+    const [Submitting, setSubmitting] = useState(false);
+
+    const formsubmit =()=>{
+      setSubmitting(!Submitting);
+    };
+
     const togglePassword = () => {
      
       setPasswordShown(!passwordShown);
@@ -24,7 +30,7 @@ const AdminLogin = () => {
   
   
   const loginSuccess = () => {
-		toast.success('Successful Login!', { position: toast.POSITION.TOP_CENTER });
+		toast.success('Welcome Admin!', { position: toast.POSITION.TOP_CENTER });
 	};
 
 	const loginFailed = (error) => {
@@ -48,50 +54,59 @@ const AdminLogin = () => {
  // @THEO LINK THE SUBMITTED INFO TO BACKEND
     
  onSubmit: async (values, Action) => { 
-  // console.log(values);
-  const { detail, password} = values;
+  // const { detail, password} = values;
+  const { adminID, Password } = values
+  formsubmit(true)
+
+
+  // setSubmitting(true);
 
   try{
     let response = await axios.post(
       'https://say--it.herokuapp.com/v1/auth/login',
       {
-        detail,
-        password,
+        detail: adminID,
+        password: Password 
+
       },
-       
+    // console.log(values)
     
     );
     const accessToken = response.data.tokens.access.token;
     const refreshToken = response.data.tokens.refresh.token;
     const userObj = response.data.user;
-
+    console.log(response)
+  
     setAuth({ accessToken, refreshToken });
     setUser(userObj);
     loginSuccess();
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    Action.resetForm();
-
+    ;
     if (auth) {
-      navigate('/adminDashboard');
+      navigate('/admindashboard');
+      // toast.success("Log success!")
+      
+      
     }
+    
   } catch (err) {
     if (!err.response) {
       loginFailed('no server response');
     } else if (err.response.status === 400) {
       loginFailed(err.response.message);
+      toast.error("Wrong Inputs submitted!")
     } else if (err.response.status === 401) {
       loginFailed(err.response.message);
     } else {
       loginFailed('Login Failed');
     }
   }
-}}
-    // toast.success("Welcome Admin")
-    // await new Promise((resolve) => setTimeout(resolve, 2000));
-    // Action.resetForm(); 
-    // },
+ 
 
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+    Action.resetForm()
+}}
+   
   )
   
 // }
@@ -104,9 +119,9 @@ const AdminLogin = () => {
             <h3 className="agentTitle">ADMIN LOGIN</h3>
             <Formik>
 
-            {({ values, handleChange, handleSubmit, isSubmitting, }) => (          
+            {({ values, isSubmitting, }) => (          
             <form id="agent-form" onSubmit={formik.handleSubmit} >
-              {/*FIELD FOR THE AGENT ID */}
+              {/*FIELD FOR THE Admin ID */}
               <div className="formGroup">
                 <span className="icon">
                   <svg
@@ -128,7 +143,8 @@ const AdminLogin = () => {
                   value = {formik.values.adminID}
                   
                   />
-                  {formik.touched.adminID && formik.errors.adminID ? <p className= "errors">{formik.errors.adminID }</p> : null }
+                  {formik.touched.adminID && formik.errors.adminID ?
+                   <p className= "errors">{formik.errors.adminID }</p> : null }
               </div>
               {/*FIELD FOR THE AGENT PASSWORD*/}
               <div className="formGroup">
@@ -156,12 +172,14 @@ const AdminLogin = () => {
                   value = {formik.values.Password}
                   
                   />
-                  {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null }
+                  {formik.touched.Password && formik.errors.Password ? 
+                  <p className= "errors">{formik.errors.Password }</p> : null }
 
                   
               </div>
               <div>
-                <button type="submit" className="logInButton" disabled ={isSubmitting} >LOGIN</button>
+                <button type="submit" className="logInButton"
+                 disabled ={isSubmitting } >LOGIN</button>
               </div>
             </form>
           )}

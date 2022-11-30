@@ -2,7 +2,8 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import LandingPage from './pages/landingPage/LandingPage';
+import LandingPage from './pages/LandingPage/landingPage';
+import { ContantUs } from './pages/LandingPage/ContantUs';
 import Blog from './pages/blog/Blog';
 import UsersLogin from './pages/login/users/UsersLogin';
 import AdminLogin from './pages/login/admin/AdminLogin';
@@ -34,6 +35,7 @@ function App() {
 				<Route path='signup' element={<SignupAcc />} />
 				{/* <Route path='/report' element={<Report />} /> */}
 				<Route path='blog' element={<Blog />} />
+				<Route path='contact' element={<ContantUs />} />
 				<Route path='/login' element={<UsersLogin />} />
 				<Route path='admin' element={<AdminLogin />} />
 				<Route path='agents' element={<AgentsLogin />} />
