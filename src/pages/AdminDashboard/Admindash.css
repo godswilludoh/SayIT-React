@@ -139,7 +139,8 @@ ul {
 	margin-left: 2rem;
 }
 #report_cards {
-	padding: 5px;
+	padding: 10px;
+	margin: 5px;
 	border-radius: 8px;
 	box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 	/* width: 10%; */
