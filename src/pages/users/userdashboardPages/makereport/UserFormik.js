@@ -8,9 +8,17 @@ import { MyTextInput } from '../../../../components/reportFormFields/MyTextInput
 import { MyTextArea } from '../../../../components/reportFormFields/MyTextArea';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../../components/hooks/useAuth';
 
 const UserFormik = () => {
 	const navigate = useNavigate();
+
+	const { auth } = useAuth();
+	const config = {
+		headers: {
+			Authorization: `Bearer ${auth.accessToken}`,
+		},
+	};
 
 	const showAlert = () => {
 		swal(
@@ -20,7 +28,7 @@ const UserFormik = () => {
 		);
 
 		setTimeout(() => {
-			navigate('/makereport');
+			navigate('/users');
 		}, 5000);
 	};
 
@@ -77,14 +85,21 @@ const UserFormik = () => {
 					setSubmitting(true);
 
 					try {
-						let response = await axios.post(
-							'https://say--it.herokuapp.com/v1/reports',
-							report
-						);
-						showAlert();
-						console.log(response.data);
+						if (values.anonymity) {
+							await axios.post(
+								'https://say--it.herokuapp.com/v1/reports',
+								report
+							);
+							showAlert();
+						} else {
+							await axios.post(
+								'https://say--it.herokuapp.com/v1/reports',
+								report,
+								config
+							);
+							showAlert();
+						}
 					} catch (error) {
-						console.log(error);
 						showFailedAlert();
 					}
 				}}
@@ -101,7 +116,7 @@ const UserFormik = () => {
 					<>
 						<div className='main-makereport'>
 							<Form className='makereportform'>
-								<pre>{JSON.stringify(values, 2, null)}</pre>
+								{/* <pre>{JSON.stringify(values, 2, null)}</pre> */}
 								<MySelect label='Sector' name='sector'>
 									<option value=''>Select a sector</option>
 									<option value='finance'>Finance</option>

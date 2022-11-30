@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { UserTableInfo } from './UserTableInfo';
 
-export const UserTable = () => {
+export const UserTable = ({ reports }) => {
+	const [dataTable, setDataTable] = useState([]);
+	console.log(dataTable);
+
+	const column = [
+		{ heading: 'S/N' },
+		{ heading: 'Date Reported' },
+		{ heading: 'Report ID' },
+		{ heading: 'Sector' },
+		{ heading: 'Action' },
+	];
 	return (
 		<div className='user-table-section'>
 			<div className='user-table'>
@@ -19,7 +31,9 @@ export const UserTable = () => {
 				</div>
 			</div>
 
-			<table id='user-table' className='user-table'></table>
+			<div id='user-table' className='user-table'>
+				<UserTableInfo data={dataTable} column={column} reports={reports} />
+			</div>
 			<div className='user-pagination'>
 				<a id='prev-button' className='user-pagination-bracket' href='#'>
 					‹
