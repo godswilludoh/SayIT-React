@@ -37,7 +37,7 @@ const UserDashboard = () => {
 			<div className='userdashboard-interface'>
 				<UserTop />
 				<div className='user-dashboard-container'>
-					<h2>
+					<h2 className='user-welcome'>
 						👋 Welcome <span id='user-username'>{user.userName}</span>
 					</h2>
 					<p className='user-secure'>Your data is safe with us 🔐</p>

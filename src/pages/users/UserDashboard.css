@@ -233,3 +233,69 @@ tr:nth-child(odd) {
 #user-profile-container #user-profileImage {
 	cursor: pointer;
 }
+
+/*  Tablets */
+@media (min-width: 768px) and (max-width: 900px) {
+	.user-info-display {
+		font-size: 23px;
+		font-weight: 700;
+	}
+
+	.user-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.user-card-item {
+		width: 250px;
+		height: 150px;
+		text-align: center;
+		margin: 2rem;
+	}
+	.user-report-button {
+		margin: 2rem;
+		padding: 1rem 2rem;
+	}
+}
+
+/* Small screen sizes */
+@media (min-width: 300px) and (max-width: 767px) {
+	.user-top {
+		display: grid;
+	}
+
+	.user-info-display {
+		font-size: 23px;
+		font-weight: 700;
+	}
+
+	.userProfileImg {
+		display: none;
+	}
+
+	.user-welcome {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.user-secure {
+		margin: 2rem 0;
+	}
+
+	.user-cards {
+		display: grid;
+		margin: 2rem;
+	}
+
+	.user-card-item {
+		width: 250px;
+		height: 150px;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.user-report-button {
+		margin-left: 1rem;
+		padding: 1rem 2rem;
+	}
+}
