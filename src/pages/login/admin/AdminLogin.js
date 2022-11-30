@@ -59,7 +59,7 @@ const AdminLogin = () => {
   formsubmit(true)
 
 
-  // setSubmitting(true);
+  setSubmitting(true);
 
   try{
     let response = await axios.post(
@@ -97,6 +97,7 @@ const AdminLogin = () => {
       toast.error("Wrong Inputs submitted!")
     } else if (err.response.status === 401) {
       loginFailed(err.response.message);
+      toast.error("Unauthorized User!")
     } else {
       loginFailed('Login Failed');
     }

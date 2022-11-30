@@ -9,18 +9,19 @@
 }
 
 .main-makereport {
-	background: #d9d9d9;
+	background: #fdfcfbd9;
 	margin: 2rem auto;
 	padding: 2rem 7rem;
-	border: 3px solid #999dad38;
+	border: 2px solid #53555ba5;
 	border-radius: 10px;
-	min-height: 100vh;
-	width: 80%;
+	min-height: 50vh;
+	width: 70%;
+	z-index: 2;
 }
-
+/* 
 .makereportform {
-	background: #d9d9d9;
-}
+	background: #ffffffc0;
+} */
 
 .makereport-title {
 	font-size: 26px;
@@ -30,4 +31,19 @@
 	margin-top: 2rem;
 	font-size: 20px;
 	font-weight: 700;
+}
+@media (min-width: 300px) and (max-width: 900px) {
+	.main-makereport {
+		width: 300px;
+		margin-top: 100px;
+		margin-left: 0px;
+		padding: 5px;
+	}
+	.makereportform {
+		padding: 0px;
+	}
+	.welcome{
+		margin-top: 10px;
+	}
+
 }
