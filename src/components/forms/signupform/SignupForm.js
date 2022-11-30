@@ -12,7 +12,7 @@ import './signupform.css';
 
 const SignupForm = () => {
 	const navigate = useNavigate();
-	const { setAuth, setUser } = useAuth();
+	const { auth, setUser } = useAuth();
 
 	const signupSuccess = () => {
 		toast.success('Signup Successful', {
@@ -67,13 +67,11 @@ const SignupForm = () => {
 						);
 
 						const accessToken = response.data.tokens.access.token;
-
-						setAuth({ accessToken });
-
+						localStorage.setItem('accessToken', JSON.stringify(accessToken));
 						setUser(response.data.user);
 
 						signupSuccess();
-						if (setAuth) {
+						if (auth) {
 							navigate('/users');
 						}
 					} catch (err) {
@@ -101,63 +99,63 @@ const SignupForm = () => {
 					isSubmitting,
 				}) => (
 					<>
-						<form action=''>
-							<h4 className='mt-2 text-center text-info'>
-								<strong>CREATE YOUR ACCOUNT</strong>
-							</h4>
-							<Form className='w-50 '>
-								<TextField
-									label='Email'
-									name='email'
-									type='email'
-									placeholder='Enter your email'
-									onChange={handleChange}
-									value={values.email}
-								/>
-								<TextField
-									label='Username'
-									name='userName'
-									type='text'
-									placeholder='Enter your username'
-									onChange={handleChange}
-									value={values.userName}
-								/>
-								<TextField
-									label='Phone Number'
-									name='phoneNumber'
-									type='tel'
-									placeholder='Enter your phone number'
-									onChange={handleChange}
-									value={values.phoneNumber}
-								/>
-								<TextField
-									label='Password'
-									name='password'
-									type='password'
-									placeHolder='Enter your Password'
-									onChange={handleChange}
-									value={values.password}
-								/>
-								<TextField
-									label='Confirm Password'
-									name='confirmPassword'
-									type='password'
-									placeHolder='confirm-password'
-									onChange={handleChange}
-									value={values.confirmPassword}
-								/>
+						{/* <form action=''> */}
+						<h4 className='mt-2 text-center text-info'>
+							<strong>CREATE YOUR ACCOUNT</strong>
+						</h4>
+						<Form className='w-50 '>
+							<TextField
+								label='Email'
+								name='email'
+								type='email'
+								placeholder='Enter your email'
+								onChange={handleChange}
+								value={values.email}
+							/>
+							<TextField
+								label='Username'
+								name='userName'
+								type='text'
+								placeholder='Enter your username'
+								onChange={handleChange}
+								value={values.userName}
+							/>
+							<TextField
+								label='Phone Number'
+								name='phoneNumber'
+								type='tel'
+								placeholder='Enter your phone number'
+								onChange={handleChange}
+								value={values.phoneNumber}
+							/>
+							<TextField
+								label='Password'
+								name='password'
+								type='password'
+								placeholder='Enter your Password'
+								onChange={handleChange}
+								value={values.password}
+							/>
+							<TextField
+								label='Confirm Password'
+								name='confirmPassword'
+								type='password'
+								placeholder='confirm-password'
+								onChange={handleChange}
+								value={values.confirmPassword}
+							/>
 
-								<button
-									type='submit'
-									id='createAccount'
-									className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
-									disabled={isSubmitting}
-									onClick={handleSubmit}
-								>
-									{isSubmitting ? 'Signing Up...' : 'CREATE ACCOUNT'}
-								</button>
-							</Form>
-						</form>
+							<button
+								type='submit'
+								id='createAccount'
+								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
+								disabled={isSubmitting}
+								onClick={handleSubmit}
+							>
+								{isSubmitting ? 'Signing Up...' : 'CREATE ACCOUNT'}
+							</button>
+						</Form>
+						{/* </form> */}
 					</>
 				)}
 			</Formik>
