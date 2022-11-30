@@ -2,8 +2,40 @@ import React from "react";
 import { formik, useFormik, yupToFormErrors } from "formik";
 import * as Yup from "yup";
 import style from "../AdminDashboard/AdminAgentModal.module.css";
+import axios from "axios";
+import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
 
 const AdminAgentModal = (props) => {
+
+  const navigate = useNavigate();
+  
+  const showAlert = () => {
+		swal(
+			'Agency successfully onboarderd',
+			'success'
+		);
+	};
+
+  const showFailedAlert = () => {
+    {
+      swal(
+        "Error",
+        "Unable to create new agency record at the moment please try again later",
+        "error"
+      );
+    }
+    setTimeout(() => {
+      navigate("/admindashboard");
+    }, 5000);
+  };
+
+
+
+
+
+
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -29,12 +61,6 @@ const AdminAgentModal = (props) => {
       phoneNumber: Yup.string()
         .max(11, "Must be 11 numbers")
         .required("Required"),
-      otherphoneNumber: Yup.string()
-        .max(11, "Must be 11 numbers")
-        .required("Required"),
-      gender: Yup.boolean()
-        .oneOf([true], "You must check one of the available boxes.")
-        .required("Required"),
       name: Yup.string().required("Required"),
       address: Yup.string().required("Required"),
       sector: Yup.string().required("Required"),
@@ -43,14 +69,51 @@ const AdminAgentModal = (props) => {
         .required("Required"),
     }),
 
+    onSubmit: async (values) => {
+      // console.log(values);
 
-    onSubmit: (values) => {
-      console.log(values);
+      const {
+        firstName,
+        lastName,
+        email,
+        userName,
+        phoneNumber,
+        name,
+        address,
+        sector,
+        regNumber,
+      } = values;
+
+
+      const agencyRegDetails = {
+        firstName,
+        lastName,
+        email,
+        userName,
+        name,
+        phoneNumber,
+        address,
+        sector,
+        regNumber
+      };
+      // console.log(agencyRegDetails);
+
+      // Post data to the backend
+      try {
+        let response = await axios.post(
+          "https://say--it.herokuapp.com/v1/agency",
+          agencyRegDetails
+        );
+        console.log(response.data)
+        showAlert();
+      } catch (error) {
+        console.log(error);
+        showFailedAlert();
+      }
+
     },
 
-// onSubmit = {(values) => {
-// Console.log(values)
-// }}
+
 
   });
 
@@ -64,6 +127,9 @@ const AdminAgentModal = (props) => {
         <h2 className={style.registrationTitle}>Registration Form</h2>
         <section className={style.agentPersonalInformation}>
           <form onSubmit={formik.handleSubmit}>
+            {/* <pre>{JSON.stringify(formik.values, null, 2)}</pre>
+            <pre>{JSON.stringify(formik.errors, null, 2)}</pre> */}
+            {/* code above helps preview the values in the form and der corresponding error */}
             <section>
               <h3 className={style.foragentPersonalTitle}>
                 1. Personel Information
@@ -305,15 +371,16 @@ const AdminAgentModal = (props) => {
                 </div>
               </div>
               <div className={style.forSubmittingAgent_Agency}>
-               
-                  <button
-                   type='submit' className={style.forSubmittingTheForm}>
-                    Submit
-                  </button>
-                
+                <button
+                type="submit" className={style.forSubmittingTheForm}>
+                  submit
+                </button>
+
+
+
                 <div>
                   <button
-                  type="button"
+                    type="button"
                     onClick={props.onClose}
                     className={style.forClosingTheForm}
                   >

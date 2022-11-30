@@ -67,10 +67,11 @@ const SignupForm = () => {
 						);
 
 						const accessToken = response.data.tokens.access.token;
+						localStorage.setItem('accessToken', JSON.stringify(accessToken));
 						const refreshToken = response.data.tokens.refresh.token;
 						const userObj = response.data.user;
 
-						setAuth({ accessToken, refreshToken });
+						setAuth({ refreshToken });
 						setUser(userObj);
 						loginSuccess();
 
@@ -91,57 +92,55 @@ const SignupForm = () => {
 				}}
 			>
 				{({ values, handleChange, handleSubmit, isSubmitting, formik }) => (
-					<form>
-						<Form className='w-75'>
-							<TextField
-								label='Username or Email'
-								name='detail'
-								type='text'
-								placeholder='Enter Username or Email'
-								onChange={handleChange}
-								value={values.detail}
-							/>
-						
-							{/* <span className='toggle-password' onClick={togglePassword}>
+					<Form className='w-75'>
+						<TextField
+							label='Username or Email'
+							name='detail'
+							type='text'
+							placeholder='Enter Username or Email'
+							onChange={handleChange}
+							value={values.detail}
+						/>
+
+						{/* <span className='toggle-password' onClick={togglePassword}>
 								{showPassword ? <FaEyeSlash /> : <FaEye />}
 							</span> */}
-							
-							 <TextField
-								label='Password'
-								name='password'
-								type={showPassword ? 'password' : 'text'}
-								placeholder='Enter Password'
-								onChange={handleChange}
-								value={values.password}
-								// endAdornment={
-								// 	<InputAdornment position="end">
-								// 	  <IconButton
-								// 		aria-label="toggle password visibility"
-								// 		onClick={handleClickShowPassword}
-								// 		onMouseDown={handleMouseDownPassword}
-								// 		edge="end"
-								// 	  >
-								// 		{values.password ? <VisibilityOff /> : <Visibility />}
-								// 	  </IconButton>
-								// 	</InputAdornment>
-								//   }
-							/>
-							
-							<Link to={'/userforgotpassword'} className='forForgotPassword'>
-								FORGOT PASSWORD?
-							</Link>
 
-							<button
-								id='createAccount'
-								className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
-								disabled={isSubmitting}
-								type='submit'
-								onClick={handleSubmit}
-							>
-								{isSubmitting ? 'Logging In' : 'Login'}
-							</button>
-						</Form>
-					</form>
+						<TextField
+							label='Password'
+							name='password'
+							type={showPassword ? 'password' : 'text'}
+							placeholder='Enter Password'
+							onChange={handleChange}
+							value={values.password}
+							// endAdornment={
+							// 	<InputAdornment position="end">
+							// 	  <IconButton
+							// 		aria-label="toggle password visibility"
+							// 		onClick={handleClickShowPassword}
+							// 		onMouseDown={handleMouseDownPassword}
+							// 		edge="end"
+							// 	  >
+							// 		{values.password ? <VisibilityOff /> : <Visibility />}
+							// 	  </IconButton>
+							// 	</InputAdornment>
+							//   }
+						/>
+
+						<Link to={'/userforgotpassword'} className='forForgotPassword'>
+							FORGOT PASSWORD?
+						</Link>
+
+						<button
+							id='createAccount'
+							className='btn mt-3  text-white bg-info btn-outline-info center-block d-block mx-auto font-weight-bold'
+							disabled={isSubmitting}
+							type='submit'
+							onClick={handleSubmit}
+						>
+							{isSubmitting ? 'Logging In' : 'Login'}
+						</button>
+					</Form>
 				)}
 			</Formik>
 			<AdditionalInfo />

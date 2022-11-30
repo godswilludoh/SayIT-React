@@ -5,11 +5,11 @@
 .makereportform-container {
 	width: 100%;
 	padding: 30px 4rem;
-	background: #b4b1af;
+	background: #d9d9d9;
 }
 
 .main-makereport {
-	background: #b4b1af;
+	background: #d9d9d9;
 	margin: 2rem auto;
 	padding: 2rem 7rem;
 	border: 3px solid #999dad38;
@@ -19,7 +19,7 @@
 }
 
 .makereportform {
-	background: #b4b1af;
+	background: #d9d9d9;
 }
 
 .makereport-title {
