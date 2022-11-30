@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const UserCards = ({ reports }) => {
 	const totalReports = reports.length;
@@ -26,9 +27,9 @@ export const UserCards = ({ reports }) => {
 				<p className='user-p-bottom'>{resolvedReport}</p>
 			</div>
 			<div className='user-button-container'>
-				<a className='user-report-button' href='/pages/makeReport.html'>
+				<Link className='user-report-button' to='/makereport'>
 					Make New Report
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

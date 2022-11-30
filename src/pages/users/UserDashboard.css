@@ -204,7 +204,7 @@
 }
 
 /*  Tablets */
-@media (min-width: 768px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 1090px) {
 	.user-info-display {
 		font-size: 23px;
 		font-weight: 700;
