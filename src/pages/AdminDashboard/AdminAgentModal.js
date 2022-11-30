@@ -8,8 +8,11 @@ import { useNavigate } from 'react-router-dom';
 
 const AdminAgentModal = (props) => {
 
+
+
   const navigate = useNavigate();
-  
+
+
   const showAlert = () => {
 		swal(
 			'Agency successfully onboarderd',
@@ -102,15 +105,17 @@ const AdminAgentModal = (props) => {
       try {
         let response = await axios.post(
           "https://say--it.herokuapp.com/v1/agency",
-          agencyRegDetails
+          agencyRegDetails,{headers: {
+            Authorization : `Bearer ${localStorage.getItem("accessToken")}`
+            }},
         );
         console.log(response.data)
         showAlert();
+
       } catch (error) {
         console.log(error);
         showFailedAlert();
       }
-
     },
 
 
@@ -161,7 +166,7 @@ const AdminAgentModal = (props) => {
                       onBlur={formik.handleBlur}
                       value={formik.values.lastName}
                       className={style.strictlyForAgent}
-                      // type="text"
+                      type="text"
                       placeholder="enter agent last name"
                     />
                     {formik.touched.lastName && formik.errors.lastName ? (
@@ -178,7 +183,7 @@ const AdminAgentModal = (props) => {
                       onBlur={formik.handleBlur}
                       value={formik.values.email}
                       className={style.strictlyForAgent}
-                      // type="email"
+                      type="email"
                       placeholder="enter agent email"
                     />
                     {formik.touched.email && formik.errors.email ? (
@@ -195,7 +200,7 @@ const AdminAgentModal = (props) => {
                       onBlur={formik.handleBlur}
                       value={formik.values.userName}
                       className={style.strictlyForAgent}
-                      // type="text"
+                      type="text"
                       placeholder="enter agent user name"
                     />
                     {formik.touched.userName && formik.errors.userName ? (
@@ -212,7 +217,7 @@ const AdminAgentModal = (props) => {
                       onBlur={formik.handleBlur}
                       value={formik.values.phoneNumber}
                       className={style.strictlyForAgent}
-                      // type="text"
+                      type="text"
                       placeholder="enter agent phone number"
                     />
                     {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
@@ -231,7 +236,7 @@ const AdminAgentModal = (props) => {
                       onBlur={formik.handleBlur}
                       value={formik.values.otherphoneNumber}
                       className={style.strictlyForAgent}
-                      // type="text"
+                      type="text"
                       placeholder="enter other phone number"
                     />
                     {formik.touched.otherphoneNumber &&
@@ -280,7 +285,7 @@ const AdminAgentModal = (props) => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
-                    // type="text"
+                    type="text"
                     placeholder="enter agency name"
                     name="name"
                   />
@@ -299,6 +304,7 @@ const AdminAgentModal = (props) => {
                     // type="text"
                     placeholder="enter agency address"
                     name="address"
+                    type="text"
                   />
                   {formik.touched.name && formik.errors.address ? (
                     <p className={style.errors}>{formik.errors.address}</p>
@@ -312,7 +318,7 @@ const AdminAgentModal = (props) => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.sector}
-                    // type="text"
+                    type="text"
                     placeholder="enter agency sector"
                     name="sector"
                   />
@@ -330,7 +336,7 @@ const AdminAgentModal = (props) => {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.regNumber}
-                      // type="text"
+                      type="text"
                       placeholder="enter agency registration number"
                       name="regNumber"
                     />
@@ -344,7 +350,7 @@ const AdminAgentModal = (props) => {
                   <h3 className={style.formTitle}>Agency Phone Number</h3>
                   <div className={style.section2InputField}>
                     <input
-                      // type="text"
+                      type="text"
                       placeholder="enter agency phone number"
                       // id="name"
                     />
@@ -355,7 +361,7 @@ const AdminAgentModal = (props) => {
                   <h3 className={style.formTitle}>Email</h3>
                   <div className={style.section2InputField}>
                     <input
-                      // type="text"
+                      type="email"
                       placeholder="enter agency mail"
                       // id="name"
                     />
