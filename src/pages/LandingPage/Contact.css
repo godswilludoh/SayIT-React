@@ -1,0 +1,88 @@
+/* *{
+    overflow: none;
+} */
+
+#contant-head{
+    margin: 15px 50px 5px 150px;
+    padding: 0px 5px 5px 5px ;
+    display: block;
+    color: rgb(241, 72, 53);
+}
+
+.Form-contain{
+    margin: 0px 0px 0px 80px;
+    padding:  0px 5px 0px 5px;
+    /* background-color: #c4c4c4; */
+    width: 500px;
+
+}
+.cont-forms{
+    padding: 8px;
+    margin: 3px;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    width: 80%;
+    height: 30%;
+    background-color: #fffdfd;;
+    
+}
+#details-input{
+    padding: 8px;
+    margin: 2px 2px 5px 0px;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    width: 80%;
+    height: 200px; 
+}
+
+.details_Info{
+    padding: 0px 0px 3px 0px;
+    
+}
+
+.details_Info label{
+    /* padding-right: 70px; */
+    display: block;
+    width: 80%;
+    margin-left: 0px;
+    padding-left: 0px;
+   
+}
+
+#cont-btn{
+background-color: rgb(254, 69, 49);
+padding: 10px 18px;
+width: 50%;
+margin: 5px 0px 2px 50px;
+border-radius: 8px;
+border: none;
+}
+.errors {
+    color: rgb(120, 18, 39);
+    font-size: smaller;
+} 
+
+.Contact-display{
+    display: flex;
+}
+.img-siide{
+    width: 500px;
+    margin-left: 200px;
+}
+@media (min-width: 300px) and (max-width: 900px) {
+	.Form-contain{
+    width: 300px;
+    margin-left: 30px;
+    }
+
+    #contant-head{
+        margin: 25px 10px 10px 10px;
+    }
+
+    #cont-btn{
+        width: 60%;
+    }
+    .img-siide{
+        display: none;
+    }
+  }

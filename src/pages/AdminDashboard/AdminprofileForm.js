@@ -15,24 +15,24 @@ export const AdminprofileForm = () => {
             FullName: "",
             Title : "",
         },
-        validationSchema: Yup.object({
-            Username: Yup.string().max(15, "*should be 15 characters or less").required("*Required"),
-            Email: Yup.string().email( "*Invalid email").required("*Required"),
-            Password: Yup.string()
-                 .required('*Please Enter your password')
-                 .matches(
-                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-                    "*Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
-            ConfirmPass: Yup.string()
-                .oneOf([Yup.ref('Password'), null], '*Passwords must match'),
-            FullName: Yup.string().required("*Required"),    
-            Title: Yup.string().required("*Required"),    
+        // validationSchema: Yup.object({
+        //     Username: Yup.string().max(15, "*should be 15 characters or less").required("*Required"),
+        //     Email: Yup.string().email( "*Invalid email").required("*Required"),
+        //     Password: Yup.string()
+        //          .required('*Please Enter your password')
+        //          .matches(
+        //             /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+        //             "*Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
+        //     ConfirmPass: Yup.string()
+        //         .oneOf([Yup.ref('Password'), null], '*Passwords must match'),
+        //     FullName: Yup.string().required("*Required"),    
+        //     Title: Yup.string().required("*Required"),    
 
-        }),
+        // }),
 
         // @THEO LINK THE SUBMITTED INFO TO BACKEND
         onSubmit: (values) =>{
-            console.log(values);
+            // console.log(values);
             toast.success('Profile updated successfully!')
             // position: toast.POSITION.TOP_CENTER,
         },
@@ -57,41 +57,45 @@ export const AdminprofileForm = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value = {formik.values.Username}
+                readOnly
                 />
-                {formik.touched.Username && formik.errors.Username ? <p className= "errors">{formik.errors.Username }</p> : null }
+                {/* {formik.touched.Username && formik.errors.Username ? <p className= "errors">{formik.errors.Username }</p> : null } */}
             </div>
             <div className="details_Info">
                 <label htmlFor="email"> Email </label>
-                <input type="text" placeholder="example@email.com"
+                <input type="text" placeholder="example@sayit.com"
                  name ="Email" 
                  className="info-placehold"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value = {formik.values.Email}
+                readOnly
                 />
-                {formik.touched.Email && formik.errors.Email ? <p className= "errors">{formik.errors.Email }</p> : null }
+                {/* {formik.touched.Email && formik.errors.Email ? <p className= "errors">{formik.errors.Email }</p> : null } */}
             </div>
             <div className="details_Info">
                 <label htmlFor="Password"> Password </label>
-                <input type="password" placeholder="****"
+                <input type="password" placeholder="******"
                  name ="Password" 
                  className="info-placehold"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value = {formik.values.Password}
+                readOnly
                 />
-                {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null }
+                {/* {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null } */}
             </div>
             <div className="details_Info">
                 <label htmlFor="password"> Confirm Password</label>
-                <input type="password" placeholder="****"
+                <input type="password" placeholder="******"
                  name ="ConfirmPass" 
                  className="info-placehold"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value = {formik.values.ConfirmPass}
+                readOnly
                 />
-                 {formik.touched.ConfirmPass && formik.errors.ConfirmPass? <p className= "errors">{formik.errors.ConfirmPass }</p> : null }
+                 {/* {formik.touched.ConfirmPass && formik.errors.ConfirmPass? <p className= "errors">{formik.errors.ConfirmPass }</p> : null } */}
             </div>
             <div className="details_Info">
                 <label htmlFor="names"> Full Name </label>
@@ -101,22 +105,24 @@ export const AdminprofileForm = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value = {formik.values.FullName}
+                readOnly
                 />
-                {formik.touched.Names && formik.errors.Username ? <p className = "errors">{formik.errors.Nneome }</p> : null }
+                {/* {formik.touched.Names && formik.errors.Username ? <p className = "errors">{formik.errors.Nneome }</p> : null } */}
             </div>
             <div className="details_Info">
                 <label htmlFor="Title"> Title </label>
-                <input type="text" placeholder="Title"
+                <input type="text" placeholder="Admin"
                  name ="Title" 
                 className="info-placehold"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value = {formik.values.Title}
+                readOnly
                 />
-                {formik.touched.Title && formik.errors.Title ? <p className= "errors">{formik.errors.Title }</p> : null }
+                {/* {formik.touched.Title && formik.errors.Title ? <p className= "errors">{formik.errors.Title }</p> : null } */}
             </div>
 
-            <button type='submit' id='prof-btn'> Save </button>
+            <button type='submit' id='prof-btn' disabled> Save </button>
 
         </form>
 

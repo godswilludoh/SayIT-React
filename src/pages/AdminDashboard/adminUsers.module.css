@@ -103,6 +103,9 @@ button {
   padding: 8px 20px;
   bottom: 0;
 }
+/* button:disabled{
+  color: opacity 35;
+} */
 
 .btn {
   border: 1px solid #B4B1AF;

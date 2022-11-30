@@ -91,6 +91,10 @@ footer {
 	margin-top: 15px;
 }
 
+.logInButton:disabled{
+	color: #f3a47fa9;
+}
+
 @media (min-width: 300px) and (max-width: 900px) {
 	.theImageSide {
 		display: none;
