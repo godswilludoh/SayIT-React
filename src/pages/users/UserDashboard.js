@@ -9,6 +9,7 @@ import axios from 'axios';
 
 const UserDashboard = () => {
 	const { user, auth } = useAuth();
+	console.log(user);
 	const config = {
 		headers: {
 			Authorization: `Bearer ${auth?.accessToken}`,
@@ -18,6 +19,9 @@ const UserDashboard = () => {
 
 	const [report, setReport] = useState([]);
 	useEffect(() => {
+		// if (localStorage.getItem('accessToken')) {
+
+		// }
 		const getReport = async () => {
 			try {
 				let response = await axios.get(

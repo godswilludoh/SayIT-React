@@ -35,9 +35,8 @@
 	cursor: pointer;
 	justify-content: space-around;
 	align-items: center;
-	margin-right: 75px;
 	margin-bottom: 5px;
-	gap: 2rem;
+	gap: 4rem;
 	font-weight: 700;
 	color: #ed4d02;
 }
@@ -104,7 +103,7 @@
 	}
 
 	.navbar.expanded .links li {
-		margin: 5px 0;
+		margin: 2px 0;
 		font-size: 24px;
 	}
 
