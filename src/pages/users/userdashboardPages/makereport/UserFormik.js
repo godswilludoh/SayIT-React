@@ -14,6 +14,7 @@ const UserFormik = () => {
 	const navigate = useNavigate();
 
 	const { auth } = useAuth();
+	console.log(auth.accessToken);
 	const config = {
 		headers: {
 			Authorization: `Bearer ${auth.accessToken}`,
