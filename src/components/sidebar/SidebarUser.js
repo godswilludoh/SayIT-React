@@ -67,7 +67,7 @@ const SidebarUser = ({ children }) => {
 						to={item.path}
 						key={index}
 						className='sidebar-links'
-						activeClassName='active'
+						activeclassname='active'
 					>
 						<div className='sidebar-icon'>{item.icon}</div>
 						<div className='sidebar-text'>{item.name}</div>
