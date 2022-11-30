@@ -260,7 +260,7 @@ export const ReportForm = () => {
 				<MyTextArea
 					className="textarea"
 					label="What do you want to report?"
-					placeholder="Enter Report Here"
+					placeholder="Type in your report details here..."
 					rows="6"
 					name="message"
 				/>
