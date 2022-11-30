@@ -3,8 +3,32 @@ import { formik, useFormik, yupToFormErrors } from "formik";
 import * as Yup from "yup";
 import style from "../AdminDashboard/AdminAgentModal.module.css";
 import axios from "axios";
+import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
 
 const AdminAgentModal = (props) => {
+
+  const navigate = useNavigate();
+  
+  const showAlert = () => {
+		swal(
+			'Agency successfully onboarderd',
+			'success'
+		);
+	};
+
+  const showFailedAlert = () => {
+    {
+      swal(
+        "Error",
+        "Unable to create new agency record at the moment please try again later",
+        "error"
+      );
+    }
+    setTimeout(() => {
+      navigate("/admindashboard");
+    }, 5000);
+  };
 
 
 
@@ -81,10 +105,10 @@ const AdminAgentModal = (props) => {
           agencyRegDetails
         );
         console.log(response.data)
-        // showAlert();
+        showAlert();
       } catch (error) {
         console.log(error);
-        // showFailedAlert();
+        showFailedAlert();
       }
 
     },
