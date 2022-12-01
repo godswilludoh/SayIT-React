@@ -15,7 +15,8 @@ const AdminAgentModal = (props) => {
 
   const showAlert = () => {
 		swal(
-			'Agency successfully onboarderd',
+      "New Agent Onboarded",
+			'Agency successfully registered',
 			'success'
 		);
 	};
@@ -72,7 +73,7 @@ const AdminAgentModal = (props) => {
         .required("Required"),
     }),
 
-    onSubmit: async (values) => {
+    onSubmit: async (values, Action) => {
       // console.log(values);
 
       const {
@@ -109,13 +110,16 @@ const AdminAgentModal = (props) => {
             Authorization : `Bearer ${localStorage.getItem("accessToken")}`
             }},
         );
-        console.log(response.data)
+        // console.log(response.data)
         showAlert();
-
+        {await new Promise((resolve) => setTimeout(resolve, 2000));
+        Action.resetForm()};
       } catch (error) {
         console.log(error);
         showFailedAlert();
-      }
+        {await new Promise((resolve) => setTimeout(resolve, 2000));
+          Action.resetForm()}
+      }    
     },
 
 
