@@ -68,7 +68,7 @@ const SignupForm = () => {
 
 						const accessToken = response.data.tokens.access.token;
 						console.log(accessToken)
-						localStorage.setItem('accessToken', JSON.stringify(accessToken));
+						localStorage.setItem('accessToken', (accessToken));
 						const refreshToken = response.data.tokens.refresh.token;
 
 						const userObj = response.data.user;
