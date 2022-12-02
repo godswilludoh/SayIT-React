@@ -1,108 +1,119 @@
-.agentAndAdminContainer{
-	overflow-x: hidden;
+.agentAndAdminContainer {
+  overflow-x: hidden;
 }
 
 .overallContainer {
-	padding-top: 30px;
-	display: flex;
-	height: 100vh;
-	overflow: hidden;
+  padding-top: 30px;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .theLoginSide {
-	flex: 2;
-	max-width: 50%;
-	background: #dc6b36;
+  flex: 2;
+  max-width: 50%;
+  background: #dc6b36;
 }
 
 .innerContainer {
-	/* margin-top: 6rem; */
-	max-width: 60%;
-	margin: 6rem auto;
+  /* margin-top: 6rem; */
+  max-width: 60%;
+  margin: 6rem auto;
 }
 
 .agentTitle {
-	padding-top: 1rem;
-	font-size: 17px;
+  padding-top: 1rem;
+  font-size: 17px;
 }
 
 form {
-	margin: 2rem auto;
+  margin: 2rem auto;
 }
 
 footer {
-	text-align: center;
-	padding-bottom: 15px;
-	font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  font-weight: bold;
 }
 
 .theImageSide {
-	flex: 1;
-	max-width: 50%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url('/public/assets/dashboardImage.png');
+  flex: 1;
+  max-width: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/public/assets/dashboardImage.png");
 }
 
 .theImageSide img {
-	margin: 6rem 2.5rem;
+  margin: 6rem 2.5rem;
 }
 
 .formGroup {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin: 10px 0px;
-	margin-bottom: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px;
+  margin-bottom: 5px;
 }
 
 .formGroup Input {
-	border: 1px solid #fff;
-	height: 60px;
-	border-radius: 2rem;
-	margin-bottom: 2px;
-	width: 100%;
-	padding: 5px 10px 5px 50px;
-	font-size: 15px;
-	outline: 0;
-	background: #dc6b36;
+  border: 1px solid #fff;
+  height: 60px;
+  border-radius: 2rem;
+  margin-bottom: 2px;
+  width: 100%;
+  padding: 5px 10px 5px 50px;
+  font-size: 15px;
+  outline: 0;
+  background: #dc6b36;
 }
-#agentID{
-	padding: 5px 10px 5px 50px;	
+#agentID {
+  padding: 5px 10px 5px 50px;
 }
 
 .formGroup Input::placeholder {
-	color: #fff;
+  color: #fff;
 }
 
 .icon {
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.passwordEyeIcon {
 	position: absolute;
-	left: 15px;
-	top: 0px;
+	right: 15px;
+	top: 0;
 	font-size: 20px;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
+	cursor: pointer;
+  }
 
 .innerContainer .agentTitle {
-	text-align: center;
-	margin: 5rem auto 0;
-	font-weight: 800;
+  text-align: center;
+  margin: 5rem auto 0;
+  font-weight: 800;
 }
 
 .logInButton {
-	height: 60px;
-	border-radius: 2rem;
-	border: none;
-	width: 100%;
-	background: #fff;
-	color: #ed4d02;
-	font-size: 18px;
-	font-weight: bold;
-	cursor: pointer;
+  height: 60px;
+  border-radius: 2rem;
+  border: none;
+  width: 100%;
+  background: #fff;
+  color: #ed4d02;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* .logInButton :disabled{
@@ -110,26 +121,25 @@ footer {
 	color: rgb(98, 14, 167);
 } */
 
-.logInButton:hover{
-	color: #2f1010;
-	background-color: rgba(255, 255, 255, 0.882);
+.logInButton:hover {
+  color: #2f1010;
+  background-color: rgba(255, 255, 255, 0.882);
 }
 
-.logInButton:disabled{
-	color: #f3a47fa9;
+.logInButton:disabled {
+  color: #f3a47fa9;
 }
-
 
 
 
 @media (min-width: 300px) and (max-width: 950px) {
-	.theImageSide {
-		display: none;
-	}
-	.theImageSide img {
-		display: none;
-	}
-	.theLoginSide {
-		max-width: 100%;
-	}
+  .theImageSide {
+    display: none;
+  }
+  .theImageSide img {
+    display: none;
+  }
+  .theLoginSide {
+    max-width: 100%;
+  }
 }
