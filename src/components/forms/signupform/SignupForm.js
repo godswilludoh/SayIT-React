@@ -57,7 +57,7 @@ const SignupForm = () => {
 					setSubmitting(true);
 					try {
 						let response = await axios.post(
-							'https://say--it.herokuapp.com/v1/auth/register',
+							'http://191.101.241.157:4500/v1/auth/register',
 							{
 								email,
 								userName,

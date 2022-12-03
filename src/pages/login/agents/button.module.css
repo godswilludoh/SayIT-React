@@ -1,108 +1,124 @@
 .overallContainer {
-	/* padding-top: 4rem; */
-	display: flex;
-	height: 100vh;
-	overflow: hidden;
+  /* padding-top: 4rem; */
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
 }
 
 .theLoginSide {
-	flex: 2;
-	max-width: 50%;
-	background: #dc6b36;
-	text-align: center;
+  flex: 2;
+  max-width: 50%;
+  background: #dc6b36;
+  text-align: center;
 }
 
 .innerContainer {
-	margin-top: 6rem;
-	max-width: 60%;
-	margin: auto;
+  margin-top: 6rem;
+  max-width: 60%;
+  margin: auto;
 }
 
 .agentTitle {
-	padding-top: 5rem;
-	font-size: 18px;
+  padding-top: 5rem;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .agentForm {
-	margin: 5rem auto;
+  margin: 5rem auto;
 }
 
 footer {
-	text-align: center;
-	padding-bottom: 15px;
-	font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  font-weight: bold;
 }
 
 .theImageSide {
-	flex: 1;
-	max-width: 50%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url('/public/assets/dashboardImage.png');
+  flex: 1;
+  max-width: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/public/assets/dashboardImage.png");
 }
 
 .theImageSide img {
-	margin: 6rem 2.5rem;
+  margin: 6rem 2.5rem;
 }
 
 .formGroup {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin: 10px 0px;
-	margin-bottom: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0px;
+  margin-bottom: 5px;
 }
 
 .formGroup Input {
-	border: 1px solid #fff;
-	height: 60px;
-	border-radius: 2rem;
-	margin-bottom: 2px;
-	width: 100%;
-	padding: 5px 10px 5px 50px;
-	font-size: 15px;
-	display: block;
-	outline: 0;
-	background: #dc6b36;
+  border: 1px solid #fff;
+  height: 60px;
+  border-radius: 2rem;
+  margin-bottom: 2px;
+  width: 100%;
+  padding: 5px 10px 5px 50px;
+  font-size: 15px;
+  display: block;
+  outline: 0;
+  background: #dc6b36;
 }
 
 .formGroup Input::placeholder {
-	color: #fff;
+  color: #fff;
 }
 
 .icon {
-	position: absolute;
-	left: 15px;
-	top: 0px;
-	font-size: 20px;
-	height: 80%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  font-size: 20px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .innerContainer .agentTitle {
-	text-align: center;
-	margin: 5rem auto 0;
-	font-weight: 800;
+  text-align: center;
+  margin: 5rem auto 0;
+  font-weight: 800;
 }
 
 .logInButton {
-	padding: 15px;
-	border-radius: 25px;
-	border: none;
-	width: 50%;
-	background: #fff;
-	color: #ed4d02;
-	font-size: 18px;
-	font-weight: bold;
-	cursor: pointer;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  width: 50%;
+  background: #fff;
+  color: #ed4d02;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
-.logInButton:hover{
-	color: #2f1010;
+.logInButton:hover {
+  color: #2f1010;
 }
 
-.logInButton:disabled{
-	color: #f3a47fa9;
+.logInButton:disabled {
+  color: #f3a47fa9;
+}
+
+@media (max-width: 800px) {
+  .theLoginSide {
+    width: 100%;
+  }
+
+  .theImageSide {
+    display: none;
+  }
+
+  .overallContainer {
+	width: 100%;
+  }
 }
