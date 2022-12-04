@@ -105,11 +105,14 @@ const AdminAgentModal = (props) => {
       // Post data to the backend
       try {
         let response = await axios.post(
-          "https://say--it.herokuapp.com/v1/agency",
+          "http://127.0.0.1:3000/v1/agency",
           agencyRegDetails,{headers: {
             Authorization : `Bearer ${localStorage.getItem("accessToken")}`
             }},
         );
+       
+        // console.log(response);
+       
         // console.log(response.data)
         showAlert();
         {await new Promise((resolve) => setTimeout(resolve, 2000));

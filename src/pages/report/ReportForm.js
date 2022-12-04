@@ -39,7 +39,7 @@ export const ReportForm = () => {
     {
       swal(
         "Error",
-        "Unable to submit your report at the moment please try agin later",
+        "Unable to submit your report at the moment please try again later",
         "error"
       );
     }
@@ -155,7 +155,7 @@ export const ReportForm = () => {
 
           try {
             let response = await axios.post(
-              "https://say--it.herokuapp.com/v1/reports",
+              "https://localhost:3000/v1/reports",
               report
             );
             showAlert();

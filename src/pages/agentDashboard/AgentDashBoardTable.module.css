@@ -1,0 +1,43 @@
+.deleteIcon{
+    font-size: 24px;
+    color: rgb(12,12,12);
+    cursor: pointer;
+}
+
+
+.printIcon{
+    padding-right: 5px;
+    font-size: 24px;
+    color: rgb(12,12,12);
+    cursor: pointer; 
+}
+
+
+.delete_Print{
+    display: flex;
+    gap: 10px;
+}
+
+.clickToSeeReport{
+    padding: 5px;
+  background: #ed4d02;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.clickToSeeReport{
+    background-color: #ce5707;
+  opacity: 1;
+}
+
+.agentTableReportSelect {
+    width: 50%;
+    height: 2rem;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border-color: #000000;
+    border: 1px solid #d9d9d9;
+    padding-left: 20px;
+  }

@@ -61,11 +61,10 @@ const AdminLogin = () => {
 
       setSubmitting(true);
 
-	//   previous server link "https://say--it.herokuapp.com/v1/auth/login"
 
       try {
         let response = await axios.post(
-			"http://sayitapi.ksolutionsng.com/v1/auth/login",
+			"http://191.101.241.157:4500/v1/auth/login",
           {
             detail: adminID,
             password: Password,
@@ -76,6 +75,7 @@ const AdminLogin = () => {
         localStorage.setItem("accessToken", accessToken);
         const refreshToken = response.data.tokens.refresh.token;
         const userObj = response.data.user;
+        console.log(userObj)
         console.log(response);
         console.log(accessToken);
 
