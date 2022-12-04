@@ -28,12 +28,8 @@ function App() {
 		<>
 			<Routes>
 				<Route index element={<LandingPage />} />
-				{/* <Route path='signup' element={<CreateAccount />} /> */}
-				{/* <Route path='report' element={<Report />} /> */}
 				<Route path='report' element={<ReportForm />} />
-				{/* <Route path='report' element={<SignupForm1 />} /> */}
 				<Route path='signup' element={<SignupAcc />} />
-				{/* <Route path='/report' element={<Report />} /> */}
 				<Route path='blog' element={<Blog />} />
 				<Route path='contact' element={<ContantUs />} />
 				<Route path='/login' element={<UsersLogin />} />
