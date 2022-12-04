@@ -3,9 +3,20 @@ import Table from "react-bootstrap/Table";
 import { FaPrint, FaTrash } from "react-icons/fa";
 import style from "../agentDashboard/AgentDashBoardTable.module.css";
 import AgentDashBoardModal from "./AgentDashBoardModal";
+// import AgentReportContext from "../../helper/context/agent-context/AgentReportContext";
 
 
 const AgentDashboardTable = () => {
+
+  // const {
+  //   addReport,
+  //   reports,
+  //   deleteReport,
+  //   findReportByID,
+  // } = useContext(AgentReportContext); //This handles using the pure functions created
+
+
+
   const [show, setShow] = useState(false);
   return (
     <>
@@ -50,7 +61,7 @@ const AgentDashboardTable = () => {
               </div>
             </td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>2</td>
             <td>002</td>
             <td>
@@ -109,7 +120,7 @@ const AgentDashboardTable = () => {
                 </span>
               </div>
             </td>
-          </tr>
+          </tr> */}
           
         </tbody>
       </Table>
