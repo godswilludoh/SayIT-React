@@ -6,7 +6,7 @@ const AgentProfileComponent = () => {
     <section className="dashboard-interface">
       <div className="top">
         <div className="info-display">
-          <p className="notificationText-forAgentProfile">👋 Welcome Funmi_EFCC</p>
+          <p className="notificationText-forAgentProfile">AGENTS PROFILE</p>
         </div>
         <div className="time-forAgentProfile">
           <DateTime></DateTime>
@@ -18,24 +18,10 @@ const AgentProfileComponent = () => {
           <p class="agentOrgAdress">
             EFCC HQ: No 6, Port Harcourt Crescent, Area 11, Garki, Abuja.
           </p>
-          <div className="forTheprofileImage">
-          <div id="profile-container-agentProfile">
-            <img id="profileImage-AgentProfile" src="/assets/newUser.png" />
-          </div>
-          <input
-            id="imageUpload"
-            type="file"
-            name="profile_photo"
-            placeholder="Photo"
-            required
-            capture
-          />
-          </div>
         </div>
 
         <section className="agentAndOrgDetails">
-          <h3 className="detailsTitle">Account</h3>
-          
+        
           <div className="agentAndOrgDetailsWrapper">
             <div className="agentProfileInfo">
               <label htmlFor="username">Username</label>
