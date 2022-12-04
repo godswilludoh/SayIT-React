@@ -1,7 +1,7 @@
 import React from 'react';
 import validationSchema from './validationSignUp';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../../../utility/api/axios';
 import { Formik, Form } from 'formik';
 import TextField from '../TextField';
 import { toast, ToastContainer } from 'react-toastify';
@@ -9,6 +9,8 @@ import { useAuth } from '../../hooks/useAuth';
 import 'react-toastify/dist/ReactToastify.css';
 import MoreInfo from './MoreInfo';
 import './signupform.css';
+
+const REGISTER_URL = '/v1/auth/register';
 
 const SignupForm = () => {
 	const navigate = useNavigate();
@@ -56,15 +58,12 @@ const SignupForm = () => {
 					const { email, userName, phoneNumber, password } = values;
 					setSubmitting(true);
 					try {
-						let response = await axios.post(
-							'http://191.101.241.157:4500/v1/auth/register',
-							{
-								email,
-								userName,
-								phoneNumber,
-								password,
-							}
-						);
+						let response = await axios.post(REGISTER_URL, {
+							email,
+							userName,
+							phoneNumber,
+							password,
+						});
 
 						const accessToken = response.data.tokens.access.token;
 						localStorage.setItem('accessToken', JSON.stringify(accessToken));
@@ -75,16 +74,16 @@ const SignupForm = () => {
 							navigate('/users');
 						}
 					} catch (err) {
-						if (!err.response) {
+						if (!err?.response) {
 							signupError('no server response');
 						} else if (err.response.status === 400) {
 							signupError(err.response.data.message);
-						} else if (err.response.status === 409) {
+						} else if (err.response?.status === 409) {
 							signupError(err.response.data.message);
 						} else if (err.response.status === 401) {
 							signupError(err.response.data.message);
 						} else {
-							signupError('Login Failed');
+							signupError('SignUp Failed');
 						}
 					}
 				}}
