@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  overflow-y: scroll;
+  width: 950px;
+  height: 90vh;
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #b4b1af;
+  border-radius: 8px;
+}
+
+.formButton {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ed4d02;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.formButton:hover {
+  color: #fff;
+}
+
+.reportHeadingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 1.5rem; */
+  margin-bottom: 2.3rem;
+}
+
+.reportHeading,
+.reportID {
+  font-weight: 700;
+}
+
+.sourceAndDateReported {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formGroup {
+  margin-bottom: 0.5rem;
+}
+
+.formGroup .InputField {
+  margin-top: 10px;
+  padding: 10px 10px 10px 5px;
+  border: red;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.formGroup label {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.formGroup textarea {
+  border: 1px solid #19100f;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  resize: none;
+  height: 220px;
+  margin-bottom: 0px;
+}
+
+.viewFileButtonContainer {
+  margin-top: 5px;
+}

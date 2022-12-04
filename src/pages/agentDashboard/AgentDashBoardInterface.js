@@ -2,9 +2,14 @@ import React from "react";
 import { DateTime } from "../../helper/date-time/DateTime";
 import {  Link } from 'react-router-dom';
 import AgentDashboardTable from './AgentDashboardTable';
+import style from "../agentDashboard/AgentDashBoardTable.module.css";
+
+
 
 
 const AgentDashBoardInterface = () => {
+
+
   return (
     <section className="dashboard-interface" id="theSecondSideOfThePage">
       <div className="top">
@@ -54,7 +59,7 @@ const AgentDashBoardInterface = () => {
             <div className="theMetricItself">0</div>
           </div>
           <div className="forTheNotification_Report">
-            <div className="forNotificationButton">
+            <div className={style.forNotificationButton}>
               <Link to={"/agentNotificationPage"} id="messageLink">
                 Notifications
               </Link>
@@ -63,7 +68,7 @@ const AgentDashBoardInterface = () => {
         </section>
 
         <AgentDashboardTable />
-        
+
       </div>
     </section>
   );

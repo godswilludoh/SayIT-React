@@ -187,7 +187,8 @@ tr:nth-child(odd) {
 .forNotificationButton {
 	background-color: rgba(0, 0, 0, 0.25);
 	/* background-color: rgba(142, 157, 198, 0.1); */
-	color: #000000;
+	/* color: #000000; */
+	color: #ed4d02;
 	font-size: 14px;
 	font-weight: 700;
 	text-align: center;
@@ -200,7 +201,7 @@ tr:nth-child(odd) {
 
 #messageLink {
 	text-decoration: none;
-	color: #000000;
+	color: #ffffff;
 	font-weight: 700;
 }
 
@@ -274,58 +275,7 @@ tr:nth-child(odd) {
 }
 
 /* ################################### */
-/* CSS FOR THE POP MODAL CONTENT STRATS HERE */
 
-.reportHeadingContainer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* margin-top: 1.5rem; */
-	margin-bottom: 2.3rem;
-}
-
-.reportHeading,
-.reportID {
-	font-weight: 700;
-}
-
-.sourceAndDateReported {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.form-group {
-	margin-bottom: 0.5rem;
-}
-
-.form-group .InputField {
-	margin-top: 10px;
-	padding: 10px 10px 10px 5px;
-	border: red;
-	background: #fff;
-	width: 100%;
-	border-radius: 5px;
-}
-
-.form-group label {
-	margin-bottom: 15px;
-	font-weight: 700;
-}
-
-.form-group textarea {
-	border: 1px solid #19100f;
-	border-radius: 5px;
-	padding: 10px;
-	width: 100%;
-	resize: none;
-	height: 220px;
-	margin-bottom: 0px;
-}
-
-.viewFileButtonContainer {
-	margin-top: 5px;
-}
 
 .formButton {
 	text-decoration: none;

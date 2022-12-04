@@ -20,13 +20,15 @@
 
 .clickToSeeReport{
     padding: 5px;
-  background: #ed4d02;
+  background: rgba(237,77,2, 0.5);
   border-radius: 5px;
   color: #ffffff;
+  border: none;
+  outline: none;
 }
 
 .clickToSeeReport{
-    background-color: #ce5707;
+    background-color: rgb(237,77,2);
   opacity: 1;
 }
 
@@ -40,4 +42,11 @@
     border-color: #000000;
     border: 1px solid #d9d9d9;
     padding-left: 20px;
+  }
+
+  .forNotificationButton{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: rgb(237,77,2);
+    color: white;
   }
