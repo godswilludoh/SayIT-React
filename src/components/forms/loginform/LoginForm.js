@@ -5,9 +5,8 @@ import validationSchema from './validationLogin';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdditionalInfo from './AdditionalInfo';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import axios from '../../../utility/api/axios';
-import { Link } from 'react-router-dom';
 import { useAuth } from '../../../components/hooks/useAuth';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
@@ -16,6 +15,9 @@ const LOGIN_URL = '/v1/auth/login';
 const SignupForm = () => {
 	const navigate = useNavigate();
 	const { auth, setAuth, setUser } = useAuth();
+
+	const location = useLocation();
+	const from = location.state?.from?.pathname || '/login';
 
 	const [showPassword, setShowPassword] = useState(false);
 
@@ -78,7 +80,7 @@ const SignupForm = () => {
 						loginSuccess();
 
 						if (auth) {
-							navigate('/users');
+							navigate(from, { replace: '/users' });
 						}
 					} catch (err) {
 						if (!err.response) {
