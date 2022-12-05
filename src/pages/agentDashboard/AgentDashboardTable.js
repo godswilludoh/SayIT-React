@@ -1,23 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Table from "react-bootstrap/Table";
 import { FaPrint, FaTrash } from "react-icons/fa";
 import style from "../agentDashboard/AgentDashBoardTable.module.css";
 import AgentDashBoardModal from "./AgentDashBoardModal";
-// import AgentReportContext from "../../helper/context/agent-context/AgentReportContext";
+import AgentReportContext from "../../helper/context/agent-context/AgentReportContext";
+import AgentReportServices from "../../helper/context/agent-context/agentreport.service";
+
 
 
 const AgentDashboardTable = () => {
 
-  // const {
-  //   addReport,
-  //   reports,
-  //   deleteReport,
-  //   findReportByID,
-  // } = useContext(AgentReportContext); //This handles using the pure functions created
+  const {
+    loadReport,
+    addReport,
+    reports,
+    deleteReport,
+    findReportByID,
+  } = useContext(AgentReportContext); //This handles using the pure functions created
 
 
 
   const [show, setShow] = useState(false);
+
+  AgentReportServices.loadReportData().then((response)=>{
+    console.log("response",response)
+  });
+
+
   return (
     <>
       <Table>
