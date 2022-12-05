@@ -2,12 +2,13 @@ import React, {useReducer} from "react";
 import AgentReportContext from "./AgentReportContext";
 import AgentReportReducer from "./AgentReportReducer";
 import{
+  LOAD_REPORT,
     ADD_REPORT,
     DELETE_REPORT,
     FIND_REPORT_BY_ID,
 } from "./AgentReportTypes";
 
-export const TodoState = ({ children }) => {
+export const AgentReportProvider = ({ children }) => {
     const initialState = {
       reports: [],
       report: {},
@@ -16,6 +17,10 @@ export const TodoState = ({ children }) => {
     const [state, dispatch] = useReducer(AgentReportReducer, initialState);
 
     // Now my pure functions
+
+    const loadReport = (reportArr) => {
+      dispatch({type: LOAD_REPORT, payload: reportArr})
+    };
 
     const addReport = (reportObj) => {
         dispatch({ type: ADD_REPORT, payload: reportObj });

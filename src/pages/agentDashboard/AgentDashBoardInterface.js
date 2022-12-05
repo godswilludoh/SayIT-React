@@ -3,7 +3,7 @@ import { DateTime } from "../../helper/date-time/DateTime";
 import {  Link } from 'react-router-dom';
 import AgentDashboardTable from './AgentDashboardTable';
 import style from "../agentDashboard/AgentDashBoardTable.module.css";
-
+// import AgentReportContext from "../../helper/context/agent-context/AgentReportContext";
 
 
 
@@ -67,7 +67,9 @@ const AgentDashBoardInterface = () => {
           </div>
         </section>
 
-        <AgentDashboardTable />
+  
+          <AgentDashboardTable />
+       
 
       </div>
     </section>

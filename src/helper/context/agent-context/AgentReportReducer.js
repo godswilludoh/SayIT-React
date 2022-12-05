@@ -2,6 +2,7 @@ import {
   ADD_REPORT,
   DELETE_REPORT,
   FIND_REPORT_BY_ID,
+  LOAD_REPORT,
 } from "./AgentReportTypes";
 
 const AgentReportReducer = (state, action) => {
@@ -9,6 +10,12 @@ const AgentReportReducer = (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
+    case LOAD_REPORT:
+      return {
+        ...state,
+        reports:payload,
+      }
+
     case ADD_REPORT:
       return {
         ...state,
