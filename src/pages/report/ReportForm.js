@@ -155,7 +155,7 @@ export const ReportForm = () => {
 
           try {
             let response = await axios.post(
-              "http://191.101.241.157:4500/v1/reports",
+              "http://191.101.241.157:4500/v1/reports/anonymous",
               report
             );
             showAlert();

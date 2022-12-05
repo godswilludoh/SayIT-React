@@ -3,7 +3,7 @@ import axiosInstance from "./axios-agentReport-config";
 const loadReportData = async() =>{
       try {
     let response = await axiosInstance.get("reports");  
-    // console.log(response.data); 
+    console.log(response.data); 
     return response
   } catch (err) {
     console.log(err)
