@@ -100,7 +100,7 @@ export const AdminReportTable = () => {
           <th>Admin Charged</th>
           <th>Action</th>
         </tr>
-        <tr>
+        {/* <tr>
         <td>Whacky Theo</td>
         <td>03-03-2022</td>
         <td>03-03-2022</td>
@@ -110,7 +110,7 @@ export const AdminReportTable = () => {
         <td>03-03-2022</td>
         <td>03-03-2022</td>
         </tr>
-        
+         */}
         
       </tbody></table>
   </div>

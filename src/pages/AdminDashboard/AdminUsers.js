@@ -48,14 +48,14 @@ export const AdminUsers = () => {
 								className={adminUsersCSS.search_Bar}
 								placeholder='Search by Name or Email'
 							/>
-							<span>
+							{/* <span>
 								<input type='checkbox' className={adminUsersCSS.checkboxes} />
 								<p>Show anaonymous Users</p>
 							</span>
 							<span>
 								<input type='checkbox' id='checkboxes' />{' '}
 								<p>Show Registered Users</p>
-							</span>
+							</span> */}
 						</div>
 						<div className='Table-display-section'>
 							<table className={adminUsersCSS.table_interfc}>
