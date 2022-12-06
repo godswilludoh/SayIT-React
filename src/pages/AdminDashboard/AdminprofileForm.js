@@ -1,132 +1,117 @@
-import React from 'react'
-import './adminprofile.css';
-import { toast, Toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useFormik, yupToFormErrors } from 'formik';
-import * as Yup from "yup";
+import React, { useEffect, useState } from "react";
+import "./adminprofile.css";
+import { toast, Toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useFormik, yupToFormErrors } from "formik";
+import userEvent from "@testing-library/user-event";
+import axios from "axios";
+// import * as Yup from "yup";
 
 export const AdminprofileForm = () => {
-    const formik = useFormik({
-        initialValues: {
-            Username: "",
-            Email: "",
-            Password: "",
-            ConfirmPass: "",
-            FullName: "",
-            Title : "",
-        },
-        // validationSchema: Yup.object({
-        //     Username: Yup.string().max(15, "*should be 15 characters or less").required("*Required"),
-        //     Email: Yup.string().email( "*Invalid email").required("*Required"),
-        //     Password: Yup.string()
-        //          .required('*Please Enter your password')
-        //          .matches(
-        //             /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-        //             "*Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"),
-        //     ConfirmPass: Yup.string()
-        //         .oneOf([Yup.ref('Password'), null], '*Passwords must match'),
-        //     FullName: Yup.string().required("*Required"),    
-        //     Title: Yup.string().required("*Required"),    
+  const formik = useFormik({
+    initialValues: {
+      Username: "",
+      Email: "",
+      Password: "",
+      Phone: "",
+      ID: "",
+      Role: "",
+    },
 
-        // }),
+    // @THEO LINK THE SUBMITTED INFO TO BACKEND
+    onSubmit: (values) => {
+      // console.log(values);
+      toast.success("Profile updated successfully!");
+      // position: toast.POSITION.TOP_CENTER,
+    },
+  });
 
-        // @THEO LINK THE SUBMITTED INFO TO BACKEND
-        onSubmit: (values) =>{
-            // console.log(values);
-            toast.success('Profile updated successfully!')
-            // position: toast.POSITION.TOP_CENTER,
-        },
-    })
+  const [admininfo, setAdminInfo] = useState([])
+//   const [userinfo, setUserInfo] = useState([]);
 
+  useEffect(() => {
+    axios.get("http://191.101.241.157:4500/v1/auth/current-user",   {headers: {
+        Authorization : `Bearer ${localStorage.getItem("accessToken")}`
+        }})
+    .then((response) => {
+      let Result = response.data
+    
+      setAdminInfo(Result);
+      console.log(Result)
+      
+    });
+  }, []);
 
+  //   const submitUserInfo = asyc () => {
+
+  //   }
 
   return (
+    // <React.Fragment>
     <div className="main-details-container">
-    <div className="acct-into">
-        <h3>Welcome Theodora-Admin002</h3>
-        <p>whackytheo@sayit.org</p>
-    </div> 
-    <div className="acct-info">
+      <div className="acct-into">
+        <div>
+          {admininfo.map((admininfo) => (
+            <h3> Welcome {admininfo.username} </h3>
+          ))}
+        </div>
+        <div>
+          {admininfo.map((admininfo) => (
+            <p>{admininfo.email}</p>
+          ))}
+        </div>
+      </div>
+
+      <div className="acct-info">
         <h5>Account</h5>
-        <form onSubmit={formik.handleSubmit}>
+        <form >
+            
+          <div>
             <div className="details_Info">
-                <label htmlFor="Username"> Username </label>
-                <input type="text" placeholder="Username"
-                 name ="Username" 
-                className="info-placehold"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value = {formik.values.Username}
-                readOnly
-                />
-                {/* {formik.touched.Username && formik.errors.Username ? <p className= "errors">{formik.errors.Username }</p> : null } */}
+              <label htmlFor="Username"> Username </label>
+              {admininfo.map((admininfo) => (
+                <input readOnly type="text" placeholder={admininfo.username} />
+              ))}
             </div>
             <div className="details_Info">
-                <label htmlFor="email"> Email </label>
-                <input type="text" placeholder="example@sayit.com"
-                 name ="Email" 
-                 className="info-placehold"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value = {formik.values.Email}
-                readOnly
-                />
-                {/* {formik.touched.Email && formik.errors.Email ? <p className= "errors">{formik.errors.Email }</p> : null } */}
+              <label htmlFor="email"> Email </label>
+              {admininfo.map((admininfo) => (
+                <input readOnly type="text" placeholder={admininfo.email} />
+              ))}
             </div>
             <div className="details_Info">
-                <label htmlFor="Password"> Password </label>
-                <input type="password" placeholder="******"
-                 name ="Password" 
-                 className="info-placehold"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value = {formik.values.Password}
-                readOnly
-                />
-                {/* {formik.touched.Password && formik.errors.Password ? <p className= "errors">{formik.errors.Password }</p> : null } */}
+              <label htmlFor="Password"> Password </label>
+             
+                <input readOnly type="password" placeholder="********" />
+
             </div>
             <div className="details_Info">
-                <label htmlFor="password"> Confirm Password</label>
-                <input type="password" placeholder="******"
-                 name ="ConfirmPass" 
-                 className="info-placehold"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value = {formik.values.ConfirmPass}
-                readOnly
-                />
-                 {/* {formik.touched.ConfirmPass && formik.errors.ConfirmPass? <p className= "errors">{formik.errors.ConfirmPass }</p> : null } */}
-            </div>
-            <div className="details_Info">
-                <label htmlFor="names"> Full Name </label>
-                <input type="text" placeholder="Names"
-                 name ="FullName" 
-                 className="info-placehold"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value = {formik.values.FullName}
-                readOnly
-                />
-                {/* {formik.touched.Names && formik.errors.Username ? <p className = "errors">{formik.errors.Nneome }</p> : null } */}
-            </div>
-            <div className="details_Info">
-                <label htmlFor="Title"> Title </label>
-                <input type="text" placeholder="Admin"
-                 name ="Title" 
-                className="info-placehold"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value = {formik.values.Title}
-                readOnly
-                />
-                {/* {formik.touched.Title && formik.errors.Title ? <p className= "errors">{formik.errors.Title }</p> : null } */}
+              <label htmlFor="password"> Phone </label>
+              {admininfo.map((admininfo) => (
+                <input readOnly type="text" placeholder={admininfo.phone} />
+              ))}
             </div>
 
-            <button type='submit' id='prof-btn' disabled> Save </button>
-
+            <div className="details_Info">
+              <label htmlFor="names"> ID </label>
+              {admininfo.map((admininfo) => (
+                <input readOnly type="text" placeholder={admininfo.id} />
+              ))}
+            </div>
+            <div className="details_Info">
+              <label htmlFor="Role"> Role </label>
+              {admininfo.map((admininfo) => (
+                <input readOnly type="text" placeholder={admininfo.role} />
+              ))}
+            </div>
+          </div>
+          <button type="submit" id="prof-btn" disabled>
+            {" "}
+            OK{" "}
+          </button>
         </form>
-
-</div>
-</div>
-  )
-}
+      </div>
+    </div>
+    // </React.Fragment>
+  );
+};
