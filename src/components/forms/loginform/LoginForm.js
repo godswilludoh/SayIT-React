@@ -17,7 +17,7 @@ const SignupForm = () => {
 	const { auth, setAuth, setUser } = useAuth();
 
 	const location = useLocation();
-	const from = location.state?.from?.pathname || '/login';
+	const from = location.state?.from?.pathname || '/';
 
 	const [showPassword, setShowPassword] = useState(false);
 
