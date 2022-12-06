@@ -5,6 +5,7 @@ import AgentDashBoardModal from './AgentDashBoardModal';
 import AgentDashBoardInterface from './AgentDashBoardInterface';
 import { SidebarAgents } from '../../components/sidebar/SidebarAgents';
 
+
 const AgentDashBoard = () => {
 	return (
 		<div className='main-container'>
@@ -12,7 +13,7 @@ const AgentDashBoard = () => {
 
 			<AgentDashBoardInterface />
 
-			<AgentDashBoardModal />
+			{/* <AgentDashBoardModal /> */}
 		</div>
 	);
 };

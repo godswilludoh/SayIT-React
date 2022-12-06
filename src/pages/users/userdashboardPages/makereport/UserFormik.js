@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Formik, Form, useField, FormikProvider, ErrorMessage } from 'formik';
 import validationSchema from './validationMakeReport';
-import axios from 'axios';
+import axios from '../../../../utility/api/axios';
 import { MySelect } from '../../../../components/reportFormFields/MySelect';
 import { MyCheckbox } from '../../../../components/reportFormFields/MyCheckbox';
 import { MyTextInput } from '../../../../components/reportFormFields/MyTextInput';
@@ -9,6 +9,8 @@ import { MyTextArea } from '../../../../components/reportFormFields/MyTextArea';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../../components/hooks/useAuth';
+
+const REGISTERED_REPORT_URL = '/v1/reports';
 
 const UserFormik = () => {
 	const navigate = useNavigate();
@@ -87,17 +89,10 @@ const UserFormik = () => {
 
 					try {
 						if (values.anonymity) {
-							await axios.post(
-								'https://say--it.herokuapp.com/v1/reports',
-								report
-							);
+							await axios.post(REGISTERED_REPORT_URL, report);
 							showAlert();
 						} else {
-							await axios.post(
-								'https://say--it.herokuapp.com/v1/reports',
-								report,
-								config
-							);
+							await axios.post(REGISTERED_REPORT_URL, report, config);
 							showAlert();
 						}
 					} catch (error) {

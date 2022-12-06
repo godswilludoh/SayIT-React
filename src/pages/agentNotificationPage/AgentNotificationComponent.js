@@ -23,7 +23,6 @@ const AgentNotificationComponent = () => {
             required
             capture
           />
-          <span className="forTheAgentID">Funmi Bankole</span>
         </div>
       </div>
       <section className="notificationContainer">

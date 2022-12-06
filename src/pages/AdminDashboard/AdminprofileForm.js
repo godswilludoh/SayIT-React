@@ -30,12 +30,15 @@ export const AdminprofileForm = () => {
 //   const [userinfo, setUserInfo] = useState([]);
 
   useEffect(() => {
-    axios.get("127.0.0.1:3000/v1/auth/current-user").then((response) => {
-      let Result = response.data;
+    axios.get("http://191.101.241.157:4500/v1/auth/current-user",   {headers: {
+        Authorization : `Bearer ${localStorage.getItem("accessToken")}`
+        }})
+    .then((response) => {
+      let Result = response.data
+    
       setAdminInfo(Result);
-    //   {headers: {
-    //     Authorization : `Bearer ${localStorage.getItem("accessToken")}`
-    //     }}
+      console.log(Result)
+      
     });
   }, []);
 
@@ -49,7 +52,7 @@ export const AdminprofileForm = () => {
       <div className="acct-into">
         <div>
           {admininfo.map((admininfo) => (
-            <h3 key={admininfo.id}> Welcome {admininfo.username} </h3>
+            <h3> Welcome {admininfo.username} </h3>
           ))}
         </div>
         <div>

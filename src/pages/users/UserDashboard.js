@@ -5,7 +5,9 @@ import './UserDashboard.css';
 import { UserTable } from './userdashboardPages/UserTable';
 import { UserCards } from './userdashboardPages/UserCards';
 import { UserTop } from './userdashboardPages/UserTop';
-import axios from 'axios';
+import axios from '../../utility/api/axios';
+
+const REGISTERED_USER_REPORT_URL = '/v1/reports';
 
 const UserDashboard = () => {
 	const { user, auth } = useAuth();
@@ -19,15 +21,9 @@ const UserDashboard = () => {
 
 	const [report, setReport] = useState([]);
 	useEffect(() => {
-		// if (localStorage.getItem('accessToken')) {
-
-		// }
 		const getReport = async () => {
 			try {
-				let response = await axios.get(
-					'https://say--it.herokuapp.com/v1/reports/user',
-					config
-				);
+				let response = await axios.get(REGISTERED_USER_REPORT_URL, config);
 				setReport(response.data);
 			} catch (error) {
 				console.log(error);

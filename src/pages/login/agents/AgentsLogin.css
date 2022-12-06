@@ -116,10 +116,7 @@ footer {
   cursor: pointer;
 }
 
-/* .logInButton :disabled{
-	opacity: 0.35;
-	color: rgb(98, 14, 167);
-} */
+
 
 .logInButton:hover {
   color: #2f1010;
@@ -132,14 +129,14 @@ footer {
 
 
 
-@media (min-width: 300px) and (max-width: 950px) {
+@media (max-width: 800px) {
+
+  .theLoginSide {
+    width: 100%;
+  }
+
   .theImageSide {
     display: none;
   }
-  .theImageSide img {
-    display: none;
-  }
-  .theLoginSide {
-    max-width: 100%;
-  }
+
 }

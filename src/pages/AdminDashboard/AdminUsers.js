@@ -63,22 +63,21 @@ export const AdminUsers = () => {
 									<tr className={adminUsersCSS.table_rowss}>
 										<th>Email</th>
 										<th>Username</th>
-										<th>Registration Date</th>
-										<th>Reports</th>
+										<th>Phone No</th>
+										<th>Registration date</th>
 										<th>Actions</th>
 									</tr>
-									{/* <tr>
-										<td>
-											<FontAwesomeIcon id='cardicons' icon={faUser} />{' '}
+									<tr>
+										<td><FontAwesomeIcon id='cardicons' icon={faUser} />{' '}
 											Anonymous@mail.com
 										</td>
 										<td> Anonymous</td>
-										<td>03-03-2022</td>
-										<td>1</td>
+										<td>0987654321</td>
+										<td>11/09/0303</td>
 										<td className='suspend-btn'>
 											<FontAwesomeIcon id='cardicons' icon={faTrash} /> Delete
 										</td>
-									</tr> */}
+									</tr>
 								</tbody>
 							</table>
 						</div>
