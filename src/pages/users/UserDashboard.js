@@ -31,6 +31,7 @@ const UserDashboard = () => {
 		};
 		getReport();
 	}, [auth.accessToken]);
+	
 	return (
 		<div className='userdashboard-container'>
 			<SidebarUser />
