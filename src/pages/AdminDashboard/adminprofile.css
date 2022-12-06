@@ -45,7 +45,8 @@
 .details_Info{
     /* padding: 5px; */
     margin: 5px 0px 0px 0px;
-    font-size:small;
+    font-size: medium;
+    width: 50%;
     /* gap: 2px; */
     
 }

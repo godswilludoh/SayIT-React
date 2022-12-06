@@ -1,5 +1,5 @@
 import React from 'react';
-import './landing.css';
+import './Landing.css';
 import { Link } from 'react-router-dom';
 import HeroSection from './HeroSection';
 import WhatwedoSection from './WhatwedoSection';
