@@ -3,11 +3,15 @@ import { DateTime } from "../../helper/date-time/DateTime";
 import {  Link } from 'react-router-dom';
 import AgentDashboardTable from './AgentDashboardTable';
 import style from "../agentDashboard/AgentDashBoardTable.module.css";
+// import { useAuth } from '../../components/hooks/useAuth';
 // import AgentReportContext from "../../helper/context/agent-context/AgentReportContext";
 
 
 
 const AgentDashBoardInterface = () => {
+
+  const agentObj = JSON.parse(localStorage.getItem("agentObj"))
+
 
 
   return (
@@ -36,7 +40,7 @@ const AgentDashBoardInterface = () => {
       </div>
       <div className="dashboard-container">
         <h2 className="registeredAgencyName">
-          Federal Road Safety Corps(FRSC)
+          {agentObj.userName}
         </h2>
 
         <section className="metricCardContainer">

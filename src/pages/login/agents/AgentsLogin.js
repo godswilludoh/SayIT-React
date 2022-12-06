@@ -70,6 +70,7 @@ const AgentsLogin = () => {
         localStorage.setItem("accessToken", accessToken);
         const refreshToken = response.data.tokens.refresh.token;
         const userObj = response.data.user;
+        localStorage.setItem("agentObj", JSON.stringify(userObj));
         console.log(values);
         console.log(userObj);
         console.log(response);

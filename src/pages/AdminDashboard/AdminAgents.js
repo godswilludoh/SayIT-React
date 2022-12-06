@@ -4,9 +4,14 @@ import { DateTime } from "../../helper/date-time/DateTime";
 // import { AdminReportTable } from './AdminDashTable';
 import "./Admindash.css";
 import AdminAgentModal from "./AdminAgentModal";
+// import { RegisteredAgentService } from "../../helper/context/agent-context/agentreport.service";
 
 export const AdminAgents = () => {
   const [show, setShow] = useState(false);
+
+  // RegisteredAgentService.loadRegisteredAgent().then((response) => {
+  //   console.log("response", response.data);
+  // });
 
   return (
     <React.Fragment>

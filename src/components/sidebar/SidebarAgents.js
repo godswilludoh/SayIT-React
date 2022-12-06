@@ -32,7 +32,7 @@ export const SidebarAgents = ({ children }) => {
 		{
 			path: '/agents',
 			name: 'Logout',
-			icon: <BiLogOut />,
+			icon: <BiLogOut/>,
 		},
 	];
 	return (
