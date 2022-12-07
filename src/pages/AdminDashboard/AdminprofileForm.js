@@ -27,7 +27,6 @@ export const AdminprofileForm = () => {
   });
 
   const [admininfo, setAdminInfo] = useState([])
-//   const [userinfo, setUserInfo] = useState([]);
 
   useEffect(() => {
     axios.get("http://191.101.241.157:4500/v1/auth/current-user",   {headers: {

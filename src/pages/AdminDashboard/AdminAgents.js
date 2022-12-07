@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SidebarAdmin } from "../../components/sidebar/SidebarAdmin";
 import { DateTime } from "../../helper/date-time/DateTime";
 // import { AdminReportTable } from './AdminDashTable';
 import "./Admindash.css";
 import AdminAgentModal from "./AdminAgentModal";
-// import { RegisteredAgentService } from "../../helper/context/agent-context/agentreport.service";
+import { RegisteredAgentService } from "../../helper/context/agent-context/agentreport.service";
+
 
 export const AdminAgents = () => {
   const [show, setShow] = useState(false);
+  const [agentinfo, setAgentInfo] = useState([])
 
-  // RegisteredAgentService.loadRegisteredAgent().then((response) => {
-  //   console.log("response", response.data);
-  // });
+  useEffect(()=>{
+  RegisteredAgentService.loadRegisteredAgent().then((response) => {
+    console.log("response", response.data);
+    setAgentInfo(response.data)
+  })
+  }, []);
+
 
   return (
     <React.Fragment>
@@ -79,19 +85,30 @@ export const AdminAgents = () => {
                   <tr>
                     <th>S/N</th>
                     <th>Agency</th>
-                    <th>Agency Info</th>
-                    <th>Report Info</th>
+                    <th>Sector</th>
+                    <th>Reg Number</th>
+                    <th>Reg Info</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>EFCC</td>
-                    <td>AG/001EFC</td>
-                    <td>View</td>
+                  {agentinfo.map((agentinfo) => (
+                  <tr key={agentinfo.id}>
+
+                      <td>{agentinfo.id}</td>
+                   
+                      <td >{agentinfo.name}</td>
+                    
+                      <td >{agentinfo.sector}</td>
+                    
+                      <td>{agentinfo.regNumber}</td>
+                   
+                      <td> {agentinfo.updatedAt}</td>
+                    
                     <td>On Boarded</td>
+
                     <td className="suspend-btn">Suspend</td>
                   </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
