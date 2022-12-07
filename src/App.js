@@ -41,22 +41,22 @@ function App() {
 					<Route path='userforgotpassword' element={<UserForgotPassword />} />
 
 					{/* Protected routes */}
-					<Route element={<RequireAuth />}>
-						<Route path='users' element={<UserDashboard />} />
-						<Route path='agentDashboard' element={<AgentDashBoard />} />
-						<Route path='adminDashboard' element={<Admindash />} />
-						<Route
-							path='agentNotificationPage'
-							element={<AgentNotificationPage />}
-						/>
-						<Route path='agentProfilePage' element={<AgentProfilePage />} />
-						<Route path='adminUsers' element={<AdminUsers />} />
-						<Route path='adminReport' element={<AdminReport />} />
-						<Route path='adminAgents' element={<AdminAgents />} />
-						<Route path='makereport' element={<MakeReportForm />} />
-						<Route path='editprofile' element={<EditProfile />} />
-						<Route path='adminProfile' element={<AdminProfile />} />
-					</Route>
+					{/* <Route element={<RequireAuth />}> */}
+					<Route path='users' element={<UserDashboard />} />
+					<Route path='agentDashboard' element={<AgentDashBoard />} />
+					<Route path='adminDashboard' element={<Admindash />} />
+					<Route
+						path='agentNotificationPage'
+						element={<AgentNotificationPage />}
+					/>
+					<Route path='agentProfilePage' element={<AgentProfilePage />} />
+					<Route path='adminUsers' element={<AdminUsers />} />
+					<Route path='adminReport' element={<AdminReport />} />
+					<Route path='adminAgents' element={<AdminAgents />} />
+					<Route path='makereport' element={<MakeReportForm />} />
+					<Route path='editprofile' element={<EditProfile />} />
+					<Route path='adminProfile' element={<AdminProfile />} />
+					{/* </Route> */}
 				</Route>
 			</Routes>
 			<ToastContainer />

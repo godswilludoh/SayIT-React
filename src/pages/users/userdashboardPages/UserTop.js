@@ -1,9 +1,8 @@
 import React from 'react';
 import { DateTime } from '../../../helper/date-time/DateTime';
-import { useAuth } from '../../../components/hooks/useAuth';
 
 export const UserTop = () => {
-	const { user } = useAuth();
+	const regUserObj = JSON.parse(localStorage.getItem('regUserObj'));
 	return (
 		<div className='user-top'>
 			<div className='user-info-display'>
@@ -29,7 +28,7 @@ export const UserTop = () => {
 					capture
 				/>
 				<span className='user-id' id='user-profilename'>
-					{user.userName}
+					{regUserObj.userName}
 				</span>
 			</div>
 		</div>
