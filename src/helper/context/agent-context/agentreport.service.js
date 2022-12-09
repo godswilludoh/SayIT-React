@@ -24,6 +24,16 @@ console.log(err)
 
 
 
+export const currentlyLoggedInAgent = async() =>{
+  try {
+let response = await axiosInstance.get("auth/current-user");  
+console.log(response.data); 
+return response
+} catch (err) {
+console.log(err)
+}
+}
+
 
 
 
@@ -35,5 +45,12 @@ export const AgentReportServices = {
 export const RegisteredAgentService = {
   loadRegisteredAgent,
 }
+
+export const currentLoggedInAgent = {
+  currentlyLoggedInAgent,
+}
+
+
+
 
 // export default AgentReportServices;

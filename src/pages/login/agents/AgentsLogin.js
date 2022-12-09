@@ -10,10 +10,12 @@ import axios from "axios";
 import { useAuth } from "../../../components/hooks/useAuth";
 import { Formik, useFormik } from "formik";
 import * as Yup from "yup";
+import { currentLoggedInAgent } from "../../../helper/context/agent-context/agentreport.service";
 
 const AgentsLogin = () => {
   const navigate = useNavigate();
   const { auth, setAuth, setUser } = useAuth();
+  
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -51,8 +53,6 @@ const AgentsLogin = () => {
     onSubmit: async (values) => {
       const { agentID, Password } = values;
 
-      
-
       // formsubmit(true);
 
       // setSubmitting(true);
@@ -68,22 +68,26 @@ const AgentsLogin = () => {
 
         const accessToken = response.data.tokens.access.token;
         localStorage.setItem("accessToken", accessToken);
-        const refreshToken = response.data.tokens.refresh.token;
-        const userObj = response.data.user;
-        localStorage.setItem("agentObj", JSON.stringify(userObj));
-        console.log(values);
-        console.log(userObj);
-        console.log(response);
-        console.log(accessToken);
+        // const refreshToken = response.data.tokens.refresh.token;
+        // const userObj = response.data.user;
+        
 
-        setAuth({ accessToken, refreshToken });
-        setUser(userObj);
+        currentLoggedInAgent.currentlyLoggedInAgent().then((response) => {
+          console.log("response", response);
+          const userObj = response.data;
+          console.log(userObj);
+        localStorage.setItem("agentObj", JSON.stringify(userObj));
+        });
+
+
+
+
+        // setAuth({ accessToken, refreshToken });
+        // setUser(userObj);
         loginSuccess();
 
         if (auth) {
           navigate("/agentDashboard");
-          
-         
         }
       } catch (err) {
         if (!err.response) {
@@ -166,8 +170,11 @@ const AgentsLogin = () => {
                     </span>
                   </div>
 
-                  <button type="submit" className="logInButton"
-                  disabled={isSubmitting}>
+                  <button
+                    type="submit"
+                    className="logInButton"
+                    disabled={isSubmitting}
+                  >
                     LOGIN
                   </button>
                 </form>

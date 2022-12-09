@@ -5,6 +5,14 @@ const AgentProfileComponent = () => {
 
   const agentObj = JSON.parse(localStorage.getItem("agentObj"))
 
+  const firstName = agentObj.agency.firstName
+  const lastName = agentObj.agency.lastName
+
+  console.log(firstName)
+  console.log(lastName)
+
+  const fullName = firstName +" "+ lastName;
+
 
   return (
     <section className="dashboard-interface">
@@ -20,7 +28,7 @@ const AgentProfileComponent = () => {
       <section class="agentOrgContainer">
         <div className="agentAdressAndProfileImage">
           <p class="agentOrgAdress">
-            EFCC HQ: No 6, Port Harcourt Crescent, Area 11, Garki, Abuja.
+            {agentObj.agency.address}
           </p>
         </div>
 
@@ -44,12 +52,12 @@ const AgentProfileComponent = () => {
 
             <div className="agentProfileInfo">
               <label htmlFor="fullname">Full Name</label>
-              <p className="values">Funmi Bankole</p>
+              <p className="values">{fullName}</p>
             </div>
 
             <div className="agentProfileInfo">
               <label htmlFor="organisation">Organisation</label>
-              <p className="values">should be ndlea</p>
+              <p className="values">{agentObj.agency.name}</p>
             </div>
 
 
