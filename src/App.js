@@ -25,6 +25,7 @@ import { AdminProfile } from './pages/AdminDashboard/AdminProfile';
 import AgentProfilePage from './pages/agentProfilePage/AgentProfilePage';
 import Missing from './utility/Missing';
 import RequireAuth from './utility/RequireAuth';
+import { AdminContext } from './helper/context/admin-context/AdminContex';
 
 function App() {
 	return (

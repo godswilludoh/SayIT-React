@@ -9,6 +9,7 @@ import { RegisteredAgentService } from "../../helper/context/agent-context/agent
 
 export const AdminAgents = () => {
   const [show, setShow] = useState(false);
+  const [suspend, setSuspend] = useState(false);
   const [agentinfo, setAgentInfo] = useState([])
 
   useEffect(()=>{
@@ -18,7 +19,10 @@ export const AdminAgents = () => {
   })
   }, []);
 
+const togglebtn = ()=>{
+  setSuspend(!suspend);
 
+}
   return (
     <React.Fragment>
       <div className="main-container">
@@ -90,6 +94,7 @@ export const AdminAgents = () => {
                     <th>Reg Info</th>
                     <th>Status</th>
                     <th>Action</th>
+                    
                   </tr>
                   {agentinfo.map((agentinfo) => (
                   <tr key={agentinfo.id}>
@@ -106,7 +111,9 @@ export const AdminAgents = () => {
                     
                     <td>On Boarded</td>
 
-                    <td className="suspend-btn">Suspend</td>
+                    <td  className={"suspend-btn" +(suspend ? 'suspended-btn' : '')} onClick={togglebtn}>
+                      {suspend ? 'SUSPENDED' : 'Suspend'}
+                      </td>
                   </tr>
                   ))}
                 </tbody>

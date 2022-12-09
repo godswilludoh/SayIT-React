@@ -321,7 +321,14 @@ hr {
     font-weight: 700;
     text-decoration: none;
     /* color; */
-    padding: 10px 10px 10px 15px;
+    padding: 10px;
+	margin: 15px auto auto auto;
+  }
+  .suspended-btn {
+    
+	background-color: red;
+	/* font */
+	margin: 15px auto auto auto;
   }
   .suspend-btn:hover {
     font-size: 16px;
@@ -329,6 +336,7 @@ hr {
     text-decoration: none;
     color: rgb(220, 20, 20);
     border-radius: 8px;
+	cursor: pointer;
   }
 
   .agent-board-btn{
