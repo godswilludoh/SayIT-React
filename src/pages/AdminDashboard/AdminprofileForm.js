@@ -27,7 +27,6 @@ export const AdminprofileForm = () => {
   });
 
   const [admininfo, setAdminInfo] = useState([])
-//   const [userinfo, setUserInfo] = useState([]);
 
   useEffect(() => {
     axios.get("http://191.101.241.157:4500/v1/auth/current-user",   {headers: {
@@ -51,14 +50,14 @@ export const AdminprofileForm = () => {
     <div className="main-details-container">
       <div className="acct-into">
         <div>
-          {admininfo.map((admininfo) => (
-            <h3> Welcome {admininfo.username} </h3>
-          ))}
+          {/* {admininfo.map((admininfo) => ( */}
+            <h3> Welcome {admininfo.userName} </h3>
+          {/* ))} */}
         </div>
         <div>
-          {admininfo.map((admininfo) => (
+          {/* {admininfo.map((admininfo) => ( */}
             <p>{admininfo.email}</p>
-          ))}
+          {/* ))} */}
         </div>
       </div>
 
@@ -69,15 +68,15 @@ export const AdminprofileForm = () => {
           <div>
             <div className="details_Info">
               <label htmlFor="Username"> Username </label>
-              {admininfo.map((admininfo) => (
-                <input readOnly type="text" placeholder={admininfo.username} />
-              ))}
+              {/* {admininfo.map((admininfo) => ( */}
+                <input readOnly type="text" placeholder={admininfo.userName} />
+              {/* ))} */}
             </div>
             <div className="details_Info">
               <label htmlFor="email"> Email </label>
-              {admininfo.map((admininfo) => (
+              {/* {admininfo.map((admininfo) => ( */}
                 <input readOnly type="text" placeholder={admininfo.email} />
-              ))}
+              {/* ))} */}
             </div>
             <div className="details_Info">
               <label htmlFor="Password"> Password </label>
@@ -87,22 +86,22 @@ export const AdminprofileForm = () => {
             </div>
             <div className="details_Info">
               <label htmlFor="password"> Phone </label>
-              {admininfo.map((admininfo) => (
-                <input readOnly type="text" placeholder={admininfo.phone} />
-              ))}
+              {/* {admininfo.map((admininfo) => ( */}
+                <input readOnly type="text" placeholder={admininfo.phoneNumber} />
+              {/* ))} */}
             </div>
 
             <div className="details_Info">
               <label htmlFor="names"> ID </label>
-              {admininfo.map((admininfo) => (
+              {/* {admininfo.map((admininfo) => ( */}
                 <input readOnly type="text" placeholder={admininfo.id} />
-              ))}
+              {/* ))} */}
             </div>
             <div className="details_Info">
               <label htmlFor="Role"> Role </label>
-              {admininfo.map((admininfo) => (
+              {/* {admininfo.map((admininfo) => ( */}
                 <input readOnly type="text" placeholder={admininfo.role} />
-              ))}
+              {/* ))} */}
             </div>
           </div>
           <button type="submit" id="prof-btn" disabled>
