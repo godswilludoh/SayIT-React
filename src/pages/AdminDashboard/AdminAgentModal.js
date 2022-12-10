@@ -105,7 +105,7 @@ const AdminAgentModal = (props) => {
       // Post data to the backend
       try {
         let response = await axios.post(
-          "http://191.101.241.157:4500/v1/agency",
+          "https://say-it-production.up.railway.app/v1/agency",
           agencyRegDetails,{headers: {
             Authorization : `Bearer ${localStorage.getItem("accessToken")}`
             }},
