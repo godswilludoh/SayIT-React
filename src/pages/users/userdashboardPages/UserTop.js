@@ -3,6 +3,7 @@ import { DateTime } from '../../../helper/date-time/DateTime';
 
 export const UserTop = () => {
 	const regUserObj = JSON.parse(localStorage.getItem('regUserObj'));
+	console.log(regUserObj);
 	return (
 		<div className='user-top'>
 			<div className='user-info-display'>
