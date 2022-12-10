@@ -27,9 +27,9 @@ ul {
 	background: #d0d0d0;
 	border-radius: 5px;
 	width: 90%;
-
 	/* margin-top: 10px; */
-	margin: 15px 0px 0px 60px;
+	margin: 15px 0px 0px 20px;
+	padding: 0px;
 }
 
 #adminBar {
@@ -37,8 +37,9 @@ ul {
 }
 #dashBar {
 	margin: 25px 0px 0px 0px;
-	font-weight: 700;
-	font-size: 20px;
+	padding: 0px;
+	/* font-weight: 700; */
+	/* font-size: 20px; */
 	/* margin-left: 5px; */
 }
 .time {
@@ -70,8 +71,8 @@ ul {
 /* THE NOTIFICATION SECTION */
 .NotifyBar {
 	/* background-color: #fffffe; */
-	margin: 60px 40px 60px 60px;
-	padding: 5px 30px 50px 30px;
+	margin: 60px 40px 60px 32px;
+	padding: 5px 30px 50px 1px;
 	/* height: 15rem; */
 	width: 90%;
 	/* border: 1px solid #d0d0d0; */
@@ -132,11 +133,15 @@ ul {
 /* THE REPORTS INTERFACE */
 .Report_Cards {
 	display: flex;
-	margin-top: 50px;
-	justify-content: space-around;
+	/* margin-top: 50px; */
+	/* justify-content:space-evenly; */
+	/* align-items: stretch; */
 	padding: 10px;
-	margin-right: 2rem;
-	margin-left: 2rem;
+	/* margin-right: 2rem; */
+	/* margin-left: 2rem; */
+	/* margin: 40px 0px 10px 0px; */
+	gap: 100px;
+	margin: 60px 20px 20px 60px;
 }
 #report_cards {
 	padding: 10px;
@@ -202,8 +207,8 @@ hr {
 	}
 
 	.NotifyBar {
-		width: 105%;
-		margin: auto;
+		width: 100%;
+		margin: 25px 2px auto 10px;
 		overflow: scroll;
 		
 	}
@@ -230,7 +235,10 @@ hr {
 	}
 	.Report_Cards {
 		display: grid;
-		width: 70%;
+		width: 50%;
+		margin-top: 100px;
+		margin-left: 100px;
+		gap: 20px;
 	}
 
 	.time {
@@ -239,9 +247,9 @@ hr {
 		size: small;
 	}
 	#dashBar {
-		margin: 0px;
+		margin-top: 100px;
 		padding: 2px;
-		width: 100%;
+		/* width: 100%; */
 	}
 	.tableSearchOption{
 		width: 100%;
@@ -280,6 +288,7 @@ hr {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
+
 .tableTitle .tableSearch{
 	/* margin: 1.5em 0em 0em auto; */
 	display: flex;
@@ -298,14 +307,13 @@ hr {
 @media (min-width: 300px) and (max-width: 900px) {
 	#taable_sec{
 		overflow: scroll;
-		margin: 60px auto auto auto;
+		margin: 100px auto auto auto;
 	}
+	.forTheprofileImage{
+	display: none;
 
-	.agent-intro{
-	display: grid;
-	padding: 2px;
-	margin: 10px;
 	}
+	
 }
 
 /* THE AGENT TABLE  */
@@ -313,16 +321,24 @@ hr {
 .agent-intro{
 	display: flex;
 	padding: 2px;
-	margin: 10px;
+	margin: 10px;	
+	/* display: flex; */
+	justify-content: space-between;
+	align-items:stretch;
+	
 }
 
 .suspend-btn{
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    /* color; */
-    padding: 10px;
+    background-color: crimson;
+    /* padding: 10px; */
 	margin: 15px auto auto auto;
+	/* border: 5px solid; */
+	border-radius: 10px;
+	padding-top: 2px;
+	/* margin-top: 5px; */
   }
   .suspended-btn {
     
@@ -334,19 +350,19 @@ hr {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    color: rgb(220, 20, 20);
+    color: rgb(255, 255, 255);
     border-radius: 8px;
 	cursor: pointer;
   }
 
   .agent-board-btn{
 	/* padding: 10px; */
-	margin-left: 100px;
-	width: 100%;
-	background-color: rgba(248, 87, 18, 0.923);
+	/* margin-left: 100px; */
+	/* width: 100%; */
+	background-color: rgb(255, 72, 0);
 	border: none;
 	border-radius: 5px;
-	/* width: 20em; */
+	width: 20em;
 	height: 3em;
 
   }
@@ -361,6 +377,11 @@ hr {
 	display: grid;
 	padding: 2px;
 	margin: 10px;
+	}
+
+	.agent-board-btn{
+		/* width: 30em; */
+		width: 160%;
 	}
 }
   

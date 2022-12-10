@@ -12,7 +12,7 @@ export const AdminReport = () => {
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
-							<h3 id='dashBar'>REPORTS</h3>
+							<h2 id='dashBar'>REPORTS</h2>
 						</li>
 						{/* THE TIME AND DATE SECTION */}
 						<li>

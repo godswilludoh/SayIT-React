@@ -48,16 +48,16 @@ export const AdminprofileForm = () => {
   return (
     // <React.Fragment>
     <div className="main-details-container">
-      <div className="acct-into">
+      <div className="acct-intro">
         <div>
           {/* {admininfo.map((admininfo) => ( */}
-            <h3> Welcome {admininfo.userName} </h3>
+            <h3>Welcome {admininfo.userName}</h3>
           {/* ))} */}
         </div>
         <div>
-          {/* {admininfo.map((admininfo) => ( */}
+          
             <p>{admininfo.email}</p>
-          {/* ))} */}
+         
         </div>
       </div>
 
@@ -68,40 +68,40 @@ export const AdminprofileForm = () => {
           <div>
             <div className="details_Info">
               <label htmlFor="Username"> Username </label>
-              {/* {admininfo.map((admininfo) => ( */}
-                <input readOnly type="text" placeholder={admininfo.userName} />
-              {/* ))} */}
+              
+                <input readOnly type="text" className="profile-input" placeholder={admininfo.userName} />
+           
             </div>
             <div className="details_Info">
               <label htmlFor="email"> Email </label>
-              {/* {admininfo.map((admininfo) => ( */}
-                <input readOnly type="text" placeholder={admininfo.email} />
-              {/* ))} */}
+             
+                <input readOnly type="text" className="profile-input" placeholder={admininfo.email} />
+            
             </div>
             <div className="details_Info">
               <label htmlFor="Password"> Password </label>
              
-                <input readOnly type="password" placeholder="********" />
+                <input readOnly type="password" className="profile-input" placeholder="********" />
 
             </div>
             <div className="details_Info">
               <label htmlFor="password"> Phone </label>
-              {/* {admininfo.map((admininfo) => ( */}
-                <input readOnly type="text" placeholder={admininfo.phoneNumber} />
-              {/* ))} */}
+            
+                <input readOnly type="text" className="profile-input" placeholder={admininfo.phoneNumber} />
+            
             </div>
 
             <div className="details_Info">
               <label htmlFor="names"> ID </label>
-              {/* {admininfo.map((admininfo) => ( */}
-                <input readOnly type="text" placeholder={admininfo.id} />
-              {/* ))} */}
+             
+                <input readOnly type="text" className="profile-input" placeholder={admininfo.id} />
+            
             </div>
             <div className="details_Info">
               <label htmlFor="Role"> Role </label>
-              {/* {admininfo.map((admininfo) => ( */}
-                <input readOnly type="text" placeholder={admininfo.role} />
-              {/* ))} */}
+             
+                <input readOnly type="text" className="profile-input" placeholder={admininfo.role} />
+              
             </div>
           </div>
           <button type="submit" id="prof-btn" disabled>

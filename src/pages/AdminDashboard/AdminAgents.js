@@ -31,7 +31,7 @@ const togglebtn = ()=>{
         <div className="topAdmin">
           <ul className="admin_Dash_Nav">
             <li>
-              <h3 id="dashBar">Agents</h3>
+              <h2 id="dashBar">Agents</h2>
             </li>
             {/* THE TIME AND DATE SECTION */}
             <li>
@@ -111,9 +111,9 @@ const togglebtn = ()=>{
                     
                     <td>On Boarded</td>
 
-                    <td  className={"suspend-btn" +(suspend ? 'suspended-btn' : '')} onClick={togglebtn}>
+                    <button  className={"suspend-btn" +(suspend ? 'suspended-btn' : '')} onClick={togglebtn}>
                       {suspend ? 'SUSPENDED' : 'Suspend'}
-                      </td>
+                      </button>
                   </tr>
                   ))}
                 </tbody>
