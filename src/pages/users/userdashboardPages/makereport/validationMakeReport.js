@@ -21,23 +21,7 @@ const validationSchema = Yup.object({
 		)
 		.required('Required!, please select a sector'),
 
-	agency: Yup.string()
-		.oneOf(
-			[
-				'frsc',
-				'nps',
-				'nscdc',
-				'ndlea',
-				'nis',
-				'nc',
-				'efcc',
-				'icfc',
-				'npf',
-				'others',
-			],
-			'Invalid agency'
-		)
-		.required('Required'),
+	agency: Yup.number().required('Required'),
 
 	reportee: Yup.string().required('Required'),
 
