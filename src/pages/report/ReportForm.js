@@ -25,6 +25,7 @@ export const ReportForm = () => {
 
   const [allAgency, setAllAgency] = useState([]);
 
+  // MADE USE OF THE GET ALL AGENCY END POIT HERE SO THAT WE CAN EXTRACT THE AGENCY NAMES
   useEffect(()=>{
     loadRegisteredAgent().then((response) => {
       // console.log("response", response.data);
@@ -34,6 +35,7 @@ export const ReportForm = () => {
 
     console.log(allAgency)
 
+    // MAPPED THROUGHT ALL OF THE AGENCY OBJECT TO EXTRACT THE NAME AND ID
     const allagencyName = allAgency.map((agency) => {
       const {name, id} = agency;
       
@@ -140,14 +142,8 @@ export const ReportForm = () => {
           acceptedTerms: Yup.boolean()
             .oneOf([true], "You must accept the terms and conditions.")
             .required("Required"),
-
-          // jobType: Yup.string()
-          //   .oneOf(
-          //     ['designer', 'development', 'product', 'other'],
-          //     'Invalid Job Type'
-          //   )
-          //   .required('Required'),
         })}
+        
         onSubmit={async (values, { setSubmitting }) => {
           {
             values.affiliation = values.affiliation == "yes" ? true : false;
@@ -239,7 +235,6 @@ export const ReportForm = () => {
 				</MySelect>
 				<br />
 
-				{/* the margin  on all <MyTextInput> component is too much */}
 				<div>
 				<MyTextInput
 					label="Which company, organization or individual is this about?"
