@@ -10,7 +10,7 @@ import axios from "axios";
 import { useAuth } from "../../../components/hooks/useAuth";
 import { Formik, useFormik } from "formik";
 import * as Yup from "yup";
-import { currentLoggedInAgent } from "../../../helper/context/agent-context/agentreport.service";
+// import { currentLoggedInAgent } from "../../../helper/context/agent-context/agentreport.service";
 
 const AgentsLogin = () => {
   const navigate = useNavigate();
@@ -52,6 +52,7 @@ const AgentsLogin = () => {
 
     onSubmit: async (values) => {
       const { agentID, Password } = values;
+      
 
       // formsubmit(true);
 
@@ -59,31 +60,25 @@ const AgentsLogin = () => {
 
       try {
         let response = await axios.post(
-          "http://191.101.241.157:4500/v1/auth/login",
+          "https://say-it-production.up.railway.app/v1/auth/login",
           {
             detail: agentID,
             password: Password,
           }
         );
-
+        
+          console.log(response)
         const accessToken = response.data.tokens.access.token;
         localStorage.setItem("accessToken", accessToken);
         // const refreshToken = response.data.tokens.refresh.token;
-        // const userObj = response.data.user;
+        const userObj = response.data.user;
+        localStorage.setItem("agentObj", JSON.stringify(userObj));
+        
         
 
-        currentLoggedInAgent.currentlyLoggedInAgent().then((response) => {
-          console.log("response", response);
-          const userObj = response.data;
-          console.log(userObj);
-        localStorage.setItem("agentObj", JSON.stringify(userObj));
-        });
 
 
-
-
-        // setAuth({ accessToken, refreshToken });
-        // setUser(userObj);
+        
         loginSuccess();
 
         if (auth) {

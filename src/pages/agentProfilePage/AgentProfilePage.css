@@ -118,10 +118,3 @@
   background-color: #ffff;
   border-radius: 10px;
 }
-
-.agentProfileInfo{
-  display: flex;
-  gap: 500px;
-  align-items: center;
-  margin-bottom: 10px;
-}

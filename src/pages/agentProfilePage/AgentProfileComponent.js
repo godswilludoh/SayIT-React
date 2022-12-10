@@ -8,11 +8,8 @@ const AgentProfileComponent = () => {
   const firstName = agentObj.agency.firstName
   const lastName = agentObj.agency.lastName
 
-  console.log(firstName)
-  console.log(lastName)
-
-  const fullName = firstName +" "+ lastName;
-
+  const fullName = lastName +" "+ firstName
+  
 
   return (
     <section className="dashboard-interface">
