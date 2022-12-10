@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { loadRegisteredAgent } from "../../helper/context/agent-context/agentreport.service";
 
-// And now we can use these
+
 export const ReportForm = () => {
 
   const [allAgency, setAllAgency] = useState([]);
@@ -143,7 +143,7 @@ export const ReportForm = () => {
             .oneOf([true], "You must accept the terms and conditions.")
             .required("Required"),
         })}
-        
+
         onSubmit={async (values, { setSubmitting }) => {
           {
             values.affiliation = values.affiliation == "yes" ? true : false;
@@ -174,7 +174,7 @@ export const ReportForm = () => {
           try {
             // console.log(values)
             let response = await axios.post(
-              "http://191.101.241.157:4500/v1/reports/anonymous",
+              "https://say-it-production.up.railway.app/v1/reports/anonymous",
               report
             );
             showAlert();

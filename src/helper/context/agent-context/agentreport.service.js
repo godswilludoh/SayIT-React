@@ -11,6 +11,16 @@ const loadReportData = async() =>{
 };
 
 
+const loadSpecificAgentReport = async () =>{
+  try {
+    let response = await axiosInstance.get("reports/agency");  
+    console.log(response.data); 
+    return response
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 
 export const loadRegisteredAgent = async() =>{
   try {
@@ -39,6 +49,7 @@ console.log(err)
 
 export const AgentReportServices = {
     loadReportData,
+    loadSpecificAgentReport,
 
 }
 
