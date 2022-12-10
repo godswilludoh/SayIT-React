@@ -65,9 +65,12 @@ const SignupForm = () => {
 							password,
 						});
 
+						const userObj = response.data.user;
+
 						const accessToken = response.data.tokens.access.token;
-						localStorage.setItem('accessToken', JSON.stringify(accessToken));
-						setUser(response.data.user);
+						localStorage.setItem('regUserObj', JSON.stringify(userObj));
+						localStorage.setItem('accessToken', accessToken);
+						setUser(JSON.stringify(response.data.user));
 
 						signupSuccess();
 						if (auth) {

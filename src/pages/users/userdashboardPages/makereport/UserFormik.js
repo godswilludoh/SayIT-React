@@ -19,7 +19,7 @@ const UserFormik = () => {
 	console.log(auth.accessToken);
 	const config = {
 		headers: {
-			Authorization: `Bearer ${auth.accessToken}`,
+			Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
 		},
 	};
 
