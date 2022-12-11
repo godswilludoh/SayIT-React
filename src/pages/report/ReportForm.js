@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Formik,
   Form,
@@ -18,9 +18,31 @@ import { MyTextArea } from "../../components/reportFormFields/MyTextArea";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { loadRegisteredAgent } from "../../helper/context/agent-context/agentreport.service";
 
-// And now we can use these
+
 export const ReportForm = () => {
+
+  const [allAgency, setAllAgency] = useState([]);
+
+  // MADE USE OF THE GET ALL AGENCY END POIT HERE SO THAT WE CAN EXTRACT THE AGENCY NAMES
+  useEffect(()=>{
+    loadRegisteredAgent().then((response) => {
+      // console.log("response", response.data);
+      setAllAgency(response.data)
+    })
+    }, []);
+
+    console.log(allAgency)
+
+    // MAPPED THROUGHT ALL OF THE AGENCY OBJECT TO EXTRACT THE NAME AND ID
+    const allagencyName = allAgency.map((agency) => {
+      const {name, id} = agency;
+      
+      return <option value={id}>{name}</option>
+
+    } )
+
   const navigate = useNavigate();
 
   const showAlert = () => {
@@ -83,22 +105,22 @@ export const ReportForm = () => {
             )
             .required("Required!, please select a sector"),
 
-          agency: Yup.string()
-            .oneOf(
-              [
-                "frsc",
-                "nps",
-                "nscdc",
-                "ndlea",
-                "nis",
-                "nc",
-                "efcc",
-                "icfc",
-                "npf",
-                "others",
-              ],
-              "Invalid agency"
-            )
+          agency: Yup.number()
+            // .oneOf(
+            //   [
+            //     "frsc",
+            //     "nps",
+            //     "nscdc",
+            //     "ndlea",
+            //     "nis",
+            //     "nc",
+            //     "efcc",
+            //     "icfc",
+            //     "npf",
+            //     "others",
+            //   ],
+            //   "Invalid agency"
+            // )
             .required("Required"),
 
           reportee: Yup.string().required("Required"),
@@ -120,14 +142,8 @@ export const ReportForm = () => {
           acceptedTerms: Yup.boolean()
             .oneOf([true], "You must accept the terms and conditions.")
             .required("Required"),
-
-          // jobType: Yup.string()
-          //   .oneOf(
-          //     ['designer', 'development', 'product', 'other'],
-          //     'Invalid Job Type'
-          //   )
-          //   .required('Required'),
         })}
+
         onSubmit={async (values, { setSubmitting }) => {
           {
             values.affiliation = values.affiliation == "yes" ? true : false;
@@ -141,9 +157,10 @@ export const ReportForm = () => {
           const { sector, agency, reportee, affiliation, subject, message } =
             values;
 
+
           const report = {
             subject,
-            agency,
+            agencyId: parseInt(agency),
             reportee,
             sector,
             affiliation,
@@ -152,10 +169,12 @@ export const ReportForm = () => {
             attachments: {},
           };
           //   console.log(report);
+          
 
           try {
+            // console.log(values)
             let response = await axios.post(
-              "http://191.101.241.157:4500/v1/reports/anonymous",
+              "https://say-it-production.up.railway.app/v1/reports/anonymous",
               report
             );
             showAlert();
@@ -194,8 +213,8 @@ export const ReportForm = () => {
 				name="agency"
 				>
 				<option value="">Select Agency</option>
-				{/* <option value="select" selected>Select Agency</option> */}
-				<option value="frsc">Federal Road Safety Corps (FRSC)</option>
+        {allagencyName}
+				{/* <option value="frsc">Federal Road Safety Corps (FRSC)</option>
 				<option value="nps">Nigeria Prisons Service (NPS)</option>
 				<option value="nscdc">
 					Nigeria Security and Civil Defense Corps (NSCDC)
@@ -211,12 +230,11 @@ export const ReportForm = () => {
 				</option>
 				<option value="icfc">
 					Independent Corrupt Practices Commission (ICPC)
-				</option>
-				<option value="others">Others</option>
+				</option> */}
+				{/* <option value="others">Others</option> */}
 				</MySelect>
 				<br />
 
-				{/* the margin  on all <MyTextInput> component is too much */}
 				<div>
 				<MyTextInput
 					label="Which company, organization or individual is this about?"

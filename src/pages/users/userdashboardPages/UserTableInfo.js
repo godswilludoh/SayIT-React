@@ -11,10 +11,19 @@ export const UserTableInfo = ({ column, reports }) => {
 				</tr>
 			</thead>
 			<tbody>
-				{reports.map((report) => {
-					const { id, createdAt, sector } = report;
+				{reports.map((report, index) => {
+					console.log(report);
+					const { id, createdAt, sector, status } = report;
+
 					return (
-						<TableRow key={id} id={id} createdAt={createdAt} sector={sector} />
+						<TableRow
+							key={id}
+							id={id}
+							index={index}
+							createdAt={createdAt}
+							sector={sector}
+							status={status}
+						/>
 					);
 				})}
 			</tbody>
@@ -23,7 +32,3 @@ export const UserTableInfo = ({ column, reports }) => {
 };
 
 const TableHeadItem = ({ item }) => <th>{item.heading}</th>;
-// const TableRow = ({ item }) => {
-// 	console.log(item);
-// 	return <tr></tr>;
-// };

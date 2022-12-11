@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { DateTime } from "../../helper/date-time/DateTime";
 import {  Link } from 'react-router-dom';
 import AgentDashboardTable from './AgentDashboardTable';
 import style from "../agentDashboard/AgentDashBoardTable.module.css";
+import { AgentReportServices } from "../../helper/context/agent-context/agentreport.service";
 // import { useAuth } from '../../components/hooks/useAuth';
 // import AgentReportContext from "../../helper/context/agent-context/AgentReportContext";
 
@@ -10,9 +11,17 @@ import style from "../agentDashboard/AgentDashBoardTable.module.css";
 
 const AgentDashBoardInterface = () => {
 
+  const [specificAgencyReport, setSpecificAgencyReport] = useState([]);
+
+  useEffect(() => {
+    AgentReportServices.loadSpecificAgentReport().then((response) => {
+      // console.log("response", response.data);
+      setSpecificAgencyReport(response.data);
+    });
+  }, []);
+  
   const agentObj = JSON.parse(localStorage.getItem("agentObj"))
-
-
+  console.log(agentObj)
 
   return (
     <section className="dashboard-interface" id="theSecondSideOfThePage">
@@ -39,8 +48,7 @@ const AgentDashBoardInterface = () => {
         </div>
       </div>
       <div className="dashboard-container">
-        <h2 className="registeredAgencyName">
-          {agentObj.userName}
+        <h2 className="registeredAgencyName">🖐 Welcome {agentObj.agency.name}
         </h2>
 
         <section className="metricCardContainer">
@@ -48,7 +56,7 @@ const AgentDashBoardInterface = () => {
             <div className="forCardWrapper">
               <p className="cardWording">Total Report Submitted</p>
             </div>
-            <div className="theMetricItself">0</div>
+            <div className="theMetricItself">{specificAgencyReport.length}</div>
           </div>
           <div className="coverForEachCard">
             <div className="forCardWrapper">

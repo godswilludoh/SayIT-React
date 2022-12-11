@@ -11,6 +11,16 @@ const loadReportData = async() =>{
 };
 
 
+const loadSpecificAgentReport = async () =>{
+  try {
+    let response = await axiosInstance.get("reports/agency");  
+    console.log(response.data); 
+    return response
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 
 export const loadRegisteredAgent = async() =>{
   try {
@@ -24,16 +34,56 @@ console.log(err)
 
 
 
+export const currentlyLoggedInAgent = async() =>{
+  try {
+let response = await axiosInstance.get("auth/current-user");  
+console.log(response.data); 
+return response
+} catch (err) {
+console.log(err)
+}
+}
+
+export const viewSpecificReportById = async(id) =>{
+  try {
+let response = await axiosInstance.get(`reports/${id}/`);  
+console.log(response.data); 
+return response
+} catch (err) {
+console.log(err)
+}
+}
+
+// FOR THE ADMIN TO DELETE
+// export const deleteSpecificReportById = async(id) =>{
+//   try {
+// let response = await axiosInstance.delete(`reports/${id}/`);  
+// console.log(response.data); 
+// return response
+// } catch (err) {
+// console.log(err)
+// }
+// }
+
 
 
 
 export const AgentReportServices = {
     loadReportData,
+    loadSpecificAgentReport,
+    // deleteSpecificReportById,
 
 }
 
 export const RegisteredAgentService = {
   loadRegisteredAgent,
 }
+
+export const currentLoggedInAgent = {
+  currentlyLoggedInAgent,
+}
+
+
+
 
 // export default AgentReportServices;

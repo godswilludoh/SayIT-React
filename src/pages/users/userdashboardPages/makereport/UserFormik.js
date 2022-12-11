@@ -9,17 +9,32 @@ import { MyTextArea } from '../../../../components/reportFormFields/MyTextArea';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../../components/hooks/useAuth';
+import { loadRegisteredAgent } from '../../../../helper/context/agent-context/agentreport.service';
 
 const REGISTERED_REPORT_URL = '/v1/reports';
 
 const UserFormik = () => {
+	const [allAgency, setAllAgency] = useState([]);
+
+	useEffect(() => {
+		loadRegisteredAgent().then((response) => {
+			setAllAgency(response.data);
+		});
+	}, []);
+
+	const allagencyName = allAgency.map((agency) => {
+		const { name, id } = agency;
+
+		return <option value={id}>{name}</option>;
+	});
+
 	const navigate = useNavigate();
 
 	const { auth } = useAuth();
 	console.log(auth.accessToken);
 	const config = {
 		headers: {
-			Authorization: `Bearer ${auth.accessToken}`,
+			Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
 		},
 	};
 
@@ -74,7 +89,7 @@ const UserFormik = () => {
 					} = values;
 					const report = {
 						subject,
-						agency,
+						agencyId: parseInt(agency),
 						reportee,
 						sector,
 						affiliation,
@@ -137,26 +152,7 @@ const UserFormik = () => {
 									value={values.agency}
 								>
 									<option value=''>Select Agency</option>
-									<option value='frsc'>Federal Road Safety Corps (FRSC)</option>
-									<option value='nps'>Nigeria Prisons Service (NPS)</option>
-									<option value='nscdc'>
-										Nigeria Security and Civil Defense Corps (NSCDC)
-									</option>
-									<option value='ndlea'>
-										Nigeria Drug Law Enforcement Agency (NDLEA)
-									</option>
-									<option value='nis'>
-										Nigeria Immigrations Service (NIS)
-									</option>
-									<option value='nc'>Nigeria Customs</option>
-									<option value='npf'>Nigeria Police Force</option>
-									<option value='efcc'>
-										Economic and Finance Crime Commissions (EFCC)
-									</option>
-									<option value='icfc'>
-										Independent Corrupt Practices Commission (ICPC)
-									</option>
-									<option value='others'>Others</option>
+									{allagencyName}
 								</MySelect>
 								<br />
 
