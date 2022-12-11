@@ -11,17 +11,21 @@ export const AdminAgents = () => {
   const [show, setShow] = useState(false);
   const [suspend, setSuspend] = useState(false);
   const [agentinfo, setAgentInfo] = useState([])
+  const [searchfilter, setSearchFilter] = useState()
 
   useEffect(()=>{
   RegisteredAgentService.loadRegisteredAgent().then((response) => {
     console.log("response", response.data);
+    // localStorage.setItem("agencyinfo")
     setAgentInfo(response.data)
   })
   }, []);
 
+  // const agencyboarded = JSON.parse(localStorage.getItem("agencyinfo"))
+
+
 const togglebtn = ()=>{
   setSuspend(!suspend);
-
 }
   return (
     <React.Fragment>
@@ -67,8 +71,12 @@ const togglebtn = ()=>{
                   <input
                     type="text"
                     className="tableSearch"
-                    placeholder="Enter Report ID"
+                    placeholder="Enter Agency name..."
+                    onChange={(e) =>{
+                      setSearchFilter(e.target.value);
+                  }}
                   />
+                  
                 </span>
               </h4>
               <span>
@@ -96,9 +104,19 @@ const togglebtn = ()=>{
                     <th>Action</th>
                     
                   </tr>
-                  {agentinfo.map((agentinfo) => (
-                  <tr key={agentinfo.id}>
+                  {agentinfo.filter(agentinfo =>{
+                    if (searchfilter == "" || []){
+                     return agentinfo;
+                    } else if(
+                      agentinfo.name.includes(searchfilter)
+                      
+                    ){
+                      return agentinfo;
+                    }
 
+                  }).map((agentinfo) => (
+                    
+                  <tr key={agentinfo.id}>
                       <td>{agentinfo.id}</td>
                    
                       <td >{agentinfo.name}</td>
