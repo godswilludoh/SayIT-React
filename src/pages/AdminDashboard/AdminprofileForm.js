@@ -29,7 +29,7 @@ export const  AdminprofileForm = () => {
   const [admininfo, setAdminInfo] = useState([])
 
   useEffect(() => {
-    axios.get("http://191.101.241.157:4500/v1/auth/current-user",   {headers: {
+    axios.get("https://say-it-production.up.railway.app/v1/auth/current-user",   {headers: {
         Authorization : `Bearer ${localStorage.getItem("accessToken")}`
         }})
     .then((response) => {
