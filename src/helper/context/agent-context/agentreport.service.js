@@ -44,12 +44,34 @@ console.log(err)
 }
 }
 
+export const viewSpecificReportById = async(id) =>{
+  try {
+let response = await axiosInstance.get(`reports/${id}/`);  
+console.log(response.data); 
+return response
+} catch (err) {
+console.log(err)
+}
+}
+
+// FOR THE ADMIN TO DELETE
+// export const deleteSpecificReportById = async(id) =>{
+//   try {
+// let response = await axiosInstance.delete(`reports/${id}/`);  
+// console.log(response.data); 
+// return response
+// } catch (err) {
+// console.log(err)
+// }
+// }
+
 
 
 
 export const AgentReportServices = {
     loadReportData,
     loadSpecificAgentReport,
+    // deleteSpecificReportById,
 
 }
 

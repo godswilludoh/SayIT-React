@@ -57,6 +57,10 @@ const AgentProfileComponent = () => {
               <p className="values">{agentObj.agency.name}</p>
             </div>
 
+            <p className="disclaimer">
+              *Please reach out to any admin if you would like to update your profile information.
+            </p>
+
 
 
           </div>
