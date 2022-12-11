@@ -14,7 +14,7 @@ export const AdminUsers = () => {
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
-							<h3 id='dashBar'>USERS</h3>
+							<h2 id='dashBar'>USERS</h2>
 						</li>
 						{/* THE TIME AND DATE SECTION */}
 						<li>
@@ -67,7 +67,7 @@ export const AdminUsers = () => {
 										<th>Registration date</th>
 										<th>Actions</th>
 									</tr>
-									<tr>
+									{/* <tr>
 										<td><FontAwesomeIcon id='cardicons' icon={faUser} />{' '}
 											Anonymous@mail.com
 										</td>
@@ -77,7 +77,7 @@ export const AdminUsers = () => {
 										<td className='suspend-btn'>
 											<FontAwesomeIcon id='cardicons' icon={faTrash} /> Delete
 										</td>
-									</tr>
+									</tr> */}
 								</tbody>
 							</table>
 						</div>

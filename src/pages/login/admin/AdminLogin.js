@@ -48,7 +48,7 @@ const AdminLogin = () => {
 
     validationSchema: Yup.object({
       adminID: Yup.string()
-        .max(16, "*Should be less than 16 characters")
+        // .max(16, "*Should be less than 16 characters")
         .required("*Cannot be empty"),
       Password: Yup.string().required("*Please enter your password"),
     }),
@@ -64,7 +64,7 @@ const AdminLogin = () => {
 
       try {
         let response = await axios.post(
-			"http://191.101.241.157:4500/v1/auth/login",
+			"https://say-it-production.up.railway.app/v1/auth/login",
           {
             detail: adminID,
             password: Password,

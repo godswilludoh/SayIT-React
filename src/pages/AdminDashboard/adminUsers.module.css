@@ -279,7 +279,7 @@ ul{
   @media(min-width: 300px) and (max-width: 900px) {
     .Display_comtainier{
         overflow: scroll;
-        margin: 60px auto auto auto;
+        margin: 120px auto auto auto;
     }
 
     .table_interfc {

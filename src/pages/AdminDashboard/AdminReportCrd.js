@@ -1,18 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "./Admindash.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
-import { faFolderOpen, faFileCircleExclamation, faUserPlus } from '@fortawesome/free-solid-svg-icons';
-// import { Link } from 'react-router-dom';
+import {faCheckDouble, faFileCircleExclamation, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { RegisteredAgentService } from "../../helper/context/agent-context/agentreport.service";
 	
 
- const AdminReportCrd = ({ reports }) => {
-  // const totalReports = reports.length;
-	// const openReport = reports.filter(
-	// 	(item) => item.status === 'inProgress'
-	// ).length;
-	// const resolvedReport = reports.filter(
-	// 	(item) => item.status === 'resolved'
-	// ).length;
+ const AdminReportCrd = () => {
+  const [agentinfo, setAgentInfo] = useState([])
+
+  useEffect(()=>{
+  RegisteredAgentService.loadRegisteredAgent().then((response) => {
+    console.log("response", response.data);
+    setAgentInfo(response.data)
+  })
+  }, []);
+
   return (
    <div>
   <ul className="Report_Cards">
@@ -22,18 +24,20 @@ import { faFolderOpen, faFileCircleExclamation, faUserPlus } from '@fortawesome/
       <hr /> 
       <div id="cardNum">0</div>
     </li>
-    <li id="report_cards"> Open Reports<span className="cardIcons">
-    
-      <FontAwesomeIcon id= 'cardicons'icon ={faFolderOpen} />
-      </span>
-      <hr />
-      <div id="cardNum">8</div>
-    </li>
+
     <li id="report_cards"> New User<span className="cardIcons">
         <FontAwesomeIcon id= 'cardicons' icon={faUserPlus} />
       </span>
       <hr />
       <div id="cardNum">0</div>
+    </li>
+
+    <li id="report_cards"> Agency <span className="cardIcons">
+    
+      <FontAwesomeIcon id= 'cardicons'icon ={faCheckDouble} />
+      </span>
+      <hr />
+      <div id="cardNum">{agentinfo.length}</div>
     </li>
   </ul>
 </div>
