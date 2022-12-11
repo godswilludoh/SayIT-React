@@ -9,16 +9,24 @@ import { RegisteredAgentService } from "../../helper/context/agent-context/agent
 
 export const AdminAgents = () => {
   const [show, setShow] = useState(false);
+  const [suspend, setSuspend] = useState(false);
   const [agentinfo, setAgentInfo] = useState([])
+  const [searchfilter, setSearchFilter] = useState()
 
   useEffect(()=>{
   RegisteredAgentService.loadRegisteredAgent().then((response) => {
     console.log("response", response.data);
+    // localStorage.setItem("agencyinfo")
     setAgentInfo(response.data)
   })
   }, []);
 
+  // const agencyboarded = JSON.parse(localStorage.getItem("agencyinfo"))
 
+
+const togglebtn = ()=>{
+  setSuspend(!suspend);
+}
   return (
     <React.Fragment>
       <div className="main-container">
@@ -27,7 +35,7 @@ export const AdminAgents = () => {
         <div className="topAdmin">
           <ul className="admin_Dash_Nav">
             <li>
-              <h3 id="dashBar">Agents</h3>
+              <h2 id="dashBar">Agents</h2>
             </li>
             {/* THE TIME AND DATE SECTION */}
             <li>
@@ -63,8 +71,12 @@ export const AdminAgents = () => {
                   <input
                     type="text"
                     className="tableSearch"
-                    placeholder="Enter Report ID"
+                    placeholder="Enter Agency name..."
+                    onChange={(e) =>{
+                      setSearchFilter(e.target.value);
+                  }}
                   />
+                  
                 </span>
               </h4>
               <span>
@@ -90,10 +102,11 @@ export const AdminAgents = () => {
                     <th>Reg Info</th>
                     <th>Status</th>
                     <th>Action</th>
+                    
                   </tr>
                   {agentinfo.map((agentinfo) => (
+                    
                   <tr key={agentinfo.id}>
-
                       <td>{agentinfo.id}</td>
                    
                       <td >{agentinfo.name}</td>
@@ -106,7 +119,9 @@ export const AdminAgents = () => {
                     
                     <td>On Boarded</td>
 
-                    <td className="suspend-btn">Suspend</td>
+                    <button  className={"suspend-btn" +(suspend ? 'suspended-btn' : '')} onClick={togglebtn}>
+                      {suspend ? 'SUSPENDED' : 'Suspend'}
+                      </button>
                   </tr>
                   ))}
                 </tbody>

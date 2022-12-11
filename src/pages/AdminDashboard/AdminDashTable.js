@@ -1,7 +1,16 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Admindash.css";
+import { RegisteredAgentService } from "../../helper/context/agent-context/agentreport.service";
 
 export const AdminDashTable = () => {
+  const [agentinfo, setAgentInfo] = useState([])
+
+  useEffect(()=>{
+  RegisteredAgentService.loadRegisteredAgent().then((response) => {
+    console.log("response", response.data);
+    setAgentInfo(response.data)
+  })
+  }, []);
   return (
     <div className="NotifyBar">
       <div>
@@ -23,10 +32,10 @@ export const AdminDashTable = () => {
             {" "}
             <strong>All</strong> <span className="notifyNums">0</span>
           </li>
-          <li>
+          {/* <li>
             {" "}
             <strong>Unread</strong> <span className="notifyNums">0</span>
-          </li>
+          </li> */}
           <li>
             {" "}
             <strong>Reports</strong> <span className="notifyNums">0</span>
@@ -37,7 +46,7 @@ export const AdminDashTable = () => {
           </li>
           <li>
             {" "}
-            <strong>Agents</strong> <span className="notifyNums">0</span>
+            <strong>Agents</strong> <span className="notifyNums">{agentinfo.length}</span>
           </li>
         </ul>
         <div>

@@ -17,7 +17,7 @@ const admindash = () => {
 				<div className='topAdmin'>
 					<ul className='admin_Dash_Nav'>
 						<li>
-							<h3 id='dashBar'>DASHBOARD</h3>
+							<h2 id='dashBar'>DASHBOARD</h2>
 						</li>
 						{/* THE TIME AND DATE SECTION */}
 						<li>

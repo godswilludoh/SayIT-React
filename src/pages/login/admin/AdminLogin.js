@@ -46,12 +46,12 @@ const AdminLogin = () => {
 			Password: '',
 		},
 
-		validationSchema: Yup.object({
-			adminID:
-				Yup.string()
-				.required('*Cannot be empty'),
-			Password: Yup.string().required('*Please enter your password'),
-		}),
+    validationSchema: Yup.object({
+      adminID: Yup.string()
+        // .max(16, "*Should be less than 16 characters")
+        .required("*Cannot be empty"),
+      Password: Yup.string().required("*Please enter your password"),
+    }),
 
 		// @THEO LINK THE SUBMITTED INFO TO BACKEND
 
@@ -61,22 +61,23 @@ const AdminLogin = () => {
 
 			setSubmitting(true);
 
-			try {
-				let response = await axios.post(
-					'http://191.101.241.157:4500/v1/auth/login',
-					{
-						detail: adminID,
-						password: Password,
-					}
-					// console.log(values)
-				);
-				const accessToken = response.data.tokens.access.token;
-				localStorage.setItem('accessToken', accessToken);
-				const refreshToken = response.data.tokens.refresh.token;
-				const userObj = response.data.user;
-				console.log(userObj);
-				console.log(response);
-				console.log(accessToken);
+
+      try {
+        let response = await axios.post(
+			"https://say-it-production.up.railway.app/v1/auth/login",
+          {
+            detail: adminID,
+            password: Password,
+          }
+          // console.log(values)
+        );
+        const accessToken = response.data.tokens.access.token;
+        localStorage.setItem("accessToken", accessToken);
+        const refreshToken = response.data.tokens.refresh.token;
+        const userObj = response.data.user;
+        console.log(userObj)
+        console.log(response);
+        console.log(accessToken);
 
 				setAuth({ accessToken, refreshToken });
 				setUser(userObj);
