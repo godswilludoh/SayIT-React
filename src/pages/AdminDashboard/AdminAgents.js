@@ -104,17 +104,7 @@ const togglebtn = ()=>{
                     <th>Action</th>
                     
                   </tr>
-                  {agentinfo.filter(agentinfo =>{
-                    if (searchfilter == "" || []){
-                     return agentinfo;
-                    } else if(
-                      agentinfo.name.includes(searchfilter)
-                      
-                    ){
-                      return agentinfo;
-                    }
-
-                  }).map((agentinfo) => (
+                  {agentinfo.map((agentinfo) => (
                     
                   <tr key={agentinfo.id}>
                       <td>{agentinfo.id}</td>
