@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import style from '../agentDashboard/AgentDashboardModal.module.css'
+// import { AgentReportServices } from "../../helper/context/agent-context/agentreport.service";
+// import { useEffect } from 'react';
 
-const AgentDashBoardModal = (props) => {
+const AgentDashBoardModal = ({show, viewspecificAgencyReport, onClose}) => {
+  // console.log(props.viewspecificAgencyReport)
 
-  if(!props.show){
+  const {id, reportee, message, subject, userId, updatedAt,} = viewspecificAgencyReport
+
+  // useEffect(() => {
+  //   AgentReportServices.viewSpecificReportById().then((response) => {
+  //     console.log("response", response.data);
+  //     // setSpecificAgencyReport(response.data);
+  //   });
+  // }, []);
+
+ 
+
+
+  if(!show){
     return null;
   }
 
@@ -12,9 +27,9 @@ const AgentDashBoardModal = (props) => {
       <div className={style.modalContent}>
         <div className={style.reportHeadingContainer}>
           <p className={style.reportHeading}>REPORT</p>
-          <p className={style.reportID}> 001 </p>
+          <p className={style.reportID}>{id} </p>
           <a href="#" 
-          onClick={props.onClose}
+          onClick={onClose}
           className={style.formButton}>
             Close
           </a>
@@ -23,36 +38,31 @@ const AgentDashBoardModal = (props) => {
           <div className={style.sourceAndDateReported}>
             <div className={style.formGroup}>
               <label htmlFor="source">SOURCE</label>
-              <p className={style.InputField}>Lameda</p>
+              <p className={style.InputField}>{userId}</p>
             </div>
-            {/* <div className={style.formGroup}>
+            <div className={style.formGroup}>
               <label htmlFor="dateReported">DATE REPORTED</label>
-              <p className={style.InputField}>Date Reported</p>
-            </div> */}
+              <p className={style.InputField}>{updatedAt}</p>
+            </div>
           </div>
           <div className={style.formGroup}>
             <label htmlFor="companyAnddOrgansitaion">
               COMPANY / ORGANISATION
             </label>
             <p className={style.InputField}>
-              COMPANY/ORGANISATION REPORTED
+              {reportee}
             </p>
           </div>
           <div className={style.formGroup}>
             <label htmlFor="subject">SUBJECT</label>
             <p className={style.InputField}>
-              SUBJECT OF REPORT
+              {subject}
             </p>
           </div>
           <div className={style.formGroup}>
             <label htmlFor="textMessages">MESSAGE</label>
             <p className={style.InputField} id="uniquemessage">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              pariatur ipsam repellat, saepe nostrum dolor. Debitis odio, quos
-              maxime ullam nam voluptatem fugit vel eligendi culpa, labore ipsam
-              ad repellat repudiandae nobis tenetur porro eaque soluta? Maiores
-              debitis aut, exercitationem tempore dignissimos voluptas
-              molestias, optio, iste dolore amet ut nostrum!
+              {message}
             </p>
           </div>
           <div className={style.formGroup}>

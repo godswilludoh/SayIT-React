@@ -48,8 +48,7 @@ const AgentDashBoardInterface = () => {
         </div>
       </div>
       <div className="dashboard-container">
-        <h2 className="registeredAgencyName">🖐 Welcome 
-          {agentObj.agency.name}
+        <h2 className="registeredAgencyName">🖐 Welcome {agentObj.agency.name}
         </h2>
 
         <section className="metricCardContainer">

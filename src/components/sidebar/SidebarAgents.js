@@ -8,8 +8,22 @@ import {
 import { FaBars, FaUser } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom';
 import './Sidebar.css';
+// import { useAuth } from "../../../components/hooks/useAuth";
 
 export const SidebarAgents = ({ children }) => {
+	// const { setAuth, setUser } = useAuth();
+
+	// const logOut = ()=> {
+	// 	localStorage.clear()
+	// 	setAuth({})
+	// 	setUser({})
+	// };
+
+	const logOut =()=>{
+		localStorage.clear()
+	};
+
+
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
@@ -32,7 +46,7 @@ export const SidebarAgents = ({ children }) => {
 		{
 			path: '/agents',
 			name: 'Logout',
-			icon: <BiLogOut/>,
+			icon: <BiLogOut onClick={logOut}/>,
 		},
 	];
 	return (
