@@ -4,8 +4,9 @@ import AdminReportCrd from './AdminReportCrd';
 import { AdminDashTable } from './AdminDashTable';
 import { DateTime } from '../../helper/date-time/DateTime';
 import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
-// import { Link } from 'react-router-dom';
-// import { AdminReport } from './AdminReport';
+// import axios from '../../utility/api/axios';
+
+// const ALL_REPORTS = '/v1/reports/'
 
 const admindash = () => {
 	return (
