@@ -12,6 +12,8 @@ import { Link } from 'react-router-dom';
 import { MyTextInput } from '../../../../components/reportFormFields/MyTextInput';
 
 export const EditFormik = () => {
+	const regUserObj = JSON.parse(localStorage.getItem('regUserObj'));
+
 	const validate = Yup.object({
 		userName: Yup.string()
 			.max(15, 'Must be 15 characters or less')
@@ -45,32 +47,34 @@ export const EditFormik = () => {
 							label='Username'
 							name='userName'
 							type='text'
-							placeholder='Enter new username...'
+							disabled
+							placeholder={regUserObj.userName}
 						/>
 						<MyTextInput
 							label='Email'
 							name='email'
 							type='text'
-							placeholder='Enter new email...'
+							disabled
+							placeholder={regUserObj.email}
 						/>
 						<MyTextInput
 							label='Phone Number'
 							name='phoneNumber'
 							type='tel'
-							placeholder='Enter new number...'
+							placeholder={regUserObj.phoneNumber}
 						/>
 
 						<MyTextInput
 							label='Password'
 							name='password'
 							type='password'
-							placeHolder='Enter your Password'
+							placeHolder={regUserObj.password}
 						/>
 						<MyTextInput
 							label='Confirm Password'
 							name='confirmPassword'
 							type='password'
-							placeHolder='confirm-password'
+							placeHolder={regUserObj.password}
 						/>
 						<div className='editprofile-btn'>
 							<Link to='/users' className='edit-btn edit-back'>
