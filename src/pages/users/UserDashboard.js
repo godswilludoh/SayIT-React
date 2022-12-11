@@ -17,10 +17,8 @@ const UserDashboard = () => {
 			Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
 		},
 	};
-	console.log(config);
 
 	const regUserObj = JSON.parse(localStorage.getItem('regUserObj'));
-	console.log(regUserObj);
 
 	const [report, setReport] = useState([]);
 	useEffect(() => {

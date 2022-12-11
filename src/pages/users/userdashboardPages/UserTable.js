@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Search from './Search';
 import { UserTableInfo } from './UserTableInfo';
+
+const filterTable = (searchValue) => {
+	if (searchValue === '') {
+		return [];
+	}
+	return [].filter((reports) => reports.id.includes(searchValue));
+};
 
 export const UserTable = ({ reports }) => {
 	const [dataTable, setDataTable] = useState([]);
-	console.log(dataTable);
+	const [searchValue, setSearchValue] = useState('');
+
+	useEffect(() => {
+		const filteredTable = filterTable(searchValue);
+		setDataTable(filteredTable);
+	}, [searchValue]);
 
 	const column = [
 		{ heading: 'S/N' },
@@ -19,14 +32,7 @@ export const UserTable = ({ reports }) => {
 					<div className='user-report-text'>
 						<p>Reports</p>
 					</div>
-					<div className='user-report-id'>
-						<input
-							id='user-search-input'
-							data-table='user-table'
-							type='text'
-							placeholder='Enter Report ID'
-						/>
-					</div>
+					<Search callback={(searchValue) => setSearchValue(searchValue)} />
 				</div>
 			</div>
 
