@@ -104,18 +104,25 @@ const togglebtn = ()=>{
                     <th>Action</th>
                     
                   </tr>
-                  {agentinfo.map((agentinfo) => (
+                  {/* {agentinfo.filter((value) =>{
+                    if (searchfilter === "" ){
+                      return value
+                    } else if(value.name.includes(searchfilter)){
+                      return value
+                    }
+                  }) */}
+                  {agentinfo.map((value, index) => {
+                    return(
+                  <tr key={(index)}>
+                      <td >{value.id}</td>
+
+                      <td>{value.name}</td>
                     
-                  <tr key={agentinfo.id}>
-                      <td>{agentinfo.id}</td>
+                      <td>{value.sector}</td>
+                    
+                      <td>{value.regNumber}</td>
                    
-                      <td >{agentinfo.name}</td>
-                    
-                      <td >{agentinfo.sector}</td>
-                    
-                      <td>{agentinfo.regNumber}</td>
-                   
-                      <td> {agentinfo.updatedAt}</td>
+                      <td>{value.updatedAt}</td>
                     
                     <td>On Boarded</td>
 
@@ -123,7 +130,8 @@ const togglebtn = ()=>{
                       {suspend ? 'SUSPENDED' : 'Suspend'}
                       </button>
                   </tr>
-                  ))}
+                  )})
+                  }
                 </tbody>
               </table>
             </div>

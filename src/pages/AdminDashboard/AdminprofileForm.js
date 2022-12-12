@@ -21,7 +21,7 @@ export const  AdminprofileForm = () => {
     // @THEO LINK THE SUBMITTED INFO TO BACKEND
     onSubmit: (values) => {
       // console.log(values);
-      toast.success("Profile updated successfully!");
+      // toast.success("Profile updated successfully!");
       // position: toast.POSITION.TOP_CENTER,
     },
   });

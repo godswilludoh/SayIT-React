@@ -115,7 +115,7 @@ const SignupForm = () => {
             <TextField
               label="Password"
               name="password"
-              type={showPassword ? "password" : "text"}
+              type={showPassword ? "password" : "password"}
               placeholder="Enter Password"
               onChange={handleChange}
               value={values.password}
