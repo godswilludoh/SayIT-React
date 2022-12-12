@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import adminUsersCSS from './adminUsers.module.css';
 import { faTrash, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DateTime } from '../../helper/date-time/DateTime';
 import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
-
+import axios from '../../utility/api/axios';
 export const AdminUsers = () => {
+
+	const [regUsers, setRegUsers] = useState([]);
+
+	useEffect(() => {
+		axios
+		  .get("/v1/users/reporter", {
+			headers: {
+			  Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+			},
+		  })
+		  .then((response) => {
+			console.log("resForRegUses", response.data);
+			setRegUsers(response.data);
+		  });
+	  }, []);
+	
+
 	return (
 		<React.Fragment>
 			<div className='main-container'>
@@ -61,12 +78,27 @@ export const AdminUsers = () => {
 							<table className={adminUsersCSS.table_interfc}>
 								<tbody className={adminUsersCSS.table_rowss}>
 									<tr className={adminUsersCSS.table_rowss}>
-										<th>Email</th>
+										<th>S/N</th>
 										<th>Username</th>
+										<th>Email</th>
 										<th>Phone No</th>
 										<th>Registration date</th>
 										<th>Actions</th>
 									</tr>
+									{regUsers.map((value, index, props) =>{
+										return(
+											<tr key={props}>
+												<td>{index +1 }</td>
+												<td>{value.userName }</td>
+												<td>{value.email }</td>
+												<td>{value.phoneNumber }</td>
+												<td>{value.updatedAt }</td>
+												<button className='suspend-btn'>
+												Delete</button>
+
+											</tr>
+										);
+									})}
 									{/* <tr>
 										<td><FontAwesomeIcon id='cardicons' icon={faUser} />{' '}
 											Anonymous@mail.com
