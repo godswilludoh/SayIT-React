@@ -13,7 +13,7 @@ import axios from "../../utility/api/axios";
   const [submitedReports, setSubmittedReports] = useState ({});
 
 
-
+  // UseEffect for all reports start here
 	useEffect(() => {
 		axios.get("/v1/reports",   {headers: {
 			Authorization : `Bearer ${localStorage.getItem("accessToken")}`
@@ -25,6 +25,7 @@ import axios from "../../utility/api/axios";
 	  }, []);
 
 
+// UseEffect for all onboared agents start here
   useEffect(()=>{
   RegisteredAgentService.loadRegisteredAgent().then((response) => {
     // console.log("response", response.data);
@@ -32,6 +33,8 @@ import axios from "../../utility/api/axios";
   })
   }, []);
 
+
+  // UseEffect for all registered agents start here
 
   const [agentinfo, setAgentInfo] = useState([])
 
@@ -41,6 +44,24 @@ import axios from "../../utility/api/axios";
     setAgentInfo(response.data)
   })
   }, []);
+
+
+  
+// UseEffect for all registered users start here
+  const [regUsers, setRegUsers] = useState([]);
+
+	useEffect(() => {
+		axios
+		  .get("/v1/users/reporter", {
+			headers: {
+			  Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+			},
+		  })
+		  .then((response) => {
+			console.log("resForRegUses", response.data);
+			setRegUsers(response.data);
+		  });
+	  }, []);
 
   return (
    <div>
@@ -56,7 +77,7 @@ import axios from "../../utility/api/axios";
         <FontAwesomeIcon id= 'cardicons' icon={faUserPlus} />
       </span>
       <hr />
-      <div id="cardNum">0</div>
+      <div id="cardNum">{regUsers.length}</div>
     </li>
 
     <li id="report_cards"> Agency <span className="cardIcons">

@@ -10,6 +10,8 @@ import { RegisteredAgentService } from "../../helper/context/agent-context/agent
 export const AdminDashTable = () => {
   const [agentinfo, setAgentInfo] = useState([]);
 
+
+  // UseEffect for all Report start here
   const [submitedReports, setSubmittedReports] = useState({});
 
   useEffect(() => {
@@ -20,17 +22,38 @@ export const AdminDashTable = () => {
         },
       })
       .then((response) => {
-        console.log("responses", response.data);
+        // console.log("responses", response.data);
         setSubmittedReports(response.data);
       });
   }, []);
 
+
+
+// UseEffect for all onboared agents start here
   useEffect(() => {
     RegisteredAgentService.loadRegisteredAgent().then((response) => {
-      console.log("response", response.data);
+      // console.log("response", response.data);
       setAgentInfo(response.data);
     });
   }, []);
+
+
+  // UseEffect for all reg users start here
+  const [regUsers, setRegUsers] = useState([]);
+
+	useEffect(() => {
+		axios
+		  .get("/v1/users/reporter", {
+			headers: {
+			  Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+			},
+		  })
+		  .then((response) => {
+			console.log("resForRegUses", response.data);
+			setRegUsers(response.data);
+		  });
+	  }, []);
+	
   return (
     <div className="NotifyBar">
       <div>
@@ -52,7 +75,7 @@ export const AdminDashTable = () => {
             {" "}
             <strong>All</strong>{" "}
             <span className="notifyNums">
-              {submitedReports.length + agentinfo.length}
+              {submitedReports.length + agentinfo.length + regUsers.length}
             </span>
           </li>
           {/* <li>
@@ -66,7 +89,7 @@ export const AdminDashTable = () => {
           </li>
           <li>
             {" "}
-            <strong>Users</strong> <span className="notifyNums">0</span>
+            <strong>Users</strong> <span className="notifyNums">{regUsers.length}</span>
           </li>
           <li>
             {" "}
