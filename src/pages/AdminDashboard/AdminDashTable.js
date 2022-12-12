@@ -1,15 +1,35 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./Admindash.css";
+import axios from "../../utility/api/axios";
 import { RegisteredAgentService } from "../../helper/context/agent-context/agentreport.service";
+// import { deleteSpecificReportById } from "../../helper/context/agent-context/agentreport.service";
+// import { viewSpecificReportById } from "../../helper/context/agent-context/agentreport.service";
+
+
 
 export const AdminDashTable = () => {
-  const [agentinfo, setAgentInfo] = useState([])
+  const [agentinfo, setAgentInfo] = useState([]);
 
-  useEffect(()=>{
-  RegisteredAgentService.loadRegisteredAgent().then((response) => {
-    console.log("response", response.data);
-    setAgentInfo(response.data)
-  })
+  const [submitedReports, setSubmittedReports] = useState({});
+
+  useEffect(() => {
+    axios
+      .get("/v1/reports", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      })
+      .then((response) => {
+        console.log("responses", response.data);
+        setSubmittedReports(response.data);
+      });
+  }, []);
+
+  useEffect(() => {
+    RegisteredAgentService.loadRegisteredAgent().then((response) => {
+      console.log("response", response.data);
+      setAgentInfo(response.data);
+    });
   }, []);
   return (
     <div className="NotifyBar">
@@ -26,11 +46,14 @@ export const AdminDashTable = () => {
             />
           </span>
         </h3>
-        
+
         <ul className="Notifications">
           <li>
             {" "}
-            <strong>All</strong> <span className="notifyNums">0</span>
+            <strong>All</strong>{" "}
+            <span className="notifyNums">
+              {submitedReports.length + agentinfo.length}
+            </span>
           </li>
           {/* <li>
             {" "}
@@ -38,7 +61,8 @@ export const AdminDashTable = () => {
           </li> */}
           <li>
             {" "}
-            <strong>Reports</strong> <span className="notifyNums">0</span>
+            <strong>Reports</strong>{" "}
+            <span className="notifyNums">{submitedReports.length}</span>
           </li>
           <li>
             {" "}
@@ -46,12 +70,13 @@ export const AdminDashTable = () => {
           </li>
           <li>
             {" "}
-            <strong>Agents</strong> <span className="notifyNums">{agentinfo.length}</span>
+            <strong>Agents</strong>{" "}
+            <span className="notifyNums">{agentinfo.length}</span>
           </li>
         </ul>
         <div>
-           <ul id="notificatonlist">
-              {/* <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
+          <ul id="notificatonlist">
+            {/* <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
                 Agent Phillip <strong> (NPF)</strong> <br></br>
                 10h ago </li>
               <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
@@ -72,7 +97,7 @@ export const AdminDashTable = () => {
                <li> <strong> Admin Godswill</strong> onboarded Agent Simon <strong>(FRSC)</strong> and
                     Agent Phillip <strong> (NPF)</strong> <br></br>
                     10h ago </li> */}
-             </ul>
+          </ul>
         </div>
       </div>
       <div>
@@ -85,46 +110,94 @@ export const AdminDashTable = () => {
 };
 
 export const AdminReportTable = () => {
+  const [submitedReports, setSubmittedReports] = useState([]);
+  // const [specificAgencyReport, setSpecificAgencyReport] = useState([]);
+  // const [viewspecificAgencyReport, setviewSpecificAgencyReport] = useState({});
+
+  useEffect(() => {
+    axios
+      .get("/v1/reports", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      })
+      .then((response) => {
+        console.log("responses", response.data);
+        setSubmittedReports(response.data);
+      });
+  }, []);
+
+// const [deletedReports, setdeletedReports] = useState()
+
+// useEffect(() => {
+//   axios
+//     .get("v1/reports/11", {
+//       headers: {
+//         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+//       },
+//     })
+//     .then((response) => {
+//       // console.log("responses", response.data);
+//       setdeletedReports(response);
+//     });
+// }, []); 
+
+
+  // const deleteReports = (reportIDParam) => {
+  //   const deletedReports = specificAgencyReport.filter((report) => report.id  !== reportIDParam);
+  //   setSpecificAgencyReport(deletedReports);
+  // };
+
   return (
     <React.Fragment>
       <div id="taable_sec">
-  <div>
-    <h4 className="tableTitle"> 
-    <span>
-    <input type="text" className= "tableSearch" placeholder="Enter Report ID" />
-    </span>
-    </h4>
-  </div>
-  <div id="user-table">
-    <div className="table-del">
-      <div>
-      </div></div><table id="user-table">
-      <tbody><tr>
-          <th>S/N</th>
-          <th>Agency Charged</th>
-          <th>Report ID</th>
-          <th>Sector</th>
-          <th>View Report</th>
-          <th>Status</th>
-          <th>Admin Charged</th>
-          <th>Action</th>
-        </tr>
-        {/* <tr>
-        <td>Whacky Theo</td>
-        <td>03-03-2022</td>
-        <td>03-03-2022</td>
-        <td>03-03-2022</td>
-        <td>03-03-2022</td>
-        <td>03-03-2022</td>
-        <td>03-03-2022</td>
-        <td>03-03-2022</td>
-        </tr>
-         */}
-        
-      </tbody></table>
-  </div>
-</div>
-
+        <div>
+          <h4 className="tableTitle">
+            <span>
+              <input
+                type="text"
+                className="tableSearch"
+                placeholder="Enter Report ID"
+              />
+            </span>
+          </h4>
+        </div>
+        <div id="user-table">
+          <div className="table-del">
+            <div></div>
+          </div>
+          <table id="user-table">
+            <tbody>
+              <tr>
+                <th>S/N</th>
+                <th>Agency ID</th>
+                <th>Report ID</th>
+                <th>Status</th>
+                <th>Sector</th>
+                <th>Date Reported</th>
+                <th>Subject</th>
+                <th>Action</th>
+              </tr>
+              {submitedReports.map((value, index) => {
+                 return( 
+                <tr>
+                 
+                  <td> {index + 1}</td>
+                  <td> {value.agencyId} </td>
+                  <td> {value.id} </td>
+                  <td> {value.status} </td>
+                  <td> {value.sector} </td>
+                  <td> {value.updatedAt} </td>
+                  <td> {value.subject} </td>
+                  <button className="suspend-btn">
+                     Delete </button>
+                </tr>
+                 );
+              })} 
+            </tbody>
+          </table>
+        </div>
+      </div>
     </React.Fragment>
   );
 };

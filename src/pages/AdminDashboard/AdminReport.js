@@ -1,10 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { SidebarAdmin } from '../../components/sidebar/SidebarAdmin';
 import { DateTime } from '../../helper/date-time/DateTime';
 import './Admindash.css';
 import { AdminReportTable } from './AdminDashTable';
+// import axios from '../../utility/api/axios';
+
 export const AdminReport = () => {
-	// const mess = useContext(AdminContext)
+
+	// const [submitedReports, setSubmittedReports] = useState ({});
+
+
+
+	// useEffect(() => {
+	// 	axios.get("/v1/reports",   {headers: {
+	// 		Authorization : `Bearer ${localStorage.getItem("accessToken")}`
+	// 		}})
+	// 	.then((response) => {
+	// 	  console.log("responses", response.data);
+	// 	  setSubmittedReports(response.data);
+	// 	});
+	//   }, []);
+	
 	return (
 		<React.Fragment>
 			<div className='main-container'>
