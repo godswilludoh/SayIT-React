@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Toast, ToastContainer } from 'react-toastify';
@@ -23,11 +24,42 @@ import { EditProfile } from './pages/users/userdashboardPages/editProfile/EditPr
 import UserForgotPassword from './pages/login/userforgotpassword/UserForgotPassword';
 import { AdminProfile } from './pages/AdminDashboard/AdminProfile';
 import AgentProfilePage from './pages/agentProfilePage/AgentProfilePage';
+import { Oval } from 'react-loader-spinner';
 import RequireAuth from './utility/RequireAuth';
 import { AdminContext } from './helper/context/admin-context/AdminContex';
 
 function App() {
-	return (
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLoading(false);
+		}, []);
+	}, []);
+	return isLoading ? (
+		<div
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				height: '100vh',
+			}}
+		>
+			<Oval
+				height={80}
+				width={80}
+				color='#4fa94d'
+				wrapperStyle={{}}
+				wrapperClass=''
+				visible={true}
+				position=''
+				ariaLabel='oval-loading'
+				secondaryColor='#4fa94d'
+				strokeWidth={2}
+				strokeWidthSecondary={2}
+			/>
+		</div>
+	) : (
 		<>
 			<Routes>
 				<Route path='/' element={<Layout />}>
