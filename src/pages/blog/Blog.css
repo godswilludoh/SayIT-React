@@ -22,7 +22,6 @@ html {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid red;
-	/* align-items: center; */
 	margin: 0 5px;
 }
 

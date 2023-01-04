@@ -9,9 +9,7 @@
 .dashboard-interface {
 	width: 100%;
 	padding: 30px;
-	/* margin: 0 5rem; */
 	background: #d9d9d9;
-	/* margin-left: 14rem; */
 	overflow: hidden;
 }
 
@@ -28,11 +26,9 @@
 
 .time {
 	display: flex;
-	/* gap: 2rem; */
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-	/* padding-left: 40px; */
 }
 
 .time-one {
@@ -186,8 +182,6 @@ tr:nth-child(odd) {
 
 .forNotificationButton {
 	background-color: rgba(0, 0, 0, 0.25);
-	/* background-color: rgba(142, 157, 198, 0.1); */
-	/* color: #000000; */
 	color: #ed4d02;
 	font-size: 14px;
 	font-weight: 700;
@@ -237,9 +231,6 @@ tr:nth-child(odd) {
 
 /* CSS FOR THE PROFILE IMAGE ENDS HERE*/
 
-
-
-/* ################################### */
 /* CSS FOR THE POP MODAL STRATS HERE */
 .modal {
 	position: fixed;
@@ -261,7 +252,6 @@ tr:nth-child(odd) {
 	transform: translate(-50%, -50%);
 	background-color: #b4b1af;
 	padding: 1rem 1.5rem;
-	/* width: 24rem; */
 	width: 70%;
 	height: 90%;
 	border-radius: 0.5rem;
@@ -273,8 +263,6 @@ tr:nth-child(odd) {
 	transform: scale(1);
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-
-/* ################################### */
 
 
 .formButton {

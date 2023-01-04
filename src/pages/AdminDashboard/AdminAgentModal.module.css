@@ -1,165 +1,155 @@
 .popModal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .popModalContent {
-  overflow-y: scroll;
-  width: 950px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  height: 90vh;
-  padding: 20px;
-  border: 1px solid #000;
-  background-color: #ffff;
-  border-radius: 8px;
+	overflow-y: scroll;
+	width: 950px;
+	height: 90vh;
+	padding: 20px;
+	border: 1px solid #000;
+	background-color: #ffff;
+	border-radius: 8px;
 }
 
 .registrationTitle {
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #b4b1af;
-  color: #ffff;
-  font-weight: 700;
-  font-size: 22px;
-  margin-top: -10px;
-  margin-bottom: 20px;
+	padding: 15px;
+	border-radius: 8px;
+	background-color: #b4b1af;
+	color: #ffff;
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: -10px;
+	margin-bottom: 20px;
 }
 
 .agentPersonalInformation {
-  padding: 25px;
-  border-radius: 8px;
-  background-color: rgba(217, 217, 217, 0.12);
+	padding: 25px;
+	border-radius: 8px;
+	background-color: rgba(217, 217, 217, 0.12);
 }
 
 .foragentPersonalTitle {
-  color: #ed4d02;
-  font-weight: 700;
-  margin-bottom: 20px;
+	color: #ed4d02;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 .formTitle {
-  font-size: 14px;
-  color: black;
-  font-weight: 700;
-  margin-bottom: 8px;
+	font-size: 14px;
+	color: black;
+	font-weight: 700;
+	margin-bottom: 8px;
 }
 
 .formGroupForOBD .strictlyForAgent {
-  padding: 5px;
-  border: 1px solid #ed4d02;
-  border-radius: 5px;
+	padding: 5px;
+	border: 1px solid #ed4d02;
+	border-radius: 5px;
 }
 
 .firstRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 55px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 55px;
 }
 
 .checkBoxHeading {
-  margin-top: 35px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  font-weight: 700;
+	margin-top: 35px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .checkBoxes {
-  margin-top: -20px;
-  display: flex;
-  gap: 50px;
-  align-items: center;
+	margin-top: -20px;
+	display: flex;
+	gap: 50px;
+	align-items: center;
 }
 
 .checkBoxContainer {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
 }
 
 .inputBorderColor {
-  border: 1px solid #ed4d02;
+	border: 1px solid #ed4d02;
 }
 
 .checboxOption {
-  font-size: 14px;
-  margin-top: 12px;
+	font-size: 14px;
+	margin-top: 12px;
 }
 
-/* .agencyPersonalInformation {
-  margin-top: 20px;
-  padding: 25px;
-  border-radius: 8px;
-  background-color: rgba(217, 217, 217, 0.12);
-} */
-
 .forEachAgencyInfoField {
-  margin-bottom: 18px;
+	margin-bottom: 18px;
 }
 
 .section2InputField input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ed4d02;
+	width: 100%;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #ed4d02;
 }
 
 .forAgentRegPhoneEmail {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .agenyLogo input {
-  margin-top: 8px;
-  margin-bottom: 100px;
+	margin-top: 8px;
+	margin-bottom: 100px;
 }
 
 .forSubmittingAgent_Agency {
-  display: flex;
-  justify-content: space-between;
-  /* justify-content: center; */
+	display: flex;
+	justify-content: space-between;
 }
 
 .forSubmittingTheForm {
-  padding: 15px;
-  padding-right: 35px;
-  padding-left: 35px;
-  border-radius: 5px;
-  border: none;
-  background-color: #ed4d02;
-  color: white;
-  text-align: center;
-  cursor: pointer;
+	padding: 15px;
+	padding-right: 35px;
+	padding-left: 35px;
+	border-radius: 5px;
+	border: none;
+	background-color: #ed4d02;
+	color: white;
+	text-align: center;
+	cursor: pointer;
 }
 
 .forClosingTheForm {
-  padding: 15px;
-  padding-right: 35px;
-  padding-left: 35px;
-  border-radius: 5px;
-  border: none;
-  background-color: #ed4d02;
-  color: white;
-  text-align: center;
-  cursor: pointer;
+	padding: 15px;
+	padding-right: 35px;
+	padding-left: 35px;
+	border-radius: 5px;
+	border: none;
+	background-color: #ed4d02;
+	color: white;
+	text-align: center;
+	cursor: pointer;
 }
 
 .forSubmittingTheForm:hover {
-  background: rgba(237, 77, 2, 0.7);
+	background: rgba(237, 77, 2, 0.7);
 }
 
 .forClosingTheForm:hover {
-  background: rgba(237, 77, 2, 0.7);
+	background: rgba(237, 77, 2, 0.7);
 }
 
-.errors{
-  color: red;
+.errors {
+	color: red;
 }

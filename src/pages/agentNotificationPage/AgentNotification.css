@@ -1,169 +1,164 @@
-.containerWrapper{
-    display: flex;
+.containerWrapper {
+	display: flex;
 }
-
 
 /* Dashboard Interface */
 .dashboard-interface {
-    width: 100%;
-    padding: 30px;
-    background: #d9d9d9;
-    /* margin-left: 14rem; */
-    overflow: hidden;
-  }
-  
-  .notificationText{
-    font-weight: 700;
-  }
-  .notificationContainer {
-    width: 100%;
-    background-color: #ffffff;
-    margin-top: 80px;
-    border-radius: 8px;
-    height: 100vh;
-  }
-  
-  .navContainer {
-    display: flex;
-    align-items: center;
-    padding: 90px 15px 15px 15px;
-    border-bottom: 1px solid #b4b1af;
-    height: 26px;
-  }
-  
-  .top {
-    display: flex;
-    align-items: center;
-  }
-  
-  .info-display {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 1rem 2rem;
-  }
-  
-  
-  .time {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    padding-left: 300px;
-  }
-  
-  .time-one {
-    background: rgba(237, 77, 2, 0.7);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding-top: 10px;
-    width: 92px;
-    height: 42px;
-  }
-  
-  .time-two {
-    background: #d9d9d9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding-top: 10px;
-    width: 150px;
-    height: 42px;
-  }
-  
-  .dashboard-container {
-    margin: 2rem;
-  }
-  
-  .p-top {
-    padding: 1rem;
-    border-bottom: 1px solid #b4b1af;
-    color: #60616e;
-    font-weight: 700;
-    font-size: 14px;
-  }
-  
-  .p-bottom {
-    color: #000000;
-    font-weight: 700;
-    font-size: 35px;
-  }
-  
-  .forTheAgentID {
-    font-weight: 700;
-  }
-  
-  .linksContainer {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 100px;
-    padding-left: 25px;
-    padding-bottom: 25px;
-  }
-  
-  .linksContainer li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    list-style: none;
-  }
-  
-  .linksContainer li a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000000;
-  }
-  
-  .notificationAmountAll {
-    padding: 10px;
-    background: #ed4d02;
-    border-radius: 4px;
-    color: #ffffff;
-  }
-  
-  .notificationAmount {
-    padding: 10px;
-    background: #000000;
-    border-radius: 4px;
-    color: #ffffff;
-  }
-
-  * FOR THE NOTIFICATION LIST STYLING */
-.theNotifications{
-    margin-top: 10px;
-    padding: 10px 30px;
+	width: 100%;
+	padding: 30px;
+	background: #d9d9d9;
+	overflow: hidden;
 }
 
-.listWrapper{
-    list-style: none;
+.notificationText {
+	font-weight: 700;
+}
+.notificationContainer {
+	width: 100%;
+	background-color: #ffffff;
+	margin-top: 80px;
+	border-radius: 8px;
+	height: 100vh;
 }
 
-.listWrapper .usersReportListEntries{
-    display: flex;
-    gap: 10px;
+.navContainer {
+	display: flex;
+	align-items: center;
+	padding: 90px 15px 15px 15px;
+	border-bottom: 1px solid #b4b1af;
+	height: 26px;
 }
 
-.usersReportListEntries{
-    margin-bottom: 15px;
-
+.top {
+	display: flex;
+	align-items: center;
 }
 
-.unread{
-    background: #D9D9D9;
+.info-display {
+	font-size: 26px;
+	font-weight: 400;
+	margin: 1rem 2rem;
 }
 
-.usersIdentity{
-    /* font-size: 13px; */
-    font-weight: 700;
+.time {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	padding-left: 300px;
 }
 
-.usersTimeOfReport{
-    font-size: 13px;
+.time-one {
+	background: rgba(237, 77, 2, 0.7);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	padding-top: 10px;
+	width: 92px;
+	height: 42px;
 }
-@media(min-width: 300px) and (max-width: 900px) {
-  .time{
-    padding: 2px;
-    width: 25%;
-  }
+
+.time-two {
+	background: #d9d9d9;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	padding-top: 10px;
+	width: 150px;
+	height: 42px;
+}
+
+.dashboard-container {
+	margin: 2rem;
+}
+
+.p-top {
+	padding: 1rem;
+	border-bottom: 1px solid #b4b1af;
+	color: #60616e;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.p-bottom {
+	color: #000000;
+	font-weight: 700;
+	font-size: 35px;
+}
+
+.forTheAgentID {
+	font-weight: 700;
+}
+
+.linksContainer {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 100px;
+	padding-left: 25px;
+	padding-bottom: 25px;
+}
+
+.linksContainer li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	list-style: none;
+}
+
+.linksContainer li a {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.notificationAmountAll {
+	padding: 10px;
+	background: #ed4d02;
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+.notificationAmount {
+	padding: 10px;
+	background: #000000;
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+/* FOR THE NOTIFICATION LIST STYLING */
+.theNotifications {
+	margin-top: 10px;
+	padding: 10px 30px;
+}
+
+.listWrapper {
+	list-style: none;
+}
+
+.listWrapper .usersReportListEntries {
+	display: flex;
+	gap: 10px;
+}
+
+.usersReportListEntries {
+	margin-bottom: 15px;
+}
+
+.unread {
+	background: #d9d9d9;
+}
+
+.usersIdentity {
+	font-weight: 700;
+}
+
+.usersTimeOfReport {
+	font-size: 13px;
+}
+@media (min-width: 300px) and (max-width: 900px) {
+	.time {
+		padding: 2px;
+		width: 25%;
+	}
 }
