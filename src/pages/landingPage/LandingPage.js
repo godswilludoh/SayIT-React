@@ -13,17 +13,11 @@ const LandingPage = () => {
 	return (
 		<div className='landingPageContainer'>
 			<Navbar />
-
 			<HeroSection />
-
 			<WhatwedoSection />
-
 			<HowitworksSection />
-
 			<Faq />
-
 			<WhyUS />
-
 			<Footer />
 		</div>
 	);
