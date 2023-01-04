@@ -21,7 +21,6 @@
 .Form-contain {
 	margin: 0px 0px 0px 80px;
 	padding: 0px 5px 0px 5px;
-	/* background-color: #c4c4c4; */
 	width: 500px;
 }
 .cont-forms {
@@ -46,11 +45,9 @@
 
 .details_Info {
 	padding: 0px 0px 3px 0px;
-	/* outline: none; */
 }
 
 .details_Info label {
-	/* padding-right: 70px; */
 	display: block;
 	width: 80%;
 	margin-left: 0px;
